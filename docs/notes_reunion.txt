@@ -11,7 +11,7 @@ Google scholar
 1. Etude l’expérimentale (PAPY)
 2. Simuler les prédicteur
 3. Etude théorique
-https://fr.wikipedia.org/wiki/Cha%C3%AEne_de_Markov. Etude théorique
+https://fr.wikipedia.org/wiki/Cha%C3%AEne_de_Markov
 
 Inversion de matrice
 
