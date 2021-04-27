@@ -1,6 +1,6 @@
-/// Notes de réunions :
+# Notes de réunions :
 
-// Réunion du Lundi 26 Avril 2021 :
+## Réunion du Lundi 26 Avril 2021 :
 hennessy et patterson
 https://arxiv.org/pdf/1804.00261.pdf
 https://www.irisa.fr/caps/people/seznec/ISCA05.pdf
@@ -8,8 +8,8 @@ algo de distance d’édition entre deux mots
 https://fr.wikipedia.org/wiki/Distance_de_Levenshtein
 Google scholar
 
-1. Etude l’expérimentale (PAPY)
-2. Simuler les prédicteur
+1. Etude expérimentale (PAPY)
+2. Simuler les prédicteurs
 3. Etude théorique
 https://fr.wikipedia.org/wiki/Cha%C3%AEne_de_Markov
 

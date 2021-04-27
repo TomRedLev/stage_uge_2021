@@ -1,6 +1,6 @@
-/// Notes de lecture :
+# Notes de lecture :
 
-// Good Predictions Are Worth A Few Comparisons :
+## Good Predictions Are Worth A Few Comparisons :
 
 Processeurs modernes -> paralélisés et utilise les producteurs pour deviner les sorties des branchements conditionnels.
 
@@ -13,7 +13,11 @@ Exemple d'introduction :
 But - Chercher le minimum et le maximum
 Approche naïve - 2n comparaisons | Approche optimale - 3n / 2 comparaisons
 Seulement, l'implémentation naïve est deux fois plus rapide.
-Une des raisons simple - Difference dans le nombre de cache misses. 
+Une des raisons simple pourrait être - Difference dans le nombre de cache misses. 
+Les deux implémentations font cependant les mêmes accès mémoires, dans le même ordre.
+
+
+
 
 
 
