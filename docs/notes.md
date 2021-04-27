@@ -22,8 +22,8 @@ Peut expliquer l'attitude des algorithmes utilisants des comparaisons. <br />
 <br />
 L'exemple d'introduction est assez marquant au vu du fait que la différence entre les deux implémentations est une branche conditionnelle qui est imprévisible (input pris au hasard, uniformément) et cela va donc augmenter le nombre de misspredictions. <br />
 <br />
-Misspredictions pour la version naïve : $\Theta$ (log(n))  <br />
-Misspredictions pour la version optimale : $\Theta$ (n) <br />
+Misspredictions pour la version naïve :  O(log(n)) <br />
+Misspredictions pour la version optimale : ![e2](http://www.sciweavers.org/free-online-latex-equation-editor) <br />
 
 
 
