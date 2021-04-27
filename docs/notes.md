@@ -5,7 +5,7 @@
 Processeurs modernes -> paralélisés et utilise les producteurs pour deviner les sorties des branchements conditionnels. <br />
 <br />
 Etudes de deux algorithmes : exponentiation rapide et la recherche dichotomique dans un tableau trié.
-Ces deux algos sont codés dans une façon que les misspredictions soient moins nombreuses, cependant cela augmente le nombre d'opérations. <br />
+Ces deux algos sont codés dans une façon que les mispredictions soient moins nombreuses, cependant cela augmente le nombre d'opérations. <br />
 <br />
 Implémentations des deux algos en version récursive Python dans pw/GoodPredictions. <br />
 <br />
@@ -20,10 +20,13 @@ A chaque conditionnelle dans un programme, il y a un mécanisme (le prédicteur)
 Le coût de la missprediction doit être pris en compte, car il peut être assez élevé. <br />
 Peut expliquer l'attitude des algorithmes utilisants des comparaisons. <br />
 <br />
-L'exemple d'introduction est assez marquant au vu du fait que la différence entre les deux implémentations est une branche conditionnelle qui est imprévisible (input pris au hasard, uniformément) et cela va donc augmenter le nombre de misspredictions. <br />
+L'exemple d'introduction est assez marquant au vu du fait que la différence entre les deux implémentations est une branche conditionnelle qui est imprévisible (input pris au hasard, uniformément) et cela va donc augmenter le nombre de mispredictions. <br />
 <br />
-Misspredictions pour la version naïve :  ![thetaresult](http://www.sciweavers.org/tex2img.php?eq=%20%5CTheta%20%28log%28n%29%29&bc=White&fc=Black&im=jpg&fs=12&ff=arev&edit=0) <br />
-Misspredictions pour la version optimale : ![thetaresult](http://www.sciweavers.org/tex2img.php?eq=%20%5CTheta%20%28n%29&bc=White&fc=Black&im=jpg&fs=12&ff=arev&edit=0) <br />
+mispredictions pour la version naïve :  ![thetaresult](http://www.sciweavers.org/tex2img.php?eq=%20%5CTheta%20%28log%28n%29%29&bc=White&fc=Black&im=jpg&fs=12&ff=arev&edit=0) <br />
+mispredictions pour la version optimale : ![thetaresult](http://www.sciweavers.org/tex2img.php?eq=%20%5CTheta%20%28n%29&bc=White&fc=Black&im=jpg&fs=12&ff=arev&edit=0) <br />
+Sujet déjà étudié pour observer le surcoût des mispredictions<br />
+Vision inverse, proposition d'algorithmes predictor-friendly (aider à éviter les mispredictions).<br />
+
 
 
 
