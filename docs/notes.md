@@ -2,6 +2,8 @@
 
 ## Good Predictions Are Worth A Few Comparisons :
 
+### 1 - Introduction :
+
 Processeurs modernes -> paralélisés et utilise les producteurs pour deviner les sorties des branchements conditionnels. <br />
 <br />
 Etudes de deux algorithmes : exponentiation rapide et la recherche dichotomique dans un tableau trié.
@@ -48,10 +50,28 @@ Brodal et Moruz ont conduit une étude sur les arbres binaires de recherche qui 
 Le travail effectué prend avantage des prédictions de branchements mais est plus lié aux algorithmes que sur les structures de données. <br />
 <br />
 
+### 2 - Éléments d'architecture matérielle : 
 
+Pour éviter de bloquer le pipeline quand il faut étudier un saut conditionnel, le prédicteur de branchements essaye de prédire si le saut va s'effectuer ou non. <br />
+Si la prédiction est bonne, cela ne ralentit pas le pipeline, alors que si elle est mauvaise, le pipeline est vidé et cela provoque donc une perte signifiante de performance. <br />
+<br />
+Plusieurs stratégies ont été établies : <br />
+static branch predictor - Il ne se sert pas de l'exécution du code pour modifier son choix.<br />
+dynamic branch predictor - Il va utiliser les résultats précédents pour déterminer si une certaine branche doit être prise ou non. <br />
+<br />
+Le 1-bit predictor ne se rappelle que du résultat précédent.<br />
+Les 2-bit predictors esssayent d'éviter les mispredictions prennent un chemin inconnu.<br />
+Le compteur saturé peut être amélioré (k-bit predictors utilisant 2^k états). <br />
+Tous les prédicteurs sont locaux, il en existe un pour chaque conditionnel (Il y a une limite en réalité). <br />
+<br />
+Une table d'historique à 2^n entrées indexés par la séquence de leurs n dernières branches (1 pour pris, 0 sinon). <br />
+Les entrées sont des k-bit predictors. <br />
+Une table est locale si ses entrées correspondent au compertement d'une branche et sont utilisées pour cette branche précise.<br />
+Une table est globale si toutes les sorties des précédentes branches sont utilisés pour indexer la table et sont partagés avec toutes les conditionnelles.<br />
+<br />
+Les corrrelating branch predictors se servent des informations locales et globales. <br />
+Les tournament predictors utilise un programme dynamique pour décider s'il vaut mieux suivre les prédictions locales ou globales. <br />
+Les mispredictions ne peuvent être observé que sur un code assembleur donné. <br />
+Les études ont été réalisées sur du code C non-optimisé mais marche aussi sur du code complêtement optimisé. <br />
 
-
-
-
-
-
+### 3 - Recherche du minimum et maximum de façon simultané :
