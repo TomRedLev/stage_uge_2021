@@ -18,12 +18,12 @@ Les deux implémentations font cependant les mêmes accès mémoires, dans le m�
 <br />
 A chaque conditionnelle dans un programme, il y a un mécanisme (le prédicteur) qui essaye de deviner si le saut conditionnel va être pris ou non. <br />
 Le coût de la missprediction doit être pris en compte, car il peut être assez élevé. <br />
-Peut expliquer l'attitude des algorithmes utilisants des comparaisons. <br / >
+Peut expliquer l'attitude des algorithmes utilisants des comparaisons. <br />
 <br />
 L'exemple d'introduction est assez marquant au vu du fait que la différence entre les deux implémentations est une branche conditionnelle qui est imprévisible (input pris au hasard, uniformément) et cela va donc augmenter le nombre de misspredictions. <br />
 <br />
-Misspredictions pour la version naïve : $Theta$ (log(n))  <br />
-Misspredictions pour la version optimale : $Theta$ (n) <br />
+Misspredictions pour la version naïve : $\Theta$ (log(n))  <br />
+Misspredictions pour la version optimale : $\Theta$ (n) <br />
 
 
 
