@@ -39,6 +39,16 @@ Travaux liés : <br />
 Biggar -> la réaction des branches pour des algorithmes de tri. <br />
 Brodal, Fagerberg et Moruz -> Troque entre comparaisons et mispredictions sur des algorithmes de tri. <br />
 Ces travaux ont ammenés à la première analyse théorique de prédicteurs de branchement statique. <br />
+Sanders et Winkel ont considéré la possibilité de dissocier les comparaisons de leurs branches dans leur algorithme SampleSort, ce qui évite la plupart des coût de mispredictions. <br />
+Elmasry, Katajainen and Stenmark ont proposés une version de MergeSort qui n'est pas impacté par les mispredictions en utilisant des instructions propres au processeur.<br />
+Kaligosi et Sanders ont analysés des predictors dynamiques pour expliquer les mispredictions qui affectent les algorithmes classiques.
+Martinez, Nebel et Wild ont précisé que cela n'était pas suffisant pour expliquer les meilleures performances obtenues avec la version à double pivot de QuickSort.
+Brodal et Moruz ont conduit une étude sur les arbres binaires de recherche qui sont biaisés, pour montrer qu'ils pouvaient obtenir de meilleurs performances que des arbres bien équilibrés car les côuts de de branches n'étaient pas obligatoirement les mêmes, dûs aux plans de prédictions de branchements. <br />
+<br />
+Le travail effectué prend avantage des prédictions de branchements mais est plus lié aux algorithmes que sur les structures de données. <br />
+<br />
+
+
 
 
 
