@@ -9,18 +9,18 @@ def determine_combination(val) :
     def determine_combination_aux(val, lst_val) :
         if sum(lst_val) > val :
             return
-        if sum(lst_val) == val and len(lst_val) >= val-1 :
+        if sum(lst_val) == val and len(lst_val) >= val-2 :
             res.append(lst_val)
         for i in range(0, 2) :
             determine_combination_aux(val, lst_val + [i + 1])
     determine_combination_aux(val, [])
-    
-    return res
-    
 
-def construct_graphs() :
+    return res
+
+
+def construct_4_graphs() :
     """
-    Supposed to construct a 4-states graph.
+    Supposed to construct the strongly connected 4-states graph.
     """
     listG = []
     for lst in determine_combination(6) :
@@ -28,7 +28,12 @@ def construct_graphs() :
         G.ajouter_aretes([(0, 0), (3, 3)])
         i = 0
         reverse = False
-        if (lst[len(lst)//2] == 2) :
+        # Doit être repensé
+        if (len(lst)%2 != 0 and lst[len(lst)//2] == 2) :
+            continue
+        if (len(lst)%2 == 0 and (sum(lst[0:len(lst)//2]) > 3 or sum(lst[len(lst)//2:]) > 3) ) :
+            continue
+        if (len(lst) == 4 and (lst[0] == lst[-1] or lst[len(lst)//2] == lst[len(lst)//2 -1])) :
             continue
         for elem in lst :
             if not reverse :
@@ -40,24 +45,24 @@ def construct_graphs() :
             if (i == 3) :
                 reverse = True
         listG.append(G)
-            
+
     return listG
-    
-    
+
+
 
 def main() :
     """
     Main function of the first practical work.
     """
-    listG = construct_graphs()
+    listG = construct_4_graphs()
     for i in range(len(listG)) :
         print(export_dot(listG[i], i))
     print(determine_combination(6))
     # tmp = export_dot(G, 0)
     # s = Source(tmp, filename="graph.dot", format="png")
     # s.view()
-    
-    
+
+
 
 if __name__ == "__main__":
     # execute only if run as a script
