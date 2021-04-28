@@ -1,8 +1,6 @@
-# Notes de lecture :
+# Good Predictions Are Worth A Few Comparisons :
 
-## Good Predictions Are Worth A Few Comparisons :
-
-### 1 - Introduction :
+## 1 - Introduction :
 
 Processeurs modernes -> paralélisés et utilise les producteurs pour deviner les sorties des branchements conditionnels. <br />
 <br />
@@ -73,5 +71,21 @@ Les corrrelating branch predictors se servent des informations locales et global
 Les tournament predictors utilise un programme dynamique pour décider s'il vaut mieux suivre les prédictions locales ou globales. <br />
 Les mispredictions ne peuvent être observé que sur un code assembleur donné. <br />
 Les études ont été réalisées sur du code C non-optimisé mais marche aussi sur du code complêtement optimisé. <br />
+<br />
 
-### 3 - Recherche du minimum et maximum de façon simultané :
+## 3 - Recherche du minimum et maximum de façon simultané :
+
+Modèle de probabilité  : distribution aléatoire uniforme d'un tableau de taille n où chaque élément est choisi entre [0,1] de façon indépendante et uniforme.<br />
+L'événement ayant une probabilité de 0 (les éléments de l'input ne sont pas identiques), cela revient à choisir au hasard une permutation entre de 1 à n, car seuls les éléments sont comparés dans les deux algorithmes. <br />
+Min/max-record : c'est un élément dans un tableau ou une permutation qui est strictement plus petit/grand que tous les autres éléments à sa gauche. <br />
+Le nombre de records dans une permutation est une statistique connue. <br />
+<br />
+
+### Première proposition : 
+
+Le nombre espéré de mispredictions performé par NaiveMinmax dans un tableau de taille n, est équivalent à 4 log(n) pour le 1-bit predictor, 2log(n) pour les 2-bit predictor et 3-bit compteur saturé. <br />
+3/2-Minmax est équivalent à n/4 + O(log(n)) pour tous les prédicteurs considérés. <br />
+<br />
+En observant ces résultats, le nombre de mispredictions dans NaiveMinmax est négligeable par rapport au nombre de comparaisons.
+Le test additionel utilisé pour optimiser 3/2-minmax provoque une augmentation des mispredictions qui deviennent comparables au nombre de comparaison.
+
