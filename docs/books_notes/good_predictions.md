@@ -86,6 +86,15 @@ Le nombre de records dans une permutation est une statistique connue. <br />
 Le nombre espéré de mispredictions performé par NaiveMinmax dans un tableau de taille n, est équivalent à 4 log(n) pour le 1-bit predictor, 2log(n) pour les 2-bit predictor et 3-bit compteur saturé. <br />
 3/2-Minmax est équivalent à n/4 + O(log(n)) pour tous les prédicteurs considérés. <br />
 <br />
-En observant ces résultats, le nombre de mispredictions dans NaiveMinmax est négligeable par rapport au nombre de comparaisons.
-Le test additionel utilisé pour optimiser 3/2-minmax provoque une augmentation des mispredictions qui deviennent comparables au nombre de comparaison.
+En observant ces résultats, le nombre de mispredictions dans NaiveMinmax est négligeable par rapport au nombre de comparaisons. <br />
+Le test additionel utilisé pour optimiser 3/2-minmax provoque une augmentation des mispredictions qui deviennent comparables au nombre de comparaison. <br />
+Les mispredictions provoquent des cycles CPU, alors que les comparaisons sont des opérations peu coûteuses. <br />
+Il y a d'autres facteurs qui peuvent influer les performances de simples programmes, comme les effets de cache. <br />
+Pour éviter cela, les éléments ont tous été accédé une seule fois et dans le même ordre. <br />
+Utilisation de l'optimisation -O3 de GCC pour vérifier que ces résultats tiennent, même avec des optimisations de code. <br />
+Avec cette optimisation, la branche dans 3/2-Minmax est remplacés par des mouvements conditionnels qui ne sont pas vulnérables à la misprediction, cependant il reste toujours 1/4n de mispredictions en moyenne. <br />
+Ces résultats ne sont pas identiques si l'on considère une distribution non-uniforme. <br />
+Il serait intéressant d'étudier le comportement des deux algorithmes sur des permutations aléatoires avec un nombre donné de records. <br />
+
+## 4 - Exponentiation by Squaring :
 
