@@ -96,5 +96,120 @@ Avec cette optimisation, la branche dans 3/2-Minmax est remplacés par des mouve
 Ces résultats ne sont pas identiques si l'on considère une distribution non-uniforme. <br />
 Il serait intéressant d'étudier le comportement des deux algorithmes sur des permutations aléatoires avec un nombre donné de records. <br />
 
-## 4 - Exponentiation by Squaring :
+## 4 - Exponentiation rapide :
 
+Les branches conditionnelles qui ont autant de chance d'être prises ou non sont très douloureuses pour l'utilisation des prédictions de branchements. <br />
+Quelques algos "diviser pour régner" utilisent de telles branches, car ils essayent d'avoir des parts égales pour atteindre une complexité optimale. <br />
+Deux façons de disrupter la balance pour finir avec de meilleures performances sur deux algos classiques. <br />
+
+### 4.1 - Algorithmes modifiés :
+Les premiers tests de modifications d'algorithmes ont conduit à une réécriture de l'exponentiation rapide, cependant il restait toujours des branchements conditionnels qui possédaient une probabilité de 2 et qui ont pu être modifié en s'intéressant aux deux derniers bits de n. <br />
+On peut rajouter des conditions qui ne sont pas obligatoirement nécessaires, mais qui permettent d'obtenir des probabilités de branchements différentes de 1/2. <br />
+Expérience : Pour comparer les expériences, la valeur flottante de x^n en utilisant chaque algorithme 5.10^7 périodes, avec n choisi uniformément entre 0 et 2^26 - 1. <br />
+Temps d'exécutions et autres paramètres (nombre de mispredictions) mesurés avec la librairie PAPI. <br />
+<br />
+Différence de vitesse : <br />
+GuidedPow > 14% > UnrolledPow <br />
+GuidedPow > 29% > ClassicalPow <br />
+Le nombre de multiplications est relativement le même entre les 3 algorithmes. <br />
+L'explication principale pour la différence de vitesse entre UnrolledPow et ClassicalPow : le nombre de boucles est divisé par 2.<br />
+Entre GuidedPow et UnrolledPow : le nombre de boucles est le même, et UnrolledPow utilise 25% en plus de comparaisons. La différence principale est le test "if (n & 3)" qui enlève un quart des mispredictions. <br />
+Le test cause des mispredictions supplémentaires mais comme il modifie les probabilités de prédictions des deux autres tests, ce qui entraîne une diminution finale du nombre de mispredictions. <br />
+Encore une fois le nombre augmenté de comparaisons est équilibré par le moins grand nombre de mispredictions. <br />
+<br />
+
+### 4.2 - Analyse du nombre moyen de mispredictions pour GuidedPow :
+Pour l'analyse, on considère que n est pris uniformément  entre 0 et N-1, avec N=4^k et k >= 1. <br />
+Considérations des prédicteurs locaux. <br />
+<br />
+Lk(n) = nombre d'itérations de boucle dans GuidedPow. <br />
+==> { Lk(n) = l | 4^l > n } <br />
+E[Lk] = k - 1/3 + o(1) ~ k. <br />
+<br />
+Les chaînes de Markov sont des outils principaux pour ce genre d'analyse. <br />
+A chaque itération, la condition est vraie avec une probabilité de 3/4, comme elle  n'est pas satisfaite si les deux derniers bits sont 00. <br />
+On peut donc associer aux arêtes "Taken" la probabilité 3/4 et "Not Taken" la probabilité 1/4. <br />
+Une misprediction arrive lorsque une arête marqué comme Taken est utilisé depuis un état qui prédit Not Taken. <br />
+Il faut aussi connaître l'état de départ du prédicteur, mais cela n'a pas d'influence sur les résultats asymptotiques. <br />
+Le problème a été réduit au fait de compter le nombres de fois que certaines arêtes soient prisent dans la chaîne de Markov, en faisant un parcours aléatoire de longueur aléatoire Lk. <br />
+<br />
+Théorème ergodique : <br />
+Considérons (M, Pi0) une chaîne primitive et apériodique de Markov sur un ensemble fini S.
+Pi est une distribution stationnaire. <br />
+E est l'ensemble d'arêtes de M, qui est un ensemble de paires (i, j) appartenant à S^2 tel que M(i, j) > 0. <br />
+Pour n un nombre intégral supérieur ou égal à 0, Ln est une variable aléatoire sur les nombres intégraux supérieurs ou égaux à 0, tels que la limite de n tend vers 0 est E[Ln] = +inf. <br />
+Xn est une variable aléatoire qui compte le nombre d'arêtes dans E qui sont utilisés pendant un parcours aléatoire de longueur Ln dans M (en commençant de la distribution initiale Pi0. <br />
+L'équivalence asymptotique est donc : E[Xn] ~E[Ln] * (sum(Pi(i)) pour (i, j) appartenant à E ) * M(i,j). <br />
+<br />
+En considérant un prédicteur donné, dans lequel la condition est satisfaite avec une probabilité p. <br />
+On définit par Mp, la matrice de transition, par Pip le vecteur stationnaire et par Mu(p) la probabilité attendue de mispredictions définie par Mu(p) = (sum(Pip(i)) pour i, j appartenant à E) * M(i, j) où E est un ensemble d'arêtes correspondantes aux mispredictions. <br />
+Le théorème est établi pour des valeurs de N qui ne sont pas des puissances de 4, ce qui est plus compliqué car les bits ne sont pas exactement 0 et 1 avec des probabilités de 1/2. <br />
+<br />
+Théorème 3 : <br />
+N est pris uniformèment entre {0, ..., N - 1}. <br />
+Le nombre de tests conditionnels dans ClassicalPow et UnrolledPow est asymptotiquement équivalent log(2, N) <br />
+Le nombre de tests conditionnels dans GuidedPow est asymptotiquement équivalent à 5/4 log(2,N). <br />
+Le nombre espéré de mispredictions est asymptotiquement équivalent à 1/2 log(2, N) pour ClassicalPow et UnrolledPow. <br />
+Le nombre espéré de mispredictions est asymptotiquement équivalent à (1/2 Mu(3/4) + 3/4 Mu(2/3)) log(2, N) pour GuidedPow. <br />
+Mu est la probabilité de mispredicitons espérés associé au prédicteur local. <br />
+<br />
+Alpha = (1/2 Mu(3/4) + 3/4 Mu(2/3)) <br />
+=> 25/48 (1-bit) <br />
+=> 9/20 (2-bit compteur saturé) <br />
+=> 2045/4368 (2-bit flip-on-consecutive) <br />
+=> 1095/2788 (3-bit compteur saturé) <br />
+<br />
+On peut comparer ces valeurs au 1/2 des deux autres algorithmes. <br />
+En particulier, pour le prédicteur 1-bit, le nombre espéré de mispredictions est plus grand pour GuidedPow que pour ClassicalPow ou UnrolledPow. <br />
+Le prédicteur n'est donc pas suffisamment performant pour compenser les mispredictions causées par la conditionnelle ajoutée. <br />
+Pour le compteur saturé à 3-bit, GuidedPow utilise 0.25 log(2, N) comparaisons de plus que UnrolledPow, mais 0.11 log(2,N) mispredictions de moins. <br />
+<br />
+
+## 5 - Recherche binaire et variantes :
+
+### 5.1 - Déséquilibrer la recherche binaire :
+Considération de la recherche binaire classique. <br />
+Pour éviter la partition en 2 parties, qui donnerait une probabilité de 1/2 pour la branche conditionnelle, alors il y aurait la possibilité de faire une partition en 4 parties. <br />
+En continuant avec la méthode "diviser pour conquérir", on peut obtenir une recherche ternaire en partitionnant par 3 parties. <br />
+Le principal problème avec cette approche est que la division par 3 est couteuse en terme d'hardware. <br />
+Pour limiter ce coût, il aura été nécessaire de créer deux parties de taille n/4 et une partie de taille n/2,
+car l'on utilise que des divisions par des puissances de 2 qui sont de simples shifts binaires, comme dans la recherche binaire standard. <br />
+<br />
+
+### 5.2 - Experiences :
+La recherche binaire biaisé marche mieux que la recherche binaire classique et la recherche faussée encore mieux. <br />
+Contrairement aux exemples précédents, les changements faits sont un peu plus sensibles aux effets de cache (à cause de la façon de partitionner le tableau, qui influence donc la position à laquelle on peut accéder à la mémoire). <br />
+Cela a mené à faire des expériences sur des tableaux qui se glissent dans le dernier niveau de cache de la machine pour mesurer les effets des prédictions de branchements. <br />
+Pour les tableaux de taille intermédiaire, la recherche fausée est plus rapide de 23% que la recherche binaire classique (Les programmes sont compilés sans optimisations de gcc). <br />
+Les expériences menées en Java, utilisant une librairie dédiée au micro-benchmarking donne relativement les même résultats (avec une accélération moins rapide de 12%), en comparant la recherche faussée à la recherche binaire écrite dans la librairie standard. <br />
+<br />
+
+### 5.3 - Analyse des Prédicteurs Locaux :
+Utilisation du théorème ergodique pour obtenir une bonne courbe asymptotique estimant le nombre de mispredictions. <br />
+Il faut aussi obtenir le nombre de fois que chaque conditionnelle est réalisée. <br />
+Une estimation du premier ordre sur le nombre de fois qu'une conditionnelle donnée est exécuté peut être réalisée en utilisant le théorème Maître de Roura. <br />
+<br />
+Théorème Maître : <br />
+Considérons k >= 1, et a1, ..., ak, ainsi que b1, ..., bk des entiers positifs réels, tels que sum(ai) = 1 pour i allant de 1à k. <br />
+Pour chaque i appartenant à {1, ..., k}, on peut aussi dire que Ei(n) est une suite réelle telle que : bi*n + Ei(n) est un entier positif et Ei(n) = O(1/n). <br />
+T(n) est la séquence d'entier réel qui satisfait, pour deux constantes positives c et d : <br />
+T(0) = c et T(n) = d + (sum(ai) pour i allant de 1 à k) * T(bi*n + Ei(n)) + O(log(n) / n) pour n >= 1. <br />
+Alors T(n) ~d/h log(n) avec h = - (sum(ai) pour i allant de 1 à k) * log(bi) <br />
+<br />
+Description des étapes de l'analyse de l'algorithme BiasedBinarySearch : <br />
+L(n) = 1 + an / (n +1) * L(an) + bn / (n + 1) L(bn), avec an = floor(n/4) + 1 et bn = ceil(3n/4) et L(0) = 0. <br />
+L(n) ~ lambda * log(n) avec lambda = 4/(4 log(4) - 3 log(3)) ± 1.78. <br />
+<br />
+Il est impossible de transformer le prédicteur en chaîne de Markov, car la probabilité an / (n + 1) et bn / (n + 1) ne sont plus fixées (elles dépendent de n). <br />
+En considérant, an/(n+1) = 1/4 + O(1/n) et bn/(n + 1) = 3/4 + O(1/n), cette chaîne de Markov devrait fournir une bonne approximation du nombre de mispredictions avec le théorème ergodique. <br />
+Une manière simple de prouver cela formellement est d'utiliser un arbre de décomposition T associé aux algorithmes de recherche. <br />
+Si l'entrée est de taille n, alors sa racine est labelisée (0, n) et chaque noeud correspond à une valeur possible de d et f pendant une boucle de l'algorithme. Les feuilles sont les paires (i,i) pour i appartenant à {0, ..., n}, ils sont identifiés avec la sortie de l'algorithme en {0, ..., n}. <br />
+Il y a une arête directe entre (d, f) et (d', f') chaque fois que les variables d et f peuvent être modifiéesd en d' et f' pendant l'itération courante de la boucle. <br />
+Une telle arête est labélisée avec la probabilité que cette mise à jour puisse arriver dans le modèle : ((f' - d' + 1) / (f - d + 1)) <br />
+Par construction suivre un chemin de puis la racine jusqu'à une feuille, en choississant à droite ou à gauche en observant les probabilités des arêtes est exactement la même chose que choisir un entier uniformément de façon aléatoire entre {0, ..., n}. <br />
+u = (u0, u1, ...) est une suite infinie d'éléments de [0, 1] pris aléatoirement uniformément et indépendamment. <br />
+On associe à U le Pathn(T, u) en T, où, à chaque étape i, on peut aller à gauche si ui est plus petit que la probabilité d'arête vers le fils gauche et à la droite sinon. <br />
+Ln(T,u) est la longueur de Pathn(T,u) et Pathn(I, u) est le chemin qui suit les valeurs de u dans un arbre infini idéal I où l'on va à gauche avec une probabilité de 1/4 et à droite avec une probabilité de 3/4. <br />
+<br />
+Lemme 5 : La probabilité que Pathn(T, u) et Pathn(I, u) diffèrent à l'une des (Ln(T, u) - sqrt(log(n))) étapes est de O(1/log(n)). <br />
+<br />

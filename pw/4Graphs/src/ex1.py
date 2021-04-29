@@ -2,7 +2,8 @@
 # -*- coding: utf-8 -*-
 
 from matriceadjacence import *
-# from graphviz import *
+from pygraphviz import *
+from graphviz import *
 
 def determine_combination(val) :
     res = []
@@ -23,6 +24,7 @@ def construct_4_graphs() :
     Supposed to construct the strongly connected 4-states graph.
     """
     listG = []
+    dot = Digraph(comment='The Round Table')
     for lst in determine_combination(6) :
         G = MatriceAdjacence(4)
         G.ajouter_aretes([(0, 0), (3, 3)])
@@ -56,11 +58,11 @@ def main() :
     """
     listG = construct_4_graphs()
     for i in range(len(listG)) :
-        print(export_dot(listG[i], i))
-    print(determine_combination(6))
-    # tmp = export_dot(G, 0)
-    # s = Source(tmp, filename="graph.dot", format="png")
-    # s.view()
+        tmp = export_dot(listG[i], i)
+        print(tmp)
+#        s = Source(tmp, filename="graph.gv", format="png")
+#        s.view()
+#    print(determine_combination(6))
 
 
 
