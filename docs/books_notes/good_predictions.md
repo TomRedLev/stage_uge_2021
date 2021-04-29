@@ -137,7 +137,7 @@ Théorème ergodique : <br />
 Considérons (M, Pi0) une chaîne primitive et apériodique de Markov sur un ensemble fini S.
 Pi est une distribution stationnaire. <br />
 E est l'ensemble d'arêtes de M, qui est un ensemble de paires (i, j) appartenant à S^2 tel que M(i, j) > 0. <br />
-Pour n un nombre intégral supérieur ou égal à 0, Ln est une variable aléatoire sur les nombres intégraux supérieurs ou égaux à 0, tels que la limite de n tend vers 0 est E[Ln] = +inf. <br />
+Pour n un nombre entier supérieur ou égal à 0, Ln est une variable aléatoire sur les nombres entiers supérieurs ou égaux à 0, tels que la limite de n tend vers 0 est E[Ln] = +inf. <br />
 Xn est une variable aléatoire qui compte le nombre d'arêtes dans E qui sont utilisés pendant un parcours aléatoire de longueur Ln dans M (en commençant de la distribution initiale Pi0. <br />
 L'équivalence asymptotique est donc : E[Xn] ~E[Ln] * (sum(Pi(i)) pour (i, j) appartenant à E ) * M(i,j). <br />
 <br />
@@ -212,4 +212,62 @@ On associe à U le Pathn(T, u) en T, où, à chaque étape i, on peut aller à g
 Ln(T,u) est la longueur de Pathn(T,u) et Pathn(I, u) est le chemin qui suit les valeurs de u dans un arbre infini idéal I où l'on va à gauche avec une probabilité de 1/4 et à droite avec une probabilité de 3/4. <br />
 <br />
 Lemme 5 : La probabilité que Pathn(T, u) et Pathn(I, u) diffèrent à l'une des (Ln(T, u) - sqrt(log(n))) étapes est de O(1/log(n)). <br />
+<br />
+L'algorithme BiasedBinarySearch fonctionne presque de la façon idéale, pour la plupart des itérations dans la boucle principale, et l'estimation en terme d'erreur est assez précise. <br />
+Ceci est suffisant pour prouver que la version idéale est une approximation correcte du premier ordre du nombre de mispredictions. <br />
+La même construction est réalisée pour les trois algorithmes. <br />
+Avec un compteur saturé à 2-bit, on a Mu(1/4) = 3/10 et Mu(1/3) = 2/5, soit E[Cn] / log(n) et E[Mn] / log(n) est autour de : <br />
+BinarySearch : 1.44, 0.72 <br />
+BiasedBinarySearch : 1.78, 0.53 <br />
+SkewSearch : 1.68, 0.58 <br />
+<br />
+Cn et Mn sont les nombres de comparaisons et de mispredictions réalisées dans le modèle établi : <br />
+BinarySearch : E[Cn] = log(n) / log(2) ; E[Mn] = log(n)/(2 log(2)) <br />
+BiasedBinarySearch : E[Cn] = 4 * log(n) / (4 log(4) - 3 log(3)) ; E[Mn] = Mu(1/4) * E[Cn] <br />
+SkewSearch : E[Cn] = 7 * log(n) / (6 log(2)); <br />
+<br />
+
+### Analyse du prédicteur global de SkewSearch :
+
+Le prédicteur de chaque entrée est un compteur saturé à 2-bits. <br />
+Ce n'est pas le seul choix possible en tant que prédicteur global, mais il est assez simple sans être trivial. <br />
+L'analyse est menée dans un framework idéalisé pour ressembler au vrai cas, tout en évitant les effets dûs aux nombres entiers. <br />
+Seule considération des suites de Taken/Not Taken produites par les deux tests conditionnels de SkewSearch. <br />
+On ne considère pas le test du while, car il ne sera pris que dans la dernière étape (et cela complexifierait le prédicteur sans ajouter d'informations utiles). <br />
+Une trace de l'exécution de l'algorithme sera un mot non-vide de l'alphabet {0, 1}. <br />
+Considération possible avec l'automate Aif, main => pris avec une probabilité de 1/4 et nested avec une probabilité de 1/3. <br />
+L'automate se transforme facilement en chaîne de Markov en utilisant les probabilités de transition.
+Le vecteur stationnaire Piif satisfait : Piif(main) = 4/7 et Piif(nested) = 3/7. <br />
+<br />
+Dans la table globale, seul est enregistré les historiques des conditionnelles main et nested. <br />
+l représente la longueur de l'historique (un nombre de bits pair). <br />
+Un historique h est comme un mot binaire de longueur l. <br />
+0^l est l'historique fait de 0 seulement. <br />
+<br />
+Quand une conditionnelle est testé à un moment t, le prédicteur utilise l'entrée à la position h[t] pour faire sa prédiction. <br />
+Pour suivre l'évolution à un temps t + 1, on peut uniquement garder la traque de la table d'historique Tt, l'historique courant et quelle conditionnelle IFt est étudiée. <br />
+Garder IFt est essentiel pour pouvoir calculer la probabilité de la prochaine sortie (0 ou 1). <br />
+On peut en déduire une chaîne de Markov (Mup) pour les mises à jour dans l'historique. <br />
+Depuis Mup, on peut théoriquement estimé le nombre de mispredictions. <br />
+Problème : Piup = O(m^3) avec m le nombre d'états de Mup, et le nombre d'états est exponentiel en l, même en retirant les états non-atteints. <br />
+h appartient à B^l un historique qui n'est pas égal à 0^l. Il y a au moins un 1 dans h. <br />
+Comme lire un 1 envoie toujours dans l'état main de l'automate Aif, on sait que la condition IFt observé vient d'ajouter une occurence de h au moment t. <br />
+On sait donc que la probabilité d'avoir un 0 ou un 1 à t+1, sachant que ht = h. <br />
+Chaque entrée de h ≠ 0^l dans la table T agit comme un compteur saturé à 2-bits ayant ses probabilités fixées, telles qu'il y a une probabilité de 1/4 pour les historiques associés au main et 1/3 pour les historiques associés à nested. <br />
+h = 0^l concentre toutes les différences entre les prédicteurs globaux et locaux. <br />
+Ce qui arrive pour l'entrée 0^l est bien décrite par l'automate de paires (s,i) où s est un état du prédicteur et i la condition courante. Cet automate peut être transformé en chaîne de Markov, et le théorème ergodique permet d'obtenir une estimation précise du nombre de mispredictions. <br />
+<br />
+Le nombre moyen de mispredictions provoquées pendant l'exécution de SkewSearch dans un tableau de taille n donné en entrée est asymptotiquement équivalent à (12/35 + 1/(592*2^l)) * E[Cn]. <br />
+<br />
+D'après le théorème 6, avec l'utilisation d'un predicteur à 2-bit local à chaque condition, le nombre de mispredictions est asymptotiquement équivalent à 12/35 E[Cn]. <br />
+La différence entre le prédicteur global est vraiment très petite, ce qui n'est pas surprenant car il n'y a une différence que lorsque l'historique est 0^l. <br />
+S'il y avait une compétition entre le prédicteur global et un prédicteur local plus précis (Ex : compteur saturé à 3-bit), le prédicteur local obtiendrait de meilleures performances. <br />
+Cela peut être un peu perturbé par le producteur global car le selecteur dynamique qui choisit entre les 2 peut choisir le prédicteur global des fois. <br />
+<br />
+
+## 6 - Conclusion :
+Propositions de versions déséquilibrées predictor-friendly de deux algorithmes classiques (Exponentiation rapide et recherche binaire). <br />
+En utilisant une estimation précise du nombre attendu de mispredictions, cela a pu montrer que les algorithmes proposés dans cet article sont intéressant à considérer lorsque le coût de comparaison est raisonnable comparé au coût de misprediction. C'est le cas pour les structures de données primaires. <br />
+Ces résultats théoriques, soutenu par des expériences, montre qu'il est intéressant de s'intéresser plus particulièrement à cette fonctionnalité dans les ordinateurs modernes pour la construction et l'analyse d'algorithmes. <br />
+Prendre les branches de prédictions en compte peuvent amener à des améliorations remarquables, même sur des algorithmes classiques. <br />
 <br />
