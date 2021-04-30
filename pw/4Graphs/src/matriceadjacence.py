@@ -325,6 +325,25 @@ class MatriceAdjacence(object):
                 if (self._matrice_adjacence[sommet][i] == 1) :
                     list.append(i)
         return list
+        
+    # TODO
+    def check_entrees(self) :
+        """
+        Renvoie True si chaque sommet a une arête entrante.
+
+        >>> G = MatriceAdjacence()
+        >>> G.ajouter_aretes([(0, 1), (1, 0)])
+        >>> G.check_entrees()
+        True
+        """
+        lstmp = [0 * self.nombre_sommets() for _ in range(self.nombre_sommets())]
+        for lst in self._matrice_adjacence :
+            for i in range(len(lst)) :
+                if lst[i] == 1 :
+                    lstmp[i] = 1
+        return lstmp == [1 * 1 for _ in range(self.nombre_sommets())]
+    
+        
 
 
 def export_dot(graphe, num):
@@ -344,13 +363,13 @@ def export_dot(graphe, num):
     2 -> 3;
     }
     """
-    graph = "graph graph" + str(num) +" {" + '\n'
+    graph = "graph graph" + str(num) +" {\n"
     for sommet in graphe.sommets():
-        graph = graph + str(sommet) + ";" + '\n'
+        graph = graph + str(sommet) + ";\n"
     for boucle in graphe.boucles():
-        graph = graph + str(boucle[0]) + " -> " + str(boucle[1]) + ";" + '\n'
+        graph = graph + str(boucle[0]) + " -> " + str(boucle[1]) + ";\n"
     for arete in graphe.aretes():
-        graph = graph + str(arete[0]) + " -> " + str(arete[1]) + ";" + '\n'
+        graph = graph + str(arete[0]) + " -> " + str(arete[1]) + ";\n"
     graph = graph + "}"
     return graph
 

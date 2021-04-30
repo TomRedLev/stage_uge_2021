@@ -63,6 +63,8 @@ def tarjan(G) :
     for sommet in G.sommets() :
         if lst[sommet][1] == None :
             parcours(G, lst, num, p, partition, sommet)
+#        if (len(partition) > 1) :
+#            return partition
     return partition
 
 
@@ -73,18 +75,19 @@ def main() :
     """
     k = int(input("Insert the value k of the k-graphs you want to generate : "))
     i = 0
+    f = open("graphs.gv", "w")
     for combi in determine_combinations(k) :
         for permut in set(map(lambda x: tuple(x),permutations(combi, len(combi)))) :
             G = construct_graph_from_permutation(permut, k)
-            val = tarjan(G)
-            
-            if (len(tarjan(G)) == 1) :
-#                print(len(val[0]))
-#                print(permut)
-#                print(val)
-                i += 1
-                print(export_dot(G, str(i)))
-                print()
+            if (G.check_entrees()) :
+                val = tarjan(G)
+                
+                if (len(tarjan(G)) == 1) :
+    #                print(len(val[0]))
+    #                print(permut)
+    #                print(val)
+                    i += 1
+                    f.write(export_dot(G, str(i)))
 
 
 
