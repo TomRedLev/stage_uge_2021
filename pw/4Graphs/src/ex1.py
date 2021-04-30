@@ -72,14 +72,19 @@ def main() :
     Main function of the first practical work.
     """
     k = int(input("Insert the value k of the k-graphs you want to generate : "))
+    i = 0
     for combi in determine_combinations(k) :
         for permut in set(map(lambda x: tuple(x),permutations(combi, len(combi)))) :
             G = construct_graph_from_permutation(permut, k)
-            # val = tarjan(G)
+            val = tarjan(G)
             
-            if (len(tarjan(G)[0]) == 1) :
-                print(export_dot(G, "0"))
-    
+            if (len(tarjan(G)) == 1) :
+#                print(len(val[0]))
+#                print(permut)
+#                print(val)
+                i += 1
+                print(export_dot(G, str(i)))
+                print()
 
 
 
