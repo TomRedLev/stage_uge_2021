@@ -4,51 +4,66 @@
 from matriceadjacence import *
 from pygraphviz import *
 from graphviz import *
+from itertools import combinations_with_replacement
+from itertools import permutations
 
-def determine_combination(val) :
-    res = []
-    def determine_combination_aux(val, lst_val) :
-        if sum(lst_val) > val :
-            return
-        if sum(lst_val) == val and len(lst_val) >= val-2 :
-            res.append(lst_val)
-        for i in range(0, 2) :
-            determine_combination_aux(val, lst_val + [i + 1])
-    determine_combination_aux(val, [])
-
-    return res
-
-
-def construct_4_graphs() :
+def determine_combinations(val) :
     """
-    Supposed to construct the strongly connected 4-states graph.
+    Construct all combinations_with_replacement of a val-length with values between
+    0 and val (not included).
     """
-    listG = []
-    dot = Digraph(comment='The Round Table')
-    for lst in determine_combination(6) :
-        G = MatriceAdjacence(4)
-        G.ajouter_aretes([(0, 0), (3, 3)])
-        i = 0
-        reverse = False
-        # Doit être repensé
-        if (len(lst)%2 != 0 and lst[len(lst)//2] == 2) :
-            continue
-        if (len(lst)%2 == 0 and (sum(lst[0:len(lst)//2]) > 3 or sum(lst[len(lst)//2:]) > 3) ) :
-            continue
-        if (len(lst) == 4 and (lst[0] == lst[-1] or lst[len(lst)//2] == lst[len(lst)//2 -1])) :
-            continue
-        for elem in lst :
-            if not reverse :
-                G.ajouter_arete(i, i+elem)
-                i += elem
-            else :
-                G.ajouter_arete(i, i-elem)
-                i -= elem
-            if (i == 3) :
-                reverse = True
-        listG.append(G)
+    return combinations_with_replacement([i for i in range(val)], (val)*2)
+    
+    
+def construct_graph_from_permutation(permut, k) :
+    """
+    Supposed to construct a strongly connected k-states graph.
+    """
+    G = MatriceAdjacence(k)
+    for i in range(0, len(permut), 2) :
+        G.ajouter_aretes([(i//2, permut[i]), (i//2, permut[i+1])])
+    return G
 
-    return listG
+def tarjan(G) :
+    """
+    Take a graph and applies Tarjan Algorithm on it.
+    """
+    num = 0
+    p = []
+    partition = []
+    lst = []
+    
+    def parcours(G, lst, num, p, partition, v) :
+        lst[v][1] = num # v.num
+        lst[v][2] = num # v.numAccessible
+        num = num + 1
+        p.append(lst[v])
+        lst[v][3] = True # v.dansP
+        
+        for w in G.voisins(v) :
+            if lst[w][2] == None :
+                parcours(G, lst, num, p, partition, w)
+                lst[v][2] = min(lst[v][2], lst[w][2])
+            elif lst[w][3] == True :
+                lst[v][2] = min(lst[v][2], lst[w][1])
+        
+        if lst[v][2] == lst[v][1] :
+            c = []
+            if p != [] :
+                while True :
+                    w = p.pop()
+                    w[3] = False
+                    c.append(w)
+                    if (w != lst[v] or p == []) :
+                        break
+            partition.append(c)
+    
+    for sommet in G.sommets() :
+        lst.append([sommet, None, None, False])
+    for sommet in G.sommets() :
+        if lst[sommet][1] == None :
+            parcours(G, lst, num, p, partition, sommet)
+    return partition
 
 
 
@@ -56,13 +71,15 @@ def main() :
     """
     Main function of the first practical work.
     """
-    listG = construct_4_graphs()
-    for i in range(len(listG)) :
-        tmp = export_dot(listG[i], i)
-        print(tmp)
-#        s = Source(tmp, filename="graph.gv", format="png")
-#        s.view()
-#    print(determine_combination(6))
+    k = int(input("Insert the value k of the k-graphs you want to generate : "))
+    for combi in determine_combinations(k) :
+        for permut in set(map(lambda x: tuple(x),permutations(combi, len(combi)))) :
+            G = construct_graph_from_permutation(permut, k)
+            # val = tarjan(G)
+            
+            if (len(tarjan(G)[0]) == 1) :
+                print(export_dot(G, "0"))
+    
 
 
 
