@@ -31,7 +31,7 @@ class MatriceAdjacence(object):
             self.ajouter_sommet()
         while (self.contient_sommet(destination) != True) :
             self.ajouter_sommet()
-        self._matrice_adjacence[source][destination] = p
+        self._matrice_adjacence[source][destination] += p
 
     def ajouter_aretes(self, iterable):
         """
@@ -372,6 +372,49 @@ def export_dot(graphe, num):
         graph = graph + str(arete[0]) + " -> " + str(arete[1]) + ";\n"
     graph = graph + "}"
     return graph
+
+def tarjan(G) :
+    """
+    Take a graph and applies Tarjan Algorithm on it.
+    """
+    num = 0
+    p = []
+    partition = []
+    lst = []
+    
+    def parcours(G, lst, num, p, partition, v) :
+        lst[v][1] = num # v.num
+        lst[v][2] = num # v.numAccessible
+        num = num + 1
+        p.append(lst[v])
+        lst[v][3] = True # v.dansP
+        
+        for w in G.voisins(v) :
+            if lst[w][2] == None :
+                parcours(G, lst, num, p, partition, w)
+                lst[v][2] = min(lst[v][2], lst[w][2])
+            elif lst[w][3] == True :
+                lst[v][2] = min(lst[v][2], lst[w][1])
+        
+        if lst[v][2] == lst[v][1] :
+            c = []
+            if p != [] :
+                while True :
+                    w = p.pop()
+                    w[3] = False
+                    c.append(w)
+                    if (w != lst[v] or p == []) :
+                        break
+            partition.append(c)
+    
+    for sommet in G.sommets() :
+        lst.append([sommet, None, None, False])
+    for sommet in G.sommets() :
+        if lst[sommet][1] == None :
+            parcours(G, lst, num, p, partition, sommet)
+#        if (len(partition) > 1) :
+#            return partition
+    return partition
 
 
 def main():

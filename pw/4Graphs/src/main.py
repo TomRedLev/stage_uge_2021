@@ -27,49 +27,6 @@ def construct_graph_from_permutation(permut, k, p) :
         G.ajouter_aretes([(i//2, permut[i], p), (i//2, permut[i+1], 1-p)])
     return G
 
-def tarjan(G) :
-    """
-    Take a graph and applies Tarjan Algorithm on it.
-    """
-    num = 0
-    p = []
-    partition = []
-    lst = []
-    
-    def parcours(G, lst, num, p, partition, v) :
-        lst[v][1] = num # v.num
-        lst[v][2] = num # v.numAccessible
-        num = num + 1
-        p.append(lst[v])
-        lst[v][3] = True # v.dansP
-        
-        for w in G.voisins(v) :
-            if lst[w][2] == None :
-                parcours(G, lst, num, p, partition, w)
-                lst[v][2] = min(lst[v][2], lst[w][2])
-            elif lst[w][3] == True :
-                lst[v][2] = min(lst[v][2], lst[w][1])
-        
-        if lst[v][2] == lst[v][1] :
-            c = []
-            if p != [] :
-                while True :
-                    w = p.pop()
-                    w[3] = False
-                    c.append(w)
-                    if (w != lst[v] or p == []) :
-                        break
-            partition.append(c)
-    
-    for sommet in G.sommets() :
-        lst.append([sommet, None, None, False])
-    for sommet in G.sommets() :
-        if lst[sommet][1] == None :
-            parcours(G, lst, num, p, partition, sommet)
-#        if (len(partition) > 1) :
-#            return partition
-    return partition
-
 
 
 def main() :
@@ -98,6 +55,7 @@ def main() :
 #                    print(permut)
                     f.write(export_dot(G, str(i)))
                     f.write("\n")
+                    print(G._matrice_adjacence)
                     i += 1
             cmpt += 1
     print(str(perf_counter() - time_perf) + " seconds to run the generation of strongly connected " + str(k) + "-states graphs.")
