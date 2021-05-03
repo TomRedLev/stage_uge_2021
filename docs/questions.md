@@ -11,3 +11,6 @@ Espace d'états E d'une chaîne de Markov X. <br />
 Dans cette situation, on étudie les chaînes de Markov à 4 états. <br />
 On peut établir la matrice de transition P, telle que : ![matrice](https://bit.ly/2QH1AuW) <br />
 
+## Génération des graphes :
+Complexité en O(2^(n^2)) pour l'instant, sûrement des solutions pour diminuer la complexité.
+

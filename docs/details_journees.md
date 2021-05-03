@@ -19,6 +19,15 @@ Tentative d'installation de PAPI (grand raté, autre programme existant avec le 
 
 ## Jeudi 29 Avril 2021 :
 Fin de lecture détaillée de l'article "Good Predictions are Worth a Few Comparisons". <br />
+Continuation de la création des graphes. <br />
 <br />
 
+## Vendredi 30 Avril 2021 :
+Reprise depuis le début du code de création des graphes à k-états fortement connexes. <br />
+Lecture de "Analysis of The OGeometric". <br />
+<br />
+
+## Lundi 03 Mai 2021 :
+Implémentation des probabilités sur les arêtes des graphes. <br />
+Relecture de "A survey of techniques For Dynamic Branch Predictions". <br />
 
