@@ -17,7 +17,7 @@ class MatriceAdjacence(object):
         """
         self._matrice_adjacence = [[0] * num for _ in range(num)]
 
-    def ajouter_arete(self, source, destination):
+    def ajouter_arete(self, source, destination, p):
         """
         Ajoute l'arête {source, destination} au graphe, en créant les
         sommets manquants le cas échéant.
@@ -31,7 +31,7 @@ class MatriceAdjacence(object):
             self.ajouter_sommet()
         while (self.contient_sommet(destination) != True) :
             self.ajouter_sommet()
-        self._matrice_adjacence[source][destination] = 1
+        self._matrice_adjacence[source][destination] = p
 
     def ajouter_aretes(self, iterable):
         """
@@ -47,7 +47,7 @@ class MatriceAdjacence(object):
         for elem in iterable :
             if elem[0] >= 0 :
                 if elem[1] >= 0 :
-                    self.ajouter_arete(elem[0], elem[1])
+                    self.ajouter_arete(elem[0], elem[1], elem[2])
 
     def ajouter_sommet(self):
         """
@@ -90,7 +90,7 @@ class MatriceAdjacence(object):
             j = 0
             while j < len(self._matrice_adjacence[i]) :
                 if (i != j) :
-                    if (self._matrice_adjacence[i][j] == 1) :
+                    if (self._matrice_adjacence[i][j] != 0) :
                         lst.append((i, j))
                 j += 1
             i += 1
@@ -112,7 +112,7 @@ class MatriceAdjacence(object):
             j = 0
             while j < len(self._matrice_adjacence[i]) :
                 if (i == j) :
-                    if (self._matrice_adjacence[i][j] == 1) :
+                    if (self._matrice_adjacence[i][j] != 0) :
                         lst.append((i, j))
                 j += 1
             i += 1
@@ -130,7 +130,7 @@ class MatriceAdjacence(object):
         if (self.contient_sommet(u) == True) :
             i = 0
             if (v < len(self._matrice_adjacence[u])) :
-                if (self._matrice_adjacence[u][v] == 1) :
+                if (self._matrice_adjacence[u][v] != 0) :
                     return True
         return False
 
@@ -162,7 +162,7 @@ class MatriceAdjacence(object):
         if (self.contient_sommet(sommet) == True) :
             i = 0
             while (i < len(self._matrice_adjacence[sommet])) :
-                if (self._matrice_adjacence[sommet][i] == 1) :
+                if (self._matrice_adjacence[sommet][i] != 0) :
                     count += 1
                 i += 1
         return count
@@ -179,7 +179,7 @@ class MatriceAdjacence(object):
         count = 0
         for i in range(self.nombre_sommets()) :
             for j in range(len(self._matrice_adjacence[i])) :
-                if (self._matrice_adjacence[i][j] == 1) :
+                if (self._matrice_adjacence[i][j] != 0) :
                     count += 1
         return count
 
@@ -197,7 +197,7 @@ class MatriceAdjacence(object):
         """
         count = 0
         for i in range(self.nombre_sommets()) :
-            if (self._matrice_adjacence[i][i] == 1) :
+            if (self._matrice_adjacence[i][i] != 0) :
                 count += 1
         return count
 
@@ -306,7 +306,7 @@ class MatriceAdjacence(object):
             for j in range(self.nombre_sommets()) :
                 for k in range(len(self._matrice_adjacence[j])) :
                     if i == k :
-                        if 1 == self._matrice_adjacence[j][k] :
+                        if self._matrice_adjacence[j][k] != 0 :
                             lst.append((j, k))
         return lst
 
@@ -322,7 +322,7 @@ class MatriceAdjacence(object):
         list = []
         if (self.contient_sommet(sommet) == True) :
             for i in range(len(self._matrice_adjacence[sommet])) :
-                if (self._matrice_adjacence[sommet][i] == 1) :
+                if (self._matrice_adjacence[sommet][i] != 0) :
                     list.append(i)
         return list
         
@@ -339,7 +339,7 @@ class MatriceAdjacence(object):
         lstmp = [0 * self.nombre_sommets() for _ in range(self.nombre_sommets())]
         for lst in self._matrice_adjacence :
             for i in range(len(lst)) :
-                if lst[i] == 1 :
+                if lst[i] != 0 :
                     lstmp[i] = 1
         return lstmp == [1 * 1 for _ in range(self.nombre_sommets())]
     
