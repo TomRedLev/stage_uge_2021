@@ -23,7 +23,7 @@ class MatriceAdjacence(object):
         sommets manquants le cas échéant.
 
         >>> G = MatriceAdjacence(2)
-        >>> G.ajouter_arete(0, 1)
+        >>> G.ajouter_arete(0, 1, 1)
         >>> G._matrice_adjacence
         [[0, 1], [0, 0]]
         """
@@ -40,7 +40,7 @@ class MatriceAdjacence(object):
         que des couples de naturels.
 
         >>> G = MatriceAdjacence(2)
-        >>> G.ajouter_aretes([(0, 1), (0, 3)])
+        >>> G.ajouter_aretes([(0, 1, 1), (0, 3, 1)])
         >>> G._matrice_adjacence
         [[0, 1, 0, 1], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0]]
         """
@@ -80,7 +80,7 @@ class MatriceAdjacence(object):
         c'est-à-dire les arêtes de la forme (u, u)).
 
         >>> G = MatriceAdjacence(2)
-        >>> G.ajouter_aretes([(0, 1), (0, 3)])
+        >>> G.ajouter_aretes([(0, 1, 1), (0, 3, 1)])
         >>> G.aretes()
         [(0, 1), (0, 3)]
         """
@@ -102,7 +102,7 @@ class MatriceAdjacence(object):
         sommet à lui-même.
 
         >>> G = MatriceAdjacence(2)
-        >>> G.ajouter_aretes([(0, 0), (3, 3)])
+        >>> G.ajouter_aretes([(0, 0, 1), (3, 3, 1)])
         >>> G.boucles()
         [(0, 0), (3, 3)]
         """
@@ -123,7 +123,7 @@ class MatriceAdjacence(object):
         Renvoie True si l'arête {u, v} existe, False sinon.
 
         >>> G = MatriceAdjacence(2)
-        >>> G.ajouter_aretes([(0, 1), (3, 3)])
+        >>> G.ajouter_aretes([(0, 1, 1), (3, 3, 1)])
         >>> G.contient_arete(0, 1)
         True
         """
@@ -154,7 +154,7 @@ class MatriceAdjacence(object):
         qu'il possède.
 
         >>> G = MatriceAdjacence(2)
-        >>> G.ajouter_aretes([(0, 1), (0, 3)])
+        >>> G.ajouter_aretes([(0, 1, 1), (0, 3, 1)])
         >>> G.degre(0)
         2
         """
@@ -172,7 +172,7 @@ class MatriceAdjacence(object):
         Renvoie le nombre d'arêtes du graphe.
 
         >>> G = MatriceAdjacence(2)
-        >>> G.ajouter_aretes([(0, 1), (0, 3), (1, 3)])
+        >>> G.ajouter_aretes([(0, 1, 1), (0, 3, 1), (1, 3, 1)])
         >>> G.nombre_aretes()
         3
         """
@@ -188,10 +188,10 @@ class MatriceAdjacence(object):
         Renvoie le nombre d'arêtes de la forme {u, u}.
 
         >>> G = MatriceAdjacence(2)
-        >>> G.ajouter_aretes([(0, 1), (0, 3), (1, 3)])
+        >>> G.ajouter_aretes([(0, 1, 1), (0, 3, 1), (1, 3, 1)])
         >>> G.nombre_boucles()
         0
-        >>> G.ajouter_aretes([(0, 0), (3, 3)])
+        >>> G.ajouter_aretes([(0, 0, 1), (3, 3, 1)])
         >>> G.nombre_boucles()
         2
         """
@@ -217,7 +217,7 @@ class MatriceAdjacence(object):
         Retire l'arête {u, v} si elle existe; provoque une erreur sinon.
 
         >>> G = MatriceAdjacence()
-        >>> G.ajouter_aretes([(0, 0), (1, 1)])
+        >>> G.ajouter_aretes([(0, 0, 1), (1, 1, 1)])
         >>> G.retirer_arete(0, 0)
         >>> G._matrice_adjacence
         [[0, 0], [0, 1]]
@@ -237,7 +237,7 @@ class MatriceAdjacence(object):
         que des couples d'éléments (quel que soit le type du couple).
 
         >>> G = MatriceAdjacence()
-        >>> G.ajouter_aretes([(0, 0), (1, 1)])
+        >>> G.ajouter_aretes([(0, 0, 1), (1, 1, 1)])
         >>> G.retirer_aretes([(0, 0), (1, 1)])
         >>> G._matrice_adjacence
         [[0, 0], [0, 0]]
@@ -251,7 +251,7 @@ class MatriceAdjacence(object):
         Déconnecte un sommet du graphe et le supprime.
 
         >>> G = MatriceAdjacence()
-        >>> G.ajouter_aretes([(0, 1), (1, 1)])
+        >>> G.ajouter_aretes([(0, 1, 1), (1, 1, 1)])
         >>> G.retirer_sommet(0)
         >>> G._matrice_adjacence
         [[1]]
@@ -270,7 +270,7 @@ class MatriceAdjacence(object):
         les arêtes incidentes à ces sommets.
 
         >>> G = MatriceAdjacence()
-        >>> G.ajouter_aretes([(0, 1), (1, 1)])
+        >>> G.ajouter_aretes([(0, 1, 1), (1, 1, 1)])
         >>> G.retirer_sommets([1, 0])
         >>> G._matrice_adjacence
         []
@@ -297,7 +297,7 @@ class MatriceAdjacence(object):
         Renvoie le sous-graphe induit par l'itérable de sommets donné.
 
         >>> G = MatriceAdjacence()
-        >>> G.ajouter_aretes([(0, 1), (1, 2)])
+        >>> G.ajouter_aretes([(0, 1, 1), (1, 2, 1)])
         >>> G.sous_graphe_induit([0, 1])
         [(0, 1)]
         """
@@ -315,7 +315,7 @@ class MatriceAdjacence(object):
         Renvoie la liste des voisins d'un sommet.
 
         >>> G = MatriceAdjacence()
-        >>> G.ajouter_aretes([(1, 1), (1, 2)])
+        >>> G.ajouter_aretes([(1, 1, 1), (1, 2, 1)])
         >>> G.voisins(1)        
         [1, 2]
         """
@@ -332,7 +332,7 @@ class MatriceAdjacence(object):
         Renvoie True si chaque sommet a une arête entrante.
 
         >>> G = MatriceAdjacence()
-        >>> G.ajouter_aretes([(0, 1), (1, 0)])
+        >>> G.ajouter_aretes([(0, 1, 1), (1, 0, 1)])
         >>> G.check_entrees()
         True
         """
@@ -343,14 +343,21 @@ class MatriceAdjacence(object):
                     lstmp[i] = 1
         return lstmp == [1 * 1 for _ in range(self.nombre_sommets())]
     
-        
-
+    
+    
+def identity_matrix(n) :
+    """
+    Create a graph that is an identity.
+    """
+    G = MatriceAdjacence(n)
+    G.ajouter_aretes([(x, x, 1) for x in range(n)])
+    return G
 
 def export_dot(graphe, num):
     """
     Renvoie une chaîne encodant le graphe au format dot.
     >>> G = MatriceAdjacence(4)
-    >>> G.ajouter_aretes([(0,1), (1,2), (2,3)])
+    >>> G.ajouter_aretes([(0, 1, 1), (1, 2, 1), (2, 3, 1)])
     
     >>> print(export_dot(G, 0))
     graph graph0 {
