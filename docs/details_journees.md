@@ -8,7 +8,7 @@ Mise en place des graphes pour l'exercice demandé. <br />
 
 ## Mardi 27 Avril 2021 :
 Lecture et travaux pratiques autour de l'article "Good Predictions are Worth a Few Comparisons". <br />
-Lecture de Digital Design (100 pages) <br />
+Lecture de Digital Design (100 pages). <br />
 <br />
 
 ## Mercredi 28 Avril 2021 :
@@ -29,5 +29,15 @@ Lecture de "Analysis of The OGeometric". <br />
 
 ## Lundi 03 Mai 2021 :
 Implémentation des probabilités sur les arêtes des graphes. <br />
-Relecture de "A survey of techniques For Dynamic Branch Predictions". <br />
+Relecture de "Analysis of The OGeometric". <br />
+Lecture de Digital Design (100 pages). <br />
+<br />
 
+## Mardi 04 Mai 2021 : 
+Implémetation des calculs de probabilités stationnaires sur les graphes (Temps avec print des stats pour les graphes à 4 états = 686 secondes, soit 11 minutes, 620 secondes sans les prints, sûrement améliorable). <br />
+Lecture de Hennessy Patterson - Computer Architecture (100 pages). <br />
+<br />
+
+## Mercredi 05 Mai 2021 :
+Tentative d'amélioration des performances du programme de génération de graphes. <br />
+<br />

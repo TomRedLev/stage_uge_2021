@@ -348,6 +348,9 @@ class MatriceAdjacence(object):
 def identity_matrix(n) :
     """
     Create a graph that is an identity.
+    
+    >>> identity_matrix(2)._matrice_adjacence
+    [[1, 0], [0, 1]]
     """
     G = MatriceAdjacence(n)
     G.ajouter_aretes([(x, x, 1) for x in range(n)])
@@ -356,9 +359,9 @@ def identity_matrix(n) :
 def export_dot(graphe, num):
     """
     Renvoie une chaîne encodant le graphe au format dot.
+    
     >>> G = MatriceAdjacence(4)
     >>> G.ajouter_aretes([(0, 1, 1), (1, 2, 1), (2, 3, 1)])
-    
     >>> print(export_dot(G, 0))
     graph graph0 {
     0;
@@ -383,6 +386,11 @@ def export_dot(graphe, num):
 def tarjan(G) :
     """
     Take a graph and applies Tarjan Algorithm on it.
+    
+    >>> G = MatriceAdjacence(3)
+    >>> G.ajouter_aretes([(0, 1, 1), (1, 2, 1), (2, 3, 1)])
+    >>> tarjan(G)
+    [[[3, 3, 3, False], [2, 2, 2, False]], [[1, 1, 1, False]], [[0, 0, 0, False]], []]
     """
     num = 0
     p = []
@@ -390,6 +398,9 @@ def tarjan(G) :
     lst = []
     
     def parcours(G, lst, num, p, partition, v) :
+        """
+        Aux function of tarjan.
+        """
         lst[v][1] = num # v.num
         lst[v][2] = num # v.numAccessible
         num = num + 1
