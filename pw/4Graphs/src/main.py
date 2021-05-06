@@ -51,7 +51,7 @@ def calculate_stationary_stats(k, G, variables) :
     lst_eq.append(sum(variables) - 1)
 
     # print((perf_counter() - time_perf), " seconds to run calculate stationary stats.")
-    return sp.solve(lst_eq)
+    return sp.solve(lst_eq, simplify=False, minimal=True) # Flag rational=False can provocate some exceptions but get the program to run 3* faster.
 
 
 def generate_variables(k) :
@@ -74,8 +74,8 @@ def main() :
     {q3: 0.0718232044198895, q2: 0.0441988950276243, q1: 0.883977900552486}
     """
     # Functions tests :
-    # import doctest
-    # doctest.testmod()
+    import doctest
+    doctest.testmod()
 
     # Variables :
     k = int(input("Insert the value k of the k-graphs you want to generate : "))
@@ -83,6 +83,7 @@ def main() :
     i = 0
     f = open("graphs.gv", "w")
     cmpt = 0
+    cmpt_rates = 0
     variables = generate_variables(k)
 
     # Starting the timer :
@@ -99,14 +100,17 @@ def main() :
                     f.write(export_dot(G, str(i)))
                     f.write("\n")
                     res = calculate_stationary_stats(k, G, variables)
+                    if res == [] :
+                        cmpt_rates += 1
                     # Comment to save a few seconds :
                     print("graph", i, " : ", res)
                     i += 1
 
             cmpt += 1
 
-    print((perf_counter() - time_perf), " seconds to run the generation of strongly connected ", k, "- states graphs.")
-    print("Number of loops : ", cmpt)
+    print((perf_counter() - time_perf), "seconds to run the generation of strongly connected", k, "- states graphs.")
+    print("Number of loops :", cmpt)
+    print("Number of missing solutions :", cmpt_rates)
     f.close()
 
 
