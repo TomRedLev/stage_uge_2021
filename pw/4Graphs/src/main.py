@@ -7,6 +7,7 @@ from itertools import permutations
 from time import *
 from numpy import *
 import sympy as sp
+import doctest
 
 def determine_combinations(val) :
     """
@@ -38,11 +39,11 @@ def construct_graph_from_permutation(permut, k, p) :
     return G
 
 
-def calculate_stationary_stats(k, G, variables) :
+def calculate_stationary_stats(k, G, variables, rational_activation) :
     """
     Calculate the stationary stats for a given graph.
 
-    >>> calculate_stationary_stats(2, construct_graph_from_permutation((0, 1, 0, 1), 2, 0.25), generate_variables(2))
+    >>> calculate_stationary_stats(2, construct_graph_from_permutation((0, 1, 0, 1), 2, 0.25), generate_variables(2), False)
     {q2: 0.750000000000000, q1: 0.250000000000000}
     """
     # time_perf = perf_counter()
@@ -51,7 +52,7 @@ def calculate_stationary_stats(k, G, variables) :
     lst_eq.append(sum(variables) - 1)
 
     # print((perf_counter() - time_perf), " seconds to run calculate stationary stats.")
-    return sp.solve(lst_eq, simplify=False, minimal=True) # Flag rational=False can provocate some exceptions but get the program to run 3* faster.
+    return sp.solve(lst_eq, simplify=False, minimal=True, rational=rational_activation) # Flag rational=False can provocate some exceptions but get the program to run 3* faster.
 
 
 def generate_variables(k) :
@@ -70,20 +71,16 @@ def main() :
     >>> G = MatriceAdjacence(3)
     >>> G.ajouter_aretes([(0, 0, 0.9), (0, 1, 0.05), (0, 2, 0.05), (1, 0, 0.7), (1, 2, 0.3), (2, 0, 0.8), (2, 2, 0.2)])
     >>> variables = sp.var("q1 q2 q3")
-    >>> calculate_stationary_stats(3, G, variables)
-    {q3: 0.0718232044198895, q2: 0.0441988950276243, q1: 0.883977900552486}
+    >>> calculate_stationary_stats(3, G, variables, True)
+    {q3: 13/181, q2: 8/181, q1: 160/181}
     """
-    # Functions tests :
-    import doctest
-    doctest.testmod()
-
     # Variables :
     k = int(input("Insert the value k of the k-graphs you want to generate : "))
     p = float(input("Insert the value p of the probability to go on a Taken branch : "))
     i = 0
     f = open("graphs.gv", "w")
     cmpt = 0
-    cmpt_rates = 0
+    cmpt_rates = 0 # Necessary if rational=False is activated
     variables = generate_variables(k)
 
     # Starting the timer :
@@ -99,8 +96,10 @@ def main() :
                 if (len(tarjan(G)) == 1) :
                     f.write(export_dot(G, str(i)))
                     f.write("\n")
-                    res = calculate_stationary_stats(k, G, variables)
+                    res = calculate_stationary_stats(k, G, variables, False)
+                    # Necessary if rational=False is activated
                     if res == [] :
+                        res = calculate_stationary_stats(k, G, variables, True)
                         cmpt_rates += 1
                     # Comment to save a few seconds :
                     print("graph", i, " : ", res)
@@ -110,10 +109,11 @@ def main() :
 
     print((perf_counter() - time_perf), "seconds to run the generation of strongly connected", k, "- states graphs.")
     print("Number of loops :", cmpt)
-    print("Number of missing solutions :", cmpt_rates)
+    print("Number of missing solutions (now catched up) :", cmpt_rates)
     f.close()
 
 
 if __name__ == "__main__":
     # execute only if run as a script
+    doctest.testmod()
     main()
