@@ -40,4 +40,9 @@ Lecture de Hennessy Patterson - Computer Architecture (100 pages). <br />
 
 ## Mercredi 05 Mai 2021 :
 Tentative d'amélioration des performances du programme de génération de graphes. <br />
+Lecture de "A survey of Techniques for Dynamic Branch Prediction" <br />
+<br />
+
+## Jeudi 06 Mai 2021 :
+Tentative d'amélioration des performances du programme de génération de graphes. <br />
 <br />
