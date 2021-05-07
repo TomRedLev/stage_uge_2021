@@ -39,20 +39,49 @@ def construct_graph_from_permutation(permut, k, p) :
     return G
 
 
-def calculate_stationary_stats(k, G, variables, rational_activation) :
+def calculate_stationary_probas(k, G, variables, rational_activation, not_solved) :
     """
     Calculate the stationary stats for a given graph.
 
-    >>> calculate_stationary_stats(2, construct_graph_from_permutation((0, 1, 0, 1), 2, 0.25), generate_variables(2), False)
+    >>> calculate_stationary_probas(2, construct_graph_from_permutation((0, 1, 0, 1), 2, 0.25), generate_variables(2), False, False)
     {q2: 0.750000000000000, q1: 0.250000000000000}
     """
     # time_perf = perf_counter()
 
     lst_eq = dot(array(variables), subtract(array(identity_matrix(k)._matrice_adjacence), array(G._matrice_adjacence))).tolist()
     lst_eq.append(sum(variables) - 1)
-
+    if (not_solved == True) :
+        return lst_eq
     # print((perf_counter() - time_perf), " seconds to run calculate stationary stats.")
+    
     return sp.solve(lst_eq, simplify=False, minimal=True, rational=rational_activation) # Flag rational=False can provocate some exceptions but get the program to run 3* faster.
+
+
+def test_stationary_probas(k, G, variables) :
+    """
+    Test if the probabilities seems correct.
+    For now, the value of p is fixed but it will change.
+    """
+    x = [1]
+    x += [0 for i in range(1, k)]
+    M = dot(array(G._matrice_adjacence), array(G._matrice_adjacence))
+    i = 2
+    while i <= k :
+        M = dot(array(M), array(M))
+        i *= i
+    for elem in M :
+        if 0 in elem :
+            print("Not useful")
+            return
+    lst_eq = dot(array(x), M).tolist()
+    # Print the exponentiation by squaring result :
+    print([elem.subs({p:0.25}) for elem in lst_eq])
+    # Print the law of large numbers result :
+    res = calculate_stationary_probas(k, G, variables, True, True)
+    res.append(p - 0.25)
+    print(sp.solve(res))
+        
+    
 
 
 def generate_variables(k) :
@@ -63,6 +92,8 @@ def generate_variables(k) :
     (q1, q2)
     """
     return sp.var(" ".join(["q" + str(i) for i in range(1, k+1)]))
+    
+
 
 def main() :
     """
@@ -71,12 +102,13 @@ def main() :
     >>> G = MatriceAdjacence(3)
     >>> G.ajouter_aretes([(0, 0, 0.9), (0, 1, 0.05), (0, 2, 0.05), (1, 0, 0.7), (1, 2, 0.3), (2, 0, 0.8), (2, 2, 0.2)])
     >>> variables = sp.var("q1 q2 q3")
-    >>> calculate_stationary_stats(3, G, variables, True)
+    >>> calculate_stationary_probas(3, G, variables, True, False)
     {q3: 13/181, q2: 8/181, q1: 160/181}
     """
     # Variables :
     k = int(input("Insert the value k of the k-graphs you want to generate : "))
-    p = float(input("Insert the value p of the probability to go on a Taken branch : "))
+    # p = float(input("Insert the value p of the probability to go on a Taken branch : "))
+    p = sp.var("p")
     i = 0
     f = open("graphs.gv", "w")
     cmpt = 0
@@ -96,13 +128,14 @@ def main() :
                 if (len(tarjan(G)) == 1) :
                     f.write(export_dot(G, str(i)))
                     f.write("\n")
-                    res = calculate_stationary_stats(k, G, variables, False)
+                    res = calculate_stationary_probas(k, G, variables, False, False)
                     # Necessary if rational=False is activated
                     if res == [] :
-                        res = calculate_stationary_stats(k, G, variables, True)
+                        res = calculate_stationary_probas(k, G, variables, True, False)
                         cmpt_rates += 1
                     # Comment to save a few seconds :
                     print("graph", i, " : ", res)
+                    test_stationary_probas(k, G, variables)
                     i += 1
 
             cmpt += 1
