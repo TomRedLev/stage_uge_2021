@@ -29,13 +29,9 @@ def construct_graph_from_permutation(permut, k, p) :
     >>> construct_graph_from_permutation((0, 1, 0, 1), 2, 0.25)._matrice_adjacence
     [[0.25, 0.75], [0.25, 0.75]]
     """
-    # time_perf = perf_counter()
-
     G = MatriceAdjacence(k)
     for i in range(0, len(permut), 2) :
         G.ajouter_aretes([(i//2, permut[i], p), (i//2, permut[i+1], 1-p)])
-
-    # print((perf_counter() - time_perf), " seconds to construct a graph from a permutation.")
     return G
 
 
@@ -46,15 +42,13 @@ def calculate_stationary_probas(k, G, variables, rational_activation, not_solved
     >>> calculate_stationary_probas(2, construct_graph_from_permutation((0, 1, 0, 1), 2, 0.25), generate_variables(2), False, False)
     {q2: 0.750000000000000, q1: 0.250000000000000}
     """
-    # time_perf = perf_counter()
 
     lst_eq = dot(array(variables), subtract(array(identity_matrix(k)._matrice_adjacence), array(G._matrice_adjacence))).tolist()
     lst_eq.append(sum(variables) - 1)
     if (not_solved == True) :
         return lst_eq
-    # print((perf_counter() - time_perf), " seconds to run calculate stationary stats.")
     
-    return sp.solve(lst_eq, simplify=False, minimal=True, rational=rational_activation) # Flag rational=False can provocate some exceptions but get the program to run 3* faster.
+    return sp.solve(lst_eq, simplify=False, minimal=True, rational=rational_activation)
 
 
 def test_stationary_probas(k, G, variables) :
@@ -107,7 +101,6 @@ def main() :
     """
     # Variables :
     k = int(input("Insert the value k of the k-graphs you want to generate : "))
-    # p = float(input("Insert the value p of the probability to go on a Taken branch : "))
     p = sp.var("p")
     i = 0
     f = open("graphs.gv", "w")
@@ -144,6 +137,9 @@ def main() :
     print("Number of loops :", cmpt)
     print("Number of missing solutions (now catched up) :", cmpt_rates)
     f.close()
+    
+    dot = Digraph()
+    display(dot)
 
 
 if __name__ == "__main__":

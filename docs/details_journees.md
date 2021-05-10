@@ -49,5 +49,10 @@ Lecture de "A survey of Techniques for Dynamic Branch Prediction". <br />
 <br />
 
 ## Vendredi 07 Mai 2021 :
-La variable p est maintenant une variable non fixée. <br />
+La variable p est maintenant une variable non fixée dans la construction de graphes. <br />
+Relecture de "A survey of Techniques for Dynamic Branch Prediction". <br />
+<br />
+
+## Lundi 10 Mai 2021 :
+Tentative d'amélioration des performances des tests de probabilités stationnaires. <br />
 <br />
