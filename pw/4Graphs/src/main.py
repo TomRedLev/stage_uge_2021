@@ -6,8 +6,11 @@ from itertools import combinations_with_replacement
 from itertools import permutations
 from time import *
 from numpy import *
+from colorama import *
 import sympy as sp
 import doctest
+
+
 
 def determine_combinations(val) :
     """
@@ -102,16 +105,17 @@ def integer_probabilities(k, G, variables) :
             if (isinstance(dic,dict)) :
                 for key in dic.keys() :
                     if (key != p) :
-                        print(key, ":", dic[key])
-                        print("Not taken :", sp.integrate(dic[key] * (1 - p), (p, 0, 1)))
-                        print("Taken :", sp.integrate(dic[key] * p, (p, 0, 1)))
+                        print(Fore.CYAN + str(key), ":", dic[key])
+                        print(Fore.GREEN, "Not taken :", sp.integrate(dic[key] * (1 - p), (p, 0, 1)))
+                        print(Fore.GREEN, "Taken :", sp.integrate(dic[key] * p, (p, 0, 1)))
                     else :
-                        expr = sp.solve(dic[key] - p, q2)
+                        q_val = "q" + str(k)
+                        expr = sp.solve(dic[key] - p, q_val)
                         if (len(expr) == 1) :
                             expr = expr[0]
-                            print(q2, ":", expr)
-                            print("Not taken :", sp.integrate(expr * (1 - p), (p, 0, 1)))
-                            print("Taken :", sp.integrate(expr * p, (p, 0, 1)))
+                            print(Fore.CYAN + str(q_val), ":", expr)
+                            print(Fore.GREEN, "Not taken :", sp.integrate(expr * (1 - p), (p, 0, 1)))
+                            print(Fore.GREEN, "Taken :", sp.integrate(expr * p, (p, 0, 1)))
 
     print()
 
@@ -154,14 +158,14 @@ def main() :
                         res = calculate_stationary_probas(k, G, variables, True, False)
                         cmpt_rates += 1
                     # Comment to save a few seconds :
-                    print("graph", i, " : ", res)
+                    print(Fore.BLUE + "graph", i, " : ", res)
                     # test_stationary_probas(k, G, variables) # Can be use to test the probabilities
                     integer_probabilities(k, G, variables)
                     i += 1
 
             cmpt += 1
-
-    print((perf_counter() - time_perf), "seconds to run the generation of strongly connected", k, "- states graphs.")
+    
+    print(Style.RESET_ALL + str((perf_counter() - time_perf)), "seconds to run the generation of strongly connected", k, "- states graphs.")
     print("Number of loops :", cmpt)
     print("Number of missing solutions (now catched up) :", cmpt_rates)
     f.close()
