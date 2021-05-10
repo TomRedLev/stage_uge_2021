@@ -47,7 +47,7 @@ def calculate_stationary_probas(k, G, variables, rational_activation, not_solved
     lst_eq.append(sum(variables) - 1)
     if (not_solved == True) :
         return lst_eq
-    
+
     return sp.solve(lst_eq, simplify=False, minimal=True, rational=rational_activation)
 
 
@@ -56,6 +56,7 @@ def test_stationary_probas(k, G, variables) :
     Test if the probabilities seems correct.
     For now, the value of p is fixed but it will change.
     """
+    p_val = float(input("Insert the value of the probability you want to applicate (between 0 and 1) : "))
     x = [1]
     x += [0 for i in range(1, k)]
     M = dot(array(G._matrice_adjacence), array(G._matrice_adjacence))
@@ -65,17 +66,20 @@ def test_stationary_probas(k, G, variables) :
         i *= i
     for elem in M :
         if 0 in elem :
-            print("Not useful")
+            print("Not useful\n")
             return
     lst_eq = dot(array(x), M).tolist()
     # Print the exponentiation by squaring result :
-    print([elem.subs({p:0.25}) for elem in lst_eq])
+    print("Tests probabilities : ")
+    print([elem.subs({p:p_val}) for elem in lst_eq])
     # Print the law of large numbers result :
     res = calculate_stationary_probas(k, G, variables, True, True)
-    res.append(p - 0.25)
+    res.append(p - p_val)
+    print("Probabiblities calculation : ")
     print(sp.solve(res))
-        
-    
+    print()
+
+
 
 
 def generate_variables(k) :
@@ -86,7 +90,30 @@ def generate_variables(k) :
     (q1, q2)
     """
     return sp.var(" ".join(["q" + str(i) for i in range(1, k+1)]))
-    
+
+
+def integer_probabilities(k, G, variables) :
+    """
+    """
+    res = calculate_stationary_probas(k, G, variables, True, True)
+    probas = sp.solve(res)
+    if (len(probas) == 1) :
+        for dic in probas :
+            if (isinstance(dic,dict)) :
+                for key in dic.keys() :
+                    if (key != p) :
+                        print(key, ":", dic[key])
+                        print("Not taken :", sp.integrate(dic[key] * (1 - p), (p, 0, 1)))
+                        print("Taken :", sp.integrate(dic[key] * p, (p, 0, 1)))
+                    else :
+                        expr = sp.solve(dic[key] - p, q2)
+                        if (len(expr) == 1) :
+                            expr = expr[0]
+                            print(q2, ":", expr)
+                            print("Not taken :", sp.integrate(expr * (1 - p), (p, 0, 1)))
+                            print("Taken :", sp.integrate(expr * p, (p, 0, 1)))
+
+    print()
 
 
 def main() :
@@ -128,7 +155,8 @@ def main() :
                         cmpt_rates += 1
                     # Comment to save a few seconds :
                     print("graph", i, " : ", res)
-                    test_stationary_probas(k, G, variables)
+                    # test_stationary_probas(k, G, variables) # Can be use to test the probabilities
+                    integer_probabilities(k, G, variables)
                     i += 1
 
             cmpt += 1
@@ -137,9 +165,6 @@ def main() :
     print("Number of loops :", cmpt)
     print("Number of missing solutions (now catched up) :", cmpt_rates)
     f.close()
-    
-    dot = Digraph()
-    display(dot)
 
 
 if __name__ == "__main__":
