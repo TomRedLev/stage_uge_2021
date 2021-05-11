@@ -95,8 +95,9 @@ def generate_variables(k) :
     return sp.var(" ".join(["q" + str(i) for i in range(1, k+1)]))
 
 
-def integer_probabilities(k, G, variables) :
+def integrate_probabilities(k, G, variables) :
     """
+    Make integrates calculations to determine if a state should be Taken or Not Taken.
     """
     res = calculate_stationary_probas(k, G, variables, True, True)
     probas = sp.solve(res)
@@ -160,7 +161,7 @@ def main() :
                     # Comment to save a few seconds :
                     print(Fore.BLUE + "graph", i, " : ", res)
                     # test_stationary_probas(k, G, variables) # Can be use to test the probabilities
-                    integer_probabilities(k, G, variables)
+                    integrate_probabilities(k, G, variables)
                     i += 1
 
             cmpt += 1
