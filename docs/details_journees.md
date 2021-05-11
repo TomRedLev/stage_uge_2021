@@ -55,4 +55,10 @@ Relecture de "A survey of Techniques for Dynamic Branch Prediction". <br />
 
 ## Lundi 10 Mai 2021 :
 Tentative d'amélioration des performances des tests de probabilités stationnaires. <br />
+Lecture  de Hennessy Patterson - Computer Architecture (100 pages). <br />
+<br />
+
+## Mardi 11 Mai 2021 :
+Essai de transformation des équations pour toutes les écrires en fonction de p. <br />
+Il me reste à trouver comment savoir si une variable est utilisée dans une équation. <br />
 <br />

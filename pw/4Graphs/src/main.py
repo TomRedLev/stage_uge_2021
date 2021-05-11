@@ -106,6 +106,7 @@ def integrate_probabilities(k, G, variables) :
             if (isinstance(dic,dict)) :
                 for key in dic.keys() :
                     if (key != p) :
+                        print(type(dic[key]))
                         print(Fore.CYAN + str(key), ":", dic[key])
                         print(Fore.GREEN, "Not taken :", sp.integrate(dic[key] * (1 - p), (p, 0, 1)))
                         print(Fore.GREEN, "Taken :", sp.integrate(dic[key] * p, (p, 0, 1)))
