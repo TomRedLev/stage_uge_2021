@@ -61,4 +61,9 @@ Lecture  de Hennessy Patterson - Computer Architecture (100 pages). <br />
 ## Mardi 11 Mai 2021 :
 Essai de transformation des équations pour toutes les écrires en fonction de p. <br />
 Il me reste à trouver comment savoir si une variable est utilisée dans une équation. <br />
+Lecture de Digital Design (100 pages). <br />
+<br />
+
+## Mercredi 12 Mai 2021 :
+Expressions de toutes les variables en fonction de p. <br />
 <br />

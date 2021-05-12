@@ -106,6 +106,11 @@ def integrate_probabilities(k, G, variables) :
             if (isinstance(dic,dict)) :
                 # Need to find the good variable in here to correct the bugs of the lasts graphs (in k = 3 for example)
                 q_val = sp.var("q" + str(k))
+                
+                for i in range(1, k+1) :
+                    if not (sp.var("q" + str(i)) in dic.keys()) :
+                        q_val = sp.var("q" + str(i))
+                
                 expr = sp.solve(dic[p] - p, q_val)
                 if (len(expr) == 1) :
                     expr = expr[0]
