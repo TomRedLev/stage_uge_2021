@@ -104,21 +104,22 @@ def integrate_probabilities(k, G, variables) :
     if (len(probas) == 1) :
         for dic in probas :
             if (isinstance(dic,dict)) :
+                # Need to find the good variable in here to correct the bugs of the lasts graphs (in k = 3 for example)
+                q_val = sp.var("q" + str(k))
+                expr = sp.solve(dic[p] - p, q_val)
+                if (len(expr) == 1) :
+                    expr = expr[0]
+                    print(Fore.CYAN + str(q_val), ":", expr)
+                    print(Fore.GREEN, "Not taken :", sp.integrate(expr * (1 - p), (p, 0, 1)))
+                    print(Fore.GREEN, "Taken :", sp.integrate(expr * p, (p, 0, 1)))
+                    
                 for key in dic.keys() :
                     if (key != p) :
-                        print(type(dic[key]))
+                        dic[key] = dic[key].subs(q_val, expr)
                         print(Fore.CYAN + str(key), ":", dic[key])
                         print(Fore.GREEN, "Not taken :", sp.integrate(dic[key] * (1 - p), (p, 0, 1)))
                         print(Fore.GREEN, "Taken :", sp.integrate(dic[key] * p, (p, 0, 1)))
-                    else :
-                        q_val = "q" + str(k)
-                        expr = sp.solve(dic[key] - p, q_val)
-                        if (len(expr) == 1) :
-                            expr = expr[0]
-                            print(Fore.CYAN + str(q_val), ":", expr)
-                            print(Fore.GREEN, "Not taken :", sp.integrate(expr * (1 - p), (p, 0, 1)))
-                            print(Fore.GREEN, "Taken :", sp.integrate(expr * p, (p, 0, 1)))
-
+        
     print()
 
 
