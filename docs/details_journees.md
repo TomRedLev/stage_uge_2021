@@ -66,4 +66,10 @@ Lecture de Digital Design (100 pages). <br />
 
 ## Mercredi 12 Mai 2021 :
 Expressions de toutes les variables en fonction de p. <br />
+Lecture de Hennessy Patterson - Computer Architecture (100 pages). <br />
+<br />
+
+## Vendredi 14 Mai 2021 :
+Tentative d'améliorer les performances du programme, devenu très lent depuis le calcul des mispredictions.<br />
+Lecture de Hennessy Patterson - Computer Architecture (100 pages). <br />
 <br />
