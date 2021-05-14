@@ -10,8 +10,6 @@ from colorama import *
 import sympy as sp
 import doctest
 
-
-
 def determine_combinations(val) :
     """
     Construct all combinations_with_replacement of a val-length with values between
@@ -76,7 +74,7 @@ def test_stationary_probas(k, G, variables) :
     print("Tests probabilities : ")
     print([elem.subs({p:p_val}) for elem in lst_eq])
     # Print the law of large numbers result :
-    res = calculate_stationary_probas(k, G, variables, True, True)
+    res = calculate_stationary_probas(k, G, variables, True, False)
     res.append(p - p_val)
     print("Probabiblities calculation : ")
     print(sp.solve(res))
@@ -99,33 +97,46 @@ def integrate_probabilities(k, G, variables) :
     """
     Make integrates calculations to determine if a state should be Taken or Not Taken.
     """
+    nb_mis = 0
     res = calculate_stationary_probas(k, G, variables, True, True)
     probas = sp.solve(res)
-    if (len(probas) == 1) :
+    if len(probas) == 1 : # Need to put the block under in this condition
         for dic in probas :
             if (isinstance(dic,dict)) :
                 # Need to find the good variable in here to correct the bugs of the lasts graphs (in k = 3 for example)
                 q_val = sp.var("q" + str(k))
                 
+#                if (len(probas) > 1 and not p in dic.keys()) :
+#                    nb_mis += 1
+#                    print(dic)
+#                    break
+#
+#                elif (len(probas) > 1 and p in dic.keys()) :
+#                    print()
+#                    break
+                    
                 for i in range(1, k+1) :
                     if not (sp.var("q" + str(i)) in dic.keys()) :
                         q_val = sp.var("q" + str(i))
-                
+                    
                 expr = sp.solve(dic[p] - p, q_val)
                 if (len(expr) == 1) :
                     expr = expr[0]
                     print(Fore.CYAN + str(q_val), ":", expr)
-                    print(Fore.GREEN, "Not taken :", sp.integrate(expr * (1 - p), (p, 0, 1)))
-                    print(Fore.GREEN, "Taken :", sp.integrate(expr * p, (p, 0, 1)))
-                    
+                    print(Fore.GREEN, "Not taken :", sp.simplify(sp.integrate(expr * (1 - p), (p, 0, 1))))
+                    print(Fore.GREEN, "Taken :", sp.simplify(sp.integrate(expr * p, (p, 0, 1))))
+                
+                nb_mis += 1
                 for key in dic.keys() :
                     if (key != p) :
+                        
                         dic[key] = dic[key].subs(q_val, expr)
                         print(Fore.CYAN + str(key), ":", dic[key])
                         print(Fore.GREEN, "Not taken :", sp.integrate(dic[key] * (1 - p), (p, 0, 1)))
                         print(Fore.GREEN, "Taken :", sp.integrate(dic[key] * p, (p, 0, 1)))
-        
+    
     print()
+    return nb_mis
 
 
 def main() :
@@ -146,6 +157,7 @@ def main() :
     cmpt = 0
     cmpt_rates = 0 # Necessary if rational=False is activated
     variables = generate_variables(k)
+    nb_mis = 0
 
     # Starting the timer :
     time_perf = perf_counter()
@@ -166,9 +178,9 @@ def main() :
                         res = calculate_stationary_probas(k, G, variables, True, False)
                         cmpt_rates += 1
                     # Comment to save a few seconds :
-                    print(Fore.BLUE + "graph", i, " : ", res)
+                    print(Fore.RED + "graph", i, " : ", res)
                     # test_stationary_probas(k, G, variables) # Can be use to test the probabilities
-                    integrate_probabilities(k, G, variables)
+                    nb_mis += integrate_probabilities(k, G, variables)
                     i += 1
 
             cmpt += 1
@@ -176,6 +188,7 @@ def main() :
     print(Style.RESET_ALL + str((perf_counter() - time_perf)), "seconds to run the generation of strongly connected", k, "- states graphs.")
     print("Number of loops :", cmpt)
     print("Number of missing solutions (now catched up) :", cmpt_rates)
+    print("Number of mispredictions :", nb_mis)
     f.close()
 
 
