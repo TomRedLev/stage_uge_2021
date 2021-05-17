@@ -2,13 +2,14 @@
 #include <stdio.h>
 #include <time.h>
 
-
+int global_history[2] = {0, 0};
+double cmpt[4] = {0, 0, 0, 0};
 
 int* min_max(int* array, int len_array) {
     /* Predictors simulator : */
-    int* global_history = (int *) calloc(2, sizeof(int)); /* Number of if */
+     /* Number of if */
     /* Stats of predictors : */
-    double* cmpt = (double *) calloc(4, sizeof(double));
+    
     int* minmax = (int *) malloc(4 * sizeof(int));
     int i;
     minmax[0] = array[0], minmax[1] = 0, minmax[2] = array[0], minmax[3] = 0;
@@ -52,8 +53,6 @@ int* min_max(int* array, int len_array) {
             }
         }
     }
-    printf("State of first if predictor : %d\nState of second if predictor : %d\n", global_history[0], global_history[1]);
-    printf("Stat of mispredictions of the predictor 1 : %f\nStat of mispredictions of the predictor 2 : %f\n", cmpt[0]/cmpt[1], cmpt[2]/cmpt[3]);
     return minmax;
 }
 
@@ -83,6 +82,10 @@ int main(void) {
     complete_array(array, len_array);
     int* minmax = min_max(array, len_array);
     printf("Min : %d, at rank : %d\nMax : %d, at rank : %d\n", minmax[0], minmax[1], minmax[2], minmax[3]);
+    
+    printf("State of first if predictor : %d\nState of second if predictor : %d\n", global_history[0], global_history[1]);
+    printf("Stat of mispredictions of the predictor 1 : %f\nStat of mispredictions of the predictor 2 : %f\n", cmpt[0]/cmpt[1], cmpt[2]/cmpt[3]);
+    
     /* display_array(array, len_array); */
     return 0;
 }

@@ -9,7 +9,13 @@ MinMax : MinMax.c
 	$(CC) -o $@ $^ $(CFLAGS)
 	$(CC) -S -o $@.s $^ $(CFLAGS)
 
+Exponentiation : Exponentiation.c
+	$(CC) -o $@ $^ $(CFLAGS)
+	$(CC) -S -o $@.s $^ $(CFLAGS)
 
+Dichotomie : Dichotomie.c
+	$(CC) -o $@ $^ $(CFLAGS)
+	$(CC) -S -o $@.s $^ $(CFLAGS)
 
 # Définition des commandes de nettoyage
 clean :
@@ -20,7 +26,7 @@ mrproper : clean
 
 
 # Définition des commandes à appeler
-install : MinMax
+install : MinMax Exponentiation Dichotomie
 
 uninstall : mrproper
 	rm -f ../bin/$(EXEC)
