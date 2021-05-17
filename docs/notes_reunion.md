@@ -16,3 +16,13 @@ https://fr.wikipedia.org/wiki/Cha%C3%AEne_de_Markov <br />
 Inversion de matrice <br />
 <br />
 RDV Jeudi 29 Avril à 17h <br />
+<br />
+Installation Pypy. <br />
+<br />
+Simulateur : écrire programme avec des branchements. <br />
+Simuler travaille de la machine. <br />
+PoC : Proof of Concept. <br />
+Faire un example de prédicteur de branchements : MinMax, Expo rapide, Dichotomie, ... <br />
+Récupérer toutes les informations sur le parcours du prédicteur. <br />
+Programme de la semaine : faire un PoC, terminer le programme de génération des graphes. <br />
+<br />
