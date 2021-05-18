@@ -73,3 +73,13 @@ Lecture de Hennessy Patterson - Computer Architecture (100 pages). <br />
 Tentative d'améliorer les performances du programme, devenu très lent depuis le calcul des mispredictions.<br />
 Lecture de Hennessy Patterson - Computer Architecture (100 pages). <br />
 <br />
+
+## Lundi 17 Mai 2021 :
+Ecriture des exemples : dichotomie, exponentiation rapide, MinMax.<br />
+Utilisation de ces exemples avec l'implémentation d'un prédicteur de branchements à 4 états saturé. <br />
+Lecture de plusieurs documents sur des versions des algorithmes sus-nommés. <br />
+<br />
+
+## Mardi 18 Mai 2021 :
+Correction de divers bugs dans les exemples. <br />
+<br />
