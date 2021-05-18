@@ -28,41 +28,49 @@ _dichotomie:                            ## @dichotomie
 	idivl	%ecx
 	movl	%eax, -32(%rbp)
 	cmpl	$2, _global_history(%rip)
-	jl	LBB0_6
+	jl	LBB0_7
 ## %bb.1:
 	movl	-20(%rbp), %eax
 	cmpl	-24(%rbp), %eax
-	jne	LBB0_6
+	je	LBB0_3
 ## %bb.2:
+	movl	-20(%rbp), %eax
+	cmpl	-32(%rbp), %eax
+	jne	LBB0_7
+LBB0_3:
 	movl	-28(%rbp), %eax
 	movq	-16(%rbp), %rcx
 	movslq	-32(%rbp), %rdx
 	cmpl	(%rcx,%rdx,4), %eax
-	je	LBB0_6
-## %bb.3:
+	je	LBB0_7
+## %bb.4:
 	movsd	LCPI0_0(%rip), %xmm0    ## xmm0 = mem[0],zero
 	addsd	_cmpt+8(%rip), %xmm0
 	movsd	%xmm0, _cmpt+8(%rip)
 	cmpl	$3, _global_history(%rip)
-	jge	LBB0_5
-## %bb.4:
+	jge	LBB0_6
+## %bb.5:
 	movl	_global_history(%rip), %eax
 	addl	$1, %eax
 	movl	%eax, _global_history(%rip)
-LBB0_5:
-	movl	$-1, -4(%rbp)
-	jmp	LBB0_36
 LBB0_6:
+	movl	$-1, -4(%rbp)
+	jmp	LBB0_38
+LBB0_7:
 	movl	-20(%rbp), %eax
 	cmpl	-24(%rbp), %eax
-	jne	LBB0_9
-## %bb.7:
+	je	LBB0_9
+## %bb.8:
+	movl	-20(%rbp), %eax
+	cmpl	-32(%rbp), %eax
+	jne	LBB0_11
+LBB0_9:
 	movl	-28(%rbp), %eax
 	movq	-16(%rbp), %rcx
 	movslq	-32(%rbp), %rdx
 	cmpl	(%rcx,%rdx,4), %eax
-	je	LBB0_9
-## %bb.8:
+	je	LBB0_11
+## %bb.10:
 	movsd	LCPI0_0(%rip), %xmm0    ## xmm0 = mem[0],zero
 	movaps	%xmm0, %xmm1
 	addsd	_cmpt(%rip), %xmm1
@@ -73,48 +81,48 @@ LBB0_6:
 	addl	$1, %eax
 	movl	%eax, _global_history(%rip)
 	movl	$-1, -4(%rbp)
-	jmp	LBB0_36
-LBB0_9:
+	jmp	LBB0_38
+LBB0_11:
 	cmpl	$0, _global_history(%rip)
-	jle	LBB0_11
-## %bb.10:
+	jle	LBB0_13
+## %bb.12:
 	movl	_global_history(%rip), %eax
 	subl	$1, %eax
 	movl	%eax, _global_history(%rip)
-LBB0_11:
-	jmp	LBB0_12
-LBB0_12:
-	jmp	LBB0_13
 LBB0_13:
+	jmp	LBB0_14
+LBB0_14:
+	jmp	LBB0_15
+LBB0_15:
 	cmpl	$2, _global_history+4(%rip)
-	jl	LBB0_18
-## %bb.14:
-	movl	-28(%rbp), %eax
-	movq	-16(%rbp), %rcx
-	movslq	-32(%rbp), %rdx
-	cmpl	(%rcx,%rdx,4), %eax
-	jne	LBB0_18
-## %bb.15:
-	movsd	LCPI0_0(%rip), %xmm0    ## xmm0 = mem[0],zero
-	addsd	_cmpt+24(%rip), %xmm0
-	movsd	%xmm0, _cmpt+24(%rip)
-	cmpl	$3, _global_history+4(%rip)
-	jge	LBB0_17
+	jl	LBB0_20
 ## %bb.16:
-	movl	_global_history+4(%rip), %eax
-	addl	$1, %eax
-	movl	%eax, _global_history+4(%rip)
-LBB0_17:
-	movl	-32(%rbp), %eax
-	movl	%eax, -4(%rbp)
-	jmp	LBB0_36
-LBB0_18:
 	movl	-28(%rbp), %eax
 	movq	-16(%rbp), %rcx
 	movslq	-32(%rbp), %rdx
 	cmpl	(%rcx,%rdx,4), %eax
 	jne	LBB0_20
-## %bb.19:
+## %bb.17:
+	movsd	LCPI0_0(%rip), %xmm0    ## xmm0 = mem[0],zero
+	addsd	_cmpt+24(%rip), %xmm0
+	movsd	%xmm0, _cmpt+24(%rip)
+	cmpl	$3, _global_history+4(%rip)
+	jge	LBB0_19
+## %bb.18:
+	movl	_global_history+4(%rip), %eax
+	addl	$1, %eax
+	movl	%eax, _global_history+4(%rip)
+LBB0_19:
+	movl	-32(%rbp), %eax
+	movl	%eax, -4(%rbp)
+	jmp	LBB0_38
+LBB0_20:
+	movl	-28(%rbp), %eax
+	movq	-16(%rbp), %rcx
+	movslq	-32(%rbp), %rdx
+	cmpl	(%rcx,%rdx,4), %eax
+	jne	LBB0_22
+## %bb.21:
 	movsd	LCPI0_0(%rip), %xmm0    ## xmm0 = mem[0],zero
 	movaps	%xmm0, %xmm1
 	addsd	_cmpt+16(%rip), %xmm1
@@ -126,52 +134,54 @@ LBB0_18:
 	movl	%eax, _global_history+4(%rip)
 	movl	-32(%rbp), %eax
 	movl	%eax, -4(%rbp)
-	jmp	LBB0_36
-LBB0_20:
+	jmp	LBB0_38
+LBB0_22:
 	cmpl	$0, _global_history+4(%rip)
-	jle	LBB0_22
-## %bb.21:
+	jle	LBB0_24
+## %bb.23:
 	movl	_global_history+4(%rip), %eax
 	subl	$1, %eax
 	movl	%eax, _global_history+4(%rip)
-LBB0_22:
-	jmp	LBB0_23
-LBB0_23:
-	jmp	LBB0_24
 LBB0_24:
+	jmp	LBB0_25
+LBB0_25:
+	jmp	LBB0_26
+LBB0_26:
 	cmpl	$2, _global_history+8(%rip)
-	jl	LBB0_29
-## %bb.25:
-	movl	-28(%rbp), %eax
-	movq	-16(%rbp), %rcx
-	movslq	-32(%rbp), %rdx
-	cmpl	(%rcx,%rdx,4), %eax
-	jge	LBB0_29
-## %bb.26:
-	movsd	LCPI0_0(%rip), %xmm0    ## xmm0 = mem[0],zero
-	addsd	_cmpt+40(%rip), %xmm0
-	movsd	%xmm0, _cmpt+40(%rip)
-	cmpl	$3, _global_history+8(%rip)
-	jge	LBB0_28
+	jl	LBB0_31
 ## %bb.27:
-	movl	_global_history+8(%rip), %eax
-	addl	$1, %eax
-	movl	%eax, _global_history+8(%rip)
-LBB0_28:
-	movq	-16(%rbp), %rdi
-	movl	-20(%rbp), %esi
-	movl	-32(%rbp), %edx
-	movl	-28(%rbp), %ecx
-	callq	_dichotomie
-	movl	%eax, -4(%rbp)
-	jmp	LBB0_36
-LBB0_29:
 	movl	-28(%rbp), %eax
 	movq	-16(%rbp), %rcx
 	movslq	-32(%rbp), %rdx
 	cmpl	(%rcx,%rdx,4), %eax
 	jge	LBB0_31
-## %bb.30:
+## %bb.28:
+	movsd	LCPI0_0(%rip), %xmm0    ## xmm0 = mem[0],zero
+	addsd	_cmpt+40(%rip), %xmm0
+	movsd	%xmm0, _cmpt+40(%rip)
+	cmpl	$3, _global_history+8(%rip)
+	jge	LBB0_30
+## %bb.29:
+	movl	_global_history+8(%rip), %eax
+	addl	$1, %eax
+	movl	%eax, _global_history+8(%rip)
+LBB0_30:
+	movq	-16(%rbp), %rdi
+	movl	-20(%rbp), %esi
+	movl	-32(%rbp), %eax
+	subl	$1, %eax
+	movl	-28(%rbp), %ecx
+	movl	%eax, %edx
+	callq	_dichotomie
+	movl	%eax, -4(%rbp)
+	jmp	LBB0_38
+LBB0_31:
+	movl	-28(%rbp), %eax
+	movq	-16(%rbp), %rcx
+	movslq	-32(%rbp), %rdx
+	cmpl	(%rcx,%rdx,4), %eax
+	jge	LBB0_33
+## %bb.32:
 	movsd	LCPI0_0(%rip), %xmm0    ## xmm0 = mem[0],zero
 	movaps	%xmm0, %xmm1
 	addsd	_cmpt+32(%rip), %xmm1
@@ -183,30 +193,34 @@ LBB0_29:
 	movl	%eax, _global_history+8(%rip)
 	movq	-16(%rbp), %rdi
 	movl	-20(%rbp), %esi
-	movl	-32(%rbp), %edx
+	movl	-32(%rbp), %eax
+	subl	$1, %eax
 	movl	-28(%rbp), %ecx
+	movl	%eax, %edx
 	callq	_dichotomie
 	movl	%eax, -4(%rbp)
-	jmp	LBB0_36
-LBB0_31:
+	jmp	LBB0_38
+LBB0_33:
 	cmpl	$0, _global_history+8(%rip)
-	jle	LBB0_33
-## %bb.32:
+	jle	LBB0_35
+## %bb.34:
 	movl	_global_history+8(%rip), %eax
 	subl	$1, %eax
 	movl	%eax, _global_history+8(%rip)
-LBB0_33:
-	jmp	LBB0_34
-LBB0_34:
-	jmp	LBB0_35
 LBB0_35:
+	jmp	LBB0_36
+LBB0_36:
+	jmp	LBB0_37
+LBB0_37:
 	movq	-16(%rbp), %rdi
-	movl	-32(%rbp), %esi
+	movl	-32(%rbp), %eax
+	addl	$1, %eax
 	movl	-24(%rbp), %edx
 	movl	-28(%rbp), %ecx
+	movl	%eax, %esi
 	callq	_dichotomie
 	movl	%eax, -4(%rbp)
-LBB0_36:
+LBB0_38:
 	movl	-4(%rbp), %eax
 	addq	$32, %rsp
 	popq	%rbp

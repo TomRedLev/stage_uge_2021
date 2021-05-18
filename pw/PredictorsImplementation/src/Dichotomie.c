@@ -7,13 +7,13 @@ double cmpt[6] = {0, 0, 0, 0, 0, 0};
 
 int dichotomie(int* array, int start, int end, int val) {
     int mid = (start + end) / 2;
-    if (global_history[0] >= 2 && start == end && val != array[mid]) {
+    if (global_history[0] >= 2 && (start == end || start == mid) && val != array[mid]) {
         cmpt[1] += 1;
         if (global_history[0] < 3) {
             global_history[0] += 1;
         }
         return -1;
-    } else if (start == end && val != array[mid]) {
+    } else if ((start == end || (start == mid)) && val != array[mid]) {
         cmpt[0] += 1;
         cmpt[1] += 1;
         global_history[0] += 1;
@@ -46,18 +46,18 @@ int dichotomie(int* array, int start, int end, int val) {
         if (global_history[2] < 3) {
             global_history[2] += 1;
         }
-        return dichotomie(array, start, mid, val);
+        return dichotomie(array, start, mid - 1, val);
     } else if (val < array[mid]) {
         cmpt[4] += 1;
         cmpt[5] += 1;
         global_history[2] += 1;
-        return dichotomie(array, start, mid, val);
+        return dichotomie(array, start, mid - 1, val);
     } else {
         if (global_history[2] > 0) {
             global_history[2] -= 1;
         }
     }
-    return dichotomie(array, mid, end, val);;
+    return dichotomie(array, mid + 1, end, val);;
 }
 
 void complete_array(int* array, int len_array) {
