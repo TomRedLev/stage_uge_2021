@@ -100,41 +100,54 @@ def integrate_probabilities(k, G, variables) :
     nb_mis = 0
     res = calculate_stationary_probas(k, G, variables, True, True)
     probas = sp.solve(res)
+    print(probas)
     if len(probas) == 1 : # Need to put the block under in this condition
         for dic in probas :
             if (isinstance(dic,dict)) :
                 # Need to find the good variable in here to correct the bugs of the lasts graphs (in k = 3 for example)
                 q_val = sp.var("q" + str(k))
-                
-#                if (len(probas) > 1 and not p in dic.keys()) :
-#                    nb_mis += 1
-#                    print(dic)
-#                    break
-#
-#                elif (len(probas) > 1 and p in dic.keys()) :
-#                    print()
-#                    break
-                    
+
+               # if (len(probas) > 1 and not p in dic.keys()) :
+               #     nb_mis += 1
+               #     print(dic)
+               #     break
+               #
+               # elif (len(probas) > 1 and p in dic.keys()) :
+               #     print()
+               #     break
+               
+               # Added to avoid TypeError during integrate calculations :
+                if (dic[p].is_integer) :
+                    break
+
                 for i in range(1, k+1) :
                     if not (sp.var("q" + str(i)) in dic.keys()) :
                         q_val = sp.var("q" + str(i))
-                    
+
                 expr = sp.solve(dic[p] - p, q_val)
                 if (len(expr) == 1) :
                     expr = expr[0]
-                    print(Fore.CYAN + str(q_val), ":", expr)
-                    print(Fore.GREEN, "Not taken :", sp.simplify(sp.integrate(expr * (1 - p), (p, 0, 1))))
-                    print(Fore.GREEN, "Taken :", sp.simplify(sp.integrate(expr * p, (p, 0, 1))))
-                
+#                    print(Fore.CYAN + str(q_val), ":", expr)
+#                    print(Fore.GREEN, "Not taken :", sp.simplify(sp.integrate(expr * (1 - p), (p, 0, 1))))
+#                    print(Fore.GREEN, "Taken :", sp.simplify(sp.integrate(expr * p, (p, 0, 1))))
+                    # We take the state where the integrate is the most important :
+                    if (sp.integrate(expr * (1 - p), (p, 0, 1)) <= sp.integrate(expr * p, (p, 0, 1))) :
+                        print(Fore.GREEN, "Taking state", q_val)
+                    else :
+                        print(Fore.GREEN, "Not taking state", q_val)
+
                 nb_mis += 1
                 for key in dic.keys() :
                     if (key != p) :
-                        
                         dic[key] = dic[key].subs(q_val, expr)
-                        print(Fore.CYAN + str(key), ":", dic[key])
-                        print(Fore.GREEN, "Not taken :", sp.integrate(dic[key] * (1 - p), (p, 0, 1)))
-                        print(Fore.GREEN, "Taken :", sp.integrate(dic[key] * p, (p, 0, 1)))
-    
+#                        print(Fore.CYAN + str(key), ":", dic[key])
+#                        print(Fore.GREEN, "Not taken :", sp.integrate(dic[key] * (1 - p), (p, 0, 1)))
+#                        print(Fore.GREEN, "Taken :", sp.integrate(dic[key] * p, (p, 0, 1)))
+                        if (sp.integrate(dic[key] * (1 - p), (p, 0, 1)) <= sp.integrate(dic[key] * p, (p, 0, 1))) :
+                            print(Fore.GREEN, "Taking state", key)
+                        else :
+                            print(Fore.GREEN, "Not taking state", key)
+
     print()
     return nb_mis
 
@@ -142,6 +155,7 @@ def integrate_probabilities(k, G, variables) :
 def main() :
     """
     Main function of the first practical work.
+    2 ## are for basic uses.
 
     >>> G = MatriceAdjacence(3)
     >>> G.ajouter_aretes([(0, 0, 0.9), (0, 1, 0.05), (0, 2, 0.05), (1, 0, 0.7), (1, 2, 0.3), (2, 0, 0.8), (2, 2, 0.2)])
@@ -155,9 +169,10 @@ def main() :
     i = 0
     f = open("graphs.gv", "w")
     cmpt = 0
-    cmpt_rates = 0 # Necessary if rational=False is activated
+    cmpt_tarj = 0
+    ## cmpt_rates = 0 # Necessary if rational=False is activated
     variables = generate_variables(k)
-    nb_mis = 0
+    nb_found = 0
 
     # Starting the timer :
     time_perf = perf_counter()
@@ -172,23 +187,24 @@ def main() :
                 if (len(tarjan(G)) == 1) :
                     f.write(export_dot(G, str(i)))
                     f.write("\n")
-                    res = calculate_stationary_probas(k, G, variables, False, False)
-                    # Necessary if rational=False is activated
-                    if res == [] :
-                        res = calculate_stationary_probas(k, G, variables, True, False)
-                        cmpt_rates += 1
+##                    res = calculate_stationary_probas(k, G, variables, False, False)
+##                    # Necessary if rational=False is activated
+##                    if res == [] :
+##                        res = calculate_stationary_probas(k, G, variables, True, False)
+##                        cmpt_rates += 1
                     # Comment to save a few seconds :
-                    print(Fore.RED + "graph", i, " : ", res)
-                    # test_stationary_probas(k, G, variables) # Can be use to test the probabilities
-                    nb_mis += integrate_probabilities(k, G, variables)
+                    print(Fore.RED + "graph", i, " : ") # "# print(Fore.RED + "graph", i, " : ", res)
+                    ## test_stationary_probas(k, G, variables) # Can be use to test the probabilities
+                    nb_found += integrate_probabilities(k, G, variables)
                     i += 1
+                    cmpt_tarj += 1
 
             cmpt += 1
-    
+
     print(Style.RESET_ALL + str((perf_counter() - time_perf)), "seconds to run the generation of strongly connected", k, "- states graphs.")
     print("Number of loops :", cmpt)
-    print("Number of missing solutions (now catched up) :", cmpt_rates)
-    print("Number of mispredictions :", nb_mis)
+    ## print("Number of missing solutions (now catched up) :", cmpt_rates)
+    print("Number of founded solutions :", nb_found, "on", cmpt_tarj)
     f.close()
 
 
