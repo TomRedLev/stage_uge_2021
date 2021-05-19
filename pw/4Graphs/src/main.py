@@ -105,6 +105,15 @@ def integrate_probabilities(k, G, variables) :
     nb_mis += 1
     print()
     return nb_mis
+    
+    
+def isomorphism_graphs(lstG, G2) :
+    """
+    Verify if two graphs are isomorphs.
+    Return True or False.
+    """
+    for G in lstG :
+        print(G._matrice_adjacence, "\n", G2._matrice_adjacence)
 
 
 def main() :
@@ -126,6 +135,7 @@ def main() :
     cmpt = 0
     variables = generate_variables(k)
     nb_found = 0
+    lstG = []
 
     # Starting the timer :
     time_perf = perf_counter()
@@ -138,13 +148,15 @@ def main() :
 
                 # Check :
                 if (len(tarjan(G)) == 1) :
-                    f.write(export_dot(G, str(i)))
-                    f.write("\n")
-                    res = calculate_stationary_probas(k, G, variables)
-                    print(Fore.RED + "graph", i, " : ", res)
-                    #test_stationary_probas(k, G, variables) # Can be use to test the probabilities
-                    nb_found += integrate_probabilities(k, G, variables)
-                    i += 1
+                    if (not isomorphism_graphs(lstG, G)) :
+                        f.write(export_dot(G, str(i)))
+                        f.write("\n")
+                        res = calculate_stationary_probas(k, G, variables)
+                        print(Fore.RED + "graph", i, " : ", res)
+                        #test_stationary_probas(k, G, variables) # Can be use to test the probabilities
+                        nb_found += integrate_probabilities(k, G, variables)
+                        i += 1
+                        lstG.append(G)
 
             cmpt += 1
 
