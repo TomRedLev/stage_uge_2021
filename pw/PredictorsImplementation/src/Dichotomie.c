@@ -7,6 +7,7 @@ double cmpt[6] = {0, 0, 0, 0, 0, 0};
 
 int dichotomie(int* array, int start, int end, int val) {
     int mid = (start + end) / 2;
+    
     if (global_history[0] >= 2 && (start == end || start == mid) && val != array[mid]) {
         cmpt[1] += 1;
         if (global_history[0] < 3) {
@@ -57,6 +58,7 @@ int dichotomie(int* array, int start, int end, int val) {
             global_history[2] -= 1;
         }
     }
+    
     return dichotomie(array, mid + 1, end, val);;
 }
 

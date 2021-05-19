@@ -26,3 +26,6 @@ Faire un example de prédicteur de branchements : MinMax, Expo rapide, Dichotomi
 Récupérer toutes les informations sur le parcours du prédicteur. <br />
 Programme de la semaine : faire un PoC, terminer le programme de génération des graphes. <br />
 <br />
+http://ligm.u-pem.fr/evenements/seminaires/ <br />
+Evaluer intégrales, faire calcul numérique. <br /> 
+https://fr.wikipedia.org/wiki/Isomorphisme_de_graphes <br />

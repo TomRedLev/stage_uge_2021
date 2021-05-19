@@ -14,6 +14,9 @@ int* min_max(int* array, int len_array) {
     int i;
     minmax[0] = array[0], minmax[1] = 0, minmax[2] = array[0], minmax[3] = 0;
     for (i = 1; i < len_array; i++) {
+        
+        
+        
         /* Modification done to implements a predictor */
         if (global_history[0] >= 2 && array[i] < minmax[0]) {
             cmpt[1] += 1.;
@@ -33,6 +36,8 @@ int* min_max(int* array, int len_array) {
                 global_history[0] -= 1;
             }
         }
+        
+        
         /* Modification done to implements a predictor */
         if (global_history[1] >= 2 && array[i] > minmax[2]) {
             cmpt[3] += 1.;

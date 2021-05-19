@@ -36,20 +36,17 @@ def construct_graph_from_permutation(permut, k, p) :
     return G
 
 
-def calculate_stationary_probas(k, G, variables, rational_activation, not_solved) :
+def calculate_stationary_probas(k, G, variables) :
     """
     Calculate the stationary stats for a given graph.
 
-    >>> calculate_stationary_probas(2, construct_graph_from_permutation((0, 1, 0, 1), 2, 0.25), generate_variables(2), False, False)
+    >>> calculate_stationary_probas(2, construct_graph_from_permutation((0, 1, 0, 1), 2, 0.25), generate_variables(2))
     {q2: 0.750000000000000, q1: 0.250000000000000}
     """
 
     lst_eq = dot(array(variables), subtract(array(identity_matrix(k)._matrice_adjacence), array(G._matrice_adjacence))).tolist()
     lst_eq.append(sum(variables) - 1)
-    if (not_solved == True) :
-        return lst_eq
-
-    return sp.solve(lst_eq, simplify=False, minimal=True, rational=rational_activation)
+    return sp.solve(lst_eq, variables)
 
 
 def test_stationary_probas(k, G, variables) :
@@ -74,10 +71,11 @@ def test_stationary_probas(k, G, variables) :
     print("Tests probabilities : ")
     print([elem.subs({p:p_val}) for elem in lst_eq])
     # Print the law of large numbers result :
-    res = calculate_stationary_probas(k, G, variables, True, False)
-    res.append(p - p_val)
+    lst_eq = dot(array(variables), subtract(array(identity_matrix(k)._matrice_adjacence), array(G._matrice_adjacence))).tolist()
+    lst_eq.append(sum(variables) - 1)
+    lst_eq.append(p - p_val)
     print("Probabiblities calculation : ")
-    print(sp.solve(res))
+    print(sp.solve(lst_eq))
     print()
 
 
@@ -98,55 +96,13 @@ def integrate_probabilities(k, G, variables) :
     Make integrates calculations to determine if a state should be Taken or Not Taken.
     """
     nb_mis = 0
-    res = calculate_stationary_probas(k, G, variables, True, True)
-    probas = sp.solve(res)
-    print(probas)
-    if len(probas) == 1 : # Need to put the block under in this condition
-        for dic in probas :
-            if (isinstance(dic,dict)) :
-                # Need to find the good variable in here to correct the bugs of the lasts graphs (in k = 3 for example)
-                q_val = sp.var("q" + str(k))
-
-               # if (len(probas) > 1 and not p in dic.keys()):
-               #     print(dic)
-               #     break
-               #
-               # elif (len(probas) > 1 and p in dic.keys()) :
-               #     print()
-               #     break
-
-               # Added to avoid TypeError during integrate calculations :
-                if (dic[p].is_integer) :
-                    break
-
-                for i in range(1, k+1) :
-                    if not (sp.var("q" + str(i)) in dic.keys()) :
-                        q_val = sp.var("q" + str(i))
-
-                expr = sp.solve(dic[p] - p, q_val)
-                if (len(expr) == 1) :
-                    expr = expr[0]
-                    # print(Fore.CYAN + str(q_val), ":", expr)
-                    # print(Fore.GREEN, "Not taken :", sp.simplify(sp.integrate(expr * (1 - p), (p, 0, 1))))
-                    # print(Fore.GREEN, "Taken :", sp.simplify(sp.integrate(expr * p, (p, 0, 1))))
-                    # We take the state where the integrate is the most important :
-                    if (sp.integrate(expr * (1 - p), (p, 0, 1)) <= sp.integrate(expr * p, (p, 0, 1))) :
-                        print(Fore.GREEN, "Taking state", q_val)
-                    else :
-                        print(Fore.GREEN, "Not taking state", q_val)
-
-                for key in dic.keys() :
-                    if (key != p) :
-                        dic[key] = dic[key].subs(q_val, expr)
-                        # print(Fore.CYAN + str(key), ":", dic[key])
-                        # print(Fore.GREEN, "Not taken :", sp.integrate(dic[key] * (1 - p), (p, 0, 1)))
-                        # print(Fore.GREEN, "Taken :", sp.integrate(dic[key] * p, (p, 0, 1)))
-                        if (sp.integrate(dic[key] * (1 - p), (p, 0, 1)) <= sp.integrate(dic[key] * p, (p, 0, 1))) :
-                            print(Fore.GREEN, "Taking state", key)
-                        else :
-                            print(Fore.GREEN, "Not taking state", key)
-                nb_mis += 1
-
+    probas = calculate_stationary_probas(k, G, variables)
+    for key in probas.keys() :
+        if (complex(sp.integrate(probas[key] * (1 - p), (p, 0, 1))).real <= complex(sp.integrate(probas[key] * p, (p, 0, 1))).real) :
+            print(Fore.GREEN, "Taking state", key)
+        else :
+            print(Fore.GREEN, "Not taking state", key)
+    nb_mis += 1
     print()
     return nb_mis
 
@@ -159,8 +115,8 @@ def main() :
     >>> G = MatriceAdjacence(3)
     >>> G.ajouter_aretes([(0, 0, 0.9), (0, 1, 0.05), (0, 2, 0.05), (1, 0, 0.7), (1, 2, 0.3), (2, 0, 0.8), (2, 2, 0.2)])
     >>> variables = sp.var("q1 q2 q3")
-    >>> calculate_stationary_probas(3, G, variables, True, False)
-    {q3: 13/181, q2: 8/181, q1: 160/181}
+    >>> calculate_stationary_probas(3, G, variables)
+    {q3: 0.0718232044198895, q2: 0.0441988950276243, q1: 0.883977900552486}
     """
     # Variables :
     k = int(input("Insert the value k of the k-graphs you want to generate : "))
@@ -168,8 +124,6 @@ def main() :
     i = 0
     f = open("graphs.gv", "w")
     cmpt = 0
-    cmpt_tarj = 0
-    ## cmpt_rates = 0 # Necessary if rational=False is activated
     variables = generate_variables(k)
     nb_found = 0
 
@@ -186,28 +140,20 @@ def main() :
                 if (len(tarjan(G)) == 1) :
                     f.write(export_dot(G, str(i)))
                     f.write("\n")
-##                    res = calculate_stationary_probas(k, G, variables, False, False)
-##                    # Necessary if rational=False is activated
-##                    if res == [] :
-##                        res = calculate_stationary_probas(k, G, variables, True, False)
-##                        cmpt_rates += 1
-                    # Comment to save a few seconds :
-                    print(Fore.RED + "graph", i, " : ") # "# print(Fore.RED + "graph", i, " : ", res)
-                    ## test_stationary_probas(k, G, variables) # Can be use to test the probabilities
+                    res = calculate_stationary_probas(k, G, variables)
+                    print(Fore.RED + "graph", i, " : ", res)
+                    #test_stationary_probas(k, G, variables) # Can be use to test the probabilities
                     nb_found += integrate_probabilities(k, G, variables)
                     i += 1
-                    cmpt_tarj += 1
 
             cmpt += 1
 
     print(Style.RESET_ALL + str((perf_counter() - time_perf)), "seconds to run the generation of strongly connected", k, "- states graphs.")
     print("Number of loops :", cmpt)
-    ## print("Number of missing solutions (now catched up) :", cmpt_rates)
-    print("Number of founded solutions :", nb_found, "on", cmpt_tarj)
+    print("Number of founded solutions :", nb_found, "on", i)
     f.close()
 
 
 if __name__ == "__main__":
-    # execute only if run as a script
     doctest.testmod()
     main()

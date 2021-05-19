@@ -87,4 +87,6 @@ Ajout de la détermination des statuts des états. <br />
 
 ## Mercredi 19 Mai 2021 :
 Tentative de compréhension de la diminution du nombre de graphes dont on peut déterminer les statuts des états. <br />
+Correction des bugs dans "4graphs" (Mauvais calcul des intégrales). <br />
+Début de la lecture pour implémenter la recherche d'isomorphisme entre les graphes. <br />
 <br />
