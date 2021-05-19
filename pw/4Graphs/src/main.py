@@ -107,15 +107,14 @@ def integrate_probabilities(k, G, variables) :
                 # Need to find the good variable in here to correct the bugs of the lasts graphs (in k = 3 for example)
                 q_val = sp.var("q" + str(k))
 
-               # if (len(probas) > 1 and not p in dic.keys()) :
-               #     nb_mis += 1
+               # if (len(probas) > 1 and not p in dic.keys()):
                #     print(dic)
                #     break
                #
                # elif (len(probas) > 1 and p in dic.keys()) :
                #     print()
                #     break
-               
+
                # Added to avoid TypeError during integrate calculations :
                 if (dic[p].is_integer) :
                     break
@@ -127,26 +126,26 @@ def integrate_probabilities(k, G, variables) :
                 expr = sp.solve(dic[p] - p, q_val)
                 if (len(expr) == 1) :
                     expr = expr[0]
-#                    print(Fore.CYAN + str(q_val), ":", expr)
-#                    print(Fore.GREEN, "Not taken :", sp.simplify(sp.integrate(expr * (1 - p), (p, 0, 1))))
-#                    print(Fore.GREEN, "Taken :", sp.simplify(sp.integrate(expr * p, (p, 0, 1))))
+                    # print(Fore.CYAN + str(q_val), ":", expr)
+                    # print(Fore.GREEN, "Not taken :", sp.simplify(sp.integrate(expr * (1 - p), (p, 0, 1))))
+                    # print(Fore.GREEN, "Taken :", sp.simplify(sp.integrate(expr * p, (p, 0, 1))))
                     # We take the state where the integrate is the most important :
                     if (sp.integrate(expr * (1 - p), (p, 0, 1)) <= sp.integrate(expr * p, (p, 0, 1))) :
                         print(Fore.GREEN, "Taking state", q_val)
                     else :
                         print(Fore.GREEN, "Not taking state", q_val)
 
-                nb_mis += 1
                 for key in dic.keys() :
                     if (key != p) :
                         dic[key] = dic[key].subs(q_val, expr)
-#                        print(Fore.CYAN + str(key), ":", dic[key])
-#                        print(Fore.GREEN, "Not taken :", sp.integrate(dic[key] * (1 - p), (p, 0, 1)))
-#                        print(Fore.GREEN, "Taken :", sp.integrate(dic[key] * p, (p, 0, 1)))
+                        # print(Fore.CYAN + str(key), ":", dic[key])
+                        # print(Fore.GREEN, "Not taken :", sp.integrate(dic[key] * (1 - p), (p, 0, 1)))
+                        # print(Fore.GREEN, "Taken :", sp.integrate(dic[key] * p, (p, 0, 1)))
                         if (sp.integrate(dic[key] * (1 - p), (p, 0, 1)) <= sp.integrate(dic[key] * p, (p, 0, 1))) :
                             print(Fore.GREEN, "Taking state", key)
                         else :
                             print(Fore.GREEN, "Not taking state", key)
+                nb_mis += 1
 
     print()
     return nb_mis

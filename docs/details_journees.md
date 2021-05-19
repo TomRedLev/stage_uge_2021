@@ -33,7 +33,7 @@ Relecture de "Analysis of The OGeometric". <br />
 Lecture de Digital Design (100 pages). <br />
 <br />
 
-## Mardi 04 Mai 2021 : 
+## Mardi 04 Mai 2021 :
 Implémetation des calculs de probabilités stationnaires sur les graphes (Temps avec print des stats pour les graphes à 4 états = 686 secondes, soit 11 minutes, 620 secondes sans les prints, sûrement améliorable). <br />
 Lecture de Hennessy Patterson - Computer Architecture (100 pages). <br />
 <br />
@@ -82,4 +82,9 @@ Lecture de plusieurs documents sur des versions des algorithmes sus-nommés. <br
 
 ## Mardi 18 Mai 2021 :
 Correction de divers bugs dans les exemples. <br />
+Ajout de la détermination des statuts des états. <br />
+<br />
+
+## Mercredi 19 Mai 2021 :
+Tentative de compréhension de la diminution du nombre de graphes dont on peut déterminer les statuts des états. <br />
 <br />
