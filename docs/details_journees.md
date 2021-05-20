@@ -93,4 +93,6 @@ Début de la lecture pour implémenter la recherche d'isomorphisme entre les gra
 
 ## Jeudi 20 Mai 2021 :
 Implémentation de la vérification de l'isomorphisme entre deux matrices d'adjacence. <br />
-
+Tentative d'amélioration du code et de l'exécution. <br />
+Bug persistant sur le 21ème graphe à 4 états. <br />
+<br />

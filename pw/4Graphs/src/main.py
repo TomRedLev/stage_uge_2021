@@ -78,9 +78,6 @@ def test_stationary_probas(k, G, variables) :
     print(sp.solve(lst_eq))
     print()
 
-
-
-
 def generate_variables(k) :
     """
     Generate the variables, using sympy, needed to create systems of equations.
