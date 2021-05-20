@@ -29,3 +29,5 @@ Programme de la semaine : faire un PoC, terminer le programme de génération de
 http://ligm.u-pem.fr/evenements/seminaires/ <br />
 Evaluer intégrales, faire calcul numérique. <br /> 
 https://fr.wikipedia.org/wiki/Isomorphisme_de_graphes <br />
+https://en.wikipedia.org/wiki/Adjacency_matrix#Isomorphism_and_invariants<br />
+Checker si dans la liste des graphes avec fonction isomorphisme, si non faire les calculs et rajouter, si oui skip. <br />

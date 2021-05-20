@@ -1,11 +1,11 @@
-#!/usr/bin/env python3
+ #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
 from matriceadjacence import *
+from numpy import *
 from itertools import combinations_with_replacement
 from itertools import permutations
 from time import *
-from numpy import *
 from colorama import *
 import sympy as sp
 import doctest
@@ -105,15 +105,26 @@ def integrate_probabilities(k, G, variables) :
     nb_mis += 1
     print()
     return nb_mis
-    
-    
-def isomorphism_graphs(lstG, G2) :
+
+def create_matrix_p(k) :
+    """
+    Return a list of Matrix established on permutations of size k.
+    """
+    return [sp.Matrix([[0 if (elem != x) else 1 for x in range(k)] for elem in perm]) for perm in permutations(arange(k))]
+
+def isomorphism_graphs(lstG, G2, lst_matrix_p) :
     """
     Verify if two graphs are isomorphs.
     Return True or False.
     """
     for G in lstG :
-        print(G._matrice_adjacence, "\n", G2._matrice_adjacence)
+        for p in lst_matrix_p :
+            A1 = sp.Matrix(G._matrice_adjacence)
+            left = p * A1 * p**(-1)
+            A2 = sp.Matrix(G2._matrice_adjacence)
+            if (left == A2) :
+                return True
+    return False
 
 
 def main() :
@@ -136,6 +147,7 @@ def main() :
     variables = generate_variables(k)
     nb_found = 0
     lstG = []
+    lst_matrix_p = create_matrix_p(k)
 
     # Starting the timer :
     time_perf = perf_counter()
@@ -148,7 +160,7 @@ def main() :
 
                 # Check :
                 if (len(tarjan(G)) == 1) :
-                    if (not isomorphism_graphs(lstG, G)) :
+                    if (not isomorphism_graphs(lstG, G, lst_matrix_p)) :
                         f.write(export_dot(G, str(i)))
                         f.write("\n")
                         res = calculate_stationary_probas(k, G, variables)

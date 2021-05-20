@@ -5,6 +5,9 @@ Implémentation d'un graphe à l'aide d'une matrice d'adjacence. Les n sommets
 sont identifiés par de simples naturels (0, 1, 2, ..., n-1).
 """
 
+from copy import deepcopy
+import numpy as np
+
 
 class MatriceAdjacence(object):
     def __init__(self, num=0):
@@ -316,7 +319,7 @@ class MatriceAdjacence(object):
 
         >>> G = MatriceAdjacence()
         >>> G.ajouter_aretes([(1, 1, 1), (1, 2, 1)])
-        >>> G.voisins(1)        
+        >>> G.voisins(1)
         [1, 2]
         """
         list = []
@@ -325,7 +328,7 @@ class MatriceAdjacence(object):
                 if (self._matrice_adjacence[sommet][i] != 0) :
                     list.append(i)
         return list
-        
+
     # TODO
     def check_entrees(self) :
         """
@@ -342,13 +345,13 @@ class MatriceAdjacence(object):
                 if lst[i] != 0 :
                     lstmp[i] = 1
         return lstmp == [1 * 1 for _ in range(self.nombre_sommets())]
-    
-    
-    
+
+
+
 def identity_matrix(n) :
     """
     Create a graph that is an identity.
-    
+
     >>> identity_matrix(2)._matrice_adjacence
     [[1, 0], [0, 1]]
     """
@@ -359,7 +362,7 @@ def identity_matrix(n) :
 def export_dot(graphe, num):
     """
     Renvoie une chaîne encodant le graphe au format dot.
-    
+
     >>> G = MatriceAdjacence(4)
     >>> G.ajouter_aretes([(0, 1, 1), (1, 2, 1), (2, 3, 1)])
     >>> print(export_dot(G, 0))
@@ -386,7 +389,7 @@ def export_dot(graphe, num):
 def tarjan(G) :
     """
     Take a graph and applies Tarjan Algorithm on it.
-    
+
     >>> G = MatriceAdjacence(3)
     >>> G.ajouter_aretes([(0, 1, 1), (1, 2, 1), (2, 3, 1)])
     >>> tarjan(G)
@@ -396,7 +399,7 @@ def tarjan(G) :
     p = []
     partition = []
     lst = []
-    
+
     def parcours(G, lst, num, p, partition, v) :
         """
         Aux function of tarjan.
@@ -406,14 +409,14 @@ def tarjan(G) :
         num = num + 1
         p.append(lst[v])
         lst[v][3] = True # v.dansP
-        
+
         for w in G.voisins(v) :
             if lst[w][2] == None :
                 parcours(G, lst, num, p, partition, w)
                 lst[v][2] = min(lst[v][2], lst[w][2])
             elif lst[w][3] == True :
                 lst[v][2] = min(lst[v][2], lst[w][1])
-        
+
         if lst[v][2] == lst[v][1] :
             c = []
             if p != [] :
@@ -424,7 +427,7 @@ def tarjan(G) :
                     if (w != lst[v] or p == []) :
                         break
             partition.append(c)
-    
+
     for sommet in G.sommets() :
         lst.append([sommet, None, None, False])
     for sommet in G.sommets() :
