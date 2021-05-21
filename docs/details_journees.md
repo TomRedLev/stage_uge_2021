@@ -100,5 +100,7 @@ Bug persistant sur le 21ème graphe à 4 états. <br />
 ## Vendredi 21 Mai 2021 : 
 Tentative d'implémentation de linsolve et de réparation du bug lors des calculs d'intégrales. <br />
 Je n'ai pas trouvé de solution pour l'instant. <br />
+Lecture de divers documentations. <br />
+Lecture de Hennessy Patterson - Computer Architecture (100 pages). <br />
 <br />
 
