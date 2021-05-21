@@ -9,6 +9,7 @@ from time import *
 from colorama import *
 import sympy as sp
 import doctest
+from scipy.integrate import simps
 
 def determine_combinations(val) :
     """

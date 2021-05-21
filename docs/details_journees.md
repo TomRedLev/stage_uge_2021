@@ -96,3 +96,9 @@ Implémentation de la vérification de l'isomorphisme entre deux matrices d'adja
 Tentative d'amélioration du code et de l'exécution. <br />
 Bug persistant sur le 21ème graphe à 4 états. <br />
 <br />
+
+## Vendredi 21 Mai 2021 : 
+Tentative d'implémentation de linsolve et de réparation du bug lors des calculs d'intégrales. <br />
+Je n'ai pas trouvé de solution pour l'instant. <br />
+<br />
+
