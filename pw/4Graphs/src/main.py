@@ -96,10 +96,12 @@ def integrate_probabilities(k, G, variables) :
     nb_mis = 0
     probas = calculate_stationary_probas(k, G, variables)
     for key in probas.keys() :
-        if (complex(sp.integrate(probas[key] * (1 - p), (p, 0, 1))).real <= complex(sp.integrate(probas[key] * p, (p, 0, 1))).real) :
-            print(Fore.GREEN, "Taking state", key)
-        else :
-            print(Fore.GREEN, "Not taking state", key)
+        print(sp.Integral(sp.expand(probas[key] * (1 - p)), (p, 0, 1)).doit(simplify=False))
+        print(sp.Integral(sp.expand(probas[key] * p), (p, 0, 1)).doit())
+        # if (complex(sp.integrate(probas[key] * (1 - p), (p, 0, 1))).real <= complex(sp.integrate(probas[key] * p, (p, 0, 1))).real) :
+        #     print(Fore.GREEN, "Taking state", key)
+        # else :
+        #     print(Fore.GREEN, "Not taking state", key)
     nb_mis += 1
     print()
     return nb_mis
