@@ -83,6 +83,7 @@ Lecture de plusieurs documents sur des versions des algorithmes sus-nommés. <br
 ## Mardi 18 Mai 2021 :
 Correction de divers bugs dans les exemples. <br />
 Ajout de la détermination des statuts des états. <br />
+Participation au séminaire du laboratoire. <br />
 <br />
 
 ## Mercredi 19 Mai 2021 :
@@ -100,7 +101,18 @@ Bug persistant sur le 21ème graphe à 4 états. <br />
 ## Vendredi 21 Mai 2021 : 
 Tentative d'implémentation de linsolve et de réparation du bug lors des calculs d'intégrales. <br />
 Je n'ai pas trouvé de solution pour l'instant. <br />
-Lecture de divers documentations. <br />
+Lecture de diverses documentations. <br />
 Lecture de Hennessy Patterson - Computer Architecture (100 pages). <br />
 <br />
 
+## Lundi 24 Mai 2021 : 
+Tentative de réparation du bug lors des calculs d'intégrales. <br />
+J'ai commencé à étudier les calculs numériques d'intégrales. <br />
+Lecture de diverses documentations. <br />
+<br />
+
+## Mardi 25 Mai 2021 : 
+Implémentation d'une solution pour le problème des calculs d'intégrales en utilisant la formule de Simpson. <br />
+cf. https://fr.wikipedia.org/wiki/Calcul_num%C3%A9rique_d%27une_int%C3%A9grale#Formules_simples <br />
+Améliorations de l'exécution du programme avec cython. <br />
+<br />
