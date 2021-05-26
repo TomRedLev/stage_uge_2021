@@ -360,7 +360,7 @@ def identity_matrix(n) :
     G.ajouter_aretes([(x, x, 1) for x in range(n)])
     return G
 
-def export_dot(graphe, num):
+def export_dot(graphe, num, states):
     """
     Renvoie une chaîne encodant le graphe au format dot.
 
@@ -378,23 +378,29 @@ def export_dot(graphe, num):
     }
     """
     p = sp.var("p")
-    graph = "digraph graph" + str(num) +" {\ncenter=true;\npad=1;\n"
+    graph = "digraph graph" + str(num) +" {\ncenter=true;\npad=1;\ngraph [label=\"Graphe " + str(num) + " :\n\", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18]"
     for sommet in graphe.sommets():
-        graph = graph + str(sommet) + ";\n"
+        var = sp.var("q" + str(sommet + 1))
+        if states[var] == 1 :
+            graph = graph + "node [color=black, shape=\"ellipse\", style=\"filled\", width=1, height=1, fillcolor=green] " + str(sommet) + ";\n"
+        else :
+            graph = graph + "node [color=black, shape=\"ellipse\", style=\"filled\", width=1, height=1, fillcolor=red] " + str(sommet) + ";\n"
     for boucle in graphe.boucles():
         if graphe._matrice_adjacence[boucle[0]][boucle[1]] == 1 :
-            graph = graph + str(boucle[0]) + " -> " + str(boucle[1]) + "[fillcolor = yellow];\n"
+            graph = graph + str(boucle[0]) + " -> " + str(boucle[1]) + "[style=dotted];\n"
+            graph = graph + str(boucle[0]) + " -> " + str(boucle[1]) + ";\n"
         elif graphe._matrice_adjacence[boucle[0]][boucle[1]] == p :
-            graph = graph + str(boucle[0]) + " -> " + str(boucle[1]) + "[fillcolor = red];\n"
+            graph = graph + str(boucle[0]) + " -> " + str(boucle[1]) + "[style=dotted];\n"
         elif graphe._matrice_adjacence[boucle[0]][boucle[1]] == (1 - p) :
-            graph = graph + str(boucle[0]) + " -> " + str(boucle[1]) + "[fillcolor = green];\n"
+            graph = graph + str(boucle[0]) + " -> " + str(boucle[1]) + ";\n"
     for arete in graphe.aretes():
         if graphe._matrice_adjacence[arete[0]][arete[1]] == 1 :
-            graph = graph + str(arete[0]) + " -> " + str(arete[1]) + "[fillcolor = yellow];\n"
+            graph = graph + str(arete[0]) + " -> " + str(arete[1]) + "[style=dotted];\n"
+            graph = graph + str(arete[0]) + " -> " + str(arete[1]) + ";\n"
         elif graphe._matrice_adjacence[arete[0]][arete[1]] == p :
-            graph = graph + str(arete[0]) + " -> " + str(arete[1]) + "[fillcolor = red];\n"
+            graph = graph + str(arete[0]) + " -> " + str(arete[1]) + "[style=dotted];\n"
         elif graphe._matrice_adjacence[arete[0]][arete[1]] == (1 - p) :
-            graph = graph + str(arete[0]) + " -> " + str(arete[1]) + "[fillcolor = green];\n"
+            graph = graph + str(arete[0]) + " -> " + str(arete[1]) + ";\n"
     graph = graph + "}"
     return graph
 

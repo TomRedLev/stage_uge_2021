@@ -94,6 +94,7 @@ def integrate_probabilities(k, G, variables) :
     """
     probas = calculate_stationary_probas(k, G, variables)
     score = 0
+    states = {}
     for key in probas.keys() :
         f, g = probas[key] * (1 - p), probas[key] * p
         a, b = 0, 1
@@ -102,12 +103,14 @@ def integrate_probabilities(k, G, variables) :
         if (expr_f <= expr_g) :
             print(Fore.GREEN, "Taking state", key, Fore.WHITE)
             score += expr_f
+            states[key] = 1
         else :
             print(Fore.GREEN, "Not taking state", key, Fore.WHITE)
             score += expr_g
+            states[key] = 0
     print(score)
     print()
-    return score
+    return score, states
 
 def create_matrix_p(k) :
     """
@@ -149,7 +152,7 @@ def main() :
     f = open("graphs.gv", "w")
     cmpt = 0
     variables = generate_variables(k)
-    nb_found = 0
+    scores = {1 : (-1,1), 2 : (-1,1)}
     lstG = []
     lst_matrix_p = create_matrix_p(k)
 
@@ -165,13 +168,16 @@ def main() :
                 # Check :
                 if (len(tarjan(G)) == 1) :
                     if (not isomorphism_graphs(lstG, G, lst_matrix_p)) :
-                        print(G._matrice_adjacence)
-                        f.write(export_dot(G, str(i)))
-                        f.write("\n")
                         res = calculate_stationary_probas(k, G, variables)
                         print("graph", i, " : ", res)
                         #test_stationary_probas(k, G, variables) # Can be use to test the probabilities
-                        nb_found += integrate_probabilities(k, G, variables)
+                        score, states = integrate_probabilities(k, G, variables)
+                        if score > 0 and score < scores[1][1] :
+                            scores[1] = (i, score)
+                        elif score > 0 and score < scores[2][1] :
+                            scores[2] = (i, score)
+                        f.write(export_dot(G, str(i), states))
+                        f.write("\n")
                         i += 1
                         lstG.append(G)
 
@@ -179,7 +185,7 @@ def main() :
 
     print(Style.RESET_ALL + str((perf_counter() - time_perf)), "seconds to run the generation of strongly connected", k, "- states graphs.")
     print("Number of loops :", cmpt)
-    print("Number of founded solutions :", nb_found, "on", i)
+    print("Founded optimal solutions are :", scores[1], "and", scores[2])
     f.close()
 
 

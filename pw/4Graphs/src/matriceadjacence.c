@@ -831,7 +831,7 @@ static const char *__pyx_f[] = {
 /*--- Type declarations ---*/
 struct __pyx_obj_16matriceadjacence___pyx_scope_struct__tarjan;
 
-/* "matriceadjacence.py":401
+/* "matriceadjacence.py":407
  *     return graph
  * 
  * def tarjan(G) :             # <<<<<<<<<<<<<<
@@ -1485,6 +1485,7 @@ static const char __pyx_k_j[] = "j";
 static const char __pyx_k_k[] = "k";
 static const char __pyx_k_n[] = "n";
 static const char __pyx_k_p[] = "p";
+static const char __pyx_k_q[] = "q";
 static const char __pyx_k_u[] = "u";
 static const char __pyx_k_v[] = "v";
 static const char __pyx_k_w[] = "w";
@@ -1529,6 +1530,7 @@ static const char __pyx_k_module[] = "__module__";
 static const char __pyx_k_object[] = "object";
 static const char __pyx_k_sommet[] = "sommet";
 static const char __pyx_k_source[] = "source";
+static const char __pyx_k_states[] = "states";
 static const char __pyx_k_tarjan[] = "tarjan";
 static const char __pyx_k_boucles[] = "boucles";
 static const char __pyx_k_doctest[] = "doctest";
@@ -1545,10 +1547,10 @@ static const char __pyx_k_partition[] = "partition";
 static const char __pyx_k_ValueError[] = "ValueError";
 static const char __pyx_k_export_dot[] = "export_dot";
 static const char __pyx_k_destination[] = "destination";
+static const char __pyx_k_style_dotted[] = "[style=dotted];\n";
 static const char __pyx_k_ajouter_arete[] = "ajouter_arete";
 static const char __pyx_k_check_entrees[] = "check_entrees";
 static const char __pyx_k_digraph_graph[] = "digraph graph";
-static const char __pyx_k_fillcolor_red[] = "[fillcolor = red];\n";
 static const char __pyx_k_nombre_aretes[] = "nombre_aretes";
 static const char __pyx_k_retirer_arete[] = "retirer_arete";
 static const char __pyx_k_ajouter_aretes[] = "ajouter_aretes";
@@ -1559,14 +1561,11 @@ static const char __pyx_k_nombre_sommets[] = "nombre_sommets";
 static const char __pyx_k_retirer_aretes[] = "retirer_aretes";
 static const char __pyx_k_retirer_sommet[] = "retirer_sommet";
 static const char __pyx_k_contient_sommet[] = "contient_sommet";
-static const char __pyx_k_fillcolor_green[] = "[fillcolor = green];\n";
 static const char __pyx_k_identity_matrix[] = "identity_matrix";
 static const char __pyx_k_retirer_sommets[] = "retirer_sommets";
-static const char __pyx_k_tarjan_line_401[] = "tarjan (line 401)";
+static const char __pyx_k_tarjan_line_407[] = "tarjan (line 407)";
 static const char __pyx_k_MatriceAdjacence[] = "MatriceAdjacence";
-static const char __pyx_k_fillcolor_yellow[] = "[fillcolor = yellow];\n";
 static const char __pyx_k_matriceadjacence[] = "matriceadjacence";
-static const char __pyx_k_center_true_pad_1[] = " {\ncenter=true;\npad=1;\n";
 static const char __pyx_k_matrice_adjacence[] = "_matrice_adjacence";
 static const char __pyx_k_cline_in_traceback[] = "cline_in_traceback";
 static const char __pyx_k_sous_graphe_induit[] = "sous_graphe_induit";
@@ -1617,6 +1616,8 @@ static const char __pyx_k_Renvoie_une_chane_encodant_le_g[] = "\n    Renvoie une
 static const char __pyx_k_Retire_l_arte_u_v_si_elle_exist[] = "\n        Retire l'ar\303\252te {u, v} si elle existe; provoque une erreur sinon.\n\n        >>> G = MatriceAdjacence()\n        >>> G.ajouter_aretes([(0, 0, 1), (1, 1, 1)])\n        >>> G.retirer_arete(0, 0)\n        >>> G._matrice_adjacence\n        [[0, 0], [0, 1]]\n        ";
 static const char __pyx_k_Retire_toutes_les_artes_de_l_it[] = "\n        Retire toutes les ar\303\252tes de l'it\303\251rable donn\303\251 du graphe. N'importe\n        quel type d'it\303\251rable est acceptable, mais il faut qu'il ne contienne\n        que des couples d'\303\251l\303\251ments (quel que soit le type du couple).\n\n        >>> G = MatriceAdjacence()\n        >>> G.ajouter_aretes([(0, 0, 1), (1, 1, 1)])\n        >>> G.retirer_aretes([(0, 0), (1, 1)])\n        >>> G._matrice_adjacence\n        [[0, 0], [0, 0]]\n        ";
 static const char __pyx_k_Take_a_graph_and_applies_Tarjan[] = "\n    Take a graph and applies Tarjan Algorithm on it.\n\n    >>> G = MatriceAdjacence(3)\n    >>> G.ajouter_aretes([(0, 1, 1), (1, 2, 1), (2, 3, 1)])\n    >>> tarjan(G)\n    [[[3, 3, 3, False], [2, 2, 2, False]], [[1, 1, 1, False]], [[0, 0, 0, False]], []]\n    ";
+static const char __pyx_k_center_true_pad_1_graph_label_G[] = " {\ncenter=true;\npad=1;\ngraph [label=\"Graphe ";
+static const char __pyx_k_labelloc_t_labeljust_center_fon[] = " :\n\", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18]";
 static const char __pyx_k_MatriceAdjacence___init___line_1[] = "MatriceAdjacence.__init__ (line 14)";
 static const char __pyx_k_MatriceAdjacence_ajouter_arete_l[] = "MatriceAdjacence.ajouter_arete (line 24)";
 static const char __pyx_k_MatriceAdjacence_boucles_line_10[] = "MatriceAdjacence.boucles (line 103)";
@@ -1628,6 +1629,7 @@ static const char __pyx_k_MatriceAdjacence_retirer_sommets[] = "MatriceAdjacence
 static const char __pyx_k_MatriceAdjacence_sommets_line_28[] = "MatriceAdjacence.sommets (line 285)";
 static const char __pyx_k_MatriceAdjacence_sous_graphe_ind[] = "MatriceAdjacence.sous_graphe_induit";
 static const char __pyx_k_MatriceAdjacence_voisins_line_31[] = "MatriceAdjacence.voisins (line 317)";
+static const char __pyx_k_node_color_black_shape_ellipse_s[] = "node [color=black, shape=\"ellipse\", style=\"filled\", width=1, height=1, fillcolor=green] ";
 static const char __pyx_k_MatriceAdjacence_ajouter_aretes_2[] = "MatriceAdjacence.ajouter_aretes (line 40)";
 static const char __pyx_k_MatriceAdjacence_ajouter_sommet_2[] = "MatriceAdjacence.ajouter_sommet (line 56)";
 static const char __pyx_k_MatriceAdjacence_contient_arete_2[] = "MatriceAdjacence.contient_arete (line 125)";
@@ -1638,6 +1640,7 @@ static const char __pyx_k_MatriceAdjacence_retirer_sommet_2[] = "MatriceAdjacenc
 static const char __pyx_k_MatriceAdjacence_contient_sommet_2[] = "MatriceAdjacence.contient_sommet (line 141)";
 static const char __pyx_k_MatriceAdjacence_retirer_sommets_2[] = "MatriceAdjacence.retirer_sommets (line 271)";
 static const char __pyx_k_MatriceAdjacence_sous_graphe_ind_2[] = "MatriceAdjacence.sous_graphe_induit (line 299)";
+static const char __pyx_k_node_color_black_shape_ellipse_s_2[] = "node [color=black, shape=\"ellipse\", style=\"filled\", width=1, height=1, fillcolor=red] ";
 static PyObject *__pyx_kp_s_;
 static PyObject *__pyx_kp_u_Ajoute_l_arte_source_destinatio;
 static PyObject *__pyx_kp_u_Ajoute_toutes_les_artes_de_l_it;
@@ -1717,7 +1720,7 @@ static PyObject *__pyx_n_s_aretes;
 static PyObject *__pyx_n_s_boucle;
 static PyObject *__pyx_n_s_boucles;
 static PyObject *__pyx_n_s_c;
-static PyObject *__pyx_kp_s_center_true_pad_1;
+static PyObject *__pyx_kp_s_center_true_pad_1_graph_label_G;
 static PyObject *__pyx_n_s_check_entrees;
 static PyObject *__pyx_n_s_cline_in_traceback;
 static PyObject *__pyx_n_s_contient_arete;
@@ -1736,9 +1739,6 @@ static PyObject *__pyx_n_s_error;
 static PyObject *__pyx_n_s_export_dot;
 static PyObject *__pyx_kp_u_export_dot_line_363;
 static PyObject *__pyx_n_s_file;
-static PyObject *__pyx_kp_s_fillcolor_green;
-static PyObject *__pyx_kp_s_fillcolor_red;
-static PyObject *__pyx_kp_s_fillcolor_yellow;
 static PyObject *__pyx_n_s_graph;
 static PyObject *__pyx_n_s_graphe;
 static PyObject *__pyx_n_s_i;
@@ -1749,6 +1749,7 @@ static PyObject *__pyx_n_s_init;
 static PyObject *__pyx_n_s_iterable;
 static PyObject *__pyx_n_s_j;
 static PyObject *__pyx_n_s_k;
+static PyObject *__pyx_kp_s_labelloc_t_labeljust_center_fon;
 static PyObject *__pyx_n_s_list;
 static PyObject *__pyx_n_s_lst;
 static PyObject *__pyx_n_s_lstmp;
@@ -1761,6 +1762,8 @@ static PyObject *__pyx_n_s_metaclass;
 static PyObject *__pyx_n_s_module;
 static PyObject *__pyx_n_s_n;
 static PyObject *__pyx_n_s_name;
+static PyObject *__pyx_kp_s_node_color_black_shape_ellipse_s;
+static PyObject *__pyx_kp_s_node_color_black_shape_ellipse_s_2;
 static PyObject *__pyx_n_s_nombre_aretes;
 static PyObject *__pyx_n_s_nombre_boucles;
 static PyObject *__pyx_n_s_nombre_sommets;
@@ -1774,6 +1777,7 @@ static PyObject *__pyx_n_s_partition;
 static PyObject *__pyx_n_s_pop;
 static PyObject *__pyx_n_s_prepare;
 static PyObject *__pyx_n_s_print;
+static PyObject *__pyx_n_s_q;
 static PyObject *__pyx_n_s_qualname;
 static PyObject *__pyx_n_s_range;
 static PyObject *__pyx_n_s_retirer_arete;
@@ -1786,9 +1790,11 @@ static PyObject *__pyx_n_s_sommets;
 static PyObject *__pyx_n_s_source;
 static PyObject *__pyx_n_s_sous_graphe_induit;
 static PyObject *__pyx_n_s_sp;
+static PyObject *__pyx_n_s_states;
+static PyObject *__pyx_kp_s_style_dotted;
 static PyObject *__pyx_n_s_sympy;
 static PyObject *__pyx_n_s_tarjan;
-static PyObject *__pyx_kp_u_tarjan_line_401;
+static PyObject *__pyx_kp_u_tarjan_line_407;
 static PyObject *__pyx_n_s_tarjan_locals_parcours;
 static PyObject *__pyx_n_s_test;
 static PyObject *__pyx_n_s_testmod;
@@ -1819,7 +1825,7 @@ static PyObject *__pyx_pf_16matriceadjacence_16MatriceAdjacence_34sous_graphe_in
 static PyObject *__pyx_pf_16matriceadjacence_16MatriceAdjacence_36voisins(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_sommet); /* proto */
 static PyObject *__pyx_pf_16matriceadjacence_16MatriceAdjacence_38check_entrees(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self); /* proto */
 static PyObject *__pyx_pf_16matriceadjacence_identity_matrix(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_n); /* proto */
-static PyObject *__pyx_pf_16matriceadjacence_2export_dot(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_graphe, PyObject *__pyx_v_num); /* proto */
+static PyObject *__pyx_pf_16matriceadjacence_2export_dot(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_graphe, PyObject *__pyx_v_num, PyObject *__pyx_v_states); /* proto */
 static PyObject *__pyx_pf_16matriceadjacence_6tarjan_parcours(PyObject *__pyx_self, PyObject *__pyx_v_G, PyObject *__pyx_v_lst, PyObject *__pyx_v_num, PyObject *__pyx_v_p, PyObject *__pyx_v_partition, PyObject *__pyx_v_v); /* proto */
 static PyObject *__pyx_pf_16matriceadjacence_4tarjan(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_G); /* proto */
 static PyObject *__pyx_pf_16matriceadjacence_6main(CYTHON_UNUSED PyObject *__pyx_self); /* proto */
@@ -7062,7 +7068,7 @@ static PyObject *__pyx_pf_16matriceadjacence_identity_matrix(CYTHON_UNUSED PyObj
  *     G.ajouter_aretes([(x, x, 1) for x in range(n)])
  *     return G             # <<<<<<<<<<<<<<
  * 
- * def export_dot(graphe, num):
+ * def export_dot(graphe, num, states):
  */
   __Pyx_XDECREF(__pyx_r);
   __Pyx_INCREF(__pyx_v_G);
@@ -7097,7 +7103,7 @@ static PyObject *__pyx_pf_16matriceadjacence_identity_matrix(CYTHON_UNUSED PyObj
 /* "matriceadjacence.py":363
  *     return G
  * 
- * def export_dot(graphe, num):             # <<<<<<<<<<<<<<
+ * def export_dot(graphe, num, states):             # <<<<<<<<<<<<<<
  *     """
  *     Renvoie une chane encodant le graphe au format dot.
  */
@@ -7109,6 +7115,7 @@ static PyMethodDef __pyx_mdef_16matriceadjacence_3export_dot = {"export_dot", (P
 static PyObject *__pyx_pw_16matriceadjacence_3export_dot(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_graphe = 0;
   PyObject *__pyx_v_num = 0;
+  PyObject *__pyx_v_states = 0;
   int __pyx_lineno = 0;
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
@@ -7116,12 +7123,14 @@ static PyObject *__pyx_pw_16matriceadjacence_3export_dot(PyObject *__pyx_self, P
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("export_dot (wrapper)", 0);
   {
-    static PyObject **__pyx_pyargnames[] = {&__pyx_n_s_graphe,&__pyx_n_s_num,0};
-    PyObject* values[2] = {0,0};
+    static PyObject **__pyx_pyargnames[] = {&__pyx_n_s_graphe,&__pyx_n_s_num,&__pyx_n_s_states,0};
+    PyObject* values[3] = {0,0,0};
     if (unlikely(__pyx_kwds)) {
       Py_ssize_t kw_args;
       const Py_ssize_t pos_args = PyTuple_GET_SIZE(__pyx_args);
       switch (pos_args) {
+        case  3: values[2] = PyTuple_GET_ITEM(__pyx_args, 2);
+        CYTHON_FALLTHROUGH;
         case  2: values[1] = PyTuple_GET_ITEM(__pyx_args, 1);
         CYTHON_FALLTHROUGH;
         case  1: values[0] = PyTuple_GET_ITEM(__pyx_args, 0);
@@ -7138,40 +7147,49 @@ static PyObject *__pyx_pw_16matriceadjacence_3export_dot(PyObject *__pyx_self, P
         case  1:
         if (likely((values[1] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_num)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("export_dot", 1, 2, 2, 1); __PYX_ERR(0, 363, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("export_dot", 1, 3, 3, 1); __PYX_ERR(0, 363, __pyx_L3_error)
+        }
+        CYTHON_FALLTHROUGH;
+        case  2:
+        if (likely((values[2] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_states)) != 0)) kw_args--;
+        else {
+          __Pyx_RaiseArgtupleInvalid("export_dot", 1, 3, 3, 2); __PYX_ERR(0, 363, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
         if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "export_dot") < 0)) __PYX_ERR(0, 363, __pyx_L3_error)
       }
-    } else if (PyTuple_GET_SIZE(__pyx_args) != 2) {
+    } else if (PyTuple_GET_SIZE(__pyx_args) != 3) {
       goto __pyx_L5_argtuple_error;
     } else {
       values[0] = PyTuple_GET_ITEM(__pyx_args, 0);
       values[1] = PyTuple_GET_ITEM(__pyx_args, 1);
+      values[2] = PyTuple_GET_ITEM(__pyx_args, 2);
     }
     __pyx_v_graphe = values[0];
     __pyx_v_num = values[1];
+    __pyx_v_states = values[2];
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("export_dot", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 363, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("export_dot", 1, 3, 3, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 363, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("matriceadjacence.export_dot", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_16matriceadjacence_2export_dot(__pyx_self, __pyx_v_graphe, __pyx_v_num);
+  __pyx_r = __pyx_pf_16matriceadjacence_2export_dot(__pyx_self, __pyx_v_graphe, __pyx_v_num, __pyx_v_states);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_16matriceadjacence_2export_dot(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_graphe, PyObject *__pyx_v_num) {
+static PyObject *__pyx_pf_16matriceadjacence_2export_dot(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_graphe, PyObject *__pyx_v_num, PyObject *__pyx_v_states) {
   PyObject *__pyx_v_p = NULL;
   PyObject *__pyx_v_graph = NULL;
   PyObject *__pyx_v_sommet = NULL;
+  PyObject *__pyx_v_var = NULL;
   PyObject *__pyx_v_boucle = NULL;
   PyObject *__pyx_v_arete = NULL;
   PyObject *__pyx_r = NULL;
@@ -7182,7 +7200,8 @@ static PyObject *__pyx_pf_16matriceadjacence_2export_dot(CYTHON_UNUSED PyObject 
   Py_ssize_t __pyx_t_4;
   PyObject *(*__pyx_t_5)(PyObject *);
   PyObject *__pyx_t_6 = NULL;
-  int __pyx_t_7;
+  PyObject *__pyx_t_7 = NULL;
+  int __pyx_t_8;
   int __pyx_lineno = 0;
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
@@ -7192,7 +7211,7 @@ static PyObject *__pyx_pf_16matriceadjacence_2export_dot(CYTHON_UNUSED PyObject 
  *     }
  *     """
  *     p = sp.var("p")             # <<<<<<<<<<<<<<
- *     graph = "digraph graph" + str(num) +" {\ncenter=true;\npad=1;\n"
+ *     graph = "digraph graph" + str(num) +" {\ncenter=true;\npad=1;\ngraph [label=\"Graphe " + str(num) + " :\n\", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18]"
  *     for sommet in graphe.sommets():
  */
   __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_sp); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 380, __pyx_L1_error)
@@ -7221,76 +7240,85 @@ static PyObject *__pyx_pf_16matriceadjacence_2export_dot(CYTHON_UNUSED PyObject 
   /* "matriceadjacence.py":381
  *     """
  *     p = sp.var("p")
- *     graph = "digraph graph" + str(num) +" {\ncenter=true;\npad=1;\n"             # <<<<<<<<<<<<<<
+ *     graph = "digraph graph" + str(num) +" {\ncenter=true;\npad=1;\ngraph [label=\"Graphe " + str(num) + " :\n\", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18]"             # <<<<<<<<<<<<<<
  *     for sommet in graphe.sommets():
- *         graph = graph + str(sommet) + ";\n"
+ *         var = sp.var("q" + str(sommet + 1))
  */
   __pyx_t_1 = __Pyx_PyObject_CallOneArg(((PyObject *)(&PyString_Type)), __pyx_v_num); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 381, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_t_3 = PyNumber_Add(__pyx_kp_s_digraph_graph, __pyx_t_1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 381, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = PyNumber_Add(__pyx_t_3, __pyx_kp_s_center_true_pad_1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 381, __pyx_L1_error)
+  __pyx_t_1 = PyNumber_Add(__pyx_t_3, __pyx_kp_s_center_true_pad_1_graph_label_G); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 381, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __pyx_v_graph = __pyx_t_1;
-  __pyx_t_1 = 0;
+  __pyx_t_3 = __Pyx_PyObject_CallOneArg(((PyObject *)(&PyString_Type)), __pyx_v_num); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 381, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_3);
+  __pyx_t_2 = PyNumber_Add(__pyx_t_1, __pyx_t_3); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 381, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_2);
+  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+  __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+  __pyx_t_3 = PyNumber_Add(__pyx_t_2, __pyx_kp_s_labelloc_t_labeljust_center_fon); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 381, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_3);
+  __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+  __pyx_v_graph = __pyx_t_3;
+  __pyx_t_3 = 0;
 
   /* "matriceadjacence.py":382
  *     p = sp.var("p")
- *     graph = "digraph graph" + str(num) +" {\ncenter=true;\npad=1;\n"
+ *     graph = "digraph graph" + str(num) +" {\ncenter=true;\npad=1;\ngraph [label=\"Graphe " + str(num) + " :\n\", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18]"
  *     for sommet in graphe.sommets():             # <<<<<<<<<<<<<<
- *         graph = graph + str(sommet) + ";\n"
- *     for boucle in graphe.boucles():
+ *         var = sp.var("q" + str(sommet + 1))
+ *         if states[var] == 1 :
  */
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_graphe, __pyx_n_s_sommets); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 382, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_2 = NULL;
-  if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_3))) {
-    __pyx_t_2 = PyMethod_GET_SELF(__pyx_t_3);
-    if (likely(__pyx_t_2)) {
-      PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_3);
-      __Pyx_INCREF(__pyx_t_2);
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_graphe, __pyx_n_s_sommets); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 382, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_2);
+  __pyx_t_1 = NULL;
+  if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_2))) {
+    __pyx_t_1 = PyMethod_GET_SELF(__pyx_t_2);
+    if (likely(__pyx_t_1)) {
+      PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_2);
+      __Pyx_INCREF(__pyx_t_1);
       __Pyx_INCREF(function);
-      __Pyx_DECREF_SET(__pyx_t_3, function);
+      __Pyx_DECREF_SET(__pyx_t_2, function);
     }
   }
-  __pyx_t_1 = (__pyx_t_2) ? __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_2) : __Pyx_PyObject_CallNoArg(__pyx_t_3);
-  __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
-  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 382, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_1);
-  __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (likely(PyList_CheckExact(__pyx_t_1)) || PyTuple_CheckExact(__pyx_t_1)) {
-    __pyx_t_3 = __pyx_t_1; __Pyx_INCREF(__pyx_t_3); __pyx_t_4 = 0;
+  __pyx_t_3 = (__pyx_t_1) ? __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_1) : __Pyx_PyObject_CallNoArg(__pyx_t_2);
+  __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
+  if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 382, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_3);
+  __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+  if (likely(PyList_CheckExact(__pyx_t_3)) || PyTuple_CheckExact(__pyx_t_3)) {
+    __pyx_t_2 = __pyx_t_3; __Pyx_INCREF(__pyx_t_2); __pyx_t_4 = 0;
     __pyx_t_5 = NULL;
   } else {
-    __pyx_t_4 = -1; __pyx_t_3 = PyObject_GetIter(__pyx_t_1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 382, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_3);
-    __pyx_t_5 = Py_TYPE(__pyx_t_3)->tp_iternext; if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 382, __pyx_L1_error)
+    __pyx_t_4 = -1; __pyx_t_2 = PyObject_GetIter(__pyx_t_3); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 382, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_2);
+    __pyx_t_5 = Py_TYPE(__pyx_t_2)->tp_iternext; if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 382, __pyx_L1_error)
   }
-  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+  __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   for (;;) {
     if (likely(!__pyx_t_5)) {
-      if (likely(PyList_CheckExact(__pyx_t_3))) {
-        if (__pyx_t_4 >= PyList_GET_SIZE(__pyx_t_3)) break;
+      if (likely(PyList_CheckExact(__pyx_t_2))) {
+        if (__pyx_t_4 >= PyList_GET_SIZE(__pyx_t_2)) break;
         #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-        __pyx_t_1 = PyList_GET_ITEM(__pyx_t_3, __pyx_t_4); __Pyx_INCREF(__pyx_t_1); __pyx_t_4++; if (unlikely(0 < 0)) __PYX_ERR(0, 382, __pyx_L1_error)
+        __pyx_t_3 = PyList_GET_ITEM(__pyx_t_2, __pyx_t_4); __Pyx_INCREF(__pyx_t_3); __pyx_t_4++; if (unlikely(0 < 0)) __PYX_ERR(0, 382, __pyx_L1_error)
         #else
-        __pyx_t_1 = PySequence_ITEM(__pyx_t_3, __pyx_t_4); __pyx_t_4++; if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 382, __pyx_L1_error)
-        __Pyx_GOTREF(__pyx_t_1);
+        __pyx_t_3 = PySequence_ITEM(__pyx_t_2, __pyx_t_4); __pyx_t_4++; if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 382, __pyx_L1_error)
+        __Pyx_GOTREF(__pyx_t_3);
         #endif
       } else {
-        if (__pyx_t_4 >= PyTuple_GET_SIZE(__pyx_t_3)) break;
+        if (__pyx_t_4 >= PyTuple_GET_SIZE(__pyx_t_2)) break;
         #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-        __pyx_t_1 = PyTuple_GET_ITEM(__pyx_t_3, __pyx_t_4); __Pyx_INCREF(__pyx_t_1); __pyx_t_4++; if (unlikely(0 < 0)) __PYX_ERR(0, 382, __pyx_L1_error)
+        __pyx_t_3 = PyTuple_GET_ITEM(__pyx_t_2, __pyx_t_4); __Pyx_INCREF(__pyx_t_3); __pyx_t_4++; if (unlikely(0 < 0)) __PYX_ERR(0, 382, __pyx_L1_error)
         #else
-        __pyx_t_1 = PySequence_ITEM(__pyx_t_3, __pyx_t_4); __pyx_t_4++; if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 382, __pyx_L1_error)
-        __Pyx_GOTREF(__pyx_t_1);
+        __pyx_t_3 = PySequence_ITEM(__pyx_t_2, __pyx_t_4); __pyx_t_4++; if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 382, __pyx_L1_error)
+        __Pyx_GOTREF(__pyx_t_3);
         #endif
       }
     } else {
-      __pyx_t_1 = __pyx_t_5(__pyx_t_3);
-      if (unlikely(!__pyx_t_1)) {
+      __pyx_t_3 = __pyx_t_5(__pyx_t_2);
+      if (unlikely(!__pyx_t_3)) {
         PyObject* exc_type = PyErr_Occurred();
         if (exc_type) {
           if (likely(__Pyx_PyErr_GivenExceptionMatches(exc_type, PyExc_StopIteration))) PyErr_Clear();
@@ -7298,283 +7326,232 @@ static PyObject *__pyx_pf_16matriceadjacence_2export_dot(CYTHON_UNUSED PyObject 
         }
         break;
       }
-      __Pyx_GOTREF(__pyx_t_1);
+      __Pyx_GOTREF(__pyx_t_3);
     }
-    __Pyx_XDECREF_SET(__pyx_v_sommet, __pyx_t_1);
-    __pyx_t_1 = 0;
+    __Pyx_XDECREF_SET(__pyx_v_sommet, __pyx_t_3);
+    __pyx_t_3 = 0;
 
     /* "matriceadjacence.py":383
- *     graph = "digraph graph" + str(num) +" {\ncenter=true;\npad=1;\n"
+ *     graph = "digraph graph" + str(num) +" {\ncenter=true;\npad=1;\ngraph [label=\"Graphe " + str(num) + " :\n\", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18]"
  *     for sommet in graphe.sommets():
- *         graph = graph + str(sommet) + ";\n"             # <<<<<<<<<<<<<<
+ *         var = sp.var("q" + str(sommet + 1))             # <<<<<<<<<<<<<<
+ *         if states[var] == 1 :
+ *             graph = graph + "node [color=black, shape=\"ellipse\", style=\"filled\", width=1, height=1, fillcolor=green] " + str(sommet) + ";\n"
+ */
+    __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_sp); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 383, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_1);
+    __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_var); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 383, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_6);
+    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+    __pyx_t_1 = __Pyx_PyInt_AddObjC(__pyx_v_sommet, __pyx_int_1, 1, 0, 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 383, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_1);
+    __pyx_t_7 = __Pyx_PyObject_CallOneArg(((PyObject *)(&PyString_Type)), __pyx_t_1); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 383, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_7);
+    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+    __pyx_t_1 = PyNumber_Add(__pyx_n_s_q, __pyx_t_7); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 383, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_1);
+    __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
+    __pyx_t_7 = NULL;
+    if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_6))) {
+      __pyx_t_7 = PyMethod_GET_SELF(__pyx_t_6);
+      if (likely(__pyx_t_7)) {
+        PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_6);
+        __Pyx_INCREF(__pyx_t_7);
+        __Pyx_INCREF(function);
+        __Pyx_DECREF_SET(__pyx_t_6, function);
+      }
+    }
+    __pyx_t_3 = (__pyx_t_7) ? __Pyx_PyObject_Call2Args(__pyx_t_6, __pyx_t_7, __pyx_t_1) : __Pyx_PyObject_CallOneArg(__pyx_t_6, __pyx_t_1);
+    __Pyx_XDECREF(__pyx_t_7); __pyx_t_7 = 0;
+    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+    if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 383, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_3);
+    __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
+    __Pyx_XDECREF_SET(__pyx_v_var, __pyx_t_3);
+    __pyx_t_3 = 0;
+
+    /* "matriceadjacence.py":384
+ *     for sommet in graphe.sommets():
+ *         var = sp.var("q" + str(sommet + 1))
+ *         if states[var] == 1 :             # <<<<<<<<<<<<<<
+ *             graph = graph + "node [color=black, shape=\"ellipse\", style=\"filled\", width=1, height=1, fillcolor=green] " + str(sommet) + ";\n"
+ *         else :
+ */
+    __pyx_t_3 = __Pyx_PyObject_GetItem(__pyx_v_states, __pyx_v_var); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 384, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_3);
+    __pyx_t_6 = __Pyx_PyInt_EqObjC(__pyx_t_3, __pyx_int_1, 1, 0); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 384, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_6);
+    __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+    __pyx_t_8 = __Pyx_PyObject_IsTrue(__pyx_t_6); if (unlikely(__pyx_t_8 < 0)) __PYX_ERR(0, 384, __pyx_L1_error)
+    __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
+    if (__pyx_t_8) {
+
+      /* "matriceadjacence.py":385
+ *         var = sp.var("q" + str(sommet + 1))
+ *         if states[var] == 1 :
+ *             graph = graph + "node [color=black, shape=\"ellipse\", style=\"filled\", width=1, height=1, fillcolor=green] " + str(sommet) + ";\n"             # <<<<<<<<<<<<<<
+ *         else :
+ *             graph = graph + "node [color=black, shape=\"ellipse\", style=\"filled\", width=1, height=1, fillcolor=red] " + str(sommet) + ";\n"
+ */
+      __pyx_t_6 = PyNumber_Add(__pyx_v_graph, __pyx_kp_s_node_color_black_shape_ellipse_s); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 385, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_6);
+      __pyx_t_3 = __Pyx_PyObject_CallOneArg(((PyObject *)(&PyString_Type)), __pyx_v_sommet); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 385, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_3);
+      __pyx_t_1 = PyNumber_Add(__pyx_t_6, __pyx_t_3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 385, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_1);
+      __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
+      __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+      __pyx_t_3 = PyNumber_Add(__pyx_t_1, __pyx_kp_s_); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 385, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_3);
+      __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+      __Pyx_DECREF_SET(__pyx_v_graph, __pyx_t_3);
+      __pyx_t_3 = 0;
+
+      /* "matriceadjacence.py":384
+ *     for sommet in graphe.sommets():
+ *         var = sp.var("q" + str(sommet + 1))
+ *         if states[var] == 1 :             # <<<<<<<<<<<<<<
+ *             graph = graph + "node [color=black, shape=\"ellipse\", style=\"filled\", width=1, height=1, fillcolor=green] " + str(sommet) + ";\n"
+ *         else :
+ */
+      goto __pyx_L5;
+    }
+
+    /* "matriceadjacence.py":387
+ *             graph = graph + "node [color=black, shape=\"ellipse\", style=\"filled\", width=1, height=1, fillcolor=green] " + str(sommet) + ";\n"
+ *         else :
+ *             graph = graph + "node [color=black, shape=\"ellipse\", style=\"filled\", width=1, height=1, fillcolor=red] " + str(sommet) + ";\n"             # <<<<<<<<<<<<<<
  *     for boucle in graphe.boucles():
  *         if graphe._matrice_adjacence[boucle[0]][boucle[1]] == 1 :
  */
-    __pyx_t_1 = __Pyx_PyObject_CallOneArg(((PyObject *)(&PyString_Type)), __pyx_v_sommet); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 383, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_2 = PyNumber_Add(__pyx_v_graph, __pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 383, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_2);
-    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    __pyx_t_1 = PyNumber_Add(__pyx_t_2, __pyx_kp_s_); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 383, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_1);
-    __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-    __Pyx_DECREF_SET(__pyx_v_graph, __pyx_t_1);
-    __pyx_t_1 = 0;
+    /*else*/ {
+      __pyx_t_3 = PyNumber_Add(__pyx_v_graph, __pyx_kp_s_node_color_black_shape_ellipse_s_2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 387, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_3);
+      __pyx_t_1 = __Pyx_PyObject_CallOneArg(((PyObject *)(&PyString_Type)), __pyx_v_sommet); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 387, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_1);
+      __pyx_t_6 = PyNumber_Add(__pyx_t_3, __pyx_t_1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 387, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_6);
+      __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+      __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+      __pyx_t_1 = PyNumber_Add(__pyx_t_6, __pyx_kp_s_); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 387, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_1);
+      __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
+      __Pyx_DECREF_SET(__pyx_v_graph, __pyx_t_1);
+      __pyx_t_1 = 0;
+    }
+    __pyx_L5:;
 
     /* "matriceadjacence.py":382
  *     p = sp.var("p")
- *     graph = "digraph graph" + str(num) +" {\ncenter=true;\npad=1;\n"
+ *     graph = "digraph graph" + str(num) +" {\ncenter=true;\npad=1;\ngraph [label=\"Graphe " + str(num) + " :\n\", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18]"
  *     for sommet in graphe.sommets():             # <<<<<<<<<<<<<<
- *         graph = graph + str(sommet) + ";\n"
- *     for boucle in graphe.boucles():
+ *         var = sp.var("q" + str(sommet + 1))
+ *         if states[var] == 1 :
  */
   }
-  __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+  __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "matriceadjacence.py":384
- *     for sommet in graphe.sommets():
- *         graph = graph + str(sommet) + ";\n"
+  /* "matriceadjacence.py":388
+ *         else :
+ *             graph = graph + "node [color=black, shape=\"ellipse\", style=\"filled\", width=1, height=1, fillcolor=red] " + str(sommet) + ";\n"
  *     for boucle in graphe.boucles():             # <<<<<<<<<<<<<<
  *         if graphe._matrice_adjacence[boucle[0]][boucle[1]] == 1 :
- *             graph = graph + str(boucle[0]) + " -> " + str(boucle[1]) + "[fillcolor = yellow];\n"
+ *             graph = graph + str(boucle[0]) + " -> " + str(boucle[1]) + "[style=dotted];\n"
  */
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_graphe, __pyx_n_s_boucles); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 384, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_graphe, __pyx_n_s_boucles); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 388, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = NULL;
+  __pyx_t_6 = NULL;
   if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_1))) {
-    __pyx_t_2 = PyMethod_GET_SELF(__pyx_t_1);
-    if (likely(__pyx_t_2)) {
+    __pyx_t_6 = PyMethod_GET_SELF(__pyx_t_1);
+    if (likely(__pyx_t_6)) {
       PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_1);
-      __Pyx_INCREF(__pyx_t_2);
+      __Pyx_INCREF(__pyx_t_6);
       __Pyx_INCREF(function);
       __Pyx_DECREF_SET(__pyx_t_1, function);
     }
   }
-  __pyx_t_3 = (__pyx_t_2) ? __Pyx_PyObject_CallOneArg(__pyx_t_1, __pyx_t_2) : __Pyx_PyObject_CallNoArg(__pyx_t_1);
-  __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
-  if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 384, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_3);
+  __pyx_t_2 = (__pyx_t_6) ? __Pyx_PyObject_CallOneArg(__pyx_t_1, __pyx_t_6) : __Pyx_PyObject_CallNoArg(__pyx_t_1);
+  __Pyx_XDECREF(__pyx_t_6); __pyx_t_6 = 0;
+  if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 388, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  if (likely(PyList_CheckExact(__pyx_t_3)) || PyTuple_CheckExact(__pyx_t_3)) {
-    __pyx_t_1 = __pyx_t_3; __Pyx_INCREF(__pyx_t_1); __pyx_t_4 = 0;
+  if (likely(PyList_CheckExact(__pyx_t_2)) || PyTuple_CheckExact(__pyx_t_2)) {
+    __pyx_t_1 = __pyx_t_2; __Pyx_INCREF(__pyx_t_1); __pyx_t_4 = 0;
     __pyx_t_5 = NULL;
   } else {
-    __pyx_t_4 = -1; __pyx_t_1 = PyObject_GetIter(__pyx_t_3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 384, __pyx_L1_error)
+    __pyx_t_4 = -1; __pyx_t_1 = PyObject_GetIter(__pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 388, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_5 = Py_TYPE(__pyx_t_1)->tp_iternext; if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 384, __pyx_L1_error)
+    __pyx_t_5 = Py_TYPE(__pyx_t_1)->tp_iternext; if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 388, __pyx_L1_error)
   }
-  __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+  __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   for (;;) {
     if (likely(!__pyx_t_5)) {
       if (likely(PyList_CheckExact(__pyx_t_1))) {
         if (__pyx_t_4 >= PyList_GET_SIZE(__pyx_t_1)) break;
         #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-        __pyx_t_3 = PyList_GET_ITEM(__pyx_t_1, __pyx_t_4); __Pyx_INCREF(__pyx_t_3); __pyx_t_4++; if (unlikely(0 < 0)) __PYX_ERR(0, 384, __pyx_L1_error)
+        __pyx_t_2 = PyList_GET_ITEM(__pyx_t_1, __pyx_t_4); __Pyx_INCREF(__pyx_t_2); __pyx_t_4++; if (unlikely(0 < 0)) __PYX_ERR(0, 388, __pyx_L1_error)
         #else
-        __pyx_t_3 = PySequence_ITEM(__pyx_t_1, __pyx_t_4); __pyx_t_4++; if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 384, __pyx_L1_error)
-        __Pyx_GOTREF(__pyx_t_3);
+        __pyx_t_2 = PySequence_ITEM(__pyx_t_1, __pyx_t_4); __pyx_t_4++; if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 388, __pyx_L1_error)
+        __Pyx_GOTREF(__pyx_t_2);
         #endif
       } else {
         if (__pyx_t_4 >= PyTuple_GET_SIZE(__pyx_t_1)) break;
         #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-        __pyx_t_3 = PyTuple_GET_ITEM(__pyx_t_1, __pyx_t_4); __Pyx_INCREF(__pyx_t_3); __pyx_t_4++; if (unlikely(0 < 0)) __PYX_ERR(0, 384, __pyx_L1_error)
+        __pyx_t_2 = PyTuple_GET_ITEM(__pyx_t_1, __pyx_t_4); __Pyx_INCREF(__pyx_t_2); __pyx_t_4++; if (unlikely(0 < 0)) __PYX_ERR(0, 388, __pyx_L1_error)
         #else
-        __pyx_t_3 = PySequence_ITEM(__pyx_t_1, __pyx_t_4); __pyx_t_4++; if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 384, __pyx_L1_error)
-        __Pyx_GOTREF(__pyx_t_3);
+        __pyx_t_2 = PySequence_ITEM(__pyx_t_1, __pyx_t_4); __pyx_t_4++; if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 388, __pyx_L1_error)
+        __Pyx_GOTREF(__pyx_t_2);
         #endif
       }
     } else {
-      __pyx_t_3 = __pyx_t_5(__pyx_t_1);
-      if (unlikely(!__pyx_t_3)) {
+      __pyx_t_2 = __pyx_t_5(__pyx_t_1);
+      if (unlikely(!__pyx_t_2)) {
         PyObject* exc_type = PyErr_Occurred();
         if (exc_type) {
           if (likely(__Pyx_PyErr_GivenExceptionMatches(exc_type, PyExc_StopIteration))) PyErr_Clear();
-          else __PYX_ERR(0, 384, __pyx_L1_error)
+          else __PYX_ERR(0, 388, __pyx_L1_error)
         }
         break;
       }
-      __Pyx_GOTREF(__pyx_t_3);
+      __Pyx_GOTREF(__pyx_t_2);
     }
-    __Pyx_XDECREF_SET(__pyx_v_boucle, __pyx_t_3);
-    __pyx_t_3 = 0;
-
-    /* "matriceadjacence.py":385
- *         graph = graph + str(sommet) + ";\n"
- *     for boucle in graphe.boucles():
- *         if graphe._matrice_adjacence[boucle[0]][boucle[1]] == 1 :             # <<<<<<<<<<<<<<
- *             graph = graph + str(boucle[0]) + " -> " + str(boucle[1]) + "[fillcolor = yellow];\n"
- *         elif graphe._matrice_adjacence[boucle[0]][boucle[1]] == p :
- */
-    __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_graphe, __pyx_n_s_matrice_adjacence); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 385, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_3);
-    __pyx_t_2 = __Pyx_GetItemInt(__pyx_v_boucle, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 385, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_2);
-    __pyx_t_6 = __Pyx_PyObject_GetItem(__pyx_t_3, __pyx_t_2); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 385, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_6);
-    __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-    __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-    __pyx_t_2 = __Pyx_GetItemInt(__pyx_v_boucle, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 385, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_2);
-    __pyx_t_3 = __Pyx_PyObject_GetItem(__pyx_t_6, __pyx_t_2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 385, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_3);
-    __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-    __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-    __pyx_t_2 = __Pyx_PyInt_EqObjC(__pyx_t_3, __pyx_int_1, 1, 0); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 385, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_2);
-    __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-    __pyx_t_7 = __Pyx_PyObject_IsTrue(__pyx_t_2); if (unlikely(__pyx_t_7 < 0)) __PYX_ERR(0, 385, __pyx_L1_error)
-    __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-    if (__pyx_t_7) {
-
-      /* "matriceadjacence.py":386
- *     for boucle in graphe.boucles():
- *         if graphe._matrice_adjacence[boucle[0]][boucle[1]] == 1 :
- *             graph = graph + str(boucle[0]) + " -> " + str(boucle[1]) + "[fillcolor = yellow];\n"             # <<<<<<<<<<<<<<
- *         elif graphe._matrice_adjacence[boucle[0]][boucle[1]] == p :
- *             graph = graph + str(boucle[0]) + " -> " + str(boucle[1]) + "[fillcolor = red];\n"
- */
-      __pyx_t_2 = __Pyx_GetItemInt(__pyx_v_boucle, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 386, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_2);
-      __pyx_t_3 = __Pyx_PyObject_CallOneArg(((PyObject *)(&PyString_Type)), __pyx_t_2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 386, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_3);
-      __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-      __pyx_t_2 = PyNumber_Add(__pyx_v_graph, __pyx_t_3); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 386, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_2);
-      __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-      __pyx_t_3 = PyNumber_Add(__pyx_t_2, __pyx_kp_s__2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 386, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_3);
-      __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-      __pyx_t_2 = __Pyx_GetItemInt(__pyx_v_boucle, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 386, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_2);
-      __pyx_t_6 = __Pyx_PyObject_CallOneArg(((PyObject *)(&PyString_Type)), __pyx_t_2); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 386, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_6);
-      __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-      __pyx_t_2 = PyNumber_Add(__pyx_t_3, __pyx_t_6); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 386, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_2);
-      __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-      __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-      __pyx_t_6 = PyNumber_Add(__pyx_t_2, __pyx_kp_s_fillcolor_yellow); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 386, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_6);
-      __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-      __Pyx_DECREF_SET(__pyx_v_graph, __pyx_t_6);
-      __pyx_t_6 = 0;
-
-      /* "matriceadjacence.py":385
- *         graph = graph + str(sommet) + ";\n"
- *     for boucle in graphe.boucles():
- *         if graphe._matrice_adjacence[boucle[0]][boucle[1]] == 1 :             # <<<<<<<<<<<<<<
- *             graph = graph + str(boucle[0]) + " -> " + str(boucle[1]) + "[fillcolor = yellow];\n"
- *         elif graphe._matrice_adjacence[boucle[0]][boucle[1]] == p :
- */
-      goto __pyx_L7;
-    }
-
-    /* "matriceadjacence.py":387
- *         if graphe._matrice_adjacence[boucle[0]][boucle[1]] == 1 :
- *             graph = graph + str(boucle[0]) + " -> " + str(boucle[1]) + "[fillcolor = yellow];\n"
- *         elif graphe._matrice_adjacence[boucle[0]][boucle[1]] == p :             # <<<<<<<<<<<<<<
- *             graph = graph + str(boucle[0]) + " -> " + str(boucle[1]) + "[fillcolor = red];\n"
- *         elif graphe._matrice_adjacence[boucle[0]][boucle[1]] == (1 - p) :
- */
-    __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_v_graphe, __pyx_n_s_matrice_adjacence); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 387, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_6);
-    __pyx_t_2 = __Pyx_GetItemInt(__pyx_v_boucle, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 387, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_2);
-    __pyx_t_3 = __Pyx_PyObject_GetItem(__pyx_t_6, __pyx_t_2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 387, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_3);
-    __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-    __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-    __pyx_t_2 = __Pyx_GetItemInt(__pyx_v_boucle, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 387, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_2);
-    __pyx_t_6 = __Pyx_PyObject_GetItem(__pyx_t_3, __pyx_t_2); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 387, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_6);
-    __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-    __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-    __pyx_t_2 = PyObject_RichCompare(__pyx_t_6, __pyx_v_p, Py_EQ); __Pyx_XGOTREF(__pyx_t_2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 387, __pyx_L1_error)
-    __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-    __pyx_t_7 = __Pyx_PyObject_IsTrue(__pyx_t_2); if (unlikely(__pyx_t_7 < 0)) __PYX_ERR(0, 387, __pyx_L1_error)
-    __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-    if (__pyx_t_7) {
-
-      /* "matriceadjacence.py":388
- *             graph = graph + str(boucle[0]) + " -> " + str(boucle[1]) + "[fillcolor = yellow];\n"
- *         elif graphe._matrice_adjacence[boucle[0]][boucle[1]] == p :
- *             graph = graph + str(boucle[0]) + " -> " + str(boucle[1]) + "[fillcolor = red];\n"             # <<<<<<<<<<<<<<
- *         elif graphe._matrice_adjacence[boucle[0]][boucle[1]] == (1 - p) :
- *             graph = graph + str(boucle[0]) + " -> " + str(boucle[1]) + "[fillcolor = green];\n"
- */
-      __pyx_t_2 = __Pyx_GetItemInt(__pyx_v_boucle, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 388, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_2);
-      __pyx_t_6 = __Pyx_PyObject_CallOneArg(((PyObject *)(&PyString_Type)), __pyx_t_2); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 388, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_6);
-      __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-      __pyx_t_2 = PyNumber_Add(__pyx_v_graph, __pyx_t_6); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 388, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_2);
-      __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-      __pyx_t_6 = PyNumber_Add(__pyx_t_2, __pyx_kp_s__2); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 388, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_6);
-      __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-      __pyx_t_2 = __Pyx_GetItemInt(__pyx_v_boucle, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 388, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_2);
-      __pyx_t_3 = __Pyx_PyObject_CallOneArg(((PyObject *)(&PyString_Type)), __pyx_t_2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 388, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_3);
-      __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-      __pyx_t_2 = PyNumber_Add(__pyx_t_6, __pyx_t_3); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 388, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_2);
-      __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-      __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-      __pyx_t_3 = PyNumber_Add(__pyx_t_2, __pyx_kp_s_fillcolor_red); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 388, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_3);
-      __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-      __Pyx_DECREF_SET(__pyx_v_graph, __pyx_t_3);
-      __pyx_t_3 = 0;
-
-      /* "matriceadjacence.py":387
- *         if graphe._matrice_adjacence[boucle[0]][boucle[1]] == 1 :
- *             graph = graph + str(boucle[0]) + " -> " + str(boucle[1]) + "[fillcolor = yellow];\n"
- *         elif graphe._matrice_adjacence[boucle[0]][boucle[1]] == p :             # <<<<<<<<<<<<<<
- *             graph = graph + str(boucle[0]) + " -> " + str(boucle[1]) + "[fillcolor = red];\n"
- *         elif graphe._matrice_adjacence[boucle[0]][boucle[1]] == (1 - p) :
- */
-      goto __pyx_L7;
-    }
+    __Pyx_XDECREF_SET(__pyx_v_boucle, __pyx_t_2);
+    __pyx_t_2 = 0;
 
     /* "matriceadjacence.py":389
- *         elif graphe._matrice_adjacence[boucle[0]][boucle[1]] == p :
- *             graph = graph + str(boucle[0]) + " -> " + str(boucle[1]) + "[fillcolor = red];\n"
- *         elif graphe._matrice_adjacence[boucle[0]][boucle[1]] == (1 - p) :             # <<<<<<<<<<<<<<
- *             graph = graph + str(boucle[0]) + " -> " + str(boucle[1]) + "[fillcolor = green];\n"
- *     for arete in graphe.aretes():
+ *             graph = graph + "node [color=black, shape=\"ellipse\", style=\"filled\", width=1, height=1, fillcolor=red] " + str(sommet) + ";\n"
+ *     for boucle in graphe.boucles():
+ *         if graphe._matrice_adjacence[boucle[0]][boucle[1]] == 1 :             # <<<<<<<<<<<<<<
+ *             graph = graph + str(boucle[0]) + " -> " + str(boucle[1]) + "[style=dotted];\n"
+ *             graph = graph + str(boucle[0]) + " -> " + str(boucle[1]) + ";\n"
  */
-    __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_graphe, __pyx_n_s_matrice_adjacence); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 389, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_3);
-    __pyx_t_2 = __Pyx_GetItemInt(__pyx_v_boucle, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 389, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_graphe, __pyx_n_s_matrice_adjacence); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 389, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
-    __pyx_t_6 = __Pyx_PyObject_GetItem(__pyx_t_3, __pyx_t_2); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 389, __pyx_L1_error)
+    __pyx_t_6 = __Pyx_GetItemInt(__pyx_v_boucle, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 389, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_6);
-    __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-    __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-    __pyx_t_2 = __Pyx_GetItemInt(__pyx_v_boucle, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 389, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_2);
-    __pyx_t_3 = __Pyx_PyObject_GetItem(__pyx_t_6, __pyx_t_2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 389, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyObject_GetItem(__pyx_t_2, __pyx_t_6); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 389, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
-    __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-    __pyx_t_2 = __Pyx_PyInt_SubtractCObj(__pyx_int_1, __pyx_v_p, 1, 0, 0); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 389, __pyx_L1_error)
+    __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
+    __pyx_t_6 = __Pyx_GetItemInt(__pyx_v_boucle, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 389, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_6);
+    __pyx_t_2 = __Pyx_PyObject_GetItem(__pyx_t_3, __pyx_t_6); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 389, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
-    __pyx_t_6 = PyObject_RichCompare(__pyx_t_3, __pyx_t_2, Py_EQ); __Pyx_XGOTREF(__pyx_t_6); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 389, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-    __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-    __pyx_t_7 = __Pyx_PyObject_IsTrue(__pyx_t_6); if (unlikely(__pyx_t_7 < 0)) __PYX_ERR(0, 389, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-    if (__pyx_t_7) {
+    __pyx_t_6 = __Pyx_PyInt_EqObjC(__pyx_t_2, __pyx_int_1, 1, 0); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 389, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_6);
+    __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+    __pyx_t_8 = __Pyx_PyObject_IsTrue(__pyx_t_6); if (unlikely(__pyx_t_8 < 0)) __PYX_ERR(0, 389, __pyx_L1_error)
+    __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
+    if (__pyx_t_8) {
 
       /* "matriceadjacence.py":390
- *             graph = graph + str(boucle[0]) + " -> " + str(boucle[1]) + "[fillcolor = red];\n"
- *         elif graphe._matrice_adjacence[boucle[0]][boucle[1]] == (1 - p) :
- *             graph = graph + str(boucle[0]) + " -> " + str(boucle[1]) + "[fillcolor = green];\n"             # <<<<<<<<<<<<<<
- *     for arete in graphe.aretes():
- *         if graphe._matrice_adjacence[arete[0]][arete[1]] == 1 :
+ *     for boucle in graphe.boucles():
+ *         if graphe._matrice_adjacence[boucle[0]][boucle[1]] == 1 :
+ *             graph = graph + str(boucle[0]) + " -> " + str(boucle[1]) + "[style=dotted];\n"             # <<<<<<<<<<<<<<
+ *             graph = graph + str(boucle[0]) + " -> " + str(boucle[1]) + ";\n"
+ *         elif graphe._matrice_adjacence[boucle[0]][boucle[1]] == p :
  */
       __pyx_t_6 = __Pyx_GetItemInt(__pyx_v_boucle, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 390, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_6);
@@ -7596,91 +7573,267 @@ static PyObject *__pyx_pf_16matriceadjacence_2export_dot(CYTHON_UNUSED PyObject 
       __Pyx_GOTREF(__pyx_t_6);
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-      __pyx_t_3 = PyNumber_Add(__pyx_t_6, __pyx_kp_s_fillcolor_green); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 390, __pyx_L1_error)
+      __pyx_t_3 = PyNumber_Add(__pyx_t_6, __pyx_kp_s_style_dotted); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 390, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_3);
       __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
       __Pyx_DECREF_SET(__pyx_v_graph, __pyx_t_3);
       __pyx_t_3 = 0;
 
-      /* "matriceadjacence.py":389
+      /* "matriceadjacence.py":391
+ *         if graphe._matrice_adjacence[boucle[0]][boucle[1]] == 1 :
+ *             graph = graph + str(boucle[0]) + " -> " + str(boucle[1]) + "[style=dotted];\n"
+ *             graph = graph + str(boucle[0]) + " -> " + str(boucle[1]) + ";\n"             # <<<<<<<<<<<<<<
  *         elif graphe._matrice_adjacence[boucle[0]][boucle[1]] == p :
- *             graph = graph + str(boucle[0]) + " -> " + str(boucle[1]) + "[fillcolor = red];\n"
+ *             graph = graph + str(boucle[0]) + " -> " + str(boucle[1]) + "[style=dotted];\n"
+ */
+      __pyx_t_3 = __Pyx_GetItemInt(__pyx_v_boucle, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 391, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_3);
+      __pyx_t_6 = __Pyx_PyObject_CallOneArg(((PyObject *)(&PyString_Type)), __pyx_t_3); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 391, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_6);
+      __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+      __pyx_t_3 = PyNumber_Add(__pyx_v_graph, __pyx_t_6); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 391, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_3);
+      __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
+      __pyx_t_6 = PyNumber_Add(__pyx_t_3, __pyx_kp_s__2); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 391, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_6);
+      __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+      __pyx_t_3 = __Pyx_GetItemInt(__pyx_v_boucle, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 391, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_3);
+      __pyx_t_2 = __Pyx_PyObject_CallOneArg(((PyObject *)(&PyString_Type)), __pyx_t_3); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 391, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_2);
+      __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+      __pyx_t_3 = PyNumber_Add(__pyx_t_6, __pyx_t_2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 391, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_3);
+      __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
+      __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+      __pyx_t_2 = PyNumber_Add(__pyx_t_3, __pyx_kp_s_); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 391, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_2);
+      __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+      __Pyx_DECREF_SET(__pyx_v_graph, __pyx_t_2);
+      __pyx_t_2 = 0;
+
+      /* "matriceadjacence.py":389
+ *             graph = graph + "node [color=black, shape=\"ellipse\", style=\"filled\", width=1, height=1, fillcolor=red] " + str(sommet) + ";\n"
+ *     for boucle in graphe.boucles():
+ *         if graphe._matrice_adjacence[boucle[0]][boucle[1]] == 1 :             # <<<<<<<<<<<<<<
+ *             graph = graph + str(boucle[0]) + " -> " + str(boucle[1]) + "[style=dotted];\n"
+ *             graph = graph + str(boucle[0]) + " -> " + str(boucle[1]) + ";\n"
+ */
+      goto __pyx_L8;
+    }
+
+    /* "matriceadjacence.py":392
+ *             graph = graph + str(boucle[0]) + " -> " + str(boucle[1]) + "[style=dotted];\n"
+ *             graph = graph + str(boucle[0]) + " -> " + str(boucle[1]) + ";\n"
+ *         elif graphe._matrice_adjacence[boucle[0]][boucle[1]] == p :             # <<<<<<<<<<<<<<
+ *             graph = graph + str(boucle[0]) + " -> " + str(boucle[1]) + "[style=dotted];\n"
+ *         elif graphe._matrice_adjacence[boucle[0]][boucle[1]] == (1 - p) :
+ */
+    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_graphe, __pyx_n_s_matrice_adjacence); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 392, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_2);
+    __pyx_t_3 = __Pyx_GetItemInt(__pyx_v_boucle, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 392, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_3);
+    __pyx_t_6 = __Pyx_PyObject_GetItem(__pyx_t_2, __pyx_t_3); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 392, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_6);
+    __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+    __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+    __pyx_t_3 = __Pyx_GetItemInt(__pyx_v_boucle, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 392, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_3);
+    __pyx_t_2 = __Pyx_PyObject_GetItem(__pyx_t_6, __pyx_t_3); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 392, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_2);
+    __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
+    __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+    __pyx_t_3 = PyObject_RichCompare(__pyx_t_2, __pyx_v_p, Py_EQ); __Pyx_XGOTREF(__pyx_t_3); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 392, __pyx_L1_error)
+    __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+    __pyx_t_8 = __Pyx_PyObject_IsTrue(__pyx_t_3); if (unlikely(__pyx_t_8 < 0)) __PYX_ERR(0, 392, __pyx_L1_error)
+    __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+    if (__pyx_t_8) {
+
+      /* "matriceadjacence.py":393
+ *             graph = graph + str(boucle[0]) + " -> " + str(boucle[1]) + ";\n"
+ *         elif graphe._matrice_adjacence[boucle[0]][boucle[1]] == p :
+ *             graph = graph + str(boucle[0]) + " -> " + str(boucle[1]) + "[style=dotted];\n"             # <<<<<<<<<<<<<<
+ *         elif graphe._matrice_adjacence[boucle[0]][boucle[1]] == (1 - p) :
+ *             graph = graph + str(boucle[0]) + " -> " + str(boucle[1]) + ";\n"
+ */
+      __pyx_t_3 = __Pyx_GetItemInt(__pyx_v_boucle, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 393, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_3);
+      __pyx_t_2 = __Pyx_PyObject_CallOneArg(((PyObject *)(&PyString_Type)), __pyx_t_3); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 393, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_2);
+      __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+      __pyx_t_3 = PyNumber_Add(__pyx_v_graph, __pyx_t_2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 393, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_3);
+      __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+      __pyx_t_2 = PyNumber_Add(__pyx_t_3, __pyx_kp_s__2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 393, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_2);
+      __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+      __pyx_t_3 = __Pyx_GetItemInt(__pyx_v_boucle, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 393, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_3);
+      __pyx_t_6 = __Pyx_PyObject_CallOneArg(((PyObject *)(&PyString_Type)), __pyx_t_3); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 393, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_6);
+      __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+      __pyx_t_3 = PyNumber_Add(__pyx_t_2, __pyx_t_6); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 393, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_3);
+      __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+      __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
+      __pyx_t_6 = PyNumber_Add(__pyx_t_3, __pyx_kp_s_style_dotted); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 393, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_6);
+      __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+      __Pyx_DECREF_SET(__pyx_v_graph, __pyx_t_6);
+      __pyx_t_6 = 0;
+
+      /* "matriceadjacence.py":392
+ *             graph = graph + str(boucle[0]) + " -> " + str(boucle[1]) + "[style=dotted];\n"
+ *             graph = graph + str(boucle[0]) + " -> " + str(boucle[1]) + ";\n"
+ *         elif graphe._matrice_adjacence[boucle[0]][boucle[1]] == p :             # <<<<<<<<<<<<<<
+ *             graph = graph + str(boucle[0]) + " -> " + str(boucle[1]) + "[style=dotted];\n"
+ *         elif graphe._matrice_adjacence[boucle[0]][boucle[1]] == (1 - p) :
+ */
+      goto __pyx_L8;
+    }
+
+    /* "matriceadjacence.py":394
+ *         elif graphe._matrice_adjacence[boucle[0]][boucle[1]] == p :
+ *             graph = graph + str(boucle[0]) + " -> " + str(boucle[1]) + "[style=dotted];\n"
  *         elif graphe._matrice_adjacence[boucle[0]][boucle[1]] == (1 - p) :             # <<<<<<<<<<<<<<
- *             graph = graph + str(boucle[0]) + " -> " + str(boucle[1]) + "[fillcolor = green];\n"
+ *             graph = graph + str(boucle[0]) + " -> " + str(boucle[1]) + ";\n"
+ *     for arete in graphe.aretes():
+ */
+    __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_v_graphe, __pyx_n_s_matrice_adjacence); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 394, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_6);
+    __pyx_t_3 = __Pyx_GetItemInt(__pyx_v_boucle, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 394, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_3);
+    __pyx_t_2 = __Pyx_PyObject_GetItem(__pyx_t_6, __pyx_t_3); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 394, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_2);
+    __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
+    __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+    __pyx_t_3 = __Pyx_GetItemInt(__pyx_v_boucle, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 394, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_3);
+    __pyx_t_6 = __Pyx_PyObject_GetItem(__pyx_t_2, __pyx_t_3); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 394, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_6);
+    __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+    __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+    __pyx_t_3 = __Pyx_PyInt_SubtractCObj(__pyx_int_1, __pyx_v_p, 1, 0, 0); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 394, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_3);
+    __pyx_t_2 = PyObject_RichCompare(__pyx_t_6, __pyx_t_3, Py_EQ); __Pyx_XGOTREF(__pyx_t_2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 394, __pyx_L1_error)
+    __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
+    __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+    __pyx_t_8 = __Pyx_PyObject_IsTrue(__pyx_t_2); if (unlikely(__pyx_t_8 < 0)) __PYX_ERR(0, 394, __pyx_L1_error)
+    __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+    if (__pyx_t_8) {
+
+      /* "matriceadjacence.py":395
+ *             graph = graph + str(boucle[0]) + " -> " + str(boucle[1]) + "[style=dotted];\n"
+ *         elif graphe._matrice_adjacence[boucle[0]][boucle[1]] == (1 - p) :
+ *             graph = graph + str(boucle[0]) + " -> " + str(boucle[1]) + ";\n"             # <<<<<<<<<<<<<<
+ *     for arete in graphe.aretes():
+ *         if graphe._matrice_adjacence[arete[0]][arete[1]] == 1 :
+ */
+      __pyx_t_2 = __Pyx_GetItemInt(__pyx_v_boucle, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 395, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_2);
+      __pyx_t_3 = __Pyx_PyObject_CallOneArg(((PyObject *)(&PyString_Type)), __pyx_t_2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 395, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_3);
+      __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+      __pyx_t_2 = PyNumber_Add(__pyx_v_graph, __pyx_t_3); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 395, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_2);
+      __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+      __pyx_t_3 = PyNumber_Add(__pyx_t_2, __pyx_kp_s__2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 395, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_3);
+      __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+      __pyx_t_2 = __Pyx_GetItemInt(__pyx_v_boucle, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 395, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_2);
+      __pyx_t_6 = __Pyx_PyObject_CallOneArg(((PyObject *)(&PyString_Type)), __pyx_t_2); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 395, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_6);
+      __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+      __pyx_t_2 = PyNumber_Add(__pyx_t_3, __pyx_t_6); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 395, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_2);
+      __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+      __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
+      __pyx_t_6 = PyNumber_Add(__pyx_t_2, __pyx_kp_s_); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 395, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_6);
+      __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+      __Pyx_DECREF_SET(__pyx_v_graph, __pyx_t_6);
+      __pyx_t_6 = 0;
+
+      /* "matriceadjacence.py":394
+ *         elif graphe._matrice_adjacence[boucle[0]][boucle[1]] == p :
+ *             graph = graph + str(boucle[0]) + " -> " + str(boucle[1]) + "[style=dotted];\n"
+ *         elif graphe._matrice_adjacence[boucle[0]][boucle[1]] == (1 - p) :             # <<<<<<<<<<<<<<
+ *             graph = graph + str(boucle[0]) + " -> " + str(boucle[1]) + ";\n"
  *     for arete in graphe.aretes():
  */
     }
-    __pyx_L7:;
+    __pyx_L8:;
 
-    /* "matriceadjacence.py":384
- *     for sommet in graphe.sommets():
- *         graph = graph + str(sommet) + ";\n"
+    /* "matriceadjacence.py":388
+ *         else :
+ *             graph = graph + "node [color=black, shape=\"ellipse\", style=\"filled\", width=1, height=1, fillcolor=red] " + str(sommet) + ";\n"
  *     for boucle in graphe.boucles():             # <<<<<<<<<<<<<<
  *         if graphe._matrice_adjacence[boucle[0]][boucle[1]] == 1 :
- *             graph = graph + str(boucle[0]) + " -> " + str(boucle[1]) + "[fillcolor = yellow];\n"
+ *             graph = graph + str(boucle[0]) + " -> " + str(boucle[1]) + "[style=dotted];\n"
  */
   }
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "matriceadjacence.py":391
+  /* "matriceadjacence.py":396
  *         elif graphe._matrice_adjacence[boucle[0]][boucle[1]] == (1 - p) :
- *             graph = graph + str(boucle[0]) + " -> " + str(boucle[1]) + "[fillcolor = green];\n"
+ *             graph = graph + str(boucle[0]) + " -> " + str(boucle[1]) + ";\n"
  *     for arete in graphe.aretes():             # <<<<<<<<<<<<<<
  *         if graphe._matrice_adjacence[arete[0]][arete[1]] == 1 :
- *             graph = graph + str(arete[0]) + " -> " + str(arete[1]) + "[fillcolor = yellow];\n"
+ *             graph = graph + str(arete[0]) + " -> " + str(arete[1]) + "[style=dotted];\n"
  */
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_graphe, __pyx_n_s_aretes); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 391, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_6 = NULL;
-  if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_3))) {
-    __pyx_t_6 = PyMethod_GET_SELF(__pyx_t_3);
-    if (likely(__pyx_t_6)) {
-      PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_3);
-      __Pyx_INCREF(__pyx_t_6);
+  __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_v_graphe, __pyx_n_s_aretes); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 396, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_6);
+  __pyx_t_2 = NULL;
+  if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_6))) {
+    __pyx_t_2 = PyMethod_GET_SELF(__pyx_t_6);
+    if (likely(__pyx_t_2)) {
+      PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_6);
+      __Pyx_INCREF(__pyx_t_2);
       __Pyx_INCREF(function);
-      __Pyx_DECREF_SET(__pyx_t_3, function);
+      __Pyx_DECREF_SET(__pyx_t_6, function);
     }
   }
-  __pyx_t_1 = (__pyx_t_6) ? __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_6) : __Pyx_PyObject_CallNoArg(__pyx_t_3);
-  __Pyx_XDECREF(__pyx_t_6); __pyx_t_6 = 0;
-  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 391, __pyx_L1_error)
+  __pyx_t_1 = (__pyx_t_2) ? __Pyx_PyObject_CallOneArg(__pyx_t_6, __pyx_t_2) : __Pyx_PyObject_CallNoArg(__pyx_t_6);
+  __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
+  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 396, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+  __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
   if (likely(PyList_CheckExact(__pyx_t_1)) || PyTuple_CheckExact(__pyx_t_1)) {
-    __pyx_t_3 = __pyx_t_1; __Pyx_INCREF(__pyx_t_3); __pyx_t_4 = 0;
+    __pyx_t_6 = __pyx_t_1; __Pyx_INCREF(__pyx_t_6); __pyx_t_4 = 0;
     __pyx_t_5 = NULL;
   } else {
-    __pyx_t_4 = -1; __pyx_t_3 = PyObject_GetIter(__pyx_t_1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 391, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_3);
-    __pyx_t_5 = Py_TYPE(__pyx_t_3)->tp_iternext; if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 391, __pyx_L1_error)
+    __pyx_t_4 = -1; __pyx_t_6 = PyObject_GetIter(__pyx_t_1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 396, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_6);
+    __pyx_t_5 = Py_TYPE(__pyx_t_6)->tp_iternext; if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 396, __pyx_L1_error)
   }
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   for (;;) {
     if (likely(!__pyx_t_5)) {
-      if (likely(PyList_CheckExact(__pyx_t_3))) {
-        if (__pyx_t_4 >= PyList_GET_SIZE(__pyx_t_3)) break;
+      if (likely(PyList_CheckExact(__pyx_t_6))) {
+        if (__pyx_t_4 >= PyList_GET_SIZE(__pyx_t_6)) break;
         #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-        __pyx_t_1 = PyList_GET_ITEM(__pyx_t_3, __pyx_t_4); __Pyx_INCREF(__pyx_t_1); __pyx_t_4++; if (unlikely(0 < 0)) __PYX_ERR(0, 391, __pyx_L1_error)
+        __pyx_t_1 = PyList_GET_ITEM(__pyx_t_6, __pyx_t_4); __Pyx_INCREF(__pyx_t_1); __pyx_t_4++; if (unlikely(0 < 0)) __PYX_ERR(0, 396, __pyx_L1_error)
         #else
-        __pyx_t_1 = PySequence_ITEM(__pyx_t_3, __pyx_t_4); __pyx_t_4++; if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 391, __pyx_L1_error)
+        __pyx_t_1 = PySequence_ITEM(__pyx_t_6, __pyx_t_4); __pyx_t_4++; if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 396, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_1);
         #endif
       } else {
-        if (__pyx_t_4 >= PyTuple_GET_SIZE(__pyx_t_3)) break;
+        if (__pyx_t_4 >= PyTuple_GET_SIZE(__pyx_t_6)) break;
         #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-        __pyx_t_1 = PyTuple_GET_ITEM(__pyx_t_3, __pyx_t_4); __Pyx_INCREF(__pyx_t_1); __pyx_t_4++; if (unlikely(0 < 0)) __PYX_ERR(0, 391, __pyx_L1_error)
+        __pyx_t_1 = PyTuple_GET_ITEM(__pyx_t_6, __pyx_t_4); __Pyx_INCREF(__pyx_t_1); __pyx_t_4++; if (unlikely(0 < 0)) __PYX_ERR(0, 396, __pyx_L1_error)
         #else
-        __pyx_t_1 = PySequence_ITEM(__pyx_t_3, __pyx_t_4); __pyx_t_4++; if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 391, __pyx_L1_error)
+        __pyx_t_1 = PySequence_ITEM(__pyx_t_6, __pyx_t_4); __pyx_t_4++; if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 396, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_1);
         #endif
       }
     } else {
-      __pyx_t_1 = __pyx_t_5(__pyx_t_3);
+      __pyx_t_1 = __pyx_t_5(__pyx_t_6);
       if (unlikely(!__pyx_t_1)) {
         PyObject* exc_type = PyErr_Occurred();
         if (exc_type) {
           if (likely(__Pyx_PyErr_GivenExceptionMatches(exc_type, PyExc_StopIteration))) PyErr_Clear();
-          else __PYX_ERR(0, 391, __pyx_L1_error)
+          else __PYX_ERR(0, 396, __pyx_L1_error)
         }
         break;
       }
@@ -7689,244 +7842,277 @@ static PyObject *__pyx_pf_16matriceadjacence_2export_dot(CYTHON_UNUSED PyObject 
     __Pyx_XDECREF_SET(__pyx_v_arete, __pyx_t_1);
     __pyx_t_1 = 0;
 
-    /* "matriceadjacence.py":392
- *             graph = graph + str(boucle[0]) + " -> " + str(boucle[1]) + "[fillcolor = green];\n"
+    /* "matriceadjacence.py":397
+ *             graph = graph + str(boucle[0]) + " -> " + str(boucle[1]) + ";\n"
  *     for arete in graphe.aretes():
  *         if graphe._matrice_adjacence[arete[0]][arete[1]] == 1 :             # <<<<<<<<<<<<<<
- *             graph = graph + str(arete[0]) + " -> " + str(arete[1]) + "[fillcolor = yellow];\n"
- *         elif graphe._matrice_adjacence[arete[0]][arete[1]] == p :
+ *             graph = graph + str(arete[0]) + " -> " + str(arete[1]) + "[style=dotted];\n"
+ *             graph = graph + str(arete[0]) + " -> " + str(arete[1]) + ";\n"
  */
-    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_graphe, __pyx_n_s_matrice_adjacence); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 392, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_graphe, __pyx_n_s_matrice_adjacence); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 397, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_6 = __Pyx_GetItemInt(__pyx_v_arete, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 392, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_6);
-    __pyx_t_2 = __Pyx_PyObject_GetItem(__pyx_t_1, __pyx_t_6); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 392, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_GetItemInt(__pyx_v_arete, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 397, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_2);
+    __pyx_t_3 = __Pyx_PyObject_GetItem(__pyx_t_1, __pyx_t_2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 397, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_3);
+    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+    __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+    __pyx_t_2 = __Pyx_GetItemInt(__pyx_v_arete, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 397, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_2);
+    __pyx_t_1 = __Pyx_PyObject_GetItem(__pyx_t_3, __pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 397, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_1);
+    __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+    __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+    __pyx_t_2 = __Pyx_PyInt_EqObjC(__pyx_t_1, __pyx_int_1, 1, 0); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 397, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-    __pyx_t_6 = __Pyx_GetItemInt(__pyx_v_arete, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 392, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_6);
-    __pyx_t_1 = __Pyx_PyObject_GetItem(__pyx_t_2, __pyx_t_6); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 392, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_1);
+    __pyx_t_8 = __Pyx_PyObject_IsTrue(__pyx_t_2); if (unlikely(__pyx_t_8 < 0)) __PYX_ERR(0, 397, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-    __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-    __pyx_t_6 = __Pyx_PyInt_EqObjC(__pyx_t_1, __pyx_int_1, 1, 0); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 392, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_6);
-    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    __pyx_t_7 = __Pyx_PyObject_IsTrue(__pyx_t_6); if (unlikely(__pyx_t_7 < 0)) __PYX_ERR(0, 392, __pyx_L1_error)
-    __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-    if (__pyx_t_7) {
+    if (__pyx_t_8) {
 
-      /* "matriceadjacence.py":393
+      /* "matriceadjacence.py":398
  *     for arete in graphe.aretes():
  *         if graphe._matrice_adjacence[arete[0]][arete[1]] == 1 :
- *             graph = graph + str(arete[0]) + " -> " + str(arete[1]) + "[fillcolor = yellow];\n"             # <<<<<<<<<<<<<<
+ *             graph = graph + str(arete[0]) + " -> " + str(arete[1]) + "[style=dotted];\n"             # <<<<<<<<<<<<<<
+ *             graph = graph + str(arete[0]) + " -> " + str(arete[1]) + ";\n"
  *         elif graphe._matrice_adjacence[arete[0]][arete[1]] == p :
- *             graph = graph + str(arete[0]) + " -> " + str(arete[1]) + "[fillcolor = red];\n"
  */
-      __pyx_t_6 = __Pyx_GetItemInt(__pyx_v_arete, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 393, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_6);
-      __pyx_t_1 = __Pyx_PyObject_CallOneArg(((PyObject *)(&PyString_Type)), __pyx_t_6); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 393, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_1);
-      __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-      __pyx_t_6 = PyNumber_Add(__pyx_v_graph, __pyx_t_1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 393, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_6);
-      __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-      __pyx_t_1 = PyNumber_Add(__pyx_t_6, __pyx_kp_s__2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 393, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_1);
-      __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-      __pyx_t_6 = __Pyx_GetItemInt(__pyx_v_arete, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 393, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_6);
-      __pyx_t_2 = __Pyx_PyObject_CallOneArg(((PyObject *)(&PyString_Type)), __pyx_t_6); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 393, __pyx_L1_error)
+      __pyx_t_2 = __Pyx_GetItemInt(__pyx_v_arete, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 398, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_2);
-      __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-      __pyx_t_6 = PyNumber_Add(__pyx_t_1, __pyx_t_2); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 393, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_6);
+      __pyx_t_1 = __Pyx_PyObject_CallOneArg(((PyObject *)(&PyString_Type)), __pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 398, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_1);
+      __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+      __pyx_t_2 = PyNumber_Add(__pyx_v_graph, __pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 398, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_2);
+      __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+      __pyx_t_1 = PyNumber_Add(__pyx_t_2, __pyx_kp_s__2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 398, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_1);
+      __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+      __pyx_t_2 = __Pyx_GetItemInt(__pyx_v_arete, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 398, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_2);
+      __pyx_t_3 = __Pyx_PyObject_CallOneArg(((PyObject *)(&PyString_Type)), __pyx_t_2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 398, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_3);
+      __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+      __pyx_t_2 = PyNumber_Add(__pyx_t_1, __pyx_t_3); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 398, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_2);
+      __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+      __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+      __pyx_t_3 = PyNumber_Add(__pyx_t_2, __pyx_kp_s_style_dotted); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 398, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_3);
+      __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+      __Pyx_DECREF_SET(__pyx_v_graph, __pyx_t_3);
+      __pyx_t_3 = 0;
+
+      /* "matriceadjacence.py":399
+ *         if graphe._matrice_adjacence[arete[0]][arete[1]] == 1 :
+ *             graph = graph + str(arete[0]) + " -> " + str(arete[1]) + "[style=dotted];\n"
+ *             graph = graph + str(arete[0]) + " -> " + str(arete[1]) + ";\n"             # <<<<<<<<<<<<<<
+ *         elif graphe._matrice_adjacence[arete[0]][arete[1]] == p :
+ *             graph = graph + str(arete[0]) + " -> " + str(arete[1]) + "[style=dotted];\n"
+ */
+      __pyx_t_3 = __Pyx_GetItemInt(__pyx_v_arete, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 399, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_3);
+      __pyx_t_2 = __Pyx_PyObject_CallOneArg(((PyObject *)(&PyString_Type)), __pyx_t_3); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 399, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_2);
+      __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+      __pyx_t_3 = PyNumber_Add(__pyx_v_graph, __pyx_t_2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 399, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_3);
+      __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+      __pyx_t_2 = PyNumber_Add(__pyx_t_3, __pyx_kp_s__2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 399, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_2);
+      __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+      __pyx_t_3 = __Pyx_GetItemInt(__pyx_v_arete, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 399, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_3);
+      __pyx_t_1 = __Pyx_PyObject_CallOneArg(((PyObject *)(&PyString_Type)), __pyx_t_3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 399, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_1);
+      __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+      __pyx_t_3 = PyNumber_Add(__pyx_t_2, __pyx_t_1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 399, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_3);
+      __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+      __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+      __pyx_t_1 = PyNumber_Add(__pyx_t_3, __pyx_kp_s_); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 399, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_1);
+      __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+      __Pyx_DECREF_SET(__pyx_v_graph, __pyx_t_1);
+      __pyx_t_1 = 0;
+
+      /* "matriceadjacence.py":397
+ *             graph = graph + str(boucle[0]) + " -> " + str(boucle[1]) + ";\n"
+ *     for arete in graphe.aretes():
+ *         if graphe._matrice_adjacence[arete[0]][arete[1]] == 1 :             # <<<<<<<<<<<<<<
+ *             graph = graph + str(arete[0]) + " -> " + str(arete[1]) + "[style=dotted];\n"
+ *             graph = graph + str(arete[0]) + " -> " + str(arete[1]) + ";\n"
+ */
+      goto __pyx_L11;
+    }
+
+    /* "matriceadjacence.py":400
+ *             graph = graph + str(arete[0]) + " -> " + str(arete[1]) + "[style=dotted];\n"
+ *             graph = graph + str(arete[0]) + " -> " + str(arete[1]) + ";\n"
+ *         elif graphe._matrice_adjacence[arete[0]][arete[1]] == p :             # <<<<<<<<<<<<<<
+ *             graph = graph + str(arete[0]) + " -> " + str(arete[1]) + "[style=dotted];\n"
+ *         elif graphe._matrice_adjacence[arete[0]][arete[1]] == (1 - p) :
+ */
+    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_graphe, __pyx_n_s_matrice_adjacence); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 400, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_1);
+    __pyx_t_3 = __Pyx_GetItemInt(__pyx_v_arete, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 400, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_3);
+    __pyx_t_2 = __Pyx_PyObject_GetItem(__pyx_t_1, __pyx_t_3); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 400, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_2);
+    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+    __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+    __pyx_t_3 = __Pyx_GetItemInt(__pyx_v_arete, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 400, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_3);
+    __pyx_t_1 = __Pyx_PyObject_GetItem(__pyx_t_2, __pyx_t_3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 400, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_1);
+    __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+    __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+    __pyx_t_3 = PyObject_RichCompare(__pyx_t_1, __pyx_v_p, Py_EQ); __Pyx_XGOTREF(__pyx_t_3); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 400, __pyx_L1_error)
+    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+    __pyx_t_8 = __Pyx_PyObject_IsTrue(__pyx_t_3); if (unlikely(__pyx_t_8 < 0)) __PYX_ERR(0, 400, __pyx_L1_error)
+    __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+    if (__pyx_t_8) {
+
+      /* "matriceadjacence.py":401
+ *             graph = graph + str(arete[0]) + " -> " + str(arete[1]) + ";\n"
+ *         elif graphe._matrice_adjacence[arete[0]][arete[1]] == p :
+ *             graph = graph + str(arete[0]) + " -> " + str(arete[1]) + "[style=dotted];\n"             # <<<<<<<<<<<<<<
+ *         elif graphe._matrice_adjacence[arete[0]][arete[1]] == (1 - p) :
+ *             graph = graph + str(arete[0]) + " -> " + str(arete[1]) + ";\n"
+ */
+      __pyx_t_3 = __Pyx_GetItemInt(__pyx_v_arete, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 401, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_3);
+      __pyx_t_1 = __Pyx_PyObject_CallOneArg(((PyObject *)(&PyString_Type)), __pyx_t_3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 401, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_1);
+      __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+      __pyx_t_3 = PyNumber_Add(__pyx_v_graph, __pyx_t_1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 401, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_3);
+      __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+      __pyx_t_1 = PyNumber_Add(__pyx_t_3, __pyx_kp_s__2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 401, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_1);
+      __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+      __pyx_t_3 = __Pyx_GetItemInt(__pyx_v_arete, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 401, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_3);
+      __pyx_t_2 = __Pyx_PyObject_CallOneArg(((PyObject *)(&PyString_Type)), __pyx_t_3); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 401, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_2);
+      __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+      __pyx_t_3 = PyNumber_Add(__pyx_t_1, __pyx_t_2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 401, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_3);
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-      __pyx_t_2 = PyNumber_Add(__pyx_t_6, __pyx_kp_s_fillcolor_yellow); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 393, __pyx_L1_error)
+      __pyx_t_2 = PyNumber_Add(__pyx_t_3, __pyx_kp_s_style_dotted); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 401, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_2);
-      __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
+      __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
       __Pyx_DECREF_SET(__pyx_v_graph, __pyx_t_2);
       __pyx_t_2 = 0;
 
-      /* "matriceadjacence.py":392
- *             graph = graph + str(boucle[0]) + " -> " + str(boucle[1]) + "[fillcolor = green];\n"
- *     for arete in graphe.aretes():
- *         if graphe._matrice_adjacence[arete[0]][arete[1]] == 1 :             # <<<<<<<<<<<<<<
- *             graph = graph + str(arete[0]) + " -> " + str(arete[1]) + "[fillcolor = yellow];\n"
- *         elif graphe._matrice_adjacence[arete[0]][arete[1]] == p :
+      /* "matriceadjacence.py":400
+ *             graph = graph + str(arete[0]) + " -> " + str(arete[1]) + "[style=dotted];\n"
+ *             graph = graph + str(arete[0]) + " -> " + str(arete[1]) + ";\n"
+ *         elif graphe._matrice_adjacence[arete[0]][arete[1]] == p :             # <<<<<<<<<<<<<<
+ *             graph = graph + str(arete[0]) + " -> " + str(arete[1]) + "[style=dotted];\n"
+ *         elif graphe._matrice_adjacence[arete[0]][arete[1]] == (1 - p) :
  */
-      goto __pyx_L10;
+      goto __pyx_L11;
     }
 
-    /* "matriceadjacence.py":394
- *         if graphe._matrice_adjacence[arete[0]][arete[1]] == 1 :
- *             graph = graph + str(arete[0]) + " -> " + str(arete[1]) + "[fillcolor = yellow];\n"
- *         elif graphe._matrice_adjacence[arete[0]][arete[1]] == p :             # <<<<<<<<<<<<<<
- *             graph = graph + str(arete[0]) + " -> " + str(arete[1]) + "[fillcolor = red];\n"
- *         elif graphe._matrice_adjacence[arete[0]][arete[1]] == (1 - p) :
- */
-    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_graphe, __pyx_n_s_matrice_adjacence); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 394, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_2);
-    __pyx_t_6 = __Pyx_GetItemInt(__pyx_v_arete, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 394, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_6);
-    __pyx_t_1 = __Pyx_PyObject_GetItem(__pyx_t_2, __pyx_t_6); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 394, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_1);
-    __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-    __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-    __pyx_t_6 = __Pyx_GetItemInt(__pyx_v_arete, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 394, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_6);
-    __pyx_t_2 = __Pyx_PyObject_GetItem(__pyx_t_1, __pyx_t_6); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 394, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_2);
-    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-    __pyx_t_6 = PyObject_RichCompare(__pyx_t_2, __pyx_v_p, Py_EQ); __Pyx_XGOTREF(__pyx_t_6); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 394, __pyx_L1_error)
-    __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-    __pyx_t_7 = __Pyx_PyObject_IsTrue(__pyx_t_6); if (unlikely(__pyx_t_7 < 0)) __PYX_ERR(0, 394, __pyx_L1_error)
-    __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-    if (__pyx_t_7) {
-
-      /* "matriceadjacence.py":395
- *             graph = graph + str(arete[0]) + " -> " + str(arete[1]) + "[fillcolor = yellow];\n"
+    /* "matriceadjacence.py":402
  *         elif graphe._matrice_adjacence[arete[0]][arete[1]] == p :
- *             graph = graph + str(arete[0]) + " -> " + str(arete[1]) + "[fillcolor = red];\n"             # <<<<<<<<<<<<<<
- *         elif graphe._matrice_adjacence[arete[0]][arete[1]] == (1 - p) :
- *             graph = graph + str(arete[0]) + " -> " + str(arete[1]) + "[fillcolor = green];\n"
- */
-      __pyx_t_6 = __Pyx_GetItemInt(__pyx_v_arete, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 395, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_6);
-      __pyx_t_2 = __Pyx_PyObject_CallOneArg(((PyObject *)(&PyString_Type)), __pyx_t_6); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 395, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_2);
-      __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-      __pyx_t_6 = PyNumber_Add(__pyx_v_graph, __pyx_t_2); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 395, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_6);
-      __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-      __pyx_t_2 = PyNumber_Add(__pyx_t_6, __pyx_kp_s__2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 395, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_2);
-      __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-      __pyx_t_6 = __Pyx_GetItemInt(__pyx_v_arete, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 395, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_6);
-      __pyx_t_1 = __Pyx_PyObject_CallOneArg(((PyObject *)(&PyString_Type)), __pyx_t_6); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 395, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_1);
-      __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-      __pyx_t_6 = PyNumber_Add(__pyx_t_2, __pyx_t_1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 395, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_6);
-      __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-      __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-      __pyx_t_1 = PyNumber_Add(__pyx_t_6, __pyx_kp_s_fillcolor_red); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 395, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_1);
-      __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-      __Pyx_DECREF_SET(__pyx_v_graph, __pyx_t_1);
-      __pyx_t_1 = 0;
-
-      /* "matriceadjacence.py":394
- *         if graphe._matrice_adjacence[arete[0]][arete[1]] == 1 :
- *             graph = graph + str(arete[0]) + " -> " + str(arete[1]) + "[fillcolor = yellow];\n"
- *         elif graphe._matrice_adjacence[arete[0]][arete[1]] == p :             # <<<<<<<<<<<<<<
- *             graph = graph + str(arete[0]) + " -> " + str(arete[1]) + "[fillcolor = red];\n"
- *         elif graphe._matrice_adjacence[arete[0]][arete[1]] == (1 - p) :
- */
-      goto __pyx_L10;
-    }
-
-    /* "matriceadjacence.py":396
- *         elif graphe._matrice_adjacence[arete[0]][arete[1]] == p :
- *             graph = graph + str(arete[0]) + " -> " + str(arete[1]) + "[fillcolor = red];\n"
+ *             graph = graph + str(arete[0]) + " -> " + str(arete[1]) + "[style=dotted];\n"
  *         elif graphe._matrice_adjacence[arete[0]][arete[1]] == (1 - p) :             # <<<<<<<<<<<<<<
- *             graph = graph + str(arete[0]) + " -> " + str(arete[1]) + "[fillcolor = green];\n"
+ *             graph = graph + str(arete[0]) + " -> " + str(arete[1]) + ";\n"
  *     graph = graph + "}"
  */
-    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_graphe, __pyx_n_s_matrice_adjacence); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 396, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_graphe, __pyx_n_s_matrice_adjacence); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 402, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_2);
+    __pyx_t_3 = __Pyx_GetItemInt(__pyx_v_arete, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 402, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_3);
+    __pyx_t_1 = __Pyx_PyObject_GetItem(__pyx_t_2, __pyx_t_3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 402, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_6 = __Pyx_GetItemInt(__pyx_v_arete, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 396, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_6);
-    __pyx_t_2 = __Pyx_PyObject_GetItem(__pyx_t_1, __pyx_t_6); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 396, __pyx_L1_error)
+    __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+    __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+    __pyx_t_3 = __Pyx_GetItemInt(__pyx_v_arete, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 402, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_3);
+    __pyx_t_2 = __Pyx_PyObject_GetItem(__pyx_t_1, __pyx_t_3); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 402, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-    __pyx_t_6 = __Pyx_GetItemInt(__pyx_v_arete, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 396, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_6);
-    __pyx_t_1 = __Pyx_PyObject_GetItem(__pyx_t_2, __pyx_t_6); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 396, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_1);
+    __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+    __pyx_t_3 = __Pyx_PyInt_SubtractCObj(__pyx_int_1, __pyx_v_p, 1, 0, 0); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 402, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_3);
+    __pyx_t_1 = PyObject_RichCompare(__pyx_t_2, __pyx_t_3, Py_EQ); __Pyx_XGOTREF(__pyx_t_1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 402, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-    __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-    __pyx_t_6 = __Pyx_PyInt_SubtractCObj(__pyx_int_1, __pyx_v_p, 1, 0, 0); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 396, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_6);
-    __pyx_t_2 = PyObject_RichCompare(__pyx_t_1, __pyx_t_6, Py_EQ); __Pyx_XGOTREF(__pyx_t_2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 396, __pyx_L1_error)
+    __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+    __pyx_t_8 = __Pyx_PyObject_IsTrue(__pyx_t_1); if (unlikely(__pyx_t_8 < 0)) __PYX_ERR(0, 402, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-    __pyx_t_7 = __Pyx_PyObject_IsTrue(__pyx_t_2); if (unlikely(__pyx_t_7 < 0)) __PYX_ERR(0, 396, __pyx_L1_error)
-    __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-    if (__pyx_t_7) {
+    if (__pyx_t_8) {
 
-      /* "matriceadjacence.py":397
- *             graph = graph + str(arete[0]) + " -> " + str(arete[1]) + "[fillcolor = red];\n"
+      /* "matriceadjacence.py":403
+ *             graph = graph + str(arete[0]) + " -> " + str(arete[1]) + "[style=dotted];\n"
  *         elif graphe._matrice_adjacence[arete[0]][arete[1]] == (1 - p) :
- *             graph = graph + str(arete[0]) + " -> " + str(arete[1]) + "[fillcolor = green];\n"             # <<<<<<<<<<<<<<
+ *             graph = graph + str(arete[0]) + " -> " + str(arete[1]) + ";\n"             # <<<<<<<<<<<<<<
  *     graph = graph + "}"
  *     return graph
  */
-      __pyx_t_2 = __Pyx_GetItemInt(__pyx_v_arete, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 397, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_2);
-      __pyx_t_6 = __Pyx_PyObject_CallOneArg(((PyObject *)(&PyString_Type)), __pyx_t_2); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 397, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_6);
-      __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-      __pyx_t_2 = PyNumber_Add(__pyx_v_graph, __pyx_t_6); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 397, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_2);
-      __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-      __pyx_t_6 = PyNumber_Add(__pyx_t_2, __pyx_kp_s__2); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 397, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_6);
-      __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-      __pyx_t_2 = __Pyx_GetItemInt(__pyx_v_arete, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 397, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_2);
-      __pyx_t_1 = __Pyx_PyObject_CallOneArg(((PyObject *)(&PyString_Type)), __pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 397, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_GetItemInt(__pyx_v_arete, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 403, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
-      __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-      __pyx_t_2 = PyNumber_Add(__pyx_t_6, __pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 397, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_2);
-      __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
+      __pyx_t_3 = __Pyx_PyObject_CallOneArg(((PyObject *)(&PyString_Type)), __pyx_t_1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 403, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_3);
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-      __pyx_t_1 = PyNumber_Add(__pyx_t_2, __pyx_kp_s_fillcolor_green); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 397, __pyx_L1_error)
+      __pyx_t_1 = PyNumber_Add(__pyx_v_graph, __pyx_t_3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 403, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
+      __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+      __pyx_t_3 = PyNumber_Add(__pyx_t_1, __pyx_kp_s__2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 403, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_3);
+      __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+      __pyx_t_1 = __Pyx_GetItemInt(__pyx_v_arete, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 403, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_1);
+      __pyx_t_2 = __Pyx_PyObject_CallOneArg(((PyObject *)(&PyString_Type)), __pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 403, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_2);
+      __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+      __pyx_t_1 = PyNumber_Add(__pyx_t_3, __pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 403, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_1);
+      __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-      __Pyx_DECREF_SET(__pyx_v_graph, __pyx_t_1);
-      __pyx_t_1 = 0;
+      __pyx_t_2 = PyNumber_Add(__pyx_t_1, __pyx_kp_s_); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 403, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_2);
+      __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+      __Pyx_DECREF_SET(__pyx_v_graph, __pyx_t_2);
+      __pyx_t_2 = 0;
 
-      /* "matriceadjacence.py":396
+      /* "matriceadjacence.py":402
  *         elif graphe._matrice_adjacence[arete[0]][arete[1]] == p :
- *             graph = graph + str(arete[0]) + " -> " + str(arete[1]) + "[fillcolor = red];\n"
+ *             graph = graph + str(arete[0]) + " -> " + str(arete[1]) + "[style=dotted];\n"
  *         elif graphe._matrice_adjacence[arete[0]][arete[1]] == (1 - p) :             # <<<<<<<<<<<<<<
- *             graph = graph + str(arete[0]) + " -> " + str(arete[1]) + "[fillcolor = green];\n"
+ *             graph = graph + str(arete[0]) + " -> " + str(arete[1]) + ";\n"
  *     graph = graph + "}"
  */
     }
-    __pyx_L10:;
+    __pyx_L11:;
 
-    /* "matriceadjacence.py":391
+    /* "matriceadjacence.py":396
  *         elif graphe._matrice_adjacence[boucle[0]][boucle[1]] == (1 - p) :
- *             graph = graph + str(boucle[0]) + " -> " + str(boucle[1]) + "[fillcolor = green];\n"
+ *             graph = graph + str(boucle[0]) + " -> " + str(boucle[1]) + ";\n"
  *     for arete in graphe.aretes():             # <<<<<<<<<<<<<<
  *         if graphe._matrice_adjacence[arete[0]][arete[1]] == 1 :
- *             graph = graph + str(arete[0]) + " -> " + str(arete[1]) + "[fillcolor = yellow];\n"
+ *             graph = graph + str(arete[0]) + " -> " + str(arete[1]) + "[style=dotted];\n"
  */
   }
-  __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+  __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
 
-  /* "matriceadjacence.py":398
+  /* "matriceadjacence.py":404
  *         elif graphe._matrice_adjacence[arete[0]][arete[1]] == (1 - p) :
- *             graph = graph + str(arete[0]) + " -> " + str(arete[1]) + "[fillcolor = green];\n"
+ *             graph = graph + str(arete[0]) + " -> " + str(arete[1]) + ";\n"
  *     graph = graph + "}"             # <<<<<<<<<<<<<<
  *     return graph
  * 
  */
-  __pyx_t_3 = PyNumber_Add(__pyx_v_graph, __pyx_kp_s__3); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 398, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_3);
-  __Pyx_DECREF_SET(__pyx_v_graph, __pyx_t_3);
-  __pyx_t_3 = 0;
+  __pyx_t_6 = PyNumber_Add(__pyx_v_graph, __pyx_kp_s__3); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 404, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_6);
+  __Pyx_DECREF_SET(__pyx_v_graph, __pyx_t_6);
+  __pyx_t_6 = 0;
 
-  /* "matriceadjacence.py":399
- *             graph = graph + str(arete[0]) + " -> " + str(arete[1]) + "[fillcolor = green];\n"
+  /* "matriceadjacence.py":405
+ *             graph = graph + str(arete[0]) + " -> " + str(arete[1]) + ";\n"
  *     graph = graph + "}"
  *     return graph             # <<<<<<<<<<<<<<
  * 
@@ -7940,7 +8126,7 @@ static PyObject *__pyx_pf_16matriceadjacence_2export_dot(CYTHON_UNUSED PyObject 
   /* "matriceadjacence.py":363
  *     return G
  * 
- * def export_dot(graphe, num):             # <<<<<<<<<<<<<<
+ * def export_dot(graphe, num, states):             # <<<<<<<<<<<<<<
  *     """
  *     Renvoie une chane encodant le graphe au format dot.
  */
@@ -7951,12 +8137,14 @@ static PyObject *__pyx_pf_16matriceadjacence_2export_dot(CYTHON_UNUSED PyObject 
   __Pyx_XDECREF(__pyx_t_2);
   __Pyx_XDECREF(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_6);
+  __Pyx_XDECREF(__pyx_t_7);
   __Pyx_AddTraceback("matriceadjacence.export_dot", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_p);
   __Pyx_XDECREF(__pyx_v_graph);
   __Pyx_XDECREF(__pyx_v_sommet);
+  __Pyx_XDECREF(__pyx_v_var);
   __Pyx_XDECREF(__pyx_v_boucle);
   __Pyx_XDECREF(__pyx_v_arete);
   __Pyx_XGIVEREF(__pyx_r);
@@ -7964,7 +8152,7 @@ static PyObject *__pyx_pf_16matriceadjacence_2export_dot(CYTHON_UNUSED PyObject 
   return __pyx_r;
 }
 
-/* "matriceadjacence.py":401
+/* "matriceadjacence.py":407
  *     return graph
  * 
  * def tarjan(G) :             # <<<<<<<<<<<<<<
@@ -7987,7 +8175,7 @@ static PyObject *__pyx_pw_16matriceadjacence_5tarjan(PyObject *__pyx_self, PyObj
   return __pyx_r;
 }
 
-/* "matriceadjacence.py":415
+/* "matriceadjacence.py":421
  *     lst = []
  * 
  *     def parcours(G, lst, num, p, partition, v) :             # <<<<<<<<<<<<<<
@@ -8043,35 +8231,35 @@ static PyObject *__pyx_pw_16matriceadjacence_6tarjan_1parcours(PyObject *__pyx_s
         case  1:
         if (likely((values[1] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_lst)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("parcours", 1, 6, 6, 1); __PYX_ERR(0, 415, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("parcours", 1, 6, 6, 1); __PYX_ERR(0, 421, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  2:
         if (likely((values[2] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_num)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("parcours", 1, 6, 6, 2); __PYX_ERR(0, 415, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("parcours", 1, 6, 6, 2); __PYX_ERR(0, 421, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  3:
         if (likely((values[3] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_p)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("parcours", 1, 6, 6, 3); __PYX_ERR(0, 415, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("parcours", 1, 6, 6, 3); __PYX_ERR(0, 421, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  4:
         if (likely((values[4] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_partition)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("parcours", 1, 6, 6, 4); __PYX_ERR(0, 415, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("parcours", 1, 6, 6, 4); __PYX_ERR(0, 421, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  5:
         if (likely((values[5] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_v)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("parcours", 1, 6, 6, 5); __PYX_ERR(0, 415, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("parcours", 1, 6, 6, 5); __PYX_ERR(0, 421, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "parcours") < 0)) __PYX_ERR(0, 415, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "parcours") < 0)) __PYX_ERR(0, 421, __pyx_L3_error)
       }
     } else if (PyTuple_GET_SIZE(__pyx_args) != 6) {
       goto __pyx_L5_argtuple_error;
@@ -8092,7 +8280,7 @@ static PyObject *__pyx_pw_16matriceadjacence_6tarjan_1parcours(PyObject *__pyx_s
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("parcours", 1, 6, 6, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 415, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("parcours", 1, 6, 6, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 421, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("matriceadjacence.tarjan.parcours", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
@@ -8130,74 +8318,74 @@ static PyObject *__pyx_pf_16matriceadjacence_6tarjan_parcours(PyObject *__pyx_se
   __pyx_cur_scope = __pyx_outer_scope;
   __Pyx_INCREF(__pyx_v_num);
 
-  /* "matriceadjacence.py":419
+  /* "matriceadjacence.py":425
  *         Aux function of tarjan.
  *         """
  *         lst[v][1] = num # v.num             # <<<<<<<<<<<<<<
  *         lst[v][2] = num # v.numAccessible
  *         num = num + 1
  */
-  __pyx_t_1 = __Pyx_PyObject_GetItem(__pyx_v_lst, __pyx_v_v); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 419, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetItem(__pyx_v_lst, __pyx_v_v); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 425, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (unlikely(__Pyx_SetItemInt(__pyx_t_1, 1, __pyx_v_num, long, 1, __Pyx_PyInt_From_long, 0, 0, 1) < 0)) __PYX_ERR(0, 419, __pyx_L1_error)
+  if (unlikely(__Pyx_SetItemInt(__pyx_t_1, 1, __pyx_v_num, long, 1, __Pyx_PyInt_From_long, 0, 0, 1) < 0)) __PYX_ERR(0, 425, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "matriceadjacence.py":420
+  /* "matriceadjacence.py":426
  *         """
  *         lst[v][1] = num # v.num
  *         lst[v][2] = num # v.numAccessible             # <<<<<<<<<<<<<<
  *         num = num + 1
  *         p.append(lst[v])
  */
-  __pyx_t_1 = __Pyx_PyObject_GetItem(__pyx_v_lst, __pyx_v_v); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 420, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetItem(__pyx_v_lst, __pyx_v_v); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 426, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (unlikely(__Pyx_SetItemInt(__pyx_t_1, 2, __pyx_v_num, long, 1, __Pyx_PyInt_From_long, 0, 0, 1) < 0)) __PYX_ERR(0, 420, __pyx_L1_error)
+  if (unlikely(__Pyx_SetItemInt(__pyx_t_1, 2, __pyx_v_num, long, 1, __Pyx_PyInt_From_long, 0, 0, 1) < 0)) __PYX_ERR(0, 426, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "matriceadjacence.py":421
+  /* "matriceadjacence.py":427
  *         lst[v][1] = num # v.num
  *         lst[v][2] = num # v.numAccessible
  *         num = num + 1             # <<<<<<<<<<<<<<
  *         p.append(lst[v])
  *         lst[v][3] = True # v.dansP
  */
-  __pyx_t_1 = __Pyx_PyInt_AddObjC(__pyx_v_num, __pyx_int_1, 1, 0, 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 421, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyInt_AddObjC(__pyx_v_num, __pyx_int_1, 1, 0, 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 427, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF_SET(__pyx_v_num, __pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "matriceadjacence.py":422
+  /* "matriceadjacence.py":428
  *         lst[v][2] = num # v.numAccessible
  *         num = num + 1
  *         p.append(lst[v])             # <<<<<<<<<<<<<<
  *         lst[v][3] = True # v.dansP
  * 
  */
-  __pyx_t_1 = __Pyx_PyObject_GetItem(__pyx_v_lst, __pyx_v_v); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 422, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetItem(__pyx_v_lst, __pyx_v_v); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 428, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = __Pyx_PyObject_Append(__pyx_v_p, __pyx_t_1); if (unlikely(__pyx_t_2 == ((int)-1))) __PYX_ERR(0, 422, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_Append(__pyx_v_p, __pyx_t_1); if (unlikely(__pyx_t_2 == ((int)-1))) __PYX_ERR(0, 428, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "matriceadjacence.py":423
+  /* "matriceadjacence.py":429
  *         num = num + 1
  *         p.append(lst[v])
  *         lst[v][3] = True # v.dansP             # <<<<<<<<<<<<<<
  * 
  *         for w in G.voisins(v) :
  */
-  __pyx_t_1 = __Pyx_PyObject_GetItem(__pyx_v_lst, __pyx_v_v); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 423, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetItem(__pyx_v_lst, __pyx_v_v); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 429, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (unlikely(__Pyx_SetItemInt(__pyx_t_1, 3, Py_True, long, 1, __Pyx_PyInt_From_long, 0, 0, 1) < 0)) __PYX_ERR(0, 423, __pyx_L1_error)
+  if (unlikely(__Pyx_SetItemInt(__pyx_t_1, 3, Py_True, long, 1, __Pyx_PyInt_From_long, 0, 0, 1) < 0)) __PYX_ERR(0, 429, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "matriceadjacence.py":425
+  /* "matriceadjacence.py":431
  *         lst[v][3] = True # v.dansP
  * 
  *         for w in G.voisins(v) :             # <<<<<<<<<<<<<<
  *             if lst[w][2] == None :
  *                 parcours(G, lst, num, p, partition, w)
  */
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_G, __pyx_n_s_voisins); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 425, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_G, __pyx_n_s_voisins); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 431, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __pyx_t_4 = NULL;
   if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_3))) {
@@ -8211,16 +8399,16 @@ static PyObject *__pyx_pf_16matriceadjacence_6tarjan_parcours(PyObject *__pyx_se
   }
   __pyx_t_1 = (__pyx_t_4) ? __Pyx_PyObject_Call2Args(__pyx_t_3, __pyx_t_4, __pyx_v_v) : __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_v_v);
   __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
-  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 425, __pyx_L1_error)
+  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 431, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   if (likely(PyList_CheckExact(__pyx_t_1)) || PyTuple_CheckExact(__pyx_t_1)) {
     __pyx_t_3 = __pyx_t_1; __Pyx_INCREF(__pyx_t_3); __pyx_t_5 = 0;
     __pyx_t_6 = NULL;
   } else {
-    __pyx_t_5 = -1; __pyx_t_3 = PyObject_GetIter(__pyx_t_1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 425, __pyx_L1_error)
+    __pyx_t_5 = -1; __pyx_t_3 = PyObject_GetIter(__pyx_t_1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 431, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
-    __pyx_t_6 = Py_TYPE(__pyx_t_3)->tp_iternext; if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 425, __pyx_L1_error)
+    __pyx_t_6 = Py_TYPE(__pyx_t_3)->tp_iternext; if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 431, __pyx_L1_error)
   }
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   for (;;) {
@@ -8228,17 +8416,17 @@ static PyObject *__pyx_pf_16matriceadjacence_6tarjan_parcours(PyObject *__pyx_se
       if (likely(PyList_CheckExact(__pyx_t_3))) {
         if (__pyx_t_5 >= PyList_GET_SIZE(__pyx_t_3)) break;
         #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-        __pyx_t_1 = PyList_GET_ITEM(__pyx_t_3, __pyx_t_5); __Pyx_INCREF(__pyx_t_1); __pyx_t_5++; if (unlikely(0 < 0)) __PYX_ERR(0, 425, __pyx_L1_error)
+        __pyx_t_1 = PyList_GET_ITEM(__pyx_t_3, __pyx_t_5); __Pyx_INCREF(__pyx_t_1); __pyx_t_5++; if (unlikely(0 < 0)) __PYX_ERR(0, 431, __pyx_L1_error)
         #else
-        __pyx_t_1 = PySequence_ITEM(__pyx_t_3, __pyx_t_5); __pyx_t_5++; if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 425, __pyx_L1_error)
+        __pyx_t_1 = PySequence_ITEM(__pyx_t_3, __pyx_t_5); __pyx_t_5++; if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 431, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_1);
         #endif
       } else {
         if (__pyx_t_5 >= PyTuple_GET_SIZE(__pyx_t_3)) break;
         #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-        __pyx_t_1 = PyTuple_GET_ITEM(__pyx_t_3, __pyx_t_5); __Pyx_INCREF(__pyx_t_1); __pyx_t_5++; if (unlikely(0 < 0)) __PYX_ERR(0, 425, __pyx_L1_error)
+        __pyx_t_1 = PyTuple_GET_ITEM(__pyx_t_3, __pyx_t_5); __Pyx_INCREF(__pyx_t_1); __pyx_t_5++; if (unlikely(0 < 0)) __PYX_ERR(0, 431, __pyx_L1_error)
         #else
-        __pyx_t_1 = PySequence_ITEM(__pyx_t_3, __pyx_t_5); __pyx_t_5++; if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 425, __pyx_L1_error)
+        __pyx_t_1 = PySequence_ITEM(__pyx_t_3, __pyx_t_5); __pyx_t_5++; if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 431, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_1);
         #endif
       }
@@ -8248,7 +8436,7 @@ static PyObject *__pyx_pf_16matriceadjacence_6tarjan_parcours(PyObject *__pyx_se
         PyObject* exc_type = PyErr_Occurred();
         if (exc_type) {
           if (likely(__Pyx_PyErr_GivenExceptionMatches(exc_type, PyExc_StopIteration))) PyErr_Clear();
-          else __PYX_ERR(0, 425, __pyx_L1_error)
+          else __PYX_ERR(0, 431, __pyx_L1_error)
         }
         break;
       }
@@ -8257,55 +8445,55 @@ static PyObject *__pyx_pf_16matriceadjacence_6tarjan_parcours(PyObject *__pyx_se
     __Pyx_XDECREF_SET(__pyx_v_w, __pyx_t_1);
     __pyx_t_1 = 0;
 
-    /* "matriceadjacence.py":426
+    /* "matriceadjacence.py":432
  * 
  *         for w in G.voisins(v) :
  *             if lst[w][2] == None :             # <<<<<<<<<<<<<<
  *                 parcours(G, lst, num, p, partition, w)
  *                 lst[v][2] = min(lst[v][2], lst[w][2])
  */
-    __pyx_t_1 = __Pyx_PyObject_GetItem(__pyx_v_lst, __pyx_v_w); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 426, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_GetItem(__pyx_v_lst, __pyx_v_w); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 432, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_4 = __Pyx_GetItemInt(__pyx_t_1, 2, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 426, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_GetItemInt(__pyx_t_1, 2, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 432, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    __pyx_t_1 = PyObject_RichCompare(__pyx_t_4, Py_None, Py_EQ); __Pyx_XGOTREF(__pyx_t_1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 426, __pyx_L1_error)
+    __pyx_t_1 = PyObject_RichCompare(__pyx_t_4, Py_None, Py_EQ); __Pyx_XGOTREF(__pyx_t_1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 432, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-    __pyx_t_7 = __Pyx_PyObject_IsTrue(__pyx_t_1); if (unlikely(__pyx_t_7 < 0)) __PYX_ERR(0, 426, __pyx_L1_error)
+    __pyx_t_7 = __Pyx_PyObject_IsTrue(__pyx_t_1); if (unlikely(__pyx_t_7 < 0)) __PYX_ERR(0, 432, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     if (__pyx_t_7) {
 
-      /* "matriceadjacence.py":427
+      /* "matriceadjacence.py":433
  *         for w in G.voisins(v) :
  *             if lst[w][2] == None :
  *                 parcours(G, lst, num, p, partition, w)             # <<<<<<<<<<<<<<
  *                 lst[v][2] = min(lst[v][2], lst[w][2])
  *             elif lst[w][3] == True :
  */
-      if (unlikely(!__pyx_cur_scope->__pyx_v_parcours)) { __Pyx_RaiseClosureNameError("parcours"); __PYX_ERR(0, 427, __pyx_L1_error) }
-      __pyx_t_1 = __pyx_pf_16matriceadjacence_6tarjan_parcours(__pyx_cur_scope->__pyx_v_parcours, __pyx_v_G, __pyx_v_lst, __pyx_v_num, __pyx_v_p, __pyx_v_partition, __pyx_v_w); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 427, __pyx_L1_error)
+      if (unlikely(!__pyx_cur_scope->__pyx_v_parcours)) { __Pyx_RaiseClosureNameError("parcours"); __PYX_ERR(0, 433, __pyx_L1_error) }
+      __pyx_t_1 = __pyx_pf_16matriceadjacence_6tarjan_parcours(__pyx_cur_scope->__pyx_v_parcours, __pyx_v_G, __pyx_v_lst, __pyx_v_num, __pyx_v_p, __pyx_v_partition, __pyx_v_w); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 433, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-      /* "matriceadjacence.py":428
+      /* "matriceadjacence.py":434
  *             if lst[w][2] == None :
  *                 parcours(G, lst, num, p, partition, w)
  *                 lst[v][2] = min(lst[v][2], lst[w][2])             # <<<<<<<<<<<<<<
  *             elif lst[w][3] == True :
  *                 lst[v][2] = min(lst[v][2], lst[w][1])
  */
-      __pyx_t_1 = __Pyx_PyObject_GetItem(__pyx_v_lst, __pyx_v_w); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 428, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyObject_GetItem(__pyx_v_lst, __pyx_v_w); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 434, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
-      __pyx_t_4 = __Pyx_GetItemInt(__pyx_t_1, 2, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 428, __pyx_L1_error)
+      __pyx_t_4 = __Pyx_GetItemInt(__pyx_t_1, 2, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 434, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_4);
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-      __pyx_t_1 = __Pyx_PyObject_GetItem(__pyx_v_lst, __pyx_v_v); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 428, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyObject_GetItem(__pyx_v_lst, __pyx_v_v); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 434, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
-      __pyx_t_8 = __Pyx_GetItemInt(__pyx_t_1, 2, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 428, __pyx_L1_error)
+      __pyx_t_8 = __Pyx_GetItemInt(__pyx_t_1, 2, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 434, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_8);
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-      __pyx_t_9 = PyObject_RichCompare(__pyx_t_4, __pyx_t_8, Py_LT); __Pyx_XGOTREF(__pyx_t_9); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 428, __pyx_L1_error)
-      __pyx_t_7 = __Pyx_PyObject_IsTrue(__pyx_t_9); if (unlikely(__pyx_t_7 < 0)) __PYX_ERR(0, 428, __pyx_L1_error)
+      __pyx_t_9 = PyObject_RichCompare(__pyx_t_4, __pyx_t_8, Py_LT); __Pyx_XGOTREF(__pyx_t_9); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 434, __pyx_L1_error)
+      __pyx_t_7 = __Pyx_PyObject_IsTrue(__pyx_t_9); if (unlikely(__pyx_t_7 < 0)) __PYX_ERR(0, 434, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
       if (__pyx_t_7) {
         __Pyx_INCREF(__pyx_t_4);
@@ -8319,13 +8507,13 @@ static PyObject *__pyx_pf_16matriceadjacence_6tarjan_parcours(PyObject *__pyx_se
       __pyx_t_4 = __pyx_t_1;
       __Pyx_INCREF(__pyx_t_4);
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-      __pyx_t_1 = __Pyx_PyObject_GetItem(__pyx_v_lst, __pyx_v_v); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 428, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyObject_GetItem(__pyx_v_lst, __pyx_v_v); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 434, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
-      if (unlikely(__Pyx_SetItemInt(__pyx_t_1, 2, __pyx_t_4, long, 1, __Pyx_PyInt_From_long, 0, 0, 1) < 0)) __PYX_ERR(0, 428, __pyx_L1_error)
+      if (unlikely(__Pyx_SetItemInt(__pyx_t_1, 2, __pyx_t_4, long, 1, __Pyx_PyInt_From_long, 0, 0, 1) < 0)) __PYX_ERR(0, 434, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-      /* "matriceadjacence.py":426
+      /* "matriceadjacence.py":432
  * 
  *         for w in G.voisins(v) :
  *             if lst[w][2] == None :             # <<<<<<<<<<<<<<
@@ -8335,43 +8523,43 @@ static PyObject *__pyx_pf_16matriceadjacence_6tarjan_parcours(PyObject *__pyx_se
       goto __pyx_L5;
     }
 
-    /* "matriceadjacence.py":429
+    /* "matriceadjacence.py":435
  *                 parcours(G, lst, num, p, partition, w)
  *                 lst[v][2] = min(lst[v][2], lst[w][2])
  *             elif lst[w][3] == True :             # <<<<<<<<<<<<<<
  *                 lst[v][2] = min(lst[v][2], lst[w][1])
  * 
  */
-    __pyx_t_4 = __Pyx_PyObject_GetItem(__pyx_v_lst, __pyx_v_w); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 429, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_PyObject_GetItem(__pyx_v_lst, __pyx_v_w); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 435, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
-    __pyx_t_1 = __Pyx_GetItemInt(__pyx_t_4, 3, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 429, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_GetItemInt(__pyx_t_4, 3, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 435, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-    __pyx_t_4 = PyObject_RichCompare(__pyx_t_1, Py_True, Py_EQ); __Pyx_XGOTREF(__pyx_t_4); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 429, __pyx_L1_error)
+    __pyx_t_4 = PyObject_RichCompare(__pyx_t_1, Py_True, Py_EQ); __Pyx_XGOTREF(__pyx_t_4); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 435, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    __pyx_t_7 = __Pyx_PyObject_IsTrue(__pyx_t_4); if (unlikely(__pyx_t_7 < 0)) __PYX_ERR(0, 429, __pyx_L1_error)
+    __pyx_t_7 = __Pyx_PyObject_IsTrue(__pyx_t_4); if (unlikely(__pyx_t_7 < 0)) __PYX_ERR(0, 435, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     if (__pyx_t_7) {
 
-      /* "matriceadjacence.py":430
+      /* "matriceadjacence.py":436
  *                 lst[v][2] = min(lst[v][2], lst[w][2])
  *             elif lst[w][3] == True :
  *                 lst[v][2] = min(lst[v][2], lst[w][1])             # <<<<<<<<<<<<<<
  * 
  *         if lst[v][2] == lst[v][1] :
  */
-      __pyx_t_4 = __Pyx_PyObject_GetItem(__pyx_v_lst, __pyx_v_w); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 430, __pyx_L1_error)
+      __pyx_t_4 = __Pyx_PyObject_GetItem(__pyx_v_lst, __pyx_v_w); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 436, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_4);
-      __pyx_t_1 = __Pyx_GetItemInt(__pyx_t_4, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 430, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_GetItemInt(__pyx_t_4, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 436, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-      __pyx_t_4 = __Pyx_PyObject_GetItem(__pyx_v_lst, __pyx_v_v); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 430, __pyx_L1_error)
+      __pyx_t_4 = __Pyx_PyObject_GetItem(__pyx_v_lst, __pyx_v_v); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 436, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_4);
-      __pyx_t_8 = __Pyx_GetItemInt(__pyx_t_4, 2, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 430, __pyx_L1_error)
+      __pyx_t_8 = __Pyx_GetItemInt(__pyx_t_4, 2, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 436, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_8);
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-      __pyx_t_9 = PyObject_RichCompare(__pyx_t_1, __pyx_t_8, Py_LT); __Pyx_XGOTREF(__pyx_t_9); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 430, __pyx_L1_error)
-      __pyx_t_7 = __Pyx_PyObject_IsTrue(__pyx_t_9); if (unlikely(__pyx_t_7 < 0)) __PYX_ERR(0, 430, __pyx_L1_error)
+      __pyx_t_9 = PyObject_RichCompare(__pyx_t_1, __pyx_t_8, Py_LT); __Pyx_XGOTREF(__pyx_t_9); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 436, __pyx_L1_error)
+      __pyx_t_7 = __Pyx_PyObject_IsTrue(__pyx_t_9); if (unlikely(__pyx_t_7 < 0)) __PYX_ERR(0, 436, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
       if (__pyx_t_7) {
         __Pyx_INCREF(__pyx_t_1);
@@ -8385,13 +8573,13 @@ static PyObject *__pyx_pf_16matriceadjacence_6tarjan_parcours(PyObject *__pyx_se
       __pyx_t_1 = __pyx_t_4;
       __Pyx_INCREF(__pyx_t_1);
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-      __pyx_t_4 = __Pyx_PyObject_GetItem(__pyx_v_lst, __pyx_v_v); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 430, __pyx_L1_error)
+      __pyx_t_4 = __Pyx_PyObject_GetItem(__pyx_v_lst, __pyx_v_v); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 436, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_4);
-      if (unlikely(__Pyx_SetItemInt(__pyx_t_4, 2, __pyx_t_1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1) < 0)) __PYX_ERR(0, 430, __pyx_L1_error)
+      if (unlikely(__Pyx_SetItemInt(__pyx_t_4, 2, __pyx_t_1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1) < 0)) __PYX_ERR(0, 436, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-      /* "matriceadjacence.py":429
+      /* "matriceadjacence.py":435
  *                 parcours(G, lst, num, p, partition, w)
  *                 lst[v][2] = min(lst[v][2], lst[w][2])
  *             elif lst[w][3] == True :             # <<<<<<<<<<<<<<
@@ -8401,7 +8589,7 @@ static PyObject *__pyx_pf_16matriceadjacence_6tarjan_parcours(PyObject *__pyx_se
     }
     __pyx_L5:;
 
-    /* "matriceadjacence.py":425
+    /* "matriceadjacence.py":431
  *         lst[v][3] = True # v.dansP
  * 
  *         for w in G.voisins(v) :             # <<<<<<<<<<<<<<
@@ -8411,58 +8599,58 @@ static PyObject *__pyx_pf_16matriceadjacence_6tarjan_parcours(PyObject *__pyx_se
   }
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "matriceadjacence.py":432
+  /* "matriceadjacence.py":438
  *                 lst[v][2] = min(lst[v][2], lst[w][1])
  * 
  *         if lst[v][2] == lst[v][1] :             # <<<<<<<<<<<<<<
  *             c = []
  *             if p != [] :
  */
-  __pyx_t_3 = __Pyx_PyObject_GetItem(__pyx_v_lst, __pyx_v_v); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 432, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetItem(__pyx_v_lst, __pyx_v_v); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 438, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_1 = __Pyx_GetItemInt(__pyx_t_3, 2, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 432, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_GetItemInt(__pyx_t_3, 2, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 438, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __pyx_t_3 = __Pyx_PyObject_GetItem(__pyx_v_lst, __pyx_v_v); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 432, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetItem(__pyx_v_lst, __pyx_v_v); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 438, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_4 = __Pyx_GetItemInt(__pyx_t_3, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 432, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_GetItemInt(__pyx_t_3, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 438, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __pyx_t_3 = PyObject_RichCompare(__pyx_t_1, __pyx_t_4, Py_EQ); __Pyx_XGOTREF(__pyx_t_3); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 432, __pyx_L1_error)
+  __pyx_t_3 = PyObject_RichCompare(__pyx_t_1, __pyx_t_4, Py_EQ); __Pyx_XGOTREF(__pyx_t_3); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 438, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  __pyx_t_7 = __Pyx_PyObject_IsTrue(__pyx_t_3); if (unlikely(__pyx_t_7 < 0)) __PYX_ERR(0, 432, __pyx_L1_error)
+  __pyx_t_7 = __Pyx_PyObject_IsTrue(__pyx_t_3); if (unlikely(__pyx_t_7 < 0)) __PYX_ERR(0, 438, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   if (__pyx_t_7) {
 
-    /* "matriceadjacence.py":433
+    /* "matriceadjacence.py":439
  * 
  *         if lst[v][2] == lst[v][1] :
  *             c = []             # <<<<<<<<<<<<<<
  *             if p != [] :
  *                 while True :
  */
-    __pyx_t_3 = PyList_New(0); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 433, __pyx_L1_error)
+    __pyx_t_3 = PyList_New(0); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 439, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __pyx_v_c = ((PyObject*)__pyx_t_3);
     __pyx_t_3 = 0;
 
-    /* "matriceadjacence.py":434
+    /* "matriceadjacence.py":440
  *         if lst[v][2] == lst[v][1] :
  *             c = []
  *             if p != [] :             # <<<<<<<<<<<<<<
  *                 while True :
  *                     w = p.pop()
  */
-    __pyx_t_3 = PyList_New(0); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 434, __pyx_L1_error)
+    __pyx_t_3 = PyList_New(0); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 440, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
-    __pyx_t_4 = PyObject_RichCompare(__pyx_v_p, __pyx_t_3, Py_NE); __Pyx_XGOTREF(__pyx_t_4); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 434, __pyx_L1_error)
+    __pyx_t_4 = PyObject_RichCompare(__pyx_v_p, __pyx_t_3, Py_NE); __Pyx_XGOTREF(__pyx_t_4); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 440, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-    __pyx_t_7 = __Pyx_PyObject_IsTrue(__pyx_t_4); if (unlikely(__pyx_t_7 < 0)) __PYX_ERR(0, 434, __pyx_L1_error)
+    __pyx_t_7 = __Pyx_PyObject_IsTrue(__pyx_t_4); if (unlikely(__pyx_t_7 < 0)) __PYX_ERR(0, 440, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     if (__pyx_t_7) {
 
-      /* "matriceadjacence.py":435
+      /* "matriceadjacence.py":441
  *             c = []
  *             if p != [] :
  *                 while True :             # <<<<<<<<<<<<<<
@@ -8471,65 +8659,65 @@ static PyObject *__pyx_pf_16matriceadjacence_6tarjan_parcours(PyObject *__pyx_se
  */
       while (1) {
 
-        /* "matriceadjacence.py":436
+        /* "matriceadjacence.py":442
  *             if p != [] :
  *                 while True :
  *                     w = p.pop()             # <<<<<<<<<<<<<<
  *                     w[3] = False
  *                     c.append(w)
  */
-        __pyx_t_4 = __Pyx_PyObject_Pop(__pyx_v_p); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 436, __pyx_L1_error)
+        __pyx_t_4 = __Pyx_PyObject_Pop(__pyx_v_p); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 442, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_4);
         __Pyx_XDECREF_SET(__pyx_v_w, __pyx_t_4);
         __pyx_t_4 = 0;
 
-        /* "matriceadjacence.py":437
+        /* "matriceadjacence.py":443
  *                 while True :
  *                     w = p.pop()
  *                     w[3] = False             # <<<<<<<<<<<<<<
  *                     c.append(w)
  *                     if (w != lst[v] or p == []) :
  */
-        if (unlikely(__Pyx_SetItemInt(__pyx_v_w, 3, Py_False, long, 1, __Pyx_PyInt_From_long, 0, 0, 1) < 0)) __PYX_ERR(0, 437, __pyx_L1_error)
+        if (unlikely(__Pyx_SetItemInt(__pyx_v_w, 3, Py_False, long, 1, __Pyx_PyInt_From_long, 0, 0, 1) < 0)) __PYX_ERR(0, 443, __pyx_L1_error)
 
-        /* "matriceadjacence.py":438
+        /* "matriceadjacence.py":444
  *                     w = p.pop()
  *                     w[3] = False
  *                     c.append(w)             # <<<<<<<<<<<<<<
  *                     if (w != lst[v] or p == []) :
  *                         break
  */
-        __pyx_t_2 = __Pyx_PyList_Append(__pyx_v_c, __pyx_v_w); if (unlikely(__pyx_t_2 == ((int)-1))) __PYX_ERR(0, 438, __pyx_L1_error)
+        __pyx_t_2 = __Pyx_PyList_Append(__pyx_v_c, __pyx_v_w); if (unlikely(__pyx_t_2 == ((int)-1))) __PYX_ERR(0, 444, __pyx_L1_error)
 
-        /* "matriceadjacence.py":439
+        /* "matriceadjacence.py":445
  *                     w[3] = False
  *                     c.append(w)
  *                     if (w != lst[v] or p == []) :             # <<<<<<<<<<<<<<
  *                         break
  *             partition.append(c)
  */
-        __pyx_t_4 = __Pyx_PyObject_GetItem(__pyx_v_lst, __pyx_v_v); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 439, __pyx_L1_error)
+        __pyx_t_4 = __Pyx_PyObject_GetItem(__pyx_v_lst, __pyx_v_v); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 445, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_4);
-        __pyx_t_3 = PyObject_RichCompare(__pyx_v_w, __pyx_t_4, Py_NE); __Pyx_XGOTREF(__pyx_t_3); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 439, __pyx_L1_error)
+        __pyx_t_3 = PyObject_RichCompare(__pyx_v_w, __pyx_t_4, Py_NE); __Pyx_XGOTREF(__pyx_t_3); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 445, __pyx_L1_error)
         __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-        __pyx_t_10 = __Pyx_PyObject_IsTrue(__pyx_t_3); if (unlikely(__pyx_t_10 < 0)) __PYX_ERR(0, 439, __pyx_L1_error)
+        __pyx_t_10 = __Pyx_PyObject_IsTrue(__pyx_t_3); if (unlikely(__pyx_t_10 < 0)) __PYX_ERR(0, 445, __pyx_L1_error)
         __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
         if (!__pyx_t_10) {
         } else {
           __pyx_t_7 = __pyx_t_10;
           goto __pyx_L11_bool_binop_done;
         }
-        __pyx_t_3 = PyList_New(0); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 439, __pyx_L1_error)
+        __pyx_t_3 = PyList_New(0); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 445, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_3);
-        __pyx_t_4 = PyObject_RichCompare(__pyx_v_p, __pyx_t_3, Py_EQ); __Pyx_XGOTREF(__pyx_t_4); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 439, __pyx_L1_error)
+        __pyx_t_4 = PyObject_RichCompare(__pyx_v_p, __pyx_t_3, Py_EQ); __Pyx_XGOTREF(__pyx_t_4); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 445, __pyx_L1_error)
         __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-        __pyx_t_10 = __Pyx_PyObject_IsTrue(__pyx_t_4); if (unlikely(__pyx_t_10 < 0)) __PYX_ERR(0, 439, __pyx_L1_error)
+        __pyx_t_10 = __Pyx_PyObject_IsTrue(__pyx_t_4); if (unlikely(__pyx_t_10 < 0)) __PYX_ERR(0, 445, __pyx_L1_error)
         __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
         __pyx_t_7 = __pyx_t_10;
         __pyx_L11_bool_binop_done:;
         if (__pyx_t_7) {
 
-          /* "matriceadjacence.py":440
+          /* "matriceadjacence.py":446
  *                     c.append(w)
  *                     if (w != lst[v] or p == []) :
  *                         break             # <<<<<<<<<<<<<<
@@ -8538,7 +8726,7 @@ static PyObject *__pyx_pf_16matriceadjacence_6tarjan_parcours(PyObject *__pyx_se
  */
           goto __pyx_L9_break;
 
-          /* "matriceadjacence.py":439
+          /* "matriceadjacence.py":445
  *                     w[3] = False
  *                     c.append(w)
  *                     if (w != lst[v] or p == []) :             # <<<<<<<<<<<<<<
@@ -8549,7 +8737,7 @@ static PyObject *__pyx_pf_16matriceadjacence_6tarjan_parcours(PyObject *__pyx_se
       }
       __pyx_L9_break:;
 
-      /* "matriceadjacence.py":434
+      /* "matriceadjacence.py":440
  *         if lst[v][2] == lst[v][1] :
  *             c = []
  *             if p != [] :             # <<<<<<<<<<<<<<
@@ -8558,16 +8746,16 @@ static PyObject *__pyx_pf_16matriceadjacence_6tarjan_parcours(PyObject *__pyx_se
  */
     }
 
-    /* "matriceadjacence.py":441
+    /* "matriceadjacence.py":447
  *                     if (w != lst[v] or p == []) :
  *                         break
  *             partition.append(c)             # <<<<<<<<<<<<<<
  * 
  *     for sommet in G.sommets() :
  */
-    __pyx_t_2 = __Pyx_PyObject_Append(__pyx_v_partition, __pyx_v_c); if (unlikely(__pyx_t_2 == ((int)-1))) __PYX_ERR(0, 441, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyObject_Append(__pyx_v_partition, __pyx_v_c); if (unlikely(__pyx_t_2 == ((int)-1))) __PYX_ERR(0, 447, __pyx_L1_error)
 
-    /* "matriceadjacence.py":432
+    /* "matriceadjacence.py":438
  *                 lst[v][2] = min(lst[v][2], lst[w][1])
  * 
  *         if lst[v][2] == lst[v][1] :             # <<<<<<<<<<<<<<
@@ -8576,7 +8764,7 @@ static PyObject *__pyx_pf_16matriceadjacence_6tarjan_parcours(PyObject *__pyx_se
  */
   }
 
-  /* "matriceadjacence.py":415
+  /* "matriceadjacence.py":421
  *     lst = []
  * 
  *     def parcours(G, lst, num, p, partition, v) :             # <<<<<<<<<<<<<<
@@ -8604,7 +8792,7 @@ static PyObject *__pyx_pf_16matriceadjacence_6tarjan_parcours(PyObject *__pyx_se
   return __pyx_r;
 }
 
-/* "matriceadjacence.py":401
+/* "matriceadjacence.py":407
  *     return graph
  * 
  * def tarjan(G) :             # <<<<<<<<<<<<<<
@@ -8636,12 +8824,12 @@ static PyObject *__pyx_pf_16matriceadjacence_4tarjan(CYTHON_UNUSED PyObject *__p
   if (unlikely(!__pyx_cur_scope)) {
     __pyx_cur_scope = ((struct __pyx_obj_16matriceadjacence___pyx_scope_struct__tarjan *)Py_None);
     __Pyx_INCREF(Py_None);
-    __PYX_ERR(0, 401, __pyx_L1_error)
+    __PYX_ERR(0, 407, __pyx_L1_error)
   } else {
     __Pyx_GOTREF(__pyx_cur_scope);
   }
 
-  /* "matriceadjacence.py":410
+  /* "matriceadjacence.py":416
  *     [[[3, 3, 3, False], [2, 2, 2, False]], [[1, 1, 1, False]], [[0, 0, 0, False]], []]
  *     """
  *     num = 0             # <<<<<<<<<<<<<<
@@ -8650,63 +8838,63 @@ static PyObject *__pyx_pf_16matriceadjacence_4tarjan(CYTHON_UNUSED PyObject *__p
  */
   __pyx_v_num = 0;
 
-  /* "matriceadjacence.py":411
+  /* "matriceadjacence.py":417
  *     """
  *     num = 0
  *     p = []             # <<<<<<<<<<<<<<
  *     partition = []
  *     lst = []
  */
-  __pyx_t_1 = PyList_New(0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 411, __pyx_L1_error)
+  __pyx_t_1 = PyList_New(0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 417, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_v_p = ((PyObject*)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "matriceadjacence.py":412
+  /* "matriceadjacence.py":418
  *     num = 0
  *     p = []
  *     partition = []             # <<<<<<<<<<<<<<
  *     lst = []
  * 
  */
-  __pyx_t_1 = PyList_New(0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 412, __pyx_L1_error)
+  __pyx_t_1 = PyList_New(0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 418, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_v_partition = ((PyObject*)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "matriceadjacence.py":413
+  /* "matriceadjacence.py":419
  *     p = []
  *     partition = []
  *     lst = []             # <<<<<<<<<<<<<<
  * 
  *     def parcours(G, lst, num, p, partition, v) :
  */
-  __pyx_t_1 = PyList_New(0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 413, __pyx_L1_error)
+  __pyx_t_1 = PyList_New(0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 419, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_v_lst = ((PyObject*)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "matriceadjacence.py":415
+  /* "matriceadjacence.py":421
  *     lst = []
  * 
  *     def parcours(G, lst, num, p, partition, v) :             # <<<<<<<<<<<<<<
  *         """
  *         Aux function of tarjan.
  */
-  __pyx_t_1 = __Pyx_CyFunction_New(&__pyx_mdef_16matriceadjacence_6tarjan_1parcours, 0, __pyx_n_s_tarjan_locals_parcours, ((PyObject*)__pyx_cur_scope), __pyx_n_s_matriceadjacence, __pyx_d, ((PyObject *)__pyx_codeobj__5)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 415, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_CyFunction_New(&__pyx_mdef_16matriceadjacence_6tarjan_1parcours, 0, __pyx_n_s_tarjan_locals_parcours, ((PyObject*)__pyx_cur_scope), __pyx_n_s_matriceadjacence, __pyx_d, ((PyObject *)__pyx_codeobj__5)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 421, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_GIVEREF(__pyx_t_1);
   __pyx_cur_scope->__pyx_v_parcours = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "matriceadjacence.py":443
+  /* "matriceadjacence.py":449
  *             partition.append(c)
  * 
  *     for sommet in G.sommets() :             # <<<<<<<<<<<<<<
  *         lst.append([sommet, None, None, False])
  *     for sommet in G.sommets() :
  */
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_G, __pyx_n_s_sommets); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 443, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_G, __pyx_n_s_sommets); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 449, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_t_3 = NULL;
   if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_2))) {
@@ -8720,16 +8908,16 @@ static PyObject *__pyx_pf_16matriceadjacence_4tarjan(CYTHON_UNUSED PyObject *__p
   }
   __pyx_t_1 = (__pyx_t_3) ? __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_3) : __Pyx_PyObject_CallNoArg(__pyx_t_2);
   __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 443, __pyx_L1_error)
+  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 449, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   if (likely(PyList_CheckExact(__pyx_t_1)) || PyTuple_CheckExact(__pyx_t_1)) {
     __pyx_t_2 = __pyx_t_1; __Pyx_INCREF(__pyx_t_2); __pyx_t_4 = 0;
     __pyx_t_5 = NULL;
   } else {
-    __pyx_t_4 = -1; __pyx_t_2 = PyObject_GetIter(__pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 443, __pyx_L1_error)
+    __pyx_t_4 = -1; __pyx_t_2 = PyObject_GetIter(__pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 449, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
-    __pyx_t_5 = Py_TYPE(__pyx_t_2)->tp_iternext; if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 443, __pyx_L1_error)
+    __pyx_t_5 = Py_TYPE(__pyx_t_2)->tp_iternext; if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 449, __pyx_L1_error)
   }
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   for (;;) {
@@ -8737,17 +8925,17 @@ static PyObject *__pyx_pf_16matriceadjacence_4tarjan(CYTHON_UNUSED PyObject *__p
       if (likely(PyList_CheckExact(__pyx_t_2))) {
         if (__pyx_t_4 >= PyList_GET_SIZE(__pyx_t_2)) break;
         #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-        __pyx_t_1 = PyList_GET_ITEM(__pyx_t_2, __pyx_t_4); __Pyx_INCREF(__pyx_t_1); __pyx_t_4++; if (unlikely(0 < 0)) __PYX_ERR(0, 443, __pyx_L1_error)
+        __pyx_t_1 = PyList_GET_ITEM(__pyx_t_2, __pyx_t_4); __Pyx_INCREF(__pyx_t_1); __pyx_t_4++; if (unlikely(0 < 0)) __PYX_ERR(0, 449, __pyx_L1_error)
         #else
-        __pyx_t_1 = PySequence_ITEM(__pyx_t_2, __pyx_t_4); __pyx_t_4++; if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 443, __pyx_L1_error)
+        __pyx_t_1 = PySequence_ITEM(__pyx_t_2, __pyx_t_4); __pyx_t_4++; if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 449, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_1);
         #endif
       } else {
         if (__pyx_t_4 >= PyTuple_GET_SIZE(__pyx_t_2)) break;
         #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-        __pyx_t_1 = PyTuple_GET_ITEM(__pyx_t_2, __pyx_t_4); __Pyx_INCREF(__pyx_t_1); __pyx_t_4++; if (unlikely(0 < 0)) __PYX_ERR(0, 443, __pyx_L1_error)
+        __pyx_t_1 = PyTuple_GET_ITEM(__pyx_t_2, __pyx_t_4); __Pyx_INCREF(__pyx_t_1); __pyx_t_4++; if (unlikely(0 < 0)) __PYX_ERR(0, 449, __pyx_L1_error)
         #else
-        __pyx_t_1 = PySequence_ITEM(__pyx_t_2, __pyx_t_4); __pyx_t_4++; if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 443, __pyx_L1_error)
+        __pyx_t_1 = PySequence_ITEM(__pyx_t_2, __pyx_t_4); __pyx_t_4++; if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 449, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_1);
         #endif
       }
@@ -8757,7 +8945,7 @@ static PyObject *__pyx_pf_16matriceadjacence_4tarjan(CYTHON_UNUSED PyObject *__p
         PyObject* exc_type = PyErr_Occurred();
         if (exc_type) {
           if (likely(__Pyx_PyErr_GivenExceptionMatches(exc_type, PyExc_StopIteration))) PyErr_Clear();
-          else __PYX_ERR(0, 443, __pyx_L1_error)
+          else __PYX_ERR(0, 449, __pyx_L1_error)
         }
         break;
       }
@@ -8766,14 +8954,14 @@ static PyObject *__pyx_pf_16matriceadjacence_4tarjan(CYTHON_UNUSED PyObject *__p
     __Pyx_XDECREF_SET(__pyx_v_sommet, __pyx_t_1);
     __pyx_t_1 = 0;
 
-    /* "matriceadjacence.py":444
+    /* "matriceadjacence.py":450
  * 
  *     for sommet in G.sommets() :
  *         lst.append([sommet, None, None, False])             # <<<<<<<<<<<<<<
  *     for sommet in G.sommets() :
  *         if lst[sommet][1] == None :
  */
-    __pyx_t_1 = PyList_New(4); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 444, __pyx_L1_error)
+    __pyx_t_1 = PyList_New(4); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 450, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_INCREF(__pyx_v_sommet);
     __Pyx_GIVEREF(__pyx_v_sommet);
@@ -8787,10 +8975,10 @@ static PyObject *__pyx_pf_16matriceadjacence_4tarjan(CYTHON_UNUSED PyObject *__p
     __Pyx_INCREF(Py_False);
     __Pyx_GIVEREF(Py_False);
     PyList_SET_ITEM(__pyx_t_1, 3, Py_False);
-    __pyx_t_6 = __Pyx_PyList_Append(__pyx_v_lst, __pyx_t_1); if (unlikely(__pyx_t_6 == ((int)-1))) __PYX_ERR(0, 444, __pyx_L1_error)
+    __pyx_t_6 = __Pyx_PyList_Append(__pyx_v_lst, __pyx_t_1); if (unlikely(__pyx_t_6 == ((int)-1))) __PYX_ERR(0, 450, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-    /* "matriceadjacence.py":443
+    /* "matriceadjacence.py":449
  *             partition.append(c)
  * 
  *     for sommet in G.sommets() :             # <<<<<<<<<<<<<<
@@ -8800,14 +8988,14 @@ static PyObject *__pyx_pf_16matriceadjacence_4tarjan(CYTHON_UNUSED PyObject *__p
   }
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "matriceadjacence.py":445
+  /* "matriceadjacence.py":451
  *     for sommet in G.sommets() :
  *         lst.append([sommet, None, None, False])
  *     for sommet in G.sommets() :             # <<<<<<<<<<<<<<
  *         if lst[sommet][1] == None :
  *             parcours(G, lst, num, p, partition, sommet)
  */
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_G, __pyx_n_s_sommets); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 445, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_G, __pyx_n_s_sommets); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 451, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_t_3 = NULL;
   if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_1))) {
@@ -8821,16 +9009,16 @@ static PyObject *__pyx_pf_16matriceadjacence_4tarjan(CYTHON_UNUSED PyObject *__p
   }
   __pyx_t_2 = (__pyx_t_3) ? __Pyx_PyObject_CallOneArg(__pyx_t_1, __pyx_t_3) : __Pyx_PyObject_CallNoArg(__pyx_t_1);
   __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 445, __pyx_L1_error)
+  if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 451, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   if (likely(PyList_CheckExact(__pyx_t_2)) || PyTuple_CheckExact(__pyx_t_2)) {
     __pyx_t_1 = __pyx_t_2; __Pyx_INCREF(__pyx_t_1); __pyx_t_4 = 0;
     __pyx_t_5 = NULL;
   } else {
-    __pyx_t_4 = -1; __pyx_t_1 = PyObject_GetIter(__pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 445, __pyx_L1_error)
+    __pyx_t_4 = -1; __pyx_t_1 = PyObject_GetIter(__pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 451, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_5 = Py_TYPE(__pyx_t_1)->tp_iternext; if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 445, __pyx_L1_error)
+    __pyx_t_5 = Py_TYPE(__pyx_t_1)->tp_iternext; if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 451, __pyx_L1_error)
   }
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   for (;;) {
@@ -8838,17 +9026,17 @@ static PyObject *__pyx_pf_16matriceadjacence_4tarjan(CYTHON_UNUSED PyObject *__p
       if (likely(PyList_CheckExact(__pyx_t_1))) {
         if (__pyx_t_4 >= PyList_GET_SIZE(__pyx_t_1)) break;
         #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-        __pyx_t_2 = PyList_GET_ITEM(__pyx_t_1, __pyx_t_4); __Pyx_INCREF(__pyx_t_2); __pyx_t_4++; if (unlikely(0 < 0)) __PYX_ERR(0, 445, __pyx_L1_error)
+        __pyx_t_2 = PyList_GET_ITEM(__pyx_t_1, __pyx_t_4); __Pyx_INCREF(__pyx_t_2); __pyx_t_4++; if (unlikely(0 < 0)) __PYX_ERR(0, 451, __pyx_L1_error)
         #else
-        __pyx_t_2 = PySequence_ITEM(__pyx_t_1, __pyx_t_4); __pyx_t_4++; if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 445, __pyx_L1_error)
+        __pyx_t_2 = PySequence_ITEM(__pyx_t_1, __pyx_t_4); __pyx_t_4++; if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 451, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_2);
         #endif
       } else {
         if (__pyx_t_4 >= PyTuple_GET_SIZE(__pyx_t_1)) break;
         #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-        __pyx_t_2 = PyTuple_GET_ITEM(__pyx_t_1, __pyx_t_4); __Pyx_INCREF(__pyx_t_2); __pyx_t_4++; if (unlikely(0 < 0)) __PYX_ERR(0, 445, __pyx_L1_error)
+        __pyx_t_2 = PyTuple_GET_ITEM(__pyx_t_1, __pyx_t_4); __Pyx_INCREF(__pyx_t_2); __pyx_t_4++; if (unlikely(0 < 0)) __PYX_ERR(0, 451, __pyx_L1_error)
         #else
-        __pyx_t_2 = PySequence_ITEM(__pyx_t_1, __pyx_t_4); __pyx_t_4++; if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 445, __pyx_L1_error)
+        __pyx_t_2 = PySequence_ITEM(__pyx_t_1, __pyx_t_4); __pyx_t_4++; if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 451, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_2);
         #endif
       }
@@ -8858,7 +9046,7 @@ static PyObject *__pyx_pf_16matriceadjacence_4tarjan(CYTHON_UNUSED PyObject *__p
         PyObject* exc_type = PyErr_Occurred();
         if (exc_type) {
           if (likely(__Pyx_PyErr_GivenExceptionMatches(exc_type, PyExc_StopIteration))) PyErr_Clear();
-          else __PYX_ERR(0, 445, __pyx_L1_error)
+          else __PYX_ERR(0, 451, __pyx_L1_error)
         }
         break;
       }
@@ -8867,39 +9055,39 @@ static PyObject *__pyx_pf_16matriceadjacence_4tarjan(CYTHON_UNUSED PyObject *__p
     __Pyx_XDECREF_SET(__pyx_v_sommet, __pyx_t_2);
     __pyx_t_2 = 0;
 
-    /* "matriceadjacence.py":446
+    /* "matriceadjacence.py":452
  *         lst.append([sommet, None, None, False])
  *     for sommet in G.sommets() :
  *         if lst[sommet][1] == None :             # <<<<<<<<<<<<<<
  *             parcours(G, lst, num, p, partition, sommet)
  * #        if (len(partition) > 1) :
  */
-    __pyx_t_2 = __Pyx_PyObject_GetItem(__pyx_v_lst, __pyx_v_sommet); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 446, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyObject_GetItem(__pyx_v_lst, __pyx_v_sommet); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 452, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
-    __pyx_t_3 = __Pyx_GetItemInt(__pyx_t_2, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 446, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_GetItemInt(__pyx_t_2, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 452, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-    __pyx_t_2 = PyObject_RichCompare(__pyx_t_3, Py_None, Py_EQ); __Pyx_XGOTREF(__pyx_t_2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 446, __pyx_L1_error)
+    __pyx_t_2 = PyObject_RichCompare(__pyx_t_3, Py_None, Py_EQ); __Pyx_XGOTREF(__pyx_t_2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 452, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-    __pyx_t_7 = __Pyx_PyObject_IsTrue(__pyx_t_2); if (unlikely(__pyx_t_7 < 0)) __PYX_ERR(0, 446, __pyx_L1_error)
+    __pyx_t_7 = __Pyx_PyObject_IsTrue(__pyx_t_2); if (unlikely(__pyx_t_7 < 0)) __PYX_ERR(0, 452, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     if (__pyx_t_7) {
 
-      /* "matriceadjacence.py":447
+      /* "matriceadjacence.py":453
  *     for sommet in G.sommets() :
  *         if lst[sommet][1] == None :
  *             parcours(G, lst, num, p, partition, sommet)             # <<<<<<<<<<<<<<
  * #        if (len(partition) > 1) :
  * #            return partition
  */
-      __pyx_t_2 = __Pyx_PyInt_From_long(__pyx_v_num); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 447, __pyx_L1_error)
+      __pyx_t_2 = __Pyx_PyInt_From_long(__pyx_v_num); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 453, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_2);
-      __pyx_t_3 = __pyx_pf_16matriceadjacence_6tarjan_parcours(__pyx_cur_scope->__pyx_v_parcours, __pyx_v_G, __pyx_v_lst, __pyx_t_2, __pyx_v_p, __pyx_v_partition, __pyx_v_sommet); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 447, __pyx_L1_error)
+      __pyx_t_3 = __pyx_pf_16matriceadjacence_6tarjan_parcours(__pyx_cur_scope->__pyx_v_parcours, __pyx_v_G, __pyx_v_lst, __pyx_t_2, __pyx_v_p, __pyx_v_partition, __pyx_v_sommet); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 453, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_3);
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-      /* "matriceadjacence.py":446
+      /* "matriceadjacence.py":452
  *         lst.append([sommet, None, None, False])
  *     for sommet in G.sommets() :
  *         if lst[sommet][1] == None :             # <<<<<<<<<<<<<<
@@ -8908,7 +9096,7 @@ static PyObject *__pyx_pf_16matriceadjacence_4tarjan(CYTHON_UNUSED PyObject *__p
  */
     }
 
-    /* "matriceadjacence.py":445
+    /* "matriceadjacence.py":451
  *     for sommet in G.sommets() :
  *         lst.append([sommet, None, None, False])
  *     for sommet in G.sommets() :             # <<<<<<<<<<<<<<
@@ -8918,7 +9106,7 @@ static PyObject *__pyx_pf_16matriceadjacence_4tarjan(CYTHON_UNUSED PyObject *__p
   }
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "matriceadjacence.py":450
+  /* "matriceadjacence.py":456
  * #        if (len(partition) > 1) :
  * #            return partition
  *     return partition             # <<<<<<<<<<<<<<
@@ -8930,7 +9118,7 @@ static PyObject *__pyx_pf_16matriceadjacence_4tarjan(CYTHON_UNUSED PyObject *__p
   __pyx_r = __pyx_v_partition;
   goto __pyx_L0;
 
-  /* "matriceadjacence.py":401
+  /* "matriceadjacence.py":407
  *     return graph
  * 
  * def tarjan(G) :             # <<<<<<<<<<<<<<
@@ -8956,7 +9144,7 @@ static PyObject *__pyx_pf_16matriceadjacence_4tarjan(CYTHON_UNUSED PyObject *__p
   return __pyx_r;
 }
 
-/* "matriceadjacence.py":453
+/* "matriceadjacence.py":459
  * 
  * 
  * def main():             # <<<<<<<<<<<<<<
@@ -8990,26 +9178,26 @@ static PyObject *__pyx_pf_16matriceadjacence_6main(CYTHON_UNUSED PyObject *__pyx
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("main", 0);
 
-  /* "matriceadjacence.py":454
+  /* "matriceadjacence.py":460
  * 
  * def main():
  *     import doctest             # <<<<<<<<<<<<<<
  *     doctest.testmod()
  * 
  */
-  __pyx_t_1 = __Pyx_Import(__pyx_n_s_doctest, 0, -1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 454, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_Import(__pyx_n_s_doctest, 0, -1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 460, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_v_doctest = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "matriceadjacence.py":455
+  /* "matriceadjacence.py":461
  * def main():
  *     import doctest
  *     doctest.testmod()             # <<<<<<<<<<<<<<
  * 
  * 
  */
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_doctest, __pyx_n_s_testmod); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 455, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_doctest, __pyx_n_s_testmod); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 461, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_t_3 = NULL;
   if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_2))) {
@@ -9023,12 +9211,12 @@ static PyObject *__pyx_pf_16matriceadjacence_6main(CYTHON_UNUSED PyObject *__pyx
   }
   __pyx_t_1 = (__pyx_t_3) ? __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_3) : __Pyx_PyObject_CallNoArg(__pyx_t_2);
   __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 455, __pyx_L1_error)
+  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 461, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "matriceadjacence.py":453
+  /* "matriceadjacence.py":459
  * 
  * 
  * def main():             # <<<<<<<<<<<<<<
@@ -9292,7 +9480,7 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_boucle, __pyx_k_boucle, sizeof(__pyx_k_boucle), 0, 0, 1, 1},
   {&__pyx_n_s_boucles, __pyx_k_boucles, sizeof(__pyx_k_boucles), 0, 0, 1, 1},
   {&__pyx_n_s_c, __pyx_k_c, sizeof(__pyx_k_c), 0, 0, 1, 1},
-  {&__pyx_kp_s_center_true_pad_1, __pyx_k_center_true_pad_1, sizeof(__pyx_k_center_true_pad_1), 0, 0, 1, 0},
+  {&__pyx_kp_s_center_true_pad_1_graph_label_G, __pyx_k_center_true_pad_1_graph_label_G, sizeof(__pyx_k_center_true_pad_1_graph_label_G), 0, 0, 1, 0},
   {&__pyx_n_s_check_entrees, __pyx_k_check_entrees, sizeof(__pyx_k_check_entrees), 0, 0, 1, 1},
   {&__pyx_n_s_cline_in_traceback, __pyx_k_cline_in_traceback, sizeof(__pyx_k_cline_in_traceback), 0, 0, 1, 1},
   {&__pyx_n_s_contient_arete, __pyx_k_contient_arete, sizeof(__pyx_k_contient_arete), 0, 0, 1, 1},
@@ -9311,9 +9499,6 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_export_dot, __pyx_k_export_dot, sizeof(__pyx_k_export_dot), 0, 0, 1, 1},
   {&__pyx_kp_u_export_dot_line_363, __pyx_k_export_dot_line_363, sizeof(__pyx_k_export_dot_line_363), 0, 1, 0, 0},
   {&__pyx_n_s_file, __pyx_k_file, sizeof(__pyx_k_file), 0, 0, 1, 1},
-  {&__pyx_kp_s_fillcolor_green, __pyx_k_fillcolor_green, sizeof(__pyx_k_fillcolor_green), 0, 0, 1, 0},
-  {&__pyx_kp_s_fillcolor_red, __pyx_k_fillcolor_red, sizeof(__pyx_k_fillcolor_red), 0, 0, 1, 0},
-  {&__pyx_kp_s_fillcolor_yellow, __pyx_k_fillcolor_yellow, sizeof(__pyx_k_fillcolor_yellow), 0, 0, 1, 0},
   {&__pyx_n_s_graph, __pyx_k_graph, sizeof(__pyx_k_graph), 0, 0, 1, 1},
   {&__pyx_n_s_graphe, __pyx_k_graphe, sizeof(__pyx_k_graphe), 0, 0, 1, 1},
   {&__pyx_n_s_i, __pyx_k_i, sizeof(__pyx_k_i), 0, 0, 1, 1},
@@ -9324,6 +9509,7 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_iterable, __pyx_k_iterable, sizeof(__pyx_k_iterable), 0, 0, 1, 1},
   {&__pyx_n_s_j, __pyx_k_j, sizeof(__pyx_k_j), 0, 0, 1, 1},
   {&__pyx_n_s_k, __pyx_k_k, sizeof(__pyx_k_k), 0, 0, 1, 1},
+  {&__pyx_kp_s_labelloc_t_labeljust_center_fon, __pyx_k_labelloc_t_labeljust_center_fon, sizeof(__pyx_k_labelloc_t_labeljust_center_fon), 0, 0, 1, 0},
   {&__pyx_n_s_list, __pyx_k_list, sizeof(__pyx_k_list), 0, 0, 1, 1},
   {&__pyx_n_s_lst, __pyx_k_lst, sizeof(__pyx_k_lst), 0, 0, 1, 1},
   {&__pyx_n_s_lstmp, __pyx_k_lstmp, sizeof(__pyx_k_lstmp), 0, 0, 1, 1},
@@ -9336,6 +9522,8 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_module, __pyx_k_module, sizeof(__pyx_k_module), 0, 0, 1, 1},
   {&__pyx_n_s_n, __pyx_k_n, sizeof(__pyx_k_n), 0, 0, 1, 1},
   {&__pyx_n_s_name, __pyx_k_name, sizeof(__pyx_k_name), 0, 0, 1, 1},
+  {&__pyx_kp_s_node_color_black_shape_ellipse_s, __pyx_k_node_color_black_shape_ellipse_s, sizeof(__pyx_k_node_color_black_shape_ellipse_s), 0, 0, 1, 0},
+  {&__pyx_kp_s_node_color_black_shape_ellipse_s_2, __pyx_k_node_color_black_shape_ellipse_s_2, sizeof(__pyx_k_node_color_black_shape_ellipse_s_2), 0, 0, 1, 0},
   {&__pyx_n_s_nombre_aretes, __pyx_k_nombre_aretes, sizeof(__pyx_k_nombre_aretes), 0, 0, 1, 1},
   {&__pyx_n_s_nombre_boucles, __pyx_k_nombre_boucles, sizeof(__pyx_k_nombre_boucles), 0, 0, 1, 1},
   {&__pyx_n_s_nombre_sommets, __pyx_k_nombre_sommets, sizeof(__pyx_k_nombre_sommets), 0, 0, 1, 1},
@@ -9349,6 +9537,7 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_pop, __pyx_k_pop, sizeof(__pyx_k_pop), 0, 0, 1, 1},
   {&__pyx_n_s_prepare, __pyx_k_prepare, sizeof(__pyx_k_prepare), 0, 0, 1, 1},
   {&__pyx_n_s_print, __pyx_k_print, sizeof(__pyx_k_print), 0, 0, 1, 1},
+  {&__pyx_n_s_q, __pyx_k_q, sizeof(__pyx_k_q), 0, 0, 1, 1},
   {&__pyx_n_s_qualname, __pyx_k_qualname, sizeof(__pyx_k_qualname), 0, 0, 1, 1},
   {&__pyx_n_s_range, __pyx_k_range, sizeof(__pyx_k_range), 0, 0, 1, 1},
   {&__pyx_n_s_retirer_arete, __pyx_k_retirer_arete, sizeof(__pyx_k_retirer_arete), 0, 0, 1, 1},
@@ -9361,9 +9550,11 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_source, __pyx_k_source, sizeof(__pyx_k_source), 0, 0, 1, 1},
   {&__pyx_n_s_sous_graphe_induit, __pyx_k_sous_graphe_induit, sizeof(__pyx_k_sous_graphe_induit), 0, 0, 1, 1},
   {&__pyx_n_s_sp, __pyx_k_sp, sizeof(__pyx_k_sp), 0, 0, 1, 1},
+  {&__pyx_n_s_states, __pyx_k_states, sizeof(__pyx_k_states), 0, 0, 1, 1},
+  {&__pyx_kp_s_style_dotted, __pyx_k_style_dotted, sizeof(__pyx_k_style_dotted), 0, 0, 1, 0},
   {&__pyx_n_s_sympy, __pyx_k_sympy, sizeof(__pyx_k_sympy), 0, 0, 1, 1},
   {&__pyx_n_s_tarjan, __pyx_k_tarjan, sizeof(__pyx_k_tarjan), 0, 0, 1, 1},
-  {&__pyx_kp_u_tarjan_line_401, __pyx_k_tarjan_line_401, sizeof(__pyx_k_tarjan_line_401), 0, 1, 0, 0},
+  {&__pyx_kp_u_tarjan_line_407, __pyx_k_tarjan_line_407, sizeof(__pyx_k_tarjan_line_407), 0, 1, 0, 0},
   {&__pyx_n_s_tarjan_locals_parcours, __pyx_k_tarjan_locals_parcours, sizeof(__pyx_k_tarjan_locals_parcours), 0, 0, 1, 1},
   {&__pyx_n_s_test, __pyx_k_test, sizeof(__pyx_k_test), 0, 0, 1, 1},
   {&__pyx_n_s_testmod, __pyx_k_testmod, sizeof(__pyx_k_testmod), 0, 0, 1, 1},
@@ -9388,17 +9579,17 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__Pyx_InitCachedConstants", 0);
 
-  /* "matriceadjacence.py":415
+  /* "matriceadjacence.py":421
  *     lst = []
  * 
  *     def parcours(G, lst, num, p, partition, v) :             # <<<<<<<<<<<<<<
  *         """
  *         Aux function of tarjan.
  */
-  __pyx_tuple__4 = PyTuple_Pack(8, __pyx_n_s_G, __pyx_n_s_lst, __pyx_n_s_num, __pyx_n_s_p, __pyx_n_s_partition, __pyx_n_s_v, __pyx_n_s_w, __pyx_n_s_c); if (unlikely(!__pyx_tuple__4)) __PYX_ERR(0, 415, __pyx_L1_error)
+  __pyx_tuple__4 = PyTuple_Pack(8, __pyx_n_s_G, __pyx_n_s_lst, __pyx_n_s_num, __pyx_n_s_p, __pyx_n_s_partition, __pyx_n_s_v, __pyx_n_s_w, __pyx_n_s_c); if (unlikely(!__pyx_tuple__4)) __PYX_ERR(0, 421, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__4);
   __Pyx_GIVEREF(__pyx_tuple__4);
-  __pyx_codeobj__5 = (PyObject*)__Pyx_PyCode_New(6, 0, 8, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__4, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_matriceadjacence_py, __pyx_n_s_parcours, 415, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__5)) __PYX_ERR(0, 415, __pyx_L1_error)
+  __pyx_codeobj__5 = (PyObject*)__Pyx_PyCode_New(6, 0, 8, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__4, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_matriceadjacence_py, __pyx_n_s_parcours, 421, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__5)) __PYX_ERR(0, 421, __pyx_L1_error)
 
   /* "matriceadjacence.py":13
  * 
@@ -9669,38 +9860,38 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   /* "matriceadjacence.py":363
  *     return G
  * 
- * def export_dot(graphe, num):             # <<<<<<<<<<<<<<
+ * def export_dot(graphe, num, states):             # <<<<<<<<<<<<<<
  *     """
  *     Renvoie une chane encodant le graphe au format dot.
  */
-  __pyx_tuple__51 = PyTuple_Pack(7, __pyx_n_s_graphe, __pyx_n_s_num, __pyx_n_s_p, __pyx_n_s_graph, __pyx_n_s_sommet, __pyx_n_s_boucle, __pyx_n_s_arete); if (unlikely(!__pyx_tuple__51)) __PYX_ERR(0, 363, __pyx_L1_error)
+  __pyx_tuple__51 = PyTuple_Pack(9, __pyx_n_s_graphe, __pyx_n_s_num, __pyx_n_s_states, __pyx_n_s_p, __pyx_n_s_graph, __pyx_n_s_sommet, __pyx_n_s_var, __pyx_n_s_boucle, __pyx_n_s_arete); if (unlikely(!__pyx_tuple__51)) __PYX_ERR(0, 363, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__51);
   __Pyx_GIVEREF(__pyx_tuple__51);
-  __pyx_codeobj__52 = (PyObject*)__Pyx_PyCode_New(2, 0, 7, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__51, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_matriceadjacence_py, __pyx_n_s_export_dot, 363, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__52)) __PYX_ERR(0, 363, __pyx_L1_error)
+  __pyx_codeobj__52 = (PyObject*)__Pyx_PyCode_New(3, 0, 9, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__51, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_matriceadjacence_py, __pyx_n_s_export_dot, 363, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__52)) __PYX_ERR(0, 363, __pyx_L1_error)
 
-  /* "matriceadjacence.py":401
+  /* "matriceadjacence.py":407
  *     return graph
  * 
  * def tarjan(G) :             # <<<<<<<<<<<<<<
  *     """
  *     Take a graph and applies Tarjan Algorithm on it.
  */
-  __pyx_tuple__53 = PyTuple_Pack(8, __pyx_n_s_G, __pyx_n_s_num, __pyx_n_s_p, __pyx_n_s_partition, __pyx_n_s_lst, __pyx_n_s_parcours, __pyx_n_s_parcours, __pyx_n_s_sommet); if (unlikely(!__pyx_tuple__53)) __PYX_ERR(0, 401, __pyx_L1_error)
+  __pyx_tuple__53 = PyTuple_Pack(8, __pyx_n_s_G, __pyx_n_s_num, __pyx_n_s_p, __pyx_n_s_partition, __pyx_n_s_lst, __pyx_n_s_parcours, __pyx_n_s_parcours, __pyx_n_s_sommet); if (unlikely(!__pyx_tuple__53)) __PYX_ERR(0, 407, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__53);
   __Pyx_GIVEREF(__pyx_tuple__53);
-  __pyx_codeobj__54 = (PyObject*)__Pyx_PyCode_New(1, 0, 8, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__53, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_matriceadjacence_py, __pyx_n_s_tarjan, 401, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__54)) __PYX_ERR(0, 401, __pyx_L1_error)
+  __pyx_codeobj__54 = (PyObject*)__Pyx_PyCode_New(1, 0, 8, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__53, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_matriceadjacence_py, __pyx_n_s_tarjan, 407, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__54)) __PYX_ERR(0, 407, __pyx_L1_error)
 
-  /* "matriceadjacence.py":453
+  /* "matriceadjacence.py":459
  * 
  * 
  * def main():             # <<<<<<<<<<<<<<
  *     import doctest
  *     doctest.testmod()
  */
-  __pyx_tuple__55 = PyTuple_Pack(1, __pyx_n_s_doctest); if (unlikely(!__pyx_tuple__55)) __PYX_ERR(0, 453, __pyx_L1_error)
+  __pyx_tuple__55 = PyTuple_Pack(1, __pyx_n_s_doctest); if (unlikely(!__pyx_tuple__55)) __PYX_ERR(0, 459, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__55);
   __Pyx_GIVEREF(__pyx_tuple__55);
-  __pyx_codeobj__56 = (PyObject*)__Pyx_PyCode_New(0, 0, 1, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__55, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_matriceadjacence_py, __pyx_n_s_main_2, 453, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__56)) __PYX_ERR(0, 453, __pyx_L1_error)
+  __pyx_codeobj__56 = (PyObject*)__Pyx_PyCode_New(0, 0, 1, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__55, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_matriceadjacence_py, __pyx_n_s_main_2, 459, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__56)) __PYX_ERR(0, 459, __pyx_L1_error)
   __Pyx_RefNannyFinishContext();
   return 0;
   __pyx_L1_error:;
@@ -9757,7 +9948,7 @@ static int __Pyx_modinit_type_init_code(void) {
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__Pyx_modinit_type_init_code", 0);
   /*--- Type init code ---*/
-  if (PyType_Ready(&__pyx_type_16matriceadjacence___pyx_scope_struct__tarjan) < 0) __PYX_ERR(0, 401, __pyx_L1_error)
+  if (PyType_Ready(&__pyx_type_16matriceadjacence___pyx_scope_struct__tarjan) < 0) __PYX_ERR(0, 407, __pyx_L1_error)
   #if PY_VERSION_HEX < 0x030800B1
   __pyx_type_16matriceadjacence___pyx_scope_struct__tarjan.tp_print = 0;
   #endif
@@ -10328,7 +10519,7 @@ if (!__Pyx_RefNanny) {
   /* "matriceadjacence.py":363
  *     return G
  * 
- * def export_dot(graphe, num):             # <<<<<<<<<<<<<<
+ * def export_dot(graphe, num, states):             # <<<<<<<<<<<<<<
  *     """
  *     Renvoie une chane encodant le graphe au format dot.
  */
@@ -10337,55 +10528,55 @@ if (!__Pyx_RefNanny) {
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_export_dot, __pyx_t_2) < 0) __PYX_ERR(0, 363, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "matriceadjacence.py":401
+  /* "matriceadjacence.py":407
  *     return graph
  * 
  * def tarjan(G) :             # <<<<<<<<<<<<<<
  *     """
  *     Take a graph and applies Tarjan Algorithm on it.
  */
-  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_16matriceadjacence_5tarjan, 0, __pyx_n_s_tarjan, NULL, __pyx_n_s_matriceadjacence, __pyx_d, ((PyObject *)__pyx_codeobj__54)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 401, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_16matriceadjacence_5tarjan, 0, __pyx_n_s_tarjan, NULL, __pyx_n_s_matriceadjacence, __pyx_d, ((PyObject *)__pyx_codeobj__54)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 407, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_tarjan, __pyx_t_2) < 0) __PYX_ERR(0, 401, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_tarjan, __pyx_t_2) < 0) __PYX_ERR(0, 407, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "matriceadjacence.py":453
+  /* "matriceadjacence.py":459
  * 
  * 
  * def main():             # <<<<<<<<<<<<<<
  *     import doctest
  *     doctest.testmod()
  */
-  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_16matriceadjacence_7main, 0, __pyx_n_s_main_2, NULL, __pyx_n_s_matriceadjacence, __pyx_d, ((PyObject *)__pyx_codeobj__56)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 453, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_16matriceadjacence_7main, 0, __pyx_n_s_main_2, NULL, __pyx_n_s_matriceadjacence, __pyx_d, ((PyObject *)__pyx_codeobj__56)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 459, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_main_2, __pyx_t_2) < 0) __PYX_ERR(0, 453, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_main_2, __pyx_t_2) < 0) __PYX_ERR(0, 459, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "matriceadjacence.py":458
+  /* "matriceadjacence.py":464
  * 
  * 
  * if __name__ == "__main__":             # <<<<<<<<<<<<<<
  *     main()
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_name); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 458, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_name); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 464, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_4 = (__Pyx_PyString_Equals(__pyx_t_2, __pyx_n_s_main, Py_EQ)); if (unlikely(__pyx_t_4 < 0)) __PYX_ERR(0, 458, __pyx_L1_error)
+  __pyx_t_4 = (__Pyx_PyString_Equals(__pyx_t_2, __pyx_n_s_main, Py_EQ)); if (unlikely(__pyx_t_4 < 0)) __PYX_ERR(0, 464, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   if (__pyx_t_4) {
 
-    /* "matriceadjacence.py":459
+    /* "matriceadjacence.py":465
  * 
  * if __name__ == "__main__":
  *     main()             # <<<<<<<<<<<<<<
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_main_2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 459, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_main_2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 465, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
-    __pyx_t_1 = __Pyx_PyObject_CallNoArg(__pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 459, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_CallNoArg(__pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 465, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-    /* "matriceadjacence.py":458
+    /* "matriceadjacence.py":464
  * 
  * 
  * if __name__ == "__main__":             # <<<<<<<<<<<<<<
@@ -10422,7 +10613,7 @@ if (!__Pyx_RefNanny) {
   if (PyDict_SetItem(__pyx_t_1, __pyx_kp_u_MatriceAdjacence_check_entrees_l, __pyx_kp_u_Renvoie_True_si_chaque_sommet_a) < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   if (PyDict_SetItem(__pyx_t_1, __pyx_kp_u_identity_matrix_line_352, __pyx_kp_u_Create_a_graph_that_is_an_ident) < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   if (PyDict_SetItem(__pyx_t_1, __pyx_kp_u_export_dot_line_363, __pyx_kp_u_Renvoie_une_chane_encodant_le_g) < 0) __PYX_ERR(0, 1, __pyx_L1_error)
-  if (PyDict_SetItem(__pyx_t_1, __pyx_kp_u_tarjan_line_401, __pyx_kp_u_Take_a_graph_and_applies_Tarjan) < 0) __PYX_ERR(0, 1, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_1, __pyx_kp_u_tarjan_line_407, __pyx_kp_u_Take_a_graph_and_applies_Tarjan) < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_test, __pyx_t_1) < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
