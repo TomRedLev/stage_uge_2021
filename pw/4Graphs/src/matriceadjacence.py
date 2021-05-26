@@ -376,7 +376,7 @@ def export_dot(graphe, num):
     2 -> 3;
     }
     """
-    graph = "graph graph" + str(num) +" {\n"
+    graph = "digraph graph" + str(num) +" {\ncenter=true;\npad=1;\n"
     for sommet in graphe.sommets():
         graph = graph + str(sommet) + ";\n"
     for boucle in graphe.boucles():

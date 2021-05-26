@@ -9,7 +9,6 @@ from time import *
 from colorama import *
 import sympy as sp
 import doctest
-from scipy.integrate import simps
 
 def determine_combinations(val) :
     """
@@ -101,9 +100,9 @@ def integrate_probabilities(k, G, variables) :
         expr_f = ((b - a) / 6) * (f.evalf(subs={p : a}) + 4 * f.evalf(subs={p : (a + b)/ 2}) + f.evalf(subs={p : b}))
         expr_g = ((b - a) / 6) * (g.evalf(subs={p : a}) + 4 * g.evalf(subs={p : (a + b)/ 2}) + g.evalf(subs={p : b}))
         if (expr_f <= expr_g) :
-            print(Fore.GREEN, "Taking state", key)
+            print(Fore.GREEN, "Taking state", key, Fore.WHITE)
         else :
-            print(Fore.GREEN, "Not taking state", key)
+            print(Fore.GREEN, "Not taking state", key, Fore.WHITE)
     nb_mis += 1
     print()
     return nb_mis
@@ -125,6 +124,7 @@ def isomorphism_graphs(lstG, G2, lst_matrix_p) :
             left = p * A1 * p**(-1)
             A2 = sp.Matrix(G2._matrice_adjacence)
             if (left == A2) :
+                # print("skipped")
                 return True
     return False
 
@@ -166,7 +166,7 @@ def main() :
                         f.write(export_dot(G, str(i)))
                         f.write("\n")
                         res = calculate_stationary_probas(k, G, variables)
-                        print(Fore.RED + "graph", i, " : ", res)
+                        print("graph", i, " : ", res)
                         #test_stationary_probas(k, G, variables) # Can be use to test the probabilities
                         nb_found += integrate_probabilities(k, G, variables)
                         i += 1
