@@ -7,6 +7,7 @@ sont identifiés par de simples naturels (0, 1, 2, ..., n-1).
 
 from copy import deepcopy
 import numpy as np
+import sympy as sp
 
 
 class MatriceAdjacence(object):
@@ -376,13 +377,24 @@ def export_dot(graphe, num):
     2 -> 3;
     }
     """
+    p = sp.var("p")
     graph = "digraph graph" + str(num) +" {\ncenter=true;\npad=1;\n"
     for sommet in graphe.sommets():
         graph = graph + str(sommet) + ";\n"
     for boucle in graphe.boucles():
-        graph = graph + str(boucle[0]) + " -> " + str(boucle[1]) + ";\n"
+        if graphe._matrice_adjacence[boucle[0]][boucle[1]] == 1 :
+            graph = graph + str(boucle[0]) + " -> " + str(boucle[1]) + "[fillcolor = yellow];\n"
+        elif graphe._matrice_adjacence[boucle[0]][boucle[1]] == p :
+            graph = graph + str(boucle[0]) + " -> " + str(boucle[1]) + "[fillcolor = red];\n"
+        elif graphe._matrice_adjacence[boucle[0]][boucle[1]] == (1 - p) :
+            graph = graph + str(boucle[0]) + " -> " + str(boucle[1]) + "[fillcolor = green];\n"
     for arete in graphe.aretes():
-        graph = graph + str(arete[0]) + " -> " + str(arete[1]) + ";\n"
+        if graphe._matrice_adjacence[arete[0]][arete[1]] == 1 :
+            graph = graph + str(arete[0]) + " -> " + str(arete[1]) + "[fillcolor = yellow];\n"
+        elif graphe._matrice_adjacence[arete[0]][arete[1]] == p :
+            graph = graph + str(arete[0]) + " -> " + str(arete[1]) + "[fillcolor = red];\n"
+        elif graphe._matrice_adjacence[arete[0]][arete[1]] == (1 - p) :
+            graph = graph + str(arete[0]) + " -> " + str(arete[1]) + "[fillcolor = green];\n"
     graph = graph + "}"
     return graph
 
