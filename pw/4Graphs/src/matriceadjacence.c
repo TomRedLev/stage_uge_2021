@@ -1353,9 +1353,6 @@ static PyObject *__Pyx_CyFunction_New(PyMethodDef *ml,
                                       PyObject *module, PyObject *globals,
                                       PyObject* code);
 
-/* Import.proto */
-static PyObject *__Pyx_Import(PyObject *name, PyObject *from_list, int level);
-
 /* IncludeStringH.proto */
 #include <string.h>
 
@@ -1365,6 +1362,9 @@ static CYTHON_INLINE PyObject* __Pyx_PyObject_GenericGetAttrNoDict(PyObject* obj
 #else
 #define __Pyx_PyObject_GenericGetAttrNoDict PyObject_GenericGetAttr
 #endif
+
+/* Import.proto */
+static PyObject *__Pyx_Import(PyObject *name, PyObject *from_list, int level);
 
 /* ImportFrom.proto */
 static PyObject* __Pyx_ImportFrom(PyObject* module, PyObject* name);
@@ -1388,19 +1388,6 @@ static PyObject *__Pyx_Py3MetaclassPrepare(PyObject *metaclass, PyObject *bases,
                                            PyObject *mkw, PyObject *modname, PyObject *doc);
 static PyObject *__Pyx_Py3ClassCreate(PyObject *metaclass, PyObject *name, PyObject *bases, PyObject *dict,
                                       PyObject *mkw, int calculate_metaclass, int allow_py2_metaclass);
-
-/* BytesEquals.proto */
-static CYTHON_INLINE int __Pyx_PyBytes_Equals(PyObject* s1, PyObject* s2, int equals);
-
-/* UnicodeEquals.proto */
-static CYTHON_INLINE int __Pyx_PyUnicode_Equals(PyObject* s1, PyObject* s2, int equals);
-
-/* StrEquals.proto */
-#if PY_MAJOR_VERSION >= 3
-#define __Pyx_PyString_Equals __Pyx_PyUnicode_Equals
-#else
-#define __Pyx_PyString_Equals __Pyx_PyBytes_Equals
-#endif
 
 /* CLineInTraceback.proto */
 #ifdef CYTHON_CLINE_IN_TRACEBACK
@@ -1525,7 +1512,6 @@ static const char __pyx_k_aretes[] = "aretes";
 static const char __pyx_k_boucle[] = "boucle";
 static const char __pyx_k_graphe[] = "graphe";
 static const char __pyx_k_import[] = "__import__";
-static const char __pyx_k_main_2[] = "main";
 static const char __pyx_k_module[] = "__module__";
 static const char __pyx_k_object[] = "object";
 static const char __pyx_k_sommet[] = "sommet";
@@ -1533,10 +1519,8 @@ static const char __pyx_k_source[] = "source";
 static const char __pyx_k_states[] = "states";
 static const char __pyx_k_tarjan[] = "tarjan";
 static const char __pyx_k_boucles[] = "boucles";
-static const char __pyx_k_doctest[] = "doctest";
 static const char __pyx_k_prepare[] = "__prepare__";
 static const char __pyx_k_sommets[] = "sommets";
-static const char __pyx_k_testmod[] = "testmod";
 static const char __pyx_k_voisins[] = "voisins";
 static const char __pyx_k_deepcopy[] = "deepcopy";
 static const char __pyx_k_iterable[] = "iterable";
@@ -1617,7 +1601,7 @@ static const char __pyx_k_Retire_l_arte_u_v_si_elle_exist[] = "\n        Retire 
 static const char __pyx_k_Retire_toutes_les_artes_de_l_it[] = "\n        Retire toutes les ar\303\252tes de l'it\303\251rable donn\303\251 du graphe. N'importe\n        quel type d'it\303\251rable est acceptable, mais il faut qu'il ne contienne\n        que des couples d'\303\251l\303\251ments (quel que soit le type du couple).\n\n        >>> G = MatriceAdjacence()\n        >>> G.ajouter_aretes([(0, 0, 1), (1, 1, 1)])\n        >>> G.retirer_aretes([(0, 0), (1, 1)])\n        >>> G._matrice_adjacence\n        [[0, 0], [0, 0]]\n        ";
 static const char __pyx_k_Take_a_graph_and_applies_Tarjan[] = "\n    Take a graph and applies Tarjan Algorithm on it.\n\n    >>> G = MatriceAdjacence(3)\n    >>> G.ajouter_aretes([(0, 1, 1), (1, 2, 1), (2, 3, 1)])\n    >>> tarjan(G)\n    [[[3, 3, 3, False], [2, 2, 2, False]], [[1, 1, 1, False]], [[0, 0, 0, False]], []]\n    ";
 static const char __pyx_k_center_true_pad_1_graph_label_G[] = " {\ncenter=true;\npad=1;\ngraph [label=\"Graphe ";
-static const char __pyx_k_labelloc_t_labeljust_center_fon[] = " :\n\", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18]";
+static const char __pyx_k_n_labelloc_t_labeljust_center_f[] = " :\\n\", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];\n";
 static const char __pyx_k_MatriceAdjacence___init___line_1[] = "MatriceAdjacence.__init__ (line 14)";
 static const char __pyx_k_MatriceAdjacence_ajouter_arete_l[] = "MatriceAdjacence.ajouter_arete (line 24)";
 static const char __pyx_k_MatriceAdjacence_boucles_line_10[] = "MatriceAdjacence.boucles (line 103)";
@@ -1732,7 +1716,6 @@ static PyObject *__pyx_n_s_degre;
 static PyObject *__pyx_n_s_destination;
 static PyObject *__pyx_kp_s_digraph_graph;
 static PyObject *__pyx_n_s_doc;
-static PyObject *__pyx_n_s_doctest;
 static PyObject *__pyx_n_s_elem;
 static PyObject *__pyx_n_s_end;
 static PyObject *__pyx_n_s_error;
@@ -1749,18 +1732,17 @@ static PyObject *__pyx_n_s_init;
 static PyObject *__pyx_n_s_iterable;
 static PyObject *__pyx_n_s_j;
 static PyObject *__pyx_n_s_k;
-static PyObject *__pyx_kp_s_labelloc_t_labeljust_center_fon;
 static PyObject *__pyx_n_s_list;
 static PyObject *__pyx_n_s_lst;
 static PyObject *__pyx_n_s_lstmp;
 static PyObject *__pyx_n_s_main;
-static PyObject *__pyx_n_s_main_2;
 static PyObject *__pyx_n_s_matrice_adjacence;
 static PyObject *__pyx_n_s_matriceadjacence;
 static PyObject *__pyx_kp_s_matriceadjacence_py;
 static PyObject *__pyx_n_s_metaclass;
 static PyObject *__pyx_n_s_module;
 static PyObject *__pyx_n_s_n;
+static PyObject *__pyx_kp_s_n_labelloc_t_labeljust_center_f;
 static PyObject *__pyx_n_s_name;
 static PyObject *__pyx_kp_s_node_color_black_shape_ellipse_s;
 static PyObject *__pyx_kp_s_node_color_black_shape_ellipse_s_2;
@@ -1797,7 +1779,6 @@ static PyObject *__pyx_n_s_tarjan;
 static PyObject *__pyx_kp_u_tarjan_line_407;
 static PyObject *__pyx_n_s_tarjan_locals_parcours;
 static PyObject *__pyx_n_s_test;
-static PyObject *__pyx_n_s_testmod;
 static PyObject *__pyx_n_s_u;
 static PyObject *__pyx_n_s_v;
 static PyObject *__pyx_n_s_var;
@@ -1828,7 +1809,6 @@ static PyObject *__pyx_pf_16matriceadjacence_identity_matrix(CYTHON_UNUSED PyObj
 static PyObject *__pyx_pf_16matriceadjacence_2export_dot(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_graphe, PyObject *__pyx_v_num, PyObject *__pyx_v_states); /* proto */
 static PyObject *__pyx_pf_16matriceadjacence_6tarjan_parcours(PyObject *__pyx_self, PyObject *__pyx_v_G, PyObject *__pyx_v_lst, PyObject *__pyx_v_num, PyObject *__pyx_v_p, PyObject *__pyx_v_partition, PyObject *__pyx_v_v); /* proto */
 static PyObject *__pyx_pf_16matriceadjacence_4tarjan(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_G); /* proto */
-static PyObject *__pyx_pf_16matriceadjacence_6main(CYTHON_UNUSED PyObject *__pyx_self); /* proto */
 static PyObject *__pyx_tp_new_16matriceadjacence___pyx_scope_struct__tarjan(PyTypeObject *t, PyObject *a, PyObject *k); /*proto*/
 static __Pyx_CachedCFunction __pyx_umethod_PyList_Type_pop = {0, &__pyx_n_s_pop, 0, 0, 0};
 static PyObject *__pyx_int_0;
@@ -1859,7 +1839,6 @@ static PyObject *__pyx_tuple__47;
 static PyObject *__pyx_tuple__49;
 static PyObject *__pyx_tuple__51;
 static PyObject *__pyx_tuple__53;
-static PyObject *__pyx_tuple__55;
 static PyObject *__pyx_codeobj__5;
 static PyObject *__pyx_codeobj__9;
 static PyObject *__pyx_codeobj__12;
@@ -1884,7 +1863,6 @@ static PyObject *__pyx_codeobj__48;
 static PyObject *__pyx_codeobj__50;
 static PyObject *__pyx_codeobj__52;
 static PyObject *__pyx_codeobj__54;
-static PyObject *__pyx_codeobj__56;
 /* Late includes */
 
 /* "matriceadjacence.py":14
@@ -7211,7 +7189,7 @@ static PyObject *__pyx_pf_16matriceadjacence_2export_dot(CYTHON_UNUSED PyObject 
  *     }
  *     """
  *     p = sp.var("p")             # <<<<<<<<<<<<<<
- *     graph = "digraph graph" + str(num) +" {\ncenter=true;\npad=1;\ngraph [label=\"Graphe " + str(num) + " :\n\", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18]"
+ *     graph = "digraph graph" + str(num) +" {\ncenter=true;\npad=1;\ngraph [label=\"Graphe " + str(num) + " :\\n\", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];\n"
  *     for sommet in graphe.sommets():
  */
   __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_sp); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 380, __pyx_L1_error)
@@ -7240,7 +7218,7 @@ static PyObject *__pyx_pf_16matriceadjacence_2export_dot(CYTHON_UNUSED PyObject 
   /* "matriceadjacence.py":381
  *     """
  *     p = sp.var("p")
- *     graph = "digraph graph" + str(num) +" {\ncenter=true;\npad=1;\ngraph [label=\"Graphe " + str(num) + " :\n\", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18]"             # <<<<<<<<<<<<<<
+ *     graph = "digraph graph" + str(num) +" {\ncenter=true;\npad=1;\ngraph [label=\"Graphe " + str(num) + " :\\n\", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];\n"             # <<<<<<<<<<<<<<
  *     for sommet in graphe.sommets():
  *         var = sp.var("q" + str(sommet + 1))
  */
@@ -7258,7 +7236,7 @@ static PyObject *__pyx_pf_16matriceadjacence_2export_dot(CYTHON_UNUSED PyObject 
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __pyx_t_3 = PyNumber_Add(__pyx_t_2, __pyx_kp_s_labelloc_t_labeljust_center_fon); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 381, __pyx_L1_error)
+  __pyx_t_3 = PyNumber_Add(__pyx_t_2, __pyx_kp_s_n_labelloc_t_labeljust_center_f); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 381, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __pyx_v_graph = __pyx_t_3;
@@ -7266,7 +7244,7 @@ static PyObject *__pyx_pf_16matriceadjacence_2export_dot(CYTHON_UNUSED PyObject 
 
   /* "matriceadjacence.py":382
  *     p = sp.var("p")
- *     graph = "digraph graph" + str(num) +" {\ncenter=true;\npad=1;\ngraph [label=\"Graphe " + str(num) + " :\n\", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18]"
+ *     graph = "digraph graph" + str(num) +" {\ncenter=true;\npad=1;\ngraph [label=\"Graphe " + str(num) + " :\\n\", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];\n"
  *     for sommet in graphe.sommets():             # <<<<<<<<<<<<<<
  *         var = sp.var("q" + str(sommet + 1))
  *         if states[var] == 1 :
@@ -7332,7 +7310,7 @@ static PyObject *__pyx_pf_16matriceadjacence_2export_dot(CYTHON_UNUSED PyObject 
     __pyx_t_3 = 0;
 
     /* "matriceadjacence.py":383
- *     graph = "digraph graph" + str(num) +" {\ncenter=true;\npad=1;\ngraph [label=\"Graphe " + str(num) + " :\n\", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18]"
+ *     graph = "digraph graph" + str(num) +" {\ncenter=true;\npad=1;\ngraph [label=\"Graphe " + str(num) + " :\\n\", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];\n"
  *     for sommet in graphe.sommets():
  *         var = sp.var("q" + str(sommet + 1))             # <<<<<<<<<<<<<<
  *         if states[var] == 1 :
@@ -7443,7 +7421,7 @@ static PyObject *__pyx_pf_16matriceadjacence_2export_dot(CYTHON_UNUSED PyObject 
 
     /* "matriceadjacence.py":382
  *     p = sp.var("p")
- *     graph = "digraph graph" + str(num) +" {\ncenter=true;\npad=1;\ngraph [label=\"Graphe " + str(num) + " :\n\", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18]"
+ *     graph = "digraph graph" + str(num) +" {\ncenter=true;\npad=1;\ngraph [label=\"Graphe " + str(num) + " :\\n\", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];\n"
  *     for sommet in graphe.sommets():             # <<<<<<<<<<<<<<
  *         var = sp.var("q" + str(sommet + 1))
  *         if states[var] == 1 :
@@ -9110,8 +9088,6 @@ static PyObject *__pyx_pf_16matriceadjacence_4tarjan(CYTHON_UNUSED PyObject *__p
  * #        if (len(partition) > 1) :
  * #            return partition
  *     return partition             # <<<<<<<<<<<<<<
- * 
- * 
  */
   __Pyx_XDECREF(__pyx_r);
   __Pyx_INCREF(__pyx_v_partition);
@@ -9139,102 +9115,6 @@ static PyObject *__pyx_pf_16matriceadjacence_4tarjan(CYTHON_UNUSED PyObject *__p
   __Pyx_XDECREF(__pyx_v_lst);
   __Pyx_XDECREF(__pyx_v_sommet);
   __Pyx_DECREF(((PyObject *)__pyx_cur_scope));
-  __Pyx_XGIVEREF(__pyx_r);
-  __Pyx_RefNannyFinishContext();
-  return __pyx_r;
-}
-
-/* "matriceadjacence.py":459
- * 
- * 
- * def main():             # <<<<<<<<<<<<<<
- *     import doctest
- *     doctest.testmod()
- */
-
-/* Python wrapper */
-static PyObject *__pyx_pw_16matriceadjacence_7main(PyObject *__pyx_self, CYTHON_UNUSED PyObject *unused); /*proto*/
-static PyMethodDef __pyx_mdef_16matriceadjacence_7main = {"main", (PyCFunction)__pyx_pw_16matriceadjacence_7main, METH_NOARGS, 0};
-static PyObject *__pyx_pw_16matriceadjacence_7main(PyObject *__pyx_self, CYTHON_UNUSED PyObject *unused) {
-  PyObject *__pyx_r = 0;
-  __Pyx_RefNannyDeclarations
-  __Pyx_RefNannySetupContext("main (wrapper)", 0);
-  __pyx_r = __pyx_pf_16matriceadjacence_6main(__pyx_self);
-
-  /* function exit code */
-  __Pyx_RefNannyFinishContext();
-  return __pyx_r;
-}
-
-static PyObject *__pyx_pf_16matriceadjacence_6main(CYTHON_UNUSED PyObject *__pyx_self) {
-  PyObject *__pyx_v_doctest = NULL;
-  PyObject *__pyx_r = NULL;
-  __Pyx_RefNannyDeclarations
-  PyObject *__pyx_t_1 = NULL;
-  PyObject *__pyx_t_2 = NULL;
-  PyObject *__pyx_t_3 = NULL;
-  int __pyx_lineno = 0;
-  const char *__pyx_filename = NULL;
-  int __pyx_clineno = 0;
-  __Pyx_RefNannySetupContext("main", 0);
-
-  /* "matriceadjacence.py":460
- * 
- * def main():
- *     import doctest             # <<<<<<<<<<<<<<
- *     doctest.testmod()
- * 
- */
-  __pyx_t_1 = __Pyx_Import(__pyx_n_s_doctest, 0, -1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 460, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_1);
-  __pyx_v_doctest = __pyx_t_1;
-  __pyx_t_1 = 0;
-
-  /* "matriceadjacence.py":461
- * def main():
- *     import doctest
- *     doctest.testmod()             # <<<<<<<<<<<<<<
- * 
- * 
- */
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_doctest, __pyx_n_s_testmod); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 461, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = NULL;
-  if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_2))) {
-    __pyx_t_3 = PyMethod_GET_SELF(__pyx_t_2);
-    if (likely(__pyx_t_3)) {
-      PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_2);
-      __Pyx_INCREF(__pyx_t_3);
-      __Pyx_INCREF(function);
-      __Pyx_DECREF_SET(__pyx_t_2, function);
-    }
-  }
-  __pyx_t_1 = (__pyx_t_3) ? __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_3) : __Pyx_PyObject_CallNoArg(__pyx_t_2);
-  __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 461, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_1);
-  __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-
-  /* "matriceadjacence.py":459
- * 
- * 
- * def main():             # <<<<<<<<<<<<<<
- *     import doctest
- *     doctest.testmod()
- */
-
-  /* function exit code */
-  __pyx_r = Py_None; __Pyx_INCREF(Py_None);
-  goto __pyx_L0;
-  __pyx_L1_error:;
-  __Pyx_XDECREF(__pyx_t_1);
-  __Pyx_XDECREF(__pyx_t_2);
-  __Pyx_XDECREF(__pyx_t_3);
-  __Pyx_AddTraceback("matriceadjacence.main", __pyx_clineno, __pyx_lineno, __pyx_filename);
-  __pyx_r = NULL;
-  __pyx_L0:;
-  __Pyx_XDECREF(__pyx_v_doctest);
   __Pyx_XGIVEREF(__pyx_r);
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
@@ -9492,7 +9372,6 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_destination, __pyx_k_destination, sizeof(__pyx_k_destination), 0, 0, 1, 1},
   {&__pyx_kp_s_digraph_graph, __pyx_k_digraph_graph, sizeof(__pyx_k_digraph_graph), 0, 0, 1, 0},
   {&__pyx_n_s_doc, __pyx_k_doc, sizeof(__pyx_k_doc), 0, 0, 1, 1},
-  {&__pyx_n_s_doctest, __pyx_k_doctest, sizeof(__pyx_k_doctest), 0, 0, 1, 1},
   {&__pyx_n_s_elem, __pyx_k_elem, sizeof(__pyx_k_elem), 0, 0, 1, 1},
   {&__pyx_n_s_end, __pyx_k_end, sizeof(__pyx_k_end), 0, 0, 1, 1},
   {&__pyx_n_s_error, __pyx_k_error, sizeof(__pyx_k_error), 0, 0, 1, 1},
@@ -9509,18 +9388,17 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_iterable, __pyx_k_iterable, sizeof(__pyx_k_iterable), 0, 0, 1, 1},
   {&__pyx_n_s_j, __pyx_k_j, sizeof(__pyx_k_j), 0, 0, 1, 1},
   {&__pyx_n_s_k, __pyx_k_k, sizeof(__pyx_k_k), 0, 0, 1, 1},
-  {&__pyx_kp_s_labelloc_t_labeljust_center_fon, __pyx_k_labelloc_t_labeljust_center_fon, sizeof(__pyx_k_labelloc_t_labeljust_center_fon), 0, 0, 1, 0},
   {&__pyx_n_s_list, __pyx_k_list, sizeof(__pyx_k_list), 0, 0, 1, 1},
   {&__pyx_n_s_lst, __pyx_k_lst, sizeof(__pyx_k_lst), 0, 0, 1, 1},
   {&__pyx_n_s_lstmp, __pyx_k_lstmp, sizeof(__pyx_k_lstmp), 0, 0, 1, 1},
   {&__pyx_n_s_main, __pyx_k_main, sizeof(__pyx_k_main), 0, 0, 1, 1},
-  {&__pyx_n_s_main_2, __pyx_k_main_2, sizeof(__pyx_k_main_2), 0, 0, 1, 1},
   {&__pyx_n_s_matrice_adjacence, __pyx_k_matrice_adjacence, sizeof(__pyx_k_matrice_adjacence), 0, 0, 1, 1},
   {&__pyx_n_s_matriceadjacence, __pyx_k_matriceadjacence, sizeof(__pyx_k_matriceadjacence), 0, 0, 1, 1},
   {&__pyx_kp_s_matriceadjacence_py, __pyx_k_matriceadjacence_py, sizeof(__pyx_k_matriceadjacence_py), 0, 0, 1, 0},
   {&__pyx_n_s_metaclass, __pyx_k_metaclass, sizeof(__pyx_k_metaclass), 0, 0, 1, 1},
   {&__pyx_n_s_module, __pyx_k_module, sizeof(__pyx_k_module), 0, 0, 1, 1},
   {&__pyx_n_s_n, __pyx_k_n, sizeof(__pyx_k_n), 0, 0, 1, 1},
+  {&__pyx_kp_s_n_labelloc_t_labeljust_center_f, __pyx_k_n_labelloc_t_labeljust_center_f, sizeof(__pyx_k_n_labelloc_t_labeljust_center_f), 0, 0, 1, 0},
   {&__pyx_n_s_name, __pyx_k_name, sizeof(__pyx_k_name), 0, 0, 1, 1},
   {&__pyx_kp_s_node_color_black_shape_ellipse_s, __pyx_k_node_color_black_shape_ellipse_s, sizeof(__pyx_k_node_color_black_shape_ellipse_s), 0, 0, 1, 0},
   {&__pyx_kp_s_node_color_black_shape_ellipse_s_2, __pyx_k_node_color_black_shape_ellipse_s_2, sizeof(__pyx_k_node_color_black_shape_ellipse_s_2), 0, 0, 1, 0},
@@ -9557,7 +9435,6 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_kp_u_tarjan_line_407, __pyx_k_tarjan_line_407, sizeof(__pyx_k_tarjan_line_407), 0, 1, 0, 0},
   {&__pyx_n_s_tarjan_locals_parcours, __pyx_k_tarjan_locals_parcours, sizeof(__pyx_k_tarjan_locals_parcours), 0, 0, 1, 1},
   {&__pyx_n_s_test, __pyx_k_test, sizeof(__pyx_k_test), 0, 0, 1, 1},
-  {&__pyx_n_s_testmod, __pyx_k_testmod, sizeof(__pyx_k_testmod), 0, 0, 1, 1},
   {&__pyx_n_s_u, __pyx_k_u, sizeof(__pyx_k_u), 0, 0, 1, 1},
   {&__pyx_n_s_v, __pyx_k_v, sizeof(__pyx_k_v), 0, 0, 1, 1},
   {&__pyx_n_s_var, __pyx_k_var, sizeof(__pyx_k_var), 0, 0, 1, 1},
@@ -9880,18 +9757,6 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__53);
   __Pyx_GIVEREF(__pyx_tuple__53);
   __pyx_codeobj__54 = (PyObject*)__Pyx_PyCode_New(1, 0, 8, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__53, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_matriceadjacence_py, __pyx_n_s_tarjan, 407, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__54)) __PYX_ERR(0, 407, __pyx_L1_error)
-
-  /* "matriceadjacence.py":459
- * 
- * 
- * def main():             # <<<<<<<<<<<<<<
- *     import doctest
- *     doctest.testmod()
- */
-  __pyx_tuple__55 = PyTuple_Pack(1, __pyx_n_s_doctest); if (unlikely(!__pyx_tuple__55)) __PYX_ERR(0, 459, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_tuple__55);
-  __Pyx_GIVEREF(__pyx_tuple__55);
-  __pyx_codeobj__56 = (PyObject*)__Pyx_PyCode_New(0, 0, 1, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__55, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_matriceadjacence_py, __pyx_n_s_main_2, 459, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__56)) __PYX_ERR(0, 459, __pyx_L1_error)
   __Pyx_RefNannyFinishContext();
   return 0;
   __pyx_L1_error:;
@@ -10084,7 +9949,6 @@ static CYTHON_SMALL_CODE int __pyx_pymod_exec_matriceadjacence(PyObject *__pyx_p
   PyObject *__pyx_t_1 = NULL;
   PyObject *__pyx_t_2 = NULL;
   PyObject *__pyx_t_3 = NULL;
-  int __pyx_t_4;
   int __pyx_lineno = 0;
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
@@ -10540,82 +10404,38 @@ if (!__Pyx_RefNanny) {
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_tarjan, __pyx_t_2) < 0) __PYX_ERR(0, 407, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "matriceadjacence.py":459
- * 
- * 
- * def main():             # <<<<<<<<<<<<<<
- *     import doctest
- *     doctest.testmod()
- */
-  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_16matriceadjacence_7main, 0, __pyx_n_s_main_2, NULL, __pyx_n_s_matriceadjacence, __pyx_d, ((PyObject *)__pyx_codeobj__56)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 459, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_2);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_main_2, __pyx_t_2) < 0) __PYX_ERR(0, 459, __pyx_L1_error)
-  __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-
-  /* "matriceadjacence.py":464
- * 
- * 
- * if __name__ == "__main__":             # <<<<<<<<<<<<<<
- *     main()
- */
-  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_name); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 464, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_4 = (__Pyx_PyString_Equals(__pyx_t_2, __pyx_n_s_main, Py_EQ)); if (unlikely(__pyx_t_4 < 0)) __PYX_ERR(0, 464, __pyx_L1_error)
-  __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  if (__pyx_t_4) {
-
-    /* "matriceadjacence.py":465
- * 
- * if __name__ == "__main__":
- *     main()             # <<<<<<<<<<<<<<
- */
-    __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_main_2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 465, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_2);
-    __pyx_t_1 = __Pyx_PyObject_CallNoArg(__pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 465, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_1);
-    __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-
-    /* "matriceadjacence.py":464
- * 
- * 
- * if __name__ == "__main__":             # <<<<<<<<<<<<<<
- *     main()
- */
-  }
-
   /* "matriceadjacence.py":1
  * #!/usr/bin/env python3             # <<<<<<<<<<<<<<
  * # -*- coding: utf-8 -*-
  * """
  */
-  __pyx_t_1 = __Pyx_PyDict_NewPresized(23); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_t_1, __pyx_kp_u_MatriceAdjacence___init___line_1, __pyx_kp_u_Initialise_un_graphe_sans_artes) < 0) __PYX_ERR(0, 1, __pyx_L1_error)
-  if (PyDict_SetItem(__pyx_t_1, __pyx_kp_u_MatriceAdjacence_ajouter_arete_l, __pyx_kp_u_Ajoute_l_arte_source_destinatio) < 0) __PYX_ERR(0, 1, __pyx_L1_error)
-  if (PyDict_SetItem(__pyx_t_1, __pyx_kp_u_MatriceAdjacence_ajouter_aretes_2, __pyx_kp_u_Ajoute_toutes_les_artes_de_l_it) < 0) __PYX_ERR(0, 1, __pyx_L1_error)
-  if (PyDict_SetItem(__pyx_t_1, __pyx_kp_u_MatriceAdjacence_ajouter_sommet_2, __pyx_kp_u_Ajoute_un_nouveau_sommet_au_gra) < 0) __PYX_ERR(0, 1, __pyx_L1_error)
-  if (PyDict_SetItem(__pyx_t_1, __pyx_kp_u_MatriceAdjacence_aretes_line_80, __pyx_kp_u_Renvoie_l_ensemble_des_artes_du) < 0) __PYX_ERR(0, 1, __pyx_L1_error)
-  if (PyDict_SetItem(__pyx_t_1, __pyx_kp_u_MatriceAdjacence_boucles_line_10, __pyx_kp_u_Renvoie_les_boucles_du_graphe_c) < 0) __PYX_ERR(0, 1, __pyx_L1_error)
-  if (PyDict_SetItem(__pyx_t_1, __pyx_kp_u_MatriceAdjacence_contient_arete_2, __pyx_kp_u_Renvoie_True_si_l_arte_u_v_exis) < 0) __PYX_ERR(0, 1, __pyx_L1_error)
-  if (PyDict_SetItem(__pyx_t_1, __pyx_kp_u_MatriceAdjacence_contient_sommet_2, __pyx_kp_u_Renvoie_True_si_le_sommet_u_exi) < 0) __PYX_ERR(0, 1, __pyx_L1_error)
-  if (PyDict_SetItem(__pyx_t_1, __pyx_kp_u_MatriceAdjacence_degre_line_155, __pyx_kp_u_Renvoie_le_degr_d_un_sommet_c_e) < 0) __PYX_ERR(0, 1, __pyx_L1_error)
-  if (PyDict_SetItem(__pyx_t_1, __pyx_kp_u_MatriceAdjacence_nombre_aretes_l, __pyx_kp_u_Renvoie_le_nombre_d_artes_du_gr) < 0) __PYX_ERR(0, 1, __pyx_L1_error)
-  if (PyDict_SetItem(__pyx_t_1, __pyx_kp_u_MatriceAdjacence_nombre_boucles_2, __pyx_kp_u_Renvoie_le_nombre_d_artes_de_la) < 0) __PYX_ERR(0, 1, __pyx_L1_error)
-  if (PyDict_SetItem(__pyx_t_1, __pyx_kp_u_MatriceAdjacence_nombre_sommets_2, __pyx_kp_u_Renvoie_le_nombre_de_sommets_du) < 0) __PYX_ERR(0, 1, __pyx_L1_error)
-  if (PyDict_SetItem(__pyx_t_1, __pyx_kp_u_MatriceAdjacence_retirer_arete_l, __pyx_kp_u_Retire_l_arte_u_v_si_elle_exist) < 0) __PYX_ERR(0, 1, __pyx_L1_error)
-  if (PyDict_SetItem(__pyx_t_1, __pyx_kp_u_MatriceAdjacence_retirer_aretes_2, __pyx_kp_u_Retire_toutes_les_artes_de_l_it) < 0) __PYX_ERR(0, 1, __pyx_L1_error)
-  if (PyDict_SetItem(__pyx_t_1, __pyx_kp_u_MatriceAdjacence_retirer_sommet_2, __pyx_kp_u_Dconnecte_un_sommet_du_graphe_e) < 0) __PYX_ERR(0, 1, __pyx_L1_error)
-  if (PyDict_SetItem(__pyx_t_1, __pyx_kp_u_MatriceAdjacence_retirer_sommets_2, __pyx_kp_u_Efface_les_sommets_de_l_itrable) < 0) __PYX_ERR(0, 1, __pyx_L1_error)
-  if (PyDict_SetItem(__pyx_t_1, __pyx_kp_u_MatriceAdjacence_sommets_line_28, __pyx_kp_u_Renvoie_l_ensemble_des_sommets) < 0) __PYX_ERR(0, 1, __pyx_L1_error)
-  if (PyDict_SetItem(__pyx_t_1, __pyx_kp_u_MatriceAdjacence_sous_graphe_ind_2, __pyx_kp_u_Renvoie_le_sous_graphe_induit_p) < 0) __PYX_ERR(0, 1, __pyx_L1_error)
-  if (PyDict_SetItem(__pyx_t_1, __pyx_kp_u_MatriceAdjacence_voisins_line_31, __pyx_kp_u_Renvoie_la_liste_des_voisins_d) < 0) __PYX_ERR(0, 1, __pyx_L1_error)
-  if (PyDict_SetItem(__pyx_t_1, __pyx_kp_u_MatriceAdjacence_check_entrees_l, __pyx_kp_u_Renvoie_True_si_chaque_sommet_a) < 0) __PYX_ERR(0, 1, __pyx_L1_error)
-  if (PyDict_SetItem(__pyx_t_1, __pyx_kp_u_identity_matrix_line_352, __pyx_kp_u_Create_a_graph_that_is_an_ident) < 0) __PYX_ERR(0, 1, __pyx_L1_error)
-  if (PyDict_SetItem(__pyx_t_1, __pyx_kp_u_export_dot_line_363, __pyx_kp_u_Renvoie_une_chane_encodant_le_g) < 0) __PYX_ERR(0, 1, __pyx_L1_error)
-  if (PyDict_SetItem(__pyx_t_1, __pyx_kp_u_tarjan_line_407, __pyx_kp_u_Take_a_graph_and_applies_Tarjan) < 0) __PYX_ERR(0, 1, __pyx_L1_error)
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_test, __pyx_t_1) < 0) __PYX_ERR(0, 1, __pyx_L1_error)
-  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+  __pyx_t_2 = __Pyx_PyDict_NewPresized(23); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 1, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_2);
+  if (PyDict_SetItem(__pyx_t_2, __pyx_kp_u_MatriceAdjacence___init___line_1, __pyx_kp_u_Initialise_un_graphe_sans_artes) < 0) __PYX_ERR(0, 1, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_2, __pyx_kp_u_MatriceAdjacence_ajouter_arete_l, __pyx_kp_u_Ajoute_l_arte_source_destinatio) < 0) __PYX_ERR(0, 1, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_2, __pyx_kp_u_MatriceAdjacence_ajouter_aretes_2, __pyx_kp_u_Ajoute_toutes_les_artes_de_l_it) < 0) __PYX_ERR(0, 1, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_2, __pyx_kp_u_MatriceAdjacence_ajouter_sommet_2, __pyx_kp_u_Ajoute_un_nouveau_sommet_au_gra) < 0) __PYX_ERR(0, 1, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_2, __pyx_kp_u_MatriceAdjacence_aretes_line_80, __pyx_kp_u_Renvoie_l_ensemble_des_artes_du) < 0) __PYX_ERR(0, 1, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_2, __pyx_kp_u_MatriceAdjacence_boucles_line_10, __pyx_kp_u_Renvoie_les_boucles_du_graphe_c) < 0) __PYX_ERR(0, 1, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_2, __pyx_kp_u_MatriceAdjacence_contient_arete_2, __pyx_kp_u_Renvoie_True_si_l_arte_u_v_exis) < 0) __PYX_ERR(0, 1, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_2, __pyx_kp_u_MatriceAdjacence_contient_sommet_2, __pyx_kp_u_Renvoie_True_si_le_sommet_u_exi) < 0) __PYX_ERR(0, 1, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_2, __pyx_kp_u_MatriceAdjacence_degre_line_155, __pyx_kp_u_Renvoie_le_degr_d_un_sommet_c_e) < 0) __PYX_ERR(0, 1, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_2, __pyx_kp_u_MatriceAdjacence_nombre_aretes_l, __pyx_kp_u_Renvoie_le_nombre_d_artes_du_gr) < 0) __PYX_ERR(0, 1, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_2, __pyx_kp_u_MatriceAdjacence_nombre_boucles_2, __pyx_kp_u_Renvoie_le_nombre_d_artes_de_la) < 0) __PYX_ERR(0, 1, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_2, __pyx_kp_u_MatriceAdjacence_nombre_sommets_2, __pyx_kp_u_Renvoie_le_nombre_de_sommets_du) < 0) __PYX_ERR(0, 1, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_2, __pyx_kp_u_MatriceAdjacence_retirer_arete_l, __pyx_kp_u_Retire_l_arte_u_v_si_elle_exist) < 0) __PYX_ERR(0, 1, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_2, __pyx_kp_u_MatriceAdjacence_retirer_aretes_2, __pyx_kp_u_Retire_toutes_les_artes_de_l_it) < 0) __PYX_ERR(0, 1, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_2, __pyx_kp_u_MatriceAdjacence_retirer_sommet_2, __pyx_kp_u_Dconnecte_un_sommet_du_graphe_e) < 0) __PYX_ERR(0, 1, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_2, __pyx_kp_u_MatriceAdjacence_retirer_sommets_2, __pyx_kp_u_Efface_les_sommets_de_l_itrable) < 0) __PYX_ERR(0, 1, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_2, __pyx_kp_u_MatriceAdjacence_sommets_line_28, __pyx_kp_u_Renvoie_l_ensemble_des_sommets) < 0) __PYX_ERR(0, 1, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_2, __pyx_kp_u_MatriceAdjacence_sous_graphe_ind_2, __pyx_kp_u_Renvoie_le_sous_graphe_induit_p) < 0) __PYX_ERR(0, 1, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_2, __pyx_kp_u_MatriceAdjacence_voisins_line_31, __pyx_kp_u_Renvoie_la_liste_des_voisins_d) < 0) __PYX_ERR(0, 1, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_2, __pyx_kp_u_MatriceAdjacence_check_entrees_l, __pyx_kp_u_Renvoie_True_si_chaque_sommet_a) < 0) __PYX_ERR(0, 1, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_2, __pyx_kp_u_identity_matrix_line_352, __pyx_kp_u_Create_a_graph_that_is_an_ident) < 0) __PYX_ERR(0, 1, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_2, __pyx_kp_u_export_dot_line_363, __pyx_kp_u_Renvoie_une_chane_encodant_le_g) < 0) __PYX_ERR(0, 1, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_2, __pyx_kp_u_tarjan_line_407, __pyx_kp_u_Take_a_graph_and_applies_Tarjan) < 0) __PYX_ERR(0, 1, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_test, __pyx_t_2) < 0) __PYX_ERR(0, 1, __pyx_L1_error)
+  __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
   /*--- Wrapped vars code ---*/
 
@@ -12924,6 +12744,46 @@ static PyObject *__Pyx_CyFunction_New(PyMethodDef *ml, int flags, PyObject* qual
     return op;
 }
 
+/* PyObject_GenericGetAttrNoDict */
+#if CYTHON_USE_TYPE_SLOTS && CYTHON_USE_PYTYPE_LOOKUP && PY_VERSION_HEX < 0x03070000
+static PyObject *__Pyx_RaiseGenericGetAttributeError(PyTypeObject *tp, PyObject *attr_name) {
+    PyErr_Format(PyExc_AttributeError,
+#if PY_MAJOR_VERSION >= 3
+                 "'%.50s' object has no attribute '%U'",
+                 tp->tp_name, attr_name);
+#else
+                 "'%.50s' object has no attribute '%.400s'",
+                 tp->tp_name, PyString_AS_STRING(attr_name));
+#endif
+    return NULL;
+}
+static CYTHON_INLINE PyObject* __Pyx_PyObject_GenericGetAttrNoDict(PyObject* obj, PyObject* attr_name) {
+    PyObject *descr;
+    PyTypeObject *tp = Py_TYPE(obj);
+    if (unlikely(!PyString_Check(attr_name))) {
+        return PyObject_GenericGetAttr(obj, attr_name);
+    }
+    assert(!tp->tp_dictoffset);
+    descr = _PyType_Lookup(tp, attr_name);
+    if (unlikely(!descr)) {
+        return __Pyx_RaiseGenericGetAttributeError(tp, attr_name);
+    }
+    Py_INCREF(descr);
+    #if PY_MAJOR_VERSION < 3
+    if (likely(PyType_HasFeature(Py_TYPE(descr), Py_TPFLAGS_HAVE_CLASS)))
+    #endif
+    {
+        descrgetfunc f = Py_TYPE(descr)->tp_descr_get;
+        if (unlikely(f)) {
+            PyObject *res = f(descr, obj, (PyObject *)tp);
+            Py_DECREF(descr);
+            return res;
+        }
+    }
+    return descr;
+}
+#endif
+
 /* Import */
 static PyObject *__Pyx_Import(PyObject *name, PyObject *from_list, int level) {
     PyObject *empty_list = 0;
@@ -12988,46 +12848,6 @@ bad:
     Py_XDECREF(empty_dict);
     return module;
 }
-
-/* PyObject_GenericGetAttrNoDict */
-#if CYTHON_USE_TYPE_SLOTS && CYTHON_USE_PYTYPE_LOOKUP && PY_VERSION_HEX < 0x03070000
-static PyObject *__Pyx_RaiseGenericGetAttributeError(PyTypeObject *tp, PyObject *attr_name) {
-    PyErr_Format(PyExc_AttributeError,
-#if PY_MAJOR_VERSION >= 3
-                 "'%.50s' object has no attribute '%U'",
-                 tp->tp_name, attr_name);
-#else
-                 "'%.50s' object has no attribute '%.400s'",
-                 tp->tp_name, PyString_AS_STRING(attr_name));
-#endif
-    return NULL;
-}
-static CYTHON_INLINE PyObject* __Pyx_PyObject_GenericGetAttrNoDict(PyObject* obj, PyObject* attr_name) {
-    PyObject *descr;
-    PyTypeObject *tp = Py_TYPE(obj);
-    if (unlikely(!PyString_Check(attr_name))) {
-        return PyObject_GenericGetAttr(obj, attr_name);
-    }
-    assert(!tp->tp_dictoffset);
-    descr = _PyType_Lookup(tp, attr_name);
-    if (unlikely(!descr)) {
-        return __Pyx_RaiseGenericGetAttributeError(tp, attr_name);
-    }
-    Py_INCREF(descr);
-    #if PY_MAJOR_VERSION < 3
-    if (likely(PyType_HasFeature(Py_TYPE(descr), Py_TPFLAGS_HAVE_CLASS)))
-    #endif
-    {
-        descrgetfunc f = Py_TYPE(descr)->tp_descr_get;
-        if (unlikely(f)) {
-            PyObject *res = f(descr, obj, (PyObject *)tp);
-            Py_DECREF(descr);
-            return res;
-        }
-    }
-    return descr;
-}
-#endif
 
 /* ImportFrom */
 static PyObject* __Pyx_ImportFrom(PyObject* module, PyObject* name) {
@@ -13147,155 +12967,6 @@ static PyObject *__Pyx_Py3ClassCreate(PyObject *metaclass, PyObject *name, PyObj
     }
     Py_XDECREF(owned_metaclass);
     return result;
-}
-
-/* BytesEquals */
-static CYTHON_INLINE int __Pyx_PyBytes_Equals(PyObject* s1, PyObject* s2, int equals) {
-#if CYTHON_COMPILING_IN_PYPY
-    return PyObject_RichCompareBool(s1, s2, equals);
-#else
-    if (s1 == s2) {
-        return (equals == Py_EQ);
-    } else if (PyBytes_CheckExact(s1) & PyBytes_CheckExact(s2)) {
-        const char *ps1, *ps2;
-        Py_ssize_t length = PyBytes_GET_SIZE(s1);
-        if (length != PyBytes_GET_SIZE(s2))
-            return (equals == Py_NE);
-        ps1 = PyBytes_AS_STRING(s1);
-        ps2 = PyBytes_AS_STRING(s2);
-        if (ps1[0] != ps2[0]) {
-            return (equals == Py_NE);
-        } else if (length == 1) {
-            return (equals == Py_EQ);
-        } else {
-            int result;
-#if CYTHON_USE_UNICODE_INTERNALS
-            Py_hash_t hash1, hash2;
-            hash1 = ((PyBytesObject*)s1)->ob_shash;
-            hash2 = ((PyBytesObject*)s2)->ob_shash;
-            if (hash1 != hash2 && hash1 != -1 && hash2 != -1) {
-                return (equals == Py_NE);
-            }
-#endif
-            result = memcmp(ps1, ps2, (size_t)length);
-            return (equals == Py_EQ) ? (result == 0) : (result != 0);
-        }
-    } else if ((s1 == Py_None) & PyBytes_CheckExact(s2)) {
-        return (equals == Py_NE);
-    } else if ((s2 == Py_None) & PyBytes_CheckExact(s1)) {
-        return (equals == Py_NE);
-    } else {
-        int result;
-        PyObject* py_result = PyObject_RichCompare(s1, s2, equals);
-        if (!py_result)
-            return -1;
-        result = __Pyx_PyObject_IsTrue(py_result);
-        Py_DECREF(py_result);
-        return result;
-    }
-#endif
-}
-
-/* UnicodeEquals */
-static CYTHON_INLINE int __Pyx_PyUnicode_Equals(PyObject* s1, PyObject* s2, int equals) {
-#if CYTHON_COMPILING_IN_PYPY
-    return PyObject_RichCompareBool(s1, s2, equals);
-#else
-#if PY_MAJOR_VERSION < 3
-    PyObject* owned_ref = NULL;
-#endif
-    int s1_is_unicode, s2_is_unicode;
-    if (s1 == s2) {
-        goto return_eq;
-    }
-    s1_is_unicode = PyUnicode_CheckExact(s1);
-    s2_is_unicode = PyUnicode_CheckExact(s2);
-#if PY_MAJOR_VERSION < 3
-    if ((s1_is_unicode & (!s2_is_unicode)) && PyString_CheckExact(s2)) {
-        owned_ref = PyUnicode_FromObject(s2);
-        if (unlikely(!owned_ref))
-            return -1;
-        s2 = owned_ref;
-        s2_is_unicode = 1;
-    } else if ((s2_is_unicode & (!s1_is_unicode)) && PyString_CheckExact(s1)) {
-        owned_ref = PyUnicode_FromObject(s1);
-        if (unlikely(!owned_ref))
-            return -1;
-        s1 = owned_ref;
-        s1_is_unicode = 1;
-    } else if (((!s2_is_unicode) & (!s1_is_unicode))) {
-        return __Pyx_PyBytes_Equals(s1, s2, equals);
-    }
-#endif
-    if (s1_is_unicode & s2_is_unicode) {
-        Py_ssize_t length;
-        int kind;
-        void *data1, *data2;
-        if (unlikely(__Pyx_PyUnicode_READY(s1) < 0) || unlikely(__Pyx_PyUnicode_READY(s2) < 0))
-            return -1;
-        length = __Pyx_PyUnicode_GET_LENGTH(s1);
-        if (length != __Pyx_PyUnicode_GET_LENGTH(s2)) {
-            goto return_ne;
-        }
-#if CYTHON_USE_UNICODE_INTERNALS
-        {
-            Py_hash_t hash1, hash2;
-        #if CYTHON_PEP393_ENABLED
-            hash1 = ((PyASCIIObject*)s1)->hash;
-            hash2 = ((PyASCIIObject*)s2)->hash;
-        #else
-            hash1 = ((PyUnicodeObject*)s1)->hash;
-            hash2 = ((PyUnicodeObject*)s2)->hash;
-        #endif
-            if (hash1 != hash2 && hash1 != -1 && hash2 != -1) {
-                goto return_ne;
-            }
-        }
-#endif
-        kind = __Pyx_PyUnicode_KIND(s1);
-        if (kind != __Pyx_PyUnicode_KIND(s2)) {
-            goto return_ne;
-        }
-        data1 = __Pyx_PyUnicode_DATA(s1);
-        data2 = __Pyx_PyUnicode_DATA(s2);
-        if (__Pyx_PyUnicode_READ(kind, data1, 0) != __Pyx_PyUnicode_READ(kind, data2, 0)) {
-            goto return_ne;
-        } else if (length == 1) {
-            goto return_eq;
-        } else {
-            int result = memcmp(data1, data2, (size_t)(length * kind));
-            #if PY_MAJOR_VERSION < 3
-            Py_XDECREF(owned_ref);
-            #endif
-            return (equals == Py_EQ) ? (result == 0) : (result != 0);
-        }
-    } else if ((s1 == Py_None) & s2_is_unicode) {
-        goto return_ne;
-    } else if ((s2 == Py_None) & s1_is_unicode) {
-        goto return_ne;
-    } else {
-        int result;
-        PyObject* py_result = PyObject_RichCompare(s1, s2, equals);
-        #if PY_MAJOR_VERSION < 3
-        Py_XDECREF(owned_ref);
-        #endif
-        if (!py_result)
-            return -1;
-        result = __Pyx_PyObject_IsTrue(py_result);
-        Py_DECREF(py_result);
-        return result;
-    }
-return_eq:
-    #if PY_MAJOR_VERSION < 3
-    Py_XDECREF(owned_ref);
-    #endif
-    return (equals == Py_EQ);
-return_ne:
-    #if PY_MAJOR_VERSION < 3
-    Py_XDECREF(owned_ref);
-    #endif
-    return (equals == Py_NE);
-#endif
 }
 
 /* CLineInTraceback */

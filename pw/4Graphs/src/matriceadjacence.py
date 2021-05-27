@@ -378,7 +378,7 @@ def export_dot(graphe, num, states):
     }
     """
     p = sp.var("p")
-    graph = "digraph graph" + str(num) +" {\ncenter=true;\npad=1;\ngraph [label=\"Graphe " + str(num) + " :\n\", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18]"
+    graph = "digraph graph" + str(num) +" {\ncenter=true;\npad=1;\ngraph [label=\"Graphe " + str(num) + " :\\n\", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];\n"
     for sommet in graphe.sommets():
         var = sp.var("q" + str(sommet + 1))
         if states[var] == 1 :
@@ -454,12 +454,3 @@ def tarjan(G) :
 #        if (len(partition) > 1) :
 #            return partition
     return partition
-
-
-def main():
-    import doctest
-    doctest.testmod()
-
-
-if __name__ == "__main__":
-    main()

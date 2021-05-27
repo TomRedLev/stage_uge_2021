@@ -1,15 +1,13 @@
 from distutils.core import setup
 from distutils.extension import Extension
 from Cython.Build import cythonize
+from Cython.Distutils import build_ext
 
-ext_modules = [
-    Extension(
-        r'matriceadjacence',
-        [r'matriceadjacence.py']
-    ),
+extensions = [
+    Extension("matriceadjacence", ["matriceadjacence.py"])
 ]
 
 setup(
-    name='matriceadjacence',
-    ext_modules=cythonize(ext_modules),
+    cmdclass = {'build_ext':build_ext},
+    ext_modules = cythonize(extensions),
 )
