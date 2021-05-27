@@ -9,6 +9,7 @@ from time import *
 from colorama import *
 import sympy as sp
 import doctest
+import warnings
 
 def determine_combinations(val) :
     """
@@ -191,4 +192,5 @@ def main() :
 
 if __name__ == "__main__":
     doctest.testmod()
+    warnings.simplefilter('ignore', np.RankWarning)
     main()

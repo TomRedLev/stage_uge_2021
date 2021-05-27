@@ -116,3 +116,16 @@ Implémentation d'une solution pour le problème des calculs d'intégrales en ut
 cf. https://fr.wikipedia.org/wiki/Calcul_num%C3%A9rique_d%27une_int%C3%A9grale#Formules_simples <br />
 Améliorations de l'exécution du programme avec cython. <br />
 <br />
+
+## Mercredi 26 Mai 2021 :
+Implémentation de l'utilisation de Graphviz. <br />
+Optimisation de la lisibilité et de l'utilisation de ce dernier. <br />
+Relecture des notes pour commencer à préparer le rapport. <br />
+<br />
+
+## Jeudi 27 Mai 2021 : 
+Tentative d'installation de pypy. <br />
+Commencement de la rédaction du rapport de projet. <br />
+Rapport disponible au lien suivant : https://fr.overleaf.com/4273838755yzqfhqtpzdkt <br />
+<br />
+

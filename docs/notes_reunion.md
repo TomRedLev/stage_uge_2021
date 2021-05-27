@@ -31,3 +31,11 @@ Evaluer intégrales, faire calcul numérique. <br />
 https://fr.wikipedia.org/wiki/Isomorphisme_de_graphes <br />
 https://en.wikipedia.org/wiki/Adjacency_matrix#Isomorphism_and_invariants<br />
 Checker si dans la liste des graphes avec fonction isomorphisme, si non faire les calculs et rajouter, si oui skip. <br />
+<br />
+Essayer de multi-threader le programme (en mettant 1/4 sur chaque coeur). <br />
+Mise en forme des graphes (tagués les arrêtes). <br />
+Faire une explication des chaînes de Markov et du calcul de probabilités sur un graphe donné. <br />
+Pypy <br />
+Cython <br />
+Ne pas utiliser de morceaux de code pour expliquer. <br />
+<br />
