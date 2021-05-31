@@ -142,3 +142,4 @@ https://stackoverflow.com/questions/65336789/numpy-build-fail-in-m1-big-sur-11-1
 Le problème d'installationsemble être un problème de compatibilité entre Pypy et Numpy. <br />
 Trouvé une solution : installation très simple via Ubuntu. <br />
 Envisager de passer en single boot Ubuntu. <br />
+https://doc.ubuntu-fr.org/installation_macbook_sans_macosx <br />
