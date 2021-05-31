@@ -127,5 +127,18 @@ Relecture des notes pour commencer à préparer le rapport. <br />
 Tentative d'installation de pypy. <br />
 Commencement de la rédaction du rapport de projet. <br />
 Rapport disponible au lien suivant : https://fr.overleaf.com/4273838755yzqfhqtpzdkt <br />
+Lecture de documentation Cython. <br />
 <br />
 
+## Vendredi 28 Mai 2021 :
+Continuation de l'écriture du rapport de projet. <br />
+Lecture de documentation Cython et Pypy et petits tests effectués. <br />
+<br />
+
+## Lundi 31 Mai 2021 :
+Tentative d'installation de pypy. <br />
+Article le plus intéressant même si Mac pas M1 et pas sous Big Sur.
+https://stackoverflow.com/questions/65336789/numpy-build-fail-in-m1-big-sur-11-1 <br />
+Le problème d'installationsemble être un problème de compatibilité entre Pypy et Numpy. <br />
+Trouvé une solution : installation très simple via Ubuntu. <br />
+Envisager de passer en single boot Ubuntu. <br />

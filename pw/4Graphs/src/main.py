@@ -170,7 +170,7 @@ def main() :
                 if (len(tarjan(G)) == 1) :
                     if (not isomorphism_graphs(lstG, G, lst_matrix_p)) :
                         res = calculate_stationary_probas(k, G, variables)
-                        print("graph", i, " : ", res)
+                        print("graph", i, " : ", G._matrice_adjacence, "\nprobabilities :", res)
                         #test_stationary_probas(k, G, variables) # Can be use to test the probabilities
                         score, states = integrate_probabilities(k, G, variables)
                         if score > 0 and score < scores[1][1] :

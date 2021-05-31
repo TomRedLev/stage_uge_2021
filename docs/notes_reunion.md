@@ -35,7 +35,7 @@ Checker si dans la liste des graphes avec fonction isomorphisme, si non faire le
 Essayer de multi-threader le programme (en mettant 1/4 sur chaque coeur). <br />
 Mise en forme des graphes (tagués les arrêtes). <br />
 Faire une explication des chaînes de Markov et du calcul de probabilités sur un graphe donné. <br />
-Pypy <br />
-Cython <br />
 Ne pas utiliser de morceaux de code pour expliquer. <br />
+Pypy. <br />
+Cython. <br />
 <br />

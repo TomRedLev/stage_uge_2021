@@ -390,17 +390,17 @@ def export_dot(graphe, num, states):
             graph = graph + str(boucle[0]) + " -> " + str(boucle[1]) + "[style=dotted];\n"
             graph = graph + str(boucle[0]) + " -> " + str(boucle[1]) + ";\n"
         elif graphe._matrice_adjacence[boucle[0]][boucle[1]] == p :
-            graph = graph + str(boucle[0]) + " -> " + str(boucle[1]) + "[style=dotted];\n"
-        elif graphe._matrice_adjacence[boucle[0]][boucle[1]] == (1 - p) :
             graph = graph + str(boucle[0]) + " -> " + str(boucle[1]) + ";\n"
+        elif graphe._matrice_adjacence[boucle[0]][boucle[1]] == (1 - p) :
+            graph = graph + str(boucle[0]) + " -> " + str(boucle[1]) + "[style=dotted];\n"
     for arete in graphe.aretes():
         if graphe._matrice_adjacence[arete[0]][arete[1]] == 1 :
             graph = graph + str(arete[0]) + " -> " + str(arete[1]) + "[style=dotted];\n"
             graph = graph + str(arete[0]) + " -> " + str(arete[1]) + ";\n"
         elif graphe._matrice_adjacence[arete[0]][arete[1]] == p :
-            graph = graph + str(arete[0]) + " -> " + str(arete[1]) + "[style=dotted];\n"
-        elif graphe._matrice_adjacence[arete[0]][arete[1]] == (1 - p) :
             graph = graph + str(arete[0]) + " -> " + str(arete[1]) + ";\n"
+        elif graphe._matrice_adjacence[arete[0]][arete[1]] == (1 - p) :
+            graph = graph + str(arete[0]) + " -> " + str(arete[1]) + "[style=dotted];\n"
     graph = graph + "}"
     return graph
 

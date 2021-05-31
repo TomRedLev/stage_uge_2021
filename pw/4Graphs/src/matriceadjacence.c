@@ -7562,7 +7562,7 @@ static PyObject *__pyx_pf_16matriceadjacence_2export_dot(CYTHON_UNUSED PyObject 
  *             graph = graph + str(boucle[0]) + " -> " + str(boucle[1]) + "[style=dotted];\n"
  *             graph = graph + str(boucle[0]) + " -> " + str(boucle[1]) + ";\n"             # <<<<<<<<<<<<<<
  *         elif graphe._matrice_adjacence[boucle[0]][boucle[1]] == p :
- *             graph = graph + str(boucle[0]) + " -> " + str(boucle[1]) + "[style=dotted];\n"
+ *             graph = graph + str(boucle[0]) + " -> " + str(boucle[1]) + ";\n"
  */
       __pyx_t_3 = __Pyx_GetItemInt(__pyx_v_boucle, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 391, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_3);
@@ -7604,7 +7604,7 @@ static PyObject *__pyx_pf_16matriceadjacence_2export_dot(CYTHON_UNUSED PyObject 
  *             graph = graph + str(boucle[0]) + " -> " + str(boucle[1]) + "[style=dotted];\n"
  *             graph = graph + str(boucle[0]) + " -> " + str(boucle[1]) + ";\n"
  *         elif graphe._matrice_adjacence[boucle[0]][boucle[1]] == p :             # <<<<<<<<<<<<<<
- *             graph = graph + str(boucle[0]) + " -> " + str(boucle[1]) + "[style=dotted];\n"
+ *             graph = graph + str(boucle[0]) + " -> " + str(boucle[1]) + ";\n"
  *         elif graphe._matrice_adjacence[boucle[0]][boucle[1]] == (1 - p) :
  */
     __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_graphe, __pyx_n_s_matrice_adjacence); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 392, __pyx_L1_error)
@@ -7630,9 +7630,9 @@ static PyObject *__pyx_pf_16matriceadjacence_2export_dot(CYTHON_UNUSED PyObject 
       /* "matriceadjacence.py":393
  *             graph = graph + str(boucle[0]) + " -> " + str(boucle[1]) + ";\n"
  *         elif graphe._matrice_adjacence[boucle[0]][boucle[1]] == p :
- *             graph = graph + str(boucle[0]) + " -> " + str(boucle[1]) + "[style=dotted];\n"             # <<<<<<<<<<<<<<
+ *             graph = graph + str(boucle[0]) + " -> " + str(boucle[1]) + ";\n"             # <<<<<<<<<<<<<<
  *         elif graphe._matrice_adjacence[boucle[0]][boucle[1]] == (1 - p) :
- *             graph = graph + str(boucle[0]) + " -> " + str(boucle[1]) + ";\n"
+ *             graph = graph + str(boucle[0]) + " -> " + str(boucle[1]) + "[style=dotted];\n"
  */
       __pyx_t_3 = __Pyx_GetItemInt(__pyx_v_boucle, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 393, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_3);
@@ -7654,7 +7654,7 @@ static PyObject *__pyx_pf_16matriceadjacence_2export_dot(CYTHON_UNUSED PyObject 
       __Pyx_GOTREF(__pyx_t_3);
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
       __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-      __pyx_t_6 = PyNumber_Add(__pyx_t_3, __pyx_kp_s_style_dotted); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 393, __pyx_L1_error)
+      __pyx_t_6 = PyNumber_Add(__pyx_t_3, __pyx_kp_s_); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 393, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_6);
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
       __Pyx_DECREF_SET(__pyx_v_graph, __pyx_t_6);
@@ -7664,7 +7664,7 @@ static PyObject *__pyx_pf_16matriceadjacence_2export_dot(CYTHON_UNUSED PyObject 
  *             graph = graph + str(boucle[0]) + " -> " + str(boucle[1]) + "[style=dotted];\n"
  *             graph = graph + str(boucle[0]) + " -> " + str(boucle[1]) + ";\n"
  *         elif graphe._matrice_adjacence[boucle[0]][boucle[1]] == p :             # <<<<<<<<<<<<<<
- *             graph = graph + str(boucle[0]) + " -> " + str(boucle[1]) + "[style=dotted];\n"
+ *             graph = graph + str(boucle[0]) + " -> " + str(boucle[1]) + ";\n"
  *         elif graphe._matrice_adjacence[boucle[0]][boucle[1]] == (1 - p) :
  */
       goto __pyx_L8;
@@ -7672,9 +7672,9 @@ static PyObject *__pyx_pf_16matriceadjacence_2export_dot(CYTHON_UNUSED PyObject 
 
     /* "matriceadjacence.py":394
  *         elif graphe._matrice_adjacence[boucle[0]][boucle[1]] == p :
- *             graph = graph + str(boucle[0]) + " -> " + str(boucle[1]) + "[style=dotted];\n"
- *         elif graphe._matrice_adjacence[boucle[0]][boucle[1]] == (1 - p) :             # <<<<<<<<<<<<<<
  *             graph = graph + str(boucle[0]) + " -> " + str(boucle[1]) + ";\n"
+ *         elif graphe._matrice_adjacence[boucle[0]][boucle[1]] == (1 - p) :             # <<<<<<<<<<<<<<
+ *             graph = graph + str(boucle[0]) + " -> " + str(boucle[1]) + "[style=dotted];\n"
  *     for arete in graphe.aretes():
  */
     __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_v_graphe, __pyx_n_s_matrice_adjacence); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 394, __pyx_L1_error)
@@ -7701,9 +7701,9 @@ static PyObject *__pyx_pf_16matriceadjacence_2export_dot(CYTHON_UNUSED PyObject 
     if (__pyx_t_8) {
 
       /* "matriceadjacence.py":395
- *             graph = graph + str(boucle[0]) + " -> " + str(boucle[1]) + "[style=dotted];\n"
+ *             graph = graph + str(boucle[0]) + " -> " + str(boucle[1]) + ";\n"
  *         elif graphe._matrice_adjacence[boucle[0]][boucle[1]] == (1 - p) :
- *             graph = graph + str(boucle[0]) + " -> " + str(boucle[1]) + ";\n"             # <<<<<<<<<<<<<<
+ *             graph = graph + str(boucle[0]) + " -> " + str(boucle[1]) + "[style=dotted];\n"             # <<<<<<<<<<<<<<
  *     for arete in graphe.aretes():
  *         if graphe._matrice_adjacence[arete[0]][arete[1]] == 1 :
  */
@@ -7727,7 +7727,7 @@ static PyObject *__pyx_pf_16matriceadjacence_2export_dot(CYTHON_UNUSED PyObject 
       __Pyx_GOTREF(__pyx_t_2);
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
       __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-      __pyx_t_6 = PyNumber_Add(__pyx_t_2, __pyx_kp_s_); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 395, __pyx_L1_error)
+      __pyx_t_6 = PyNumber_Add(__pyx_t_2, __pyx_kp_s_style_dotted); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 395, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_6);
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
       __Pyx_DECREF_SET(__pyx_v_graph, __pyx_t_6);
@@ -7735,9 +7735,9 @@ static PyObject *__pyx_pf_16matriceadjacence_2export_dot(CYTHON_UNUSED PyObject 
 
       /* "matriceadjacence.py":394
  *         elif graphe._matrice_adjacence[boucle[0]][boucle[1]] == p :
- *             graph = graph + str(boucle[0]) + " -> " + str(boucle[1]) + "[style=dotted];\n"
- *         elif graphe._matrice_adjacence[boucle[0]][boucle[1]] == (1 - p) :             # <<<<<<<<<<<<<<
  *             graph = graph + str(boucle[0]) + " -> " + str(boucle[1]) + ";\n"
+ *         elif graphe._matrice_adjacence[boucle[0]][boucle[1]] == (1 - p) :             # <<<<<<<<<<<<<<
+ *             graph = graph + str(boucle[0]) + " -> " + str(boucle[1]) + "[style=dotted];\n"
  *     for arete in graphe.aretes():
  */
     }
@@ -7755,7 +7755,7 @@ static PyObject *__pyx_pf_16matriceadjacence_2export_dot(CYTHON_UNUSED PyObject 
 
   /* "matriceadjacence.py":396
  *         elif graphe._matrice_adjacence[boucle[0]][boucle[1]] == (1 - p) :
- *             graph = graph + str(boucle[0]) + " -> " + str(boucle[1]) + ";\n"
+ *             graph = graph + str(boucle[0]) + " -> " + str(boucle[1]) + "[style=dotted];\n"
  *     for arete in graphe.aretes():             # <<<<<<<<<<<<<<
  *         if graphe._matrice_adjacence[arete[0]][arete[1]] == 1 :
  *             graph = graph + str(arete[0]) + " -> " + str(arete[1]) + "[style=dotted];\n"
@@ -7821,7 +7821,7 @@ static PyObject *__pyx_pf_16matriceadjacence_2export_dot(CYTHON_UNUSED PyObject 
     __pyx_t_1 = 0;
 
     /* "matriceadjacence.py":397
- *             graph = graph + str(boucle[0]) + " -> " + str(boucle[1]) + ";\n"
+ *             graph = graph + str(boucle[0]) + " -> " + str(boucle[1]) + "[style=dotted];\n"
  *     for arete in graphe.aretes():
  *         if graphe._matrice_adjacence[arete[0]][arete[1]] == 1 :             # <<<<<<<<<<<<<<
  *             graph = graph + str(arete[0]) + " -> " + str(arete[1]) + "[style=dotted];\n"
@@ -7886,7 +7886,7 @@ static PyObject *__pyx_pf_16matriceadjacence_2export_dot(CYTHON_UNUSED PyObject 
  *             graph = graph + str(arete[0]) + " -> " + str(arete[1]) + "[style=dotted];\n"
  *             graph = graph + str(arete[0]) + " -> " + str(arete[1]) + ";\n"             # <<<<<<<<<<<<<<
  *         elif graphe._matrice_adjacence[arete[0]][arete[1]] == p :
- *             graph = graph + str(arete[0]) + " -> " + str(arete[1]) + "[style=dotted];\n"
+ *             graph = graph + str(arete[0]) + " -> " + str(arete[1]) + ";\n"
  */
       __pyx_t_3 = __Pyx_GetItemInt(__pyx_v_arete, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 399, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_3);
@@ -7915,7 +7915,7 @@ static PyObject *__pyx_pf_16matriceadjacence_2export_dot(CYTHON_UNUSED PyObject 
       __pyx_t_1 = 0;
 
       /* "matriceadjacence.py":397
- *             graph = graph + str(boucle[0]) + " -> " + str(boucle[1]) + ";\n"
+ *             graph = graph + str(boucle[0]) + " -> " + str(boucle[1]) + "[style=dotted];\n"
  *     for arete in graphe.aretes():
  *         if graphe._matrice_adjacence[arete[0]][arete[1]] == 1 :             # <<<<<<<<<<<<<<
  *             graph = graph + str(arete[0]) + " -> " + str(arete[1]) + "[style=dotted];\n"
@@ -7928,7 +7928,7 @@ static PyObject *__pyx_pf_16matriceadjacence_2export_dot(CYTHON_UNUSED PyObject 
  *             graph = graph + str(arete[0]) + " -> " + str(arete[1]) + "[style=dotted];\n"
  *             graph = graph + str(arete[0]) + " -> " + str(arete[1]) + ";\n"
  *         elif graphe._matrice_adjacence[arete[0]][arete[1]] == p :             # <<<<<<<<<<<<<<
- *             graph = graph + str(arete[0]) + " -> " + str(arete[1]) + "[style=dotted];\n"
+ *             graph = graph + str(arete[0]) + " -> " + str(arete[1]) + ";\n"
  *         elif graphe._matrice_adjacence[arete[0]][arete[1]] == (1 - p) :
  */
     __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_graphe, __pyx_n_s_matrice_adjacence); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 400, __pyx_L1_error)
@@ -7954,9 +7954,9 @@ static PyObject *__pyx_pf_16matriceadjacence_2export_dot(CYTHON_UNUSED PyObject 
       /* "matriceadjacence.py":401
  *             graph = graph + str(arete[0]) + " -> " + str(arete[1]) + ";\n"
  *         elif graphe._matrice_adjacence[arete[0]][arete[1]] == p :
- *             graph = graph + str(arete[0]) + " -> " + str(arete[1]) + "[style=dotted];\n"             # <<<<<<<<<<<<<<
+ *             graph = graph + str(arete[0]) + " -> " + str(arete[1]) + ";\n"             # <<<<<<<<<<<<<<
  *         elif graphe._matrice_adjacence[arete[0]][arete[1]] == (1 - p) :
- *             graph = graph + str(arete[0]) + " -> " + str(arete[1]) + ";\n"
+ *             graph = graph + str(arete[0]) + " -> " + str(arete[1]) + "[style=dotted];\n"
  */
       __pyx_t_3 = __Pyx_GetItemInt(__pyx_v_arete, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 401, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_3);
@@ -7978,7 +7978,7 @@ static PyObject *__pyx_pf_16matriceadjacence_2export_dot(CYTHON_UNUSED PyObject 
       __Pyx_GOTREF(__pyx_t_3);
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-      __pyx_t_2 = PyNumber_Add(__pyx_t_3, __pyx_kp_s_style_dotted); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 401, __pyx_L1_error)
+      __pyx_t_2 = PyNumber_Add(__pyx_t_3, __pyx_kp_s_); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 401, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_2);
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
       __Pyx_DECREF_SET(__pyx_v_graph, __pyx_t_2);
@@ -7988,7 +7988,7 @@ static PyObject *__pyx_pf_16matriceadjacence_2export_dot(CYTHON_UNUSED PyObject 
  *             graph = graph + str(arete[0]) + " -> " + str(arete[1]) + "[style=dotted];\n"
  *             graph = graph + str(arete[0]) + " -> " + str(arete[1]) + ";\n"
  *         elif graphe._matrice_adjacence[arete[0]][arete[1]] == p :             # <<<<<<<<<<<<<<
- *             graph = graph + str(arete[0]) + " -> " + str(arete[1]) + "[style=dotted];\n"
+ *             graph = graph + str(arete[0]) + " -> " + str(arete[1]) + ";\n"
  *         elif graphe._matrice_adjacence[arete[0]][arete[1]] == (1 - p) :
  */
       goto __pyx_L11;
@@ -7996,9 +7996,9 @@ static PyObject *__pyx_pf_16matriceadjacence_2export_dot(CYTHON_UNUSED PyObject 
 
     /* "matriceadjacence.py":402
  *         elif graphe._matrice_adjacence[arete[0]][arete[1]] == p :
- *             graph = graph + str(arete[0]) + " -> " + str(arete[1]) + "[style=dotted];\n"
- *         elif graphe._matrice_adjacence[arete[0]][arete[1]] == (1 - p) :             # <<<<<<<<<<<<<<
  *             graph = graph + str(arete[0]) + " -> " + str(arete[1]) + ";\n"
+ *         elif graphe._matrice_adjacence[arete[0]][arete[1]] == (1 - p) :             # <<<<<<<<<<<<<<
+ *             graph = graph + str(arete[0]) + " -> " + str(arete[1]) + "[style=dotted];\n"
  *     graph = graph + "}"
  */
     __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_graphe, __pyx_n_s_matrice_adjacence); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 402, __pyx_L1_error)
@@ -8025,9 +8025,9 @@ static PyObject *__pyx_pf_16matriceadjacence_2export_dot(CYTHON_UNUSED PyObject 
     if (__pyx_t_8) {
 
       /* "matriceadjacence.py":403
- *             graph = graph + str(arete[0]) + " -> " + str(arete[1]) + "[style=dotted];\n"
+ *             graph = graph + str(arete[0]) + " -> " + str(arete[1]) + ";\n"
  *         elif graphe._matrice_adjacence[arete[0]][arete[1]] == (1 - p) :
- *             graph = graph + str(arete[0]) + " -> " + str(arete[1]) + ";\n"             # <<<<<<<<<<<<<<
+ *             graph = graph + str(arete[0]) + " -> " + str(arete[1]) + "[style=dotted];\n"             # <<<<<<<<<<<<<<
  *     graph = graph + "}"
  *     return graph
  */
@@ -8051,7 +8051,7 @@ static PyObject *__pyx_pf_16matriceadjacence_2export_dot(CYTHON_UNUSED PyObject 
       __Pyx_GOTREF(__pyx_t_1);
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-      __pyx_t_2 = PyNumber_Add(__pyx_t_1, __pyx_kp_s_); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 403, __pyx_L1_error)
+      __pyx_t_2 = PyNumber_Add(__pyx_t_1, __pyx_kp_s_style_dotted); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 403, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_2);
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
       __Pyx_DECREF_SET(__pyx_v_graph, __pyx_t_2);
@@ -8059,9 +8059,9 @@ static PyObject *__pyx_pf_16matriceadjacence_2export_dot(CYTHON_UNUSED PyObject 
 
       /* "matriceadjacence.py":402
  *         elif graphe._matrice_adjacence[arete[0]][arete[1]] == p :
- *             graph = graph + str(arete[0]) + " -> " + str(arete[1]) + "[style=dotted];\n"
- *         elif graphe._matrice_adjacence[arete[0]][arete[1]] == (1 - p) :             # <<<<<<<<<<<<<<
  *             graph = graph + str(arete[0]) + " -> " + str(arete[1]) + ";\n"
+ *         elif graphe._matrice_adjacence[arete[0]][arete[1]] == (1 - p) :             # <<<<<<<<<<<<<<
+ *             graph = graph + str(arete[0]) + " -> " + str(arete[1]) + "[style=dotted];\n"
  *     graph = graph + "}"
  */
     }
@@ -8069,7 +8069,7 @@ static PyObject *__pyx_pf_16matriceadjacence_2export_dot(CYTHON_UNUSED PyObject 
 
     /* "matriceadjacence.py":396
  *         elif graphe._matrice_adjacence[boucle[0]][boucle[1]] == (1 - p) :
- *             graph = graph + str(boucle[0]) + " -> " + str(boucle[1]) + ";\n"
+ *             graph = graph + str(boucle[0]) + " -> " + str(boucle[1]) + "[style=dotted];\n"
  *     for arete in graphe.aretes():             # <<<<<<<<<<<<<<
  *         if graphe._matrice_adjacence[arete[0]][arete[1]] == 1 :
  *             graph = graph + str(arete[0]) + " -> " + str(arete[1]) + "[style=dotted];\n"
@@ -8079,7 +8079,7 @@ static PyObject *__pyx_pf_16matriceadjacence_2export_dot(CYTHON_UNUSED PyObject 
 
   /* "matriceadjacence.py":404
  *         elif graphe._matrice_adjacence[arete[0]][arete[1]] == (1 - p) :
- *             graph = graph + str(arete[0]) + " -> " + str(arete[1]) + ";\n"
+ *             graph = graph + str(arete[0]) + " -> " + str(arete[1]) + "[style=dotted];\n"
  *     graph = graph + "}"             # <<<<<<<<<<<<<<
  *     return graph
  * 
@@ -8090,7 +8090,7 @@ static PyObject *__pyx_pf_16matriceadjacence_2export_dot(CYTHON_UNUSED PyObject 
   __pyx_t_6 = 0;
 
   /* "matriceadjacence.py":405
- *             graph = graph + str(arete[0]) + " -> " + str(arete[1]) + ";\n"
+ *             graph = graph + str(arete[0]) + " -> " + str(arete[1]) + "[style=dotted];\n"
  *     graph = graph + "}"
  *     return graph             # <<<<<<<<<<<<<<
  * 
