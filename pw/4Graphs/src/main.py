@@ -42,7 +42,7 @@ def calculate_stationary_probas(k, G, variables) :
     Calculate the stationary stats for a given graph.
 
     >>> calculate_stationary_probas(2, construct_graph_from_permutation((0, 1, 0, 1), 2, 0.25), generate_variables(2))
-    {q2: 0.750000000000000, q1: 0.250000000000000}
+    {q1: 0.250000000000000, q2: 0.750000000000000}
     """
 
     lst_eq = dot(array(variables), subtract(array(identity_matrix(k)._matrice_adjacence), array(G._matrice_adjacence))).tolist()
@@ -144,7 +144,7 @@ def main() :
     >>> G.ajouter_aretes([(0, 0, 0.9), (0, 1, 0.05), (0, 2, 0.05), (1, 0, 0.7), (1, 2, 0.3), (2, 0, 0.8), (2, 2, 0.2)])
     >>> variables = sp.var("q1 q2 q3")
     >>> calculate_stationary_probas(3, G, variables)
-    {q3: 0.0718232044198895, q2: 0.0441988950276243, q1: 0.883977900552486}
+    {q1: 0.883977900552486, q2: 0.0441988950276243, q3: 0.0718232044198895}
     """
     # Variables :
     k = int(input("Insert the value k of the k-graphs you want to generate : "))
