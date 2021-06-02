@@ -143,3 +143,11 @@ Le problème d'installationsemble être un problème de compatibilité entre Pyp
 Trouvé une solution : installation très simple via Ubuntu. <br />
 Envisager de passer en single boot Ubuntu. <br />
 https://doc.ubuntu-fr.org/installation_macbook_sans_macosx <br />
+
+## Mardi 01 Juin 2021 :
+Installation en single boot Ubuntu. <br />
+Installation de tous les packages nécessaires au bon fonctionnement des tests et du programme principal. <br />
+Résolution de divers problèmes (Audio, WiFi, ...) <br />
+Microphone ne marche pas avant la réunion. <br />
+Tentative de correction de la commande dot pour générer le pdf, qui ne marche plus. <br />
+<br />
