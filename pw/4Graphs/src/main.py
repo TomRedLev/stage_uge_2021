@@ -10,16 +10,30 @@ from colorama import *
 import sympy as sp
 import doctest
 import warnings
+import copy
 
-def determine_combinations(val) :
-    """
-    Construct all combinations_with_replacement of a val-length with values between
-    0 and val (not included).
+def verify_ongoing_edges(n, lst) :
+    for k in range(n) :
+        if (lst.count(k) == 0) :
+            return False
+    return True
 
-    >>> [i for i in determine_combinations(2)]
-    [(0, 0, 0, 0), (0, 0, 0, 1), (0, 0, 1, 1), (0, 1, 1, 1), (1, 1, 1, 1)]
-    """
-    return combinations_with_replacement([i for i in range(val)], (val)*2)
+def generate_edges_aux(n, i, lst, lst_evolving) :
+    if (i == -1) :
+        return
+    for j in range(n) :
+        lst_evolving[i] = j
+        if (lst_evolving not in lst and verify_ongoing_edges(n, lst_evolving)) :
+            lst.append(copy.deepcopy(lst_evolving))
+        generate_edges_aux(n, i-1, lst, lst_evolving)
+
+def generate_edges(n) :
+    lst = []
+    lst_evolving = [0 for x in range(2*n)]
+    generate_edges_aux(n, len(lst_evolving)-1, lst, lst_evolving)
+    return lst
+
+
 
 
 def construct_graph_from_permutation(permut, k, p) :
@@ -160,29 +174,28 @@ def main() :
     # Starting the timer :
     time_perf = perf_counter()
     # Main loop :
-    for combi in determine_combinations(k) :
-        for permut in set(map(lambda x: tuple(x),permutations(combi, len(combi)))) :
-            G = construct_graph_from_permutation(permut, k, p)
+    for edges in generate_edges(k) :
+        G = construct_graph_from_permutation(edges, k, p)
 
-            if (G.check_entrees()) :
+        if (G.check_entrees()) :
 
-                # Check :
-                if (len(tarjan(G)) == 1) :
-                    if (not isomorphism_graphs(lstG, G, lst_matrix_p)) :
-                        res = calculate_stationary_probas(k, G, variables)
-                        print("graph", i, " : ", G._matrice_adjacence, "\nprobabilities :", res)
-                        #test_stationary_probas(k, G, variables) # Can be use to test the probabilities
-                        score, states = integrate_probabilities(k, G, variables)
-                        if score > 0 and score < scores[1][1] :
-                            scores[1] = (i, score)
-                        elif score > 0 and score < scores[2][1] :
-                            scores[2] = (i, score)
-                        f.write(export_dot(G, str(i), states))
-                        f.write("\n")
-                        i += 1
-                        lstG.append(G)
+            # Check :
+            if (len(tarjan(G)) == 1) :
+                if (not isomorphism_graphs(lstG, G, lst_matrix_p)) :
+                    res = calculate_stationary_probas(k, G, variables)
+                    print("graph", i, " : ", G._matrice_adjacence, "\nprobabilities :", res)
+                    #test_stationary_probas(k, G, variables) # Can be use to test the probabilities
+                    score, states = integrate_probabilities(k, G, variables)
+                    if score > 0 and score < scores[1][1] :
+                        scores[1] = (i, score)
+                    elif score > 0 and score < scores[2][1] :
+                        scores[2] = (i, score)
+                    f.write(export_dot(G, str(i), states))
+                    f.write("\n")
+                    i += 1
+                    lstG.append(G)
 
-            cmpt += 1
+        cmpt += 1
 
     print(Style.RESET_ALL + str((perf_counter() - time_perf)), "seconds to run the generation of strongly connected", k, "- states graphs.")
     print("Number of loops :", cmpt)
