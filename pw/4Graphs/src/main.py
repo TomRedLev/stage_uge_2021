@@ -12,6 +12,7 @@ import doctest
 import warnings
 import copy
 
+# New Graphs Generation :
 def verify_ongoing_edges(n, lst) :
     for k in range(n) :
         if (lst.count(k) == 0) :
@@ -32,6 +33,44 @@ def generate_edges(n) :
     lst_evolving = [0 for x in range(2*n)]
     generate_edges_aux(n, len(lst_evolving)-1, lst, lst_evolving)
     return lst
+
+# New in-depth courses :
+def explore(G, sommet, marked, etiquettes, path) :
+    marked[sommet] = True
+    etiquettes[sommet] = path
+    voisins = G.voisins(sommet)
+    if (len(voisins) == 2) :
+        if (G._matrice_adjacence[sommet][voisins[0]] == (1-p)) :
+            if marked[voisins[0]] != True :
+                explore(G, voisins[0], marked, etiquettes, path + "NT")
+            if marked[voisins[1]] != True :
+                explore(G, voisins[1], marked, etiquettes, path + "T")
+        else :
+            if marked[voisins[1]] != True :
+                explore(G, voisins[1], marked, etiquettes, path + "NT")
+            if marked[voisins[0]] != True :
+                explore(G, voisins[0], marked, etiquettes, path + "T")
+    else :
+        if marked[voisins[0]] != True :
+            explore(G, voisins[0], marked, etiquettes, path + "NT")
+        if marked[voisins[0]] != True :
+            explore(G, voisins[0], marked, etiquettes, path + "T")
+
+def indepth_course(G, set_paths) :
+    keeped_signatures = set()
+    signature_0 = ""
+    for sommet in G.sommets() :
+        marked = [False for x in range(len(G.sommets()))]
+        etiquettes = ["" for x in range(len(G.sommets()))]
+        explore(G, sommet, marked, etiquettes, "")
+        keeped_signatures.add(":".join(etiquettes))
+    if keeped_signatures.issubset(set_paths) :
+        return False
+    set_paths.update(keeped_signatures)
+    return True
+
+
+
 
 
 
@@ -127,27 +166,6 @@ def integrate_probabilities(k, G, variables) :
     print()
     return score, states
 
-def create_matrix_p(k) :
-    """
-    Return a list of Matrix established on permutations of size k.
-    """
-    return [sp.Matrix([[0 if (elem != x) else 1 for x in range(k)] for elem in perm]) for perm in permutations(arange(k))]
-
-def isomorphism_graphs(lstG, G2, lst_matrix_p) :
-    """
-    Verify if two graphs are isomorphs.
-    Return True or False.
-    """
-    for G in lstG :
-        for p in lst_matrix_p :
-            A1 = sp.Matrix(G._matrice_adjacence)
-            left = p * A1 * p**(-1)
-            A2 = sp.Matrix(G2._matrice_adjacence)
-            if (left == A2) :
-                # print("skipped")
-                return True
-    return False
-
 
 def main() :
     """
@@ -168,8 +186,7 @@ def main() :
     cmpt = 0
     variables = generate_variables(k)
     scores = {1 : (-1,1), 2 : (-1,1)}
-    lstG = []
-    lst_matrix_p = create_matrix_p(k)
+    set_paths = set()
 
     # Starting the timer :
     time_perf = perf_counter()
@@ -181,7 +198,7 @@ def main() :
 
             # Check :
             if (len(tarjan(G)) == 1) :
-                if (not isomorphism_graphs(lstG, G, lst_matrix_p)) :
+                if (indepth_course(G, set_paths)) :
                     res = calculate_stationary_probas(k, G, variables)
                     print("graph", i, " : ", G._matrice_adjacence, "\nprobabilities :", res)
                     #test_stationary_probas(k, G, variables) # Can be use to test the probabilities
@@ -193,7 +210,6 @@ def main() :
                     f.write(export_dot(G, str(i), states))
                     f.write("\n")
                     i += 1
-                    lstG.append(G)
 
         cmpt += 1
 
