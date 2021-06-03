@@ -3,7 +3,7 @@
 
 import copy
 
-# Old version : 
+# Old version :
 def determine_combinations(val) :
     """
     Construct all combinations_with_replacement of a val-length with values between
@@ -14,6 +14,35 @@ def determine_combinations(val) :
     """
     return combinations_with_replacement([i for i in range(val)], (val)*2)
 
+
+#Old version of isomorphism :
+def create_matrix_p(k) :
+    """
+    Return a list of Matrix established on permutations of size k.
+    """
+    return [sp.Matrix([[0 if (elem != x) else 1 for x in range(k)] for elem in perm]) for perm in permutations(arange(k))]
+
+def isomorphism_graphs(lstG, G2, lst_matrix_p) :
+    """
+    Verify if two graphs are isomorphs.
+    Return True or False.
+    """
+    for G in lstG :
+        for p in lst_matrix_p :
+            A1 = sp.Matrix(G._matrice_adjacence)
+            left = p * A1 * p**(-1)
+            A2 = sp.Matrix(G2._matrice_adjacence)
+            if (left == A2) :
+                # print("skipped")
+                return True
+    return False
+
+
+# Need to be called like :
+# lstG = []
+# lst_matrix_p = create_matrix_p(k)
+# not isomorphism_graphs(lstG, G, lst_matrix_p)
+# lstG.append(G)
 
 
 
@@ -44,7 +73,8 @@ def main() :
     """
     Main function of the first practical work.
     """
-    test = generate_edges(4)
+    n = int(input("Enter n : "))
+    test = generate_edges(n)
     print(test)
     print(len(test))
 

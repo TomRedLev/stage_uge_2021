@@ -151,3 +151,17 @@ Résolution de divers problèmes (Audio, WiFi, ...) <br />
 Microphone ne marche pas avant la réunion. <br />
 Tentative de correction de la commande dot pour générer le pdf, qui ne marche plus. <br />
 <br />
+
+## Mercredi 02 Juin 2021 :
+Recherhe et implémentation de l'algorithme pour générer de façon plus optimale les graphes.<br />
+Recherche de l'algorithme de parcours en profondeur dans des matrices d'adjacence.<br />
+Recherche du fonctionnement des étiquettes liées aux états.<br />
+<br />
+
+## Jeudi 03 Juin 2021 :
+Recherche et implémentation de l'algorithme de parcours en profondeur dans des matrices d'adjacence.<br />
+Travail sur les divers exemples + lecture pour l'implémentation. <br />
+<br />
+
+
+
