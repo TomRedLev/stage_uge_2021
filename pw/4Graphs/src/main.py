@@ -34,6 +34,11 @@ def generate_edges(n) :
     generate_edges_aux(n, len(lst_evolving)-1, lst, lst_evolving)
     return lst
 
+
+
+
+
+
 # New in-depth courses :
 def explore(G, sommet, marked, etiquettes, path) :
     marked[sommet] = True
@@ -58,7 +63,6 @@ def explore(G, sommet, marked, etiquettes, path) :
 
 def indepth_course(G, set_paths) :
     keeped_signatures = set()
-    signature_0 = ""
     for sommet in G.sommets() :
         marked = [False for x in range(len(G.sommets()))]
         etiquettes = ["" for x in range(len(G.sommets()))]
