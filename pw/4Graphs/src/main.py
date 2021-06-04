@@ -187,7 +187,7 @@ def main() :
     f = open("graphs.gv", "w")
     cmpt = 0
     variables = generate_variables(k)
-    scores = {1 : (-1,1), 2 : (-1,1)}
+    mini = 1
     set_paths = set()
 
     # Starting the timer :
@@ -205,19 +205,22 @@ def main() :
                     print("graph", i, " : ", G._matrice_adjacence, "\nprobabilities :", res)
                     #test_stationary_probas(k, G, variables) # Can be use to test the probabilities
                     score, states = integrate_probabilities(k, G, variables)
-                    if score > 0 and score < scores[1][1] :
-                        scores[1] = (i, score)
-                    elif score > 0 and score < scores[2][1] :
-                        scores[2] = (i, score)
-                    f.write(export_dot(G, str(i), states))
-                    f.write("\n\n")
+                    if score > 0 and score < mini :
+                        mini = score
+                        f.close()
+                        f = open("graphs.gv", "w")
+                        f.write(export_dot(G, str(i), states))
+                        f.write("\n\n")
+                    elif score > 0 and score == mini :
+                        f.write(export_dot(G, str(i), states)) 
+                        f.write("\n\n")
                     i += 1
 
         cmpt += 1
 
     print(Style.RESET_ALL + str((perf_counter() - time_perf)), "seconds to run the generation of strongly connected", k, "- states graphs.")
     print("Number of loops :", cmpt)
-    print("Founded optimal solutions are :", scores[1], "and", scores[2])
+    print("You can check optimal solutions in graphs.pdf")
     f.close()
 
 
