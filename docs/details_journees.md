@@ -161,7 +161,20 @@ Recherche du fonctionnement des étiquettes liées aux états.<br />
 ## Jeudi 03 Juin 2021 :
 Recherche et implémentation de l'algorithme de parcours en profondeur dans des matrices d'adjacence.<br />
 Travail sur les divers exemples + lecture pour l'implémentation. <br />
+Installation de PAPI. <br />
 <br />
+
+## Vendredi 04 Juin 2021 :
+Réflexion sur la perte de précisions des graphes à 2 états. <br />
+L'isomorphisme coupe bien plus de graphes et je ne comprends pas d'où cela vient
+. <br />
+Cela n'est pas dérengeant pour les graphes à 3/4 états mais bien plus pour les g
+raphes à 2 états, où je ne trouve plus la solution optimale, mais seulement deux
+ solutions sous optimales. <br />
+Je vais continuer à réfléchir sur la manière d'implémenter tout cela. <br />
+(J'envisage peut-être de rajouter mon ancienne solution d'isomorphisme pour les
+graphes < à 3 états mais cela est peut-être inutile. <br />
+
 
 
 
