@@ -4,4 +4,4 @@ To compile the following project, you will need to
 use the following commands :
 $ python3 setup.py build_ext --inplace
 $ python3 main.py
-$ dot -Tps2 graphs.gv -o graphs.ps | ps2pdf graphs.ps
+$ dot -Tpdf graphs.gv | csplit --quiet --elide-empty-files --prefix=tmpforestfile - "/%%EOF/+1" "{*}" && pdftk tmpforestfile* cat output graphs.pdf && rm -f tmpforestfile*

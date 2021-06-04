@@ -46,20 +46,18 @@ def explore(G, sommet, marked, etiquettes, path) :
     voisins = G.voisins(sommet)
     if (len(voisins) == 2) :
         if (G._matrice_adjacence[sommet][voisins[0]] == (1-p)) :
-            if marked[voisins[0]] != True :
+            if not marked[voisins[0]] :
                 explore(G, voisins[0], marked, etiquettes, path + "NT")
-            if marked[voisins[1]] != True :
+            if not marked[voisins[1]] :
                 explore(G, voisins[1], marked, etiquettes, path + "T")
         else :
-            if marked[voisins[1]] != True :
+            if not marked[voisins[1]] :
                 explore(G, voisins[1], marked, etiquettes, path + "NT")
-            if marked[voisins[0]] != True :
+            if not marked[voisins[0]] :
                 explore(G, voisins[0], marked, etiquettes, path + "T")
     else :
-        if marked[voisins[0]] != True :
+        if not marked[voisins[0]] :
             explore(G, voisins[0], marked, etiquettes, path + "NT")
-        if marked[voisins[0]] != True :
-            explore(G, voisins[0], marked, etiquettes, path + "T")
 
 def indepth_course(G, set_paths) :
     keeped_signatures = set()
@@ -212,7 +210,7 @@ def main() :
                     elif score > 0 and score < scores[2][1] :
                         scores[2] = (i, score)
                     f.write(export_dot(G, str(i), states))
-                    f.write("\n")
+                    f.write("\n\n")
                     i += 1
 
         cmpt += 1
