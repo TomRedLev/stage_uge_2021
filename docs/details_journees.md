@@ -174,6 +174,12 @@ raphes à 2 états, où je ne trouve plus la solution optimale, mais seulement d
 Je vais continuer à réfléchir sur la manière d'implémenter tout cela. <br />
 (J'envisage peut-être de rajouter mon ancienne solution d'isomorphisme pour les
 graphes < à 3 états mais cela est peut-être inutile. <br />
+<br />
+
+## Lundi 07 Juin 2021 :
+Correction de divers problèmes dans le programme principal de génération des graphes. <br />
+Tentative de nouvelles implémentations pour les exemples donnés. <br />
+<br />
 
 
 

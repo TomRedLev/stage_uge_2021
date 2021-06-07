@@ -14,12 +14,18 @@ import copy
 
 # New Graphs Generation :
 def verify_ongoing_edges(n, lst) :
+    """
+    Verify if each state got at least 1 on-going state.
+    """
     for k in range(n) :
         if (lst.count(k) == 0) :
             return False
     return True
 
 def generate_edges_aux(n, i, lst, lst_evolving) :
+    """
+    Auxilar function of generate_edges.
+    """
     if (i == -1) :
         return
     for j in range(n) :
@@ -29,6 +35,9 @@ def generate_edges_aux(n, i, lst, lst_evolving) :
         generate_edges_aux(n, i-1, lst, lst_evolving)
 
 def generate_edges(n) :
+    """
+    Generate all the adges needed to build graphs wanted.
+    """
     lst = []
     lst_evolving = [0 for x in range(2*n)]
     generate_edges_aux(n, len(lst_evolving)-1, lst, lst_evolving)
@@ -41,6 +50,9 @@ def generate_edges(n) :
 
 # New in-depth courses :
 def explore(G, sommet, marked, etiquettes, path) :
+    """
+    Auxilar function of indepth_course.
+    """
     marked[sommet] = True
     etiquettes[sommet] = path
     voisins = G.voisins(sommet)
@@ -60,6 +72,11 @@ def explore(G, sommet, marked, etiquettes, path) :
             explore(G, voisins[0], marked, etiquettes, path + "NT")
 
 def indepth_course(G, set_paths) :
+    """
+    Do an in-depth course in a graph, starting at each state.
+    It registers the paths taken from each state to discover 
+    all the others.
+    """
     keeped_signatures = set()
     for sommet in G.sommets() :
         marked = [False for x in range(len(G.sommets()))]
