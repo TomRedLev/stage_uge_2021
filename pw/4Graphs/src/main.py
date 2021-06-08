@@ -59,17 +59,17 @@ def explore(G, sommet, marked, etiquettes, path) :
     if (len(voisins) == 2) :
         if (G._matrice_adjacence[sommet][voisins[0]] == (1-p)) :
             if not marked[voisins[0]] :
-                explore(G, voisins[0], marked, etiquettes, path + "NT")
+                explore(G, voisins[0], marked, etiquettes, path + "N")
             if not marked[voisins[1]] :
                 explore(G, voisins[1], marked, etiquettes, path + "T")
         else :
             if not marked[voisins[1]] :
-                explore(G, voisins[1], marked, etiquettes, path + "NT")
+                explore(G, voisins[1], marked, etiquettes, path + "N")
             if not marked[voisins[0]] :
                 explore(G, voisins[0], marked, etiquettes, path + "T")
     else :
         if not marked[voisins[0]] :
-            explore(G, voisins[0], marked, etiquettes, path + "NT")
+            explore(G, voisins[0], marked, etiquettes, path + "N")
 
 def indepth_course(G, set_paths) :
     """
@@ -217,6 +217,7 @@ def main() :
 
             # Check :
             if (len(tarjan(G)) == 1) :
+                print(G._matrice_adjacence)
                 if (indepth_course(G, set_paths)) :
                     res = calculate_stationary_probas(k, G, variables)
                     print("graph", i, " : ", G._matrice_adjacence, "\nprobabilities :", res)

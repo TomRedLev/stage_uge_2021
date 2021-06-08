@@ -39,3 +39,8 @@ Ne pas utiliser de morceaux de code pour expliquer. <br />
 Pypy. <br />
 Cython. <br />
 <br />
+Faire évoluer n entre 100 et ... (trouver la valeur limite d'exécution). <br />
+Permettre de vérifier la formule de mispredictions théorique. <br />
+Essayer de concaténer le code des calculs de mispredictions. <br />
+Idée : Essayer de faire une fonction qui prend la comparaison et effectue le reste des opérations en interne. <br />
+
