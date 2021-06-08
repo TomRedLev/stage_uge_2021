@@ -181,6 +181,12 @@ Correction de divers problèmes dans le programme principal de génération des 
 Tentative de nouvelles implémentations pour les exemples donnés. <br />
 <br />
 
+## Mardi 08 Juin 2021 :
+Implémentations de l'exemple MinMax. <br />
+Création des structures de graphes et d'états en C. <br />
+Implémentation de ces structures dans l'exemple cité précédemment. <br />
+<br />
+
 
 
 
