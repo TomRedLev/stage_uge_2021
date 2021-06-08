@@ -8,6 +8,7 @@
 
 typedef struct state {
 	int num_state;
+	int taken_state; /* If 1 : Taken, else : Not Taken */
 	struct state * taken;
 	struct state * not_taken;	
 } State;
@@ -19,5 +20,6 @@ typedef struct graph {
 
 Graph * create_tbsc(void);
 void running_graph(Graph * graph, int taken);
+int check_current_state(Graph * graph);
 
 #endif
