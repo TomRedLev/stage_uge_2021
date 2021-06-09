@@ -49,6 +49,29 @@ def generate_edges(n) :
 
 
 # New in-depth courses :
+def explore_v2(G, sommet, marked, etiquettes, path) :
+    """
+    Auxilar function of indepth_course.
+    """
+    marked[sommet] = True
+    etiquettes[sommet] = path
+    voisins = G.voisins(sommet)
+    if (len(voisins) == 2) :
+        if (G._matrice_adjacence[sommet][voisins[0]] == (1-p)) :
+            if not marked[voisins[0]] :
+                explore(G, voisins[0], marked, etiquettes, path + "N")
+            if not marked[voisins[1]] :
+                explore(G, voisins[1], marked, etiquettes, path + "T")
+        else :
+            if not marked[voisins[1]] :
+                explore(G, voisins[1], marked, etiquettes, path + "N")
+            if not marked[voisins[0]] :
+                explore(G, voisins[0], marked, etiquettes, path + "T")
+    else :
+        if not marked[voisins[0]] :
+            explore(G, voisins[0], marked, etiquettes, path + "N")
+
+
 def explore(G, sommet, marked, etiquettes, path) :
     """
     Auxilar function of indepth_course.
@@ -83,9 +106,10 @@ def indepth_course(G, set_paths) :
         etiquettes = ["" for x in range(len(G.sommets()))]
         explore(G, sommet, marked, etiquettes, "")
         keeped_signatures.add(":".join(etiquettes))
-    if keeped_signatures.issubset(set_paths) :
+    keeped_signatures = frozenset(keeped_signatures)
+    if keeped_signatures in set_paths :
         return False
-    set_paths.update(keeped_signatures)
+    set_paths.add(keeped_signatures)
     return True
 
 
@@ -217,7 +241,6 @@ def main() :
 
             # Check :
             if (len(tarjan(G)) == 1) :
-                print(G._matrice_adjacence)
                 if (indepth_course(G, set_paths)) :
                     res = calculate_stationary_probas(k, G, variables)
                     print("graph", i, " : ", G._matrice_adjacence, "\nprobabilities :", res)

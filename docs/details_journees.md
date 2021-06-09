@@ -187,6 +187,12 @@ Création des structures de graphes et d'états en C. <br />
 Implémentation de ces structures dans l'exemple cité précédemment. <br />
 <br />
 
+## Mercredi 09 Juin 2021 :
+Tentative d'amélioration de la détermination des graphes isomorphes. <br />
+Implémentation du set de sets avec les frozensets. <br />
+J'ai l'impression d'évacuer encore trop de graphes, en observant les graphes à 2 états et en ne trouvant toujours pas les solutions optimales dans les graphes retenus. <br />
+Cependant, j'en obtiens tout de même beaucoup plus. Je vais continuer à réfléchir sur la question. <br />
+
 
 
 

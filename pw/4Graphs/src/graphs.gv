@@ -1,24 +1,165 @@
-digraph graph0 {
+digraph graph5 {
 center=true;
 pad=1;
-graph [label="Graphe 0 :\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
-node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 0;
-node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 1;
-0 -> 0[style=dotted];
-0 -> 1;
-1 -> 0[style=dotted];
-1 -> 0;
-}
-
-digraph graph2 {
-center=true;
-pad=1;
-graph [label="Graphe 2 :\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+graph [label="Graphe 5 :\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
 node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 0;
 node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 2;
 1 -> 1[style=dotted];
 0 -> 1[style=dotted];
+0 -> 2;
+1 -> 0;
+2 -> 0[style=dotted];
+2 -> 0;
+}
+
+digraph graph8 {
+center=true;
+pad=1;
+graph [label="Graphe 8 :\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 2;
+1 -> 1[style=dotted];
+0 -> 1[style=dotted];
+0 -> 2;
+1 -> 2;
+2 -> 0[style=dotted];
+2 -> 0;
+}
+
+digraph graph21 {
+center=true;
+pad=1;
+graph [label="Graphe 21 :\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 2;
+0 -> 0[style=dotted];
+1 -> 1[style=dotted];
+0 -> 2;
+1 -> 2;
+2 -> 0[style=dotted];
+2 -> 1;
+}
+
+digraph graph33 {
+center=true;
+pad=1;
+graph [label="Graphe 33 :\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 2;
+1 -> 1[style=dotted];
+0 -> 2[style=dotted];
+0 -> 2;
+1 -> 0;
+2 -> 0;
+2 -> 1[style=dotted];
+}
+
+digraph graph36 {
+center=true;
+pad=1;
+graph [label="Graphe 36 :\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 2;
+0 -> 0[style=dotted];
+1 -> 1[style=dotted];
+0 -> 2;
+1 -> 2;
+2 -> 0;
+2 -> 1[style=dotted];
+}
+
+digraph graph38 {
+center=true;
+pad=1;
+graph [label="Graphe 38 :\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 2;
+1 -> 1[style=dotted];
+0 -> 1[style=dotted];
+0 -> 2;
+1 -> 2;
+2 -> 0;
+2 -> 1[style=dotted];
+}
+
+digraph graph55 {
+center=true;
+pad=1;
+graph [label="Graphe 55 :\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 2;
+1 -> 1[style=dotted];
+2 -> 2[style=dotted];
+0 -> 1[style=dotted];
+0 -> 2;
+1 -> 0;
+2 -> 0;
+}
+
+digraph graph56 {
+center=true;
+pad=1;
+graph [label="Graphe 56 :\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 2;
+1 -> 1[style=dotted];
+2 -> 2[style=dotted];
+0 -> 1;
+0 -> 2[style=dotted];
+1 -> 0;
+2 -> 0;
+}
+
+digraph graph62 {
+center=true;
+pad=1;
+graph [label="Graphe 62 :\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 2;
+2 -> 2[style=dotted];
+0 -> 1;
+0 -> 2[style=dotted];
+1 -> 0;
+1 -> 2[style=dotted];
+2 -> 0;
+}
+
+digraph graph65 {
+center=true;
+pad=1;
+graph [label="Graphe 65 :\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 2;
+0 -> 0[style=dotted];
+2 -> 2[style=dotted];
+0 -> 1;
+1 -> 0[style=dotted];
+1 -> 2;
+2 -> 1;
+}
+
+digraph graph72 {
+center=true;
+pad=1;
+graph [label="Graphe 72 :\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 2;
+0 -> 0[style=dotted];
+2 -> 2[style=dotted];
 0 -> 1;
 1 -> 0;
+1 -> 2[style=dotted];
+2 -> 1;
 }
 
