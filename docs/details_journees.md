@@ -193,6 +193,13 @@ Implémentation du set de sets avec les frozensets. <br />
 J'ai l'impression d'évacuer encore trop de graphes, en observant les graphes à 2 états et en ne trouvant toujours pas les solutions optimales dans les graphes retenus. <br />
 Cependant, j'en obtiens tout de même beaucoup plus. Je vais continuer à réfléchir sur la question. <br />
 
+## Jeudi 10 Juin 2021 : 
+J'ai peut-être trouvé une solution au fait d'avoir des solutions manquantes lors de la génération des graphes à 2 états. Je pense en obtenir un peu trop désormais, mais cela me semble moins dérengeant que ne pas obtenir de solutions du tout pour k = 2. <br />
+Pour k = 4, le programme s'exécute en 277 secondes. <br />
+On obtient un nombre de 3695 solutions optimales pour les graphes à 4 états. <br />
+On peut obtenir des graphes proches du compteur saturé à 2 bits. <br />
+Exemple : Graphe 2560 (p1692), 4643(p113), 4636 (p107), 4983 (p304), 7623(p1284) <br />
+Je n'ai cependant pas trouvé le compteur saturé en lui-même. <br />
 
 
 

@@ -8,6 +8,7 @@ from itertools import permutations
 from time import *
 from colorama import *
 import sympy as sp
+import math
 import doctest
 import warnings
 import copy
@@ -69,7 +70,7 @@ def explore_v2(G, sommet, marked, etiquettes, path) :
                 explore(G, voisins[0], marked, etiquettes, path + "T")
     else :
         if not marked[voisins[0]] :
-            explore(G, voisins[0], marked, etiquettes, path + "N")
+            explore(G, voisins[0], marked, etiquettes, path + "B")
 
 
 def explore(G, sommet, marked, etiquettes, path) :
@@ -92,7 +93,7 @@ def explore(G, sommet, marked, etiquettes, path) :
                 explore(G, voisins[0], marked, etiquettes, path + "T")
     else :
         if not marked[voisins[0]] :
-            explore(G, voisins[0], marked, etiquettes, path + "N")
+            explore(G, voisins[0], marked, etiquettes, path + "B")
 
 def indepth_course(G, set_paths) :
     """
@@ -252,7 +253,7 @@ def main() :
                         f = open("graphs.gv", "w")
                         f.write(export_dot(G, str(i), states))
                         f.write("\n\n")
-                    elif score > 0 and score == mini :
+                    elif score > 0 and math.isclose(score, mini) :
                         f.write(export_dot(G, str(i), states)) 
                         f.write("\n\n")
                     i += 1
