@@ -50,29 +50,6 @@ def generate_edges(n) :
 
 
 # New in-depth courses :
-def explore_v2(G, sommet, marked, etiquettes, path) :
-    """
-    Auxilar function of indepth_course.
-    """
-    marked[sommet] = True
-    etiquettes[sommet] = path
-    voisins = G.voisins(sommet)
-    if (len(voisins) == 2) :
-        if (G._matrice_adjacence[sommet][voisins[0]] == (1-p)) :
-            if not marked[voisins[0]] :
-                explore(G, voisins[0], marked, etiquettes, path + "N")
-            if not marked[voisins[1]] :
-                explore(G, voisins[1], marked, etiquettes, path + "T")
-        else :
-            if not marked[voisins[1]] :
-                explore(G, voisins[1], marked, etiquettes, path + "N")
-            if not marked[voisins[0]] :
-                explore(G, voisins[0], marked, etiquettes, path + "T")
-    else :
-        if not marked[voisins[0]] :
-            explore(G, voisins[0], marked, etiquettes, path + "B")
-
-
 def explore(G, sommet, marked, etiquettes, path) :
     """
     Auxilar function of indepth_course.
@@ -93,7 +70,7 @@ def explore(G, sommet, marked, etiquettes, path) :
                 explore(G, voisins[0], marked, etiquettes, path + "T")
     else :
         if not marked[voisins[0]] :
-            explore(G, voisins[0], marked, etiquettes, path + "B")
+            explore(G, voisins[0], marked, etiquettes, path + "N") # Can put B to obtains more results
 
 def indepth_course(G, set_paths) :
     """
