@@ -201,5 +201,12 @@ On peut obtenir des graphes proches du compteur saturé à 2 bits. <br />
 Exemple : Graphe 2560 (p1692), 4643(p113), 4636 (p107), 4983 (p304), 7623(p1284) <br />
 Je n'ai cependant pas trouvé le compteur saturé en lui-même. <br />
 
+## Vendredi 11 Juin 2021 : 
+Amélioration et études des problèmes liés au programme de génération des graphes. <br />
+Détection du problème d'isomorphisme du compteur saturé à 2 bits. <br />
+Tentative de patch du bug infructueuse. <br />
+Amélioration des structures pour les exemples MinMax donné. <br />
+<br />
+
 
 
