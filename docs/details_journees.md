@@ -208,5 +208,16 @@ Tentative de patch du bug infructueuse. <br />
 Amélioration des structures pour les exemples MinMax donné. <br />
 <br />
 
+## Lundi 14 Juin 2021 : 
+Amélioration et études des problèmes liés au programme de génération des graphes. <br />
+Réécriture de la détection du problème d'isomorphisme du compteur saturé à 2 bits. <br />
+Correction du bug, on peut voir les compteurs saturés aux graphes suivants : <br />
+iso counter not isomorph 2734 <br />
+iso counter not isomorph 4643 <br />
+iso counter not isomorph 4803 <br />
+iso counter not isomorph 7623 <br />
+Assister au séminaire. <br />
+<br />
+
 
 

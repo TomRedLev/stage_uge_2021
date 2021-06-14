@@ -70,7 +70,7 @@ def explore(G, sommet, marked, etiquettes, path) :
                 explore(G, voisins[0], marked, etiquettes, path + "T")
     else :
         if not marked[voisins[0]] :
-            explore(G, voisins[0], marked, etiquettes, path + "N") # Can put B to obtains more results
+            explore(G, voisins[0], marked, etiquettes, path + "B") # Can put B to obtains more results or N for less
 
 def indepth_course(G, set_paths) :
     """
@@ -188,6 +188,41 @@ def integrate_probabilities(k, G, variables) :
     return score, states
 
 
+
+# def test_iso_counters(G) :
+#     mat = G._matrice_adjacence
+#     if ((mat[0][0] == 1 - p and mat[0][1] == p and mat[1][0] == 1 - p and mat[1][2] == p and mat[2][1] == 1 - p and mat[2][3] == p and mat[3][2] == 1-p and mat[3][3] == p) or
+#         (mat[0][0] == 1 - p and mat[0][2] == p and mat[2][0] == 1 - p and mat[2][1] == p and mat[1][2] == 1 - p and mat[1][3] == p and mat[3][1] == 1-p and mat[3][3] == p) or
+#         (mat[0][0] == 1 - p and mat[0][3] == p and mat[3][0] == 1 - p and mat[3][1] == p and mat[1][3] == 1 - p and mat[1][2] == p and mat[2][1] == 1-p and mat[2][2] == p) or
+#         (mat[0][0] == 1 - p and mat[0][1] == p and mat[1][0] == 1 - p and mat[1][3] == p and mat[3][1] == 1 - p and mat[3][2] == p and mat[2][3] == 1-p and mat[2][2] == p) or
+#         (mat[0][0] == 1 - p and mat[0][2] == p and mat[2][0] == 1 - p and mat[2][3] == p and mat[3][2] == 1 - p and mat[3][1] == p and mat[1][3] == 1-p and mat[1][1] == p) or
+#         (mat[0][0] == 1 - p and mat[0][3] == p and mat[3][0] == 1 - p and mat[3][2] == p and mat[2][3] == 1 - p and mat[2][1] == p and mat[1][2] == 1-p and mat[1][1] == p) or
+
+#         (mat[1][1] == 1 - p and mat[1][0] == p and mat[0][1] == 1 - p and mat[0][2] == p and mat[2][0] == 1 - p and mat[2][3] == p and mat[3][2] == 1-p and mat[3][3] == p) or
+#         (mat[1][1] == 1 - p and mat[1][0] == p and mat[0][1] == 1 - p and mat[0][3] == p and mat[3][0] == 1 - p and mat[3][2] == p and mat[2][3] == 1-p and mat[2][2] == p) or
+#         (mat[1][1] == 1 - p and mat[1][2] == p and mat[2][1] == 1 - p and mat[2][0] == p and mat[0][2] == 1 - p and mat[0][3] == p and mat[3][0] == 1-p and mat[3][3] == p) or
+#         (mat[1][1] == 1 - p and mat[1][2] == p and mat[2][1] == 1 - p and mat[2][3] == p and mat[3][2] == 1 - p and mat[3][0] == p and mat[0][3] == 1-p and mat[0][0] == p) or
+#         (mat[1][1] == 1 - p and mat[1][3] == p and mat[3][1] == 1 - p and mat[3][2] == p and mat[2][3] == 1 - p and mat[2][0] == p and mat[0][2] == 1-p and mat[0][0] == p) or
+#         (mat[1][1] == 1 - p and mat[1][3] == p and mat[3][1] == 1 - p and mat[3][0] == p and mat[0][3] == 1 - p and mat[0][2] == p and mat[2][0] == 1-p and mat[2][2] == p) or
+
+#         (mat[2][2] == 1 - p and mat[2][0] == p and mat[0][2] == 1 - p and mat[0][1] == p and mat[1][0] == 1 - p and mat[1][3] == p and mat[3][1] == 1-p and mat[3][3] == p) or
+#         (mat[2][2] == 1 - p and mat[2][0] == p and mat[0][2] == 1 - p and mat[0][3] == p and mat[3][0] == 1 - p and mat[3][1] == p and mat[1][3] == 1-p and mat[1][1] == p) or
+#         (mat[2][2] == 1 - p and mat[2][1] == p and mat[1][2] == 1 - p and mat[1][0] == p and mat[0][1] == 1 - p and mat[0][3] == p and mat[3][0] == 1-p and mat[3][3] == p) or
+#         (mat[2][2] == 1 - p and mat[2][1] == p and mat[1][2] == 1 - p and mat[1][3] == p and mat[3][1] == 1 - p and mat[3][0] == p and mat[0][3] == 1-p and mat[0][0] == p) or
+#         (mat[2][2] == 1 - p and mat[2][3] == p and mat[3][2] == 1 - p and mat[3][0] == p and mat[0][3] == 1 - p and mat[0][1] == p and mat[1][0] == 1-p and mat[1][1] == p) or
+#         (mat[2][2] == 1 - p and mat[2][3] == p and mat[3][2] == 1 - p and mat[3][1] == p and mat[1][3] == 1 - p and mat[1][0] == p and mat[0][1] == 1-p and mat[0][0] == p) or
+
+#         (mat[3][3] == 1 - p and mat[3][0] == p and mat[0][3] == 1 - p and mat[0][1] == p and mat[1][0] == 1 - p and mat[1][2] == p and mat[2][1] == 1-p and mat[2][2] == p) or
+#         (mat[3][3] == 1 - p and mat[3][0] == p and mat[0][3] == 1 - p and mat[0][2] == p and mat[2][0] == 1 - p and mat[2][1] == p and mat[1][2] == 1-p and mat[1][1] == p) or
+#         (mat[3][3] == 1 - p and mat[3][1] == p and mat[1][3] == 1 - p and mat[1][0] == p and mat[0][1] == 1 - p and mat[0][2] == p and mat[2][0] == 1-p and mat[2][2] == p) or
+#         (mat[3][3] == 1 - p and mat[3][1] == p and mat[1][3] == 1 - p and mat[1][2] == p and mat[2][1] == 1 - p and mat[2][0] == p and mat[0][2] == 1-p and mat[0][0] == p) or
+#         (mat[3][3] == 1 - p and mat[3][2] == p and mat[2][3] == 1 - p and mat[2][0] == p and mat[0][2] == 1 - p and mat[0][1] == p and mat[1][0] == 1-p and mat[1][1] == p) or
+#         (mat[3][3] == 1 - p and mat[3][2] == p and mat[2][3] == 1 - p and mat[2][1] == p and mat[1][2] == 1 - p and mat[1][0] == p and mat[0][1] == 1-p and mat[0][0] == p)) :
+#         return True
+#     return False
+
+
+
 def main() :
     """
     Main function of the first practical work.
@@ -219,7 +254,10 @@ def main() :
 
             # Check :
             if (len(tarjan(G)) == 1) :
+                # The 2-bit saturated counter (4-states) is passing tarjan, but not the isomorphism check.
                 if (indepth_course(G, set_paths)) :
+                    # if (test_iso_counters(G)) :
+                    #     print("iso counter not isomorph", i)
                     res = calculate_stationary_probas(k, G, variables)
                     print("graph", i, " : ", G._matrice_adjacence, "\nprobabilities :", res)
                     #test_stationary_probas(k, G, variables) # Can be use to test the probabilities
