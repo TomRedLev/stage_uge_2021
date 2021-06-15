@@ -219,5 +219,10 @@ iso counter not isomorph 7623 <br />
 Assister au séminaire. <br />
 <br />
 
+## Mardi 15 Juin 2021 : 
+Tentative de compréhension des résultats obtenus sur les graphes non isomorphes, qui
+ressemblent à des compteurs saturés à 2 bits (calculs réalisés et vérifiés à la main). <br />
+Revérification que le code suit bien la méthodologie et les calculs établis. <br />
+Assister au séminaire. <br />
 
 
