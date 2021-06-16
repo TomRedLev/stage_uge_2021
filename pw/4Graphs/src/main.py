@@ -175,12 +175,17 @@ def integrate_probabilities(k, G, variables) :
         a, b = 0, 1
         expr_f = ((b - a) / 6) * (f.evalf(subs={p : a}) + 4 * f.evalf(subs={p : (a + b)/ 2}) + f.evalf(subs={p : b}))
         expr_g = ((b - a) / 6) * (g.evalf(subs={p : a}) + 4 * g.evalf(subs={p : (a + b)/ 2}) + g.evalf(subs={p : b}))
+        if (math.isclose(expr_f, expr_g) and len(G._matrice_adjacence) == 4 and test_iso_counters(G)) : 
+            # expr_f = ((b - a) / 24) * (24 * f.evalf(subs={p : ((b + a) / 2)}) + (b - a) * (f.diff(p).evalf(subs={p : b}) - f.diff(p).evalf(subs={p : a})))
+            # expr_g = ((b - a) / 24) * (24 * g.evalf(subs={p : ((b + a) / 2)}) + (b - a) * (g.diff(p).evalf(subs={p : b}) - g.diff(p).evalf(subs={p : a})))
+            expr_f = sp.integrate(f, (p, 0, 1))
+            expr_g = sp.integrate(g, (p, 0, 1))
         if (expr_f <= expr_g) :
-            print(Fore.GREEN, "Taking state", key, Fore.WHITE)
+            print(Fore.GREEN, expr_f, "<=", expr_g, "so : Taking state", key, Fore.WHITE)
             score += expr_f
             states[key] = 1
         else :
-            print(Fore.GREEN, "Not taking state", key, Fore.WHITE)
+            print(Fore.GREEN, expr_f, ">", expr_g, "so : Not taking state", key, Fore.WHITE)
             score += expr_g
             states[key] = 0
     print(score)
@@ -189,37 +194,37 @@ def integrate_probabilities(k, G, variables) :
 
 
 
-# def test_iso_counters(G) :
-#     mat = G._matrice_adjacence
-#     if ((mat[0][0] == 1 - p and mat[0][1] == p and mat[1][0] == 1 - p and mat[1][2] == p and mat[2][1] == 1 - p and mat[2][3] == p and mat[3][2] == 1-p and mat[3][3] == p) or
-#         (mat[0][0] == 1 - p and mat[0][2] == p and mat[2][0] == 1 - p and mat[2][1] == p and mat[1][2] == 1 - p and mat[1][3] == p and mat[3][1] == 1-p and mat[3][3] == p) or
-#         (mat[0][0] == 1 - p and mat[0][3] == p and mat[3][0] == 1 - p and mat[3][1] == p and mat[1][3] == 1 - p and mat[1][2] == p and mat[2][1] == 1-p and mat[2][2] == p) or
-#         (mat[0][0] == 1 - p and mat[0][1] == p and mat[1][0] == 1 - p and mat[1][3] == p and mat[3][1] == 1 - p and mat[3][2] == p and mat[2][3] == 1-p and mat[2][2] == p) or
-#         (mat[0][0] == 1 - p and mat[0][2] == p and mat[2][0] == 1 - p and mat[2][3] == p and mat[3][2] == 1 - p and mat[3][1] == p and mat[1][3] == 1-p and mat[1][1] == p) or
-#         (mat[0][0] == 1 - p and mat[0][3] == p and mat[3][0] == 1 - p and mat[3][2] == p and mat[2][3] == 1 - p and mat[2][1] == p and mat[1][2] == 1-p and mat[1][1] == p) or
+def test_iso_counters(G) :
+    mat = G._matrice_adjacence
+    if ((mat[0][0] == 1 - p and mat[0][1] == p and mat[1][0] == 1 - p and mat[1][2] == p and mat[2][1] == 1 - p and mat[2][3] == p and mat[3][2] == 1-p and mat[3][3] == p) or
+        (mat[0][0] == 1 - p and mat[0][2] == p and mat[2][0] == 1 - p and mat[2][1] == p and mat[1][2] == 1 - p and mat[1][3] == p and mat[3][1] == 1-p and mat[3][3] == p) or
+        (mat[0][0] == 1 - p and mat[0][3] == p and mat[3][0] == 1 - p and mat[3][1] == p and mat[1][3] == 1 - p and mat[1][2] == p and mat[2][1] == 1-p and mat[2][2] == p) or
+        (mat[0][0] == 1 - p and mat[0][1] == p and mat[1][0] == 1 - p and mat[1][3] == p and mat[3][1] == 1 - p and mat[3][2] == p and mat[2][3] == 1-p and mat[2][2] == p) or
+        (mat[0][0] == 1 - p and mat[0][2] == p and mat[2][0] == 1 - p and mat[2][3] == p and mat[3][2] == 1 - p and mat[3][1] == p and mat[1][3] == 1-p and mat[1][1] == p) or
+        (mat[0][0] == 1 - p and mat[0][3] == p and mat[3][0] == 1 - p and mat[3][2] == p and mat[2][3] == 1 - p and mat[2][1] == p and mat[1][2] == 1-p and mat[1][1] == p) or
 
-#         (mat[1][1] == 1 - p and mat[1][0] == p and mat[0][1] == 1 - p and mat[0][2] == p and mat[2][0] == 1 - p and mat[2][3] == p and mat[3][2] == 1-p and mat[3][3] == p) or
-#         (mat[1][1] == 1 - p and mat[1][0] == p and mat[0][1] == 1 - p and mat[0][3] == p and mat[3][0] == 1 - p and mat[3][2] == p and mat[2][3] == 1-p and mat[2][2] == p) or
-#         (mat[1][1] == 1 - p and mat[1][2] == p and mat[2][1] == 1 - p and mat[2][0] == p and mat[0][2] == 1 - p and mat[0][3] == p and mat[3][0] == 1-p and mat[3][3] == p) or
-#         (mat[1][1] == 1 - p and mat[1][2] == p and mat[2][1] == 1 - p and mat[2][3] == p and mat[3][2] == 1 - p and mat[3][0] == p and mat[0][3] == 1-p and mat[0][0] == p) or
-#         (mat[1][1] == 1 - p and mat[1][3] == p and mat[3][1] == 1 - p and mat[3][2] == p and mat[2][3] == 1 - p and mat[2][0] == p and mat[0][2] == 1-p and mat[0][0] == p) or
-#         (mat[1][1] == 1 - p and mat[1][3] == p and mat[3][1] == 1 - p and mat[3][0] == p and mat[0][3] == 1 - p and mat[0][2] == p and mat[2][0] == 1-p and mat[2][2] == p) or
+        (mat[1][1] == 1 - p and mat[1][0] == p and mat[0][1] == 1 - p and mat[0][2] == p and mat[2][0] == 1 - p and mat[2][3] == p and mat[3][2] == 1-p and mat[3][3] == p) or
+        (mat[1][1] == 1 - p and mat[1][0] == p and mat[0][1] == 1 - p and mat[0][3] == p and mat[3][0] == 1 - p and mat[3][2] == p and mat[2][3] == 1-p and mat[2][2] == p) or
+        (mat[1][1] == 1 - p and mat[1][2] == p and mat[2][1] == 1 - p and mat[2][0] == p and mat[0][2] == 1 - p and mat[0][3] == p and mat[3][0] == 1-p and mat[3][3] == p) or
+        (mat[1][1] == 1 - p and mat[1][2] == p and mat[2][1] == 1 - p and mat[2][3] == p and mat[3][2] == 1 - p and mat[3][0] == p and mat[0][3] == 1-p and mat[0][0] == p) or
+        (mat[1][1] == 1 - p and mat[1][3] == p and mat[3][1] == 1 - p and mat[3][2] == p and mat[2][3] == 1 - p and mat[2][0] == p and mat[0][2] == 1-p and mat[0][0] == p) or
+        (mat[1][1] == 1 - p and mat[1][3] == p and mat[3][1] == 1 - p and mat[3][0] == p and mat[0][3] == 1 - p and mat[0][2] == p and mat[2][0] == 1-p and mat[2][2] == p) or
 
-#         (mat[2][2] == 1 - p and mat[2][0] == p and mat[0][2] == 1 - p and mat[0][1] == p and mat[1][0] == 1 - p and mat[1][3] == p and mat[3][1] == 1-p and mat[3][3] == p) or
-#         (mat[2][2] == 1 - p and mat[2][0] == p and mat[0][2] == 1 - p and mat[0][3] == p and mat[3][0] == 1 - p and mat[3][1] == p and mat[1][3] == 1-p and mat[1][1] == p) or
-#         (mat[2][2] == 1 - p and mat[2][1] == p and mat[1][2] == 1 - p and mat[1][0] == p and mat[0][1] == 1 - p and mat[0][3] == p and mat[3][0] == 1-p and mat[3][3] == p) or
-#         (mat[2][2] == 1 - p and mat[2][1] == p and mat[1][2] == 1 - p and mat[1][3] == p and mat[3][1] == 1 - p and mat[3][0] == p and mat[0][3] == 1-p and mat[0][0] == p) or
-#         (mat[2][2] == 1 - p and mat[2][3] == p and mat[3][2] == 1 - p and mat[3][0] == p and mat[0][3] == 1 - p and mat[0][1] == p and mat[1][0] == 1-p and mat[1][1] == p) or
-#         (mat[2][2] == 1 - p and mat[2][3] == p and mat[3][2] == 1 - p and mat[3][1] == p and mat[1][3] == 1 - p and mat[1][0] == p and mat[0][1] == 1-p and mat[0][0] == p) or
+        (mat[2][2] == 1 - p and mat[2][0] == p and mat[0][2] == 1 - p and mat[0][1] == p and mat[1][0] == 1 - p and mat[1][3] == p and mat[3][1] == 1-p and mat[3][3] == p) or
+        (mat[2][2] == 1 - p and mat[2][0] == p and mat[0][2] == 1 - p and mat[0][3] == p and mat[3][0] == 1 - p and mat[3][1] == p and mat[1][3] == 1-p and mat[1][1] == p) or
+        (mat[2][2] == 1 - p and mat[2][1] == p and mat[1][2] == 1 - p and mat[1][0] == p and mat[0][1] == 1 - p and mat[0][3] == p and mat[3][0] == 1-p and mat[3][3] == p) or
+        (mat[2][2] == 1 - p and mat[2][1] == p and mat[1][2] == 1 - p and mat[1][3] == p and mat[3][1] == 1 - p and mat[3][0] == p and mat[0][3] == 1-p and mat[0][0] == p) or
+        (mat[2][2] == 1 - p and mat[2][3] == p and mat[3][2] == 1 - p and mat[3][0] == p and mat[0][3] == 1 - p and mat[0][1] == p and mat[1][0] == 1-p and mat[1][1] == p) or
+        (mat[2][2] == 1 - p and mat[2][3] == p and mat[3][2] == 1 - p and mat[3][1] == p and mat[1][3] == 1 - p and mat[1][0] == p and mat[0][1] == 1-p and mat[0][0] == p) or
 
-#         (mat[3][3] == 1 - p and mat[3][0] == p and mat[0][3] == 1 - p and mat[0][1] == p and mat[1][0] == 1 - p and mat[1][2] == p and mat[2][1] == 1-p and mat[2][2] == p) or
-#         (mat[3][3] == 1 - p and mat[3][0] == p and mat[0][3] == 1 - p and mat[0][2] == p and mat[2][0] == 1 - p and mat[2][1] == p and mat[1][2] == 1-p and mat[1][1] == p) or
-#         (mat[3][3] == 1 - p and mat[3][1] == p and mat[1][3] == 1 - p and mat[1][0] == p and mat[0][1] == 1 - p and mat[0][2] == p and mat[2][0] == 1-p and mat[2][2] == p) or
-#         (mat[3][3] == 1 - p and mat[3][1] == p and mat[1][3] == 1 - p and mat[1][2] == p and mat[2][1] == 1 - p and mat[2][0] == p and mat[0][2] == 1-p and mat[0][0] == p) or
-#         (mat[3][3] == 1 - p and mat[3][2] == p and mat[2][3] == 1 - p and mat[2][0] == p and mat[0][2] == 1 - p and mat[0][1] == p and mat[1][0] == 1-p and mat[1][1] == p) or
-#         (mat[3][3] == 1 - p and mat[3][2] == p and mat[2][3] == 1 - p and mat[2][1] == p and mat[1][2] == 1 - p and mat[1][0] == p and mat[0][1] == 1-p and mat[0][0] == p)) :
-#         return True
-#     return False
+        (mat[3][3] == 1 - p and mat[3][0] == p and mat[0][3] == 1 - p and mat[0][1] == p and mat[1][0] == 1 - p and mat[1][2] == p and mat[2][1] == 1-p and mat[2][2] == p) or
+        (mat[3][3] == 1 - p and mat[3][0] == p and mat[0][3] == 1 - p and mat[0][2] == p and mat[2][0] == 1 - p and mat[2][1] == p and mat[1][2] == 1-p and mat[1][1] == p) or
+        (mat[3][3] == 1 - p and mat[3][1] == p and mat[1][3] == 1 - p and mat[1][0] == p and mat[0][1] == 1 - p and mat[0][2] == p and mat[2][0] == 1-p and mat[2][2] == p) or
+        (mat[3][3] == 1 - p and mat[3][1] == p and mat[1][3] == 1 - p and mat[1][2] == p and mat[2][1] == 1 - p and mat[2][0] == p and mat[0][2] == 1-p and mat[0][0] == p) or
+        (mat[3][3] == 1 - p and mat[3][2] == p and mat[2][3] == 1 - p and mat[2][0] == p and mat[0][2] == 1 - p and mat[0][1] == p and mat[1][0] == 1-p and mat[1][1] == p) or
+        (mat[3][3] == 1 - p and mat[3][2] == p and mat[2][3] == 1 - p and mat[2][1] == p and mat[1][2] == 1 - p and mat[1][0] == p and mat[0][1] == 1-p and mat[0][0] == p)) :
+        return True
+    return False
 
 
 
