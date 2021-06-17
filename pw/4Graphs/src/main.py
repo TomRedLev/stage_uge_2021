@@ -176,10 +176,27 @@ def integrate_probabilities(k, G, variables) :
         expr_f = ((b - a) / 6) * (f.evalf(subs={p : a}) + 4 * f.evalf(subs={p : (a + b)/ 2}) + f.evalf(subs={p : b}))
         expr_g = ((b - a) / 6) * (g.evalf(subs={p : a}) + 4 * g.evalf(subs={p : (a + b)/ 2}) + g.evalf(subs={p : b}))
         if (math.isclose(expr_f, expr_g) and len(G._matrice_adjacence) == 4 and test_iso_counters(G)) : 
-            # expr_f = ((b - a) / 24) * (24 * f.evalf(subs={p : ((b + a) / 2)}) + (b - a) * (f.diff(p).evalf(subs={p : b}) - f.diff(p).evalf(subs={p : a})))
-            # expr_g = ((b - a) / 24) * (24 * g.evalf(subs={p : ((b + a) / 2)}) + (b - a) * (g.diff(p).evalf(subs={p : b}) - g.diff(p).evalf(subs={p : a})))
-            expr_f = sp.integrate(f, (p, 0, 1))
-            expr_g = sp.integrate(g, (p, 0, 1))
+            # expr_f = float(sp.integrate(f, (p, 0, 1)))
+            # expr_g = float(sp.integrate(g, (p, 0, 1)))
+            n = 40
+            h = (b - a) / n
+            sum_fxk = 0
+            sum_fmk = 0
+            for k in range(1, n) : 
+                xk = a + k*h
+                sum_fxk += f.evalf(subs={p : xk})
+            for k in range(n) :
+                mk = a + (k + 1/2)*h
+                sum_fmk = f.evalf(subs={p : mk})
+            expr_f = (h / 6) * (f.evalf(subs={p : a}) + f.evalf(subs={p : b}) + 2 * sum_fxk + 4 * sum_fmk)
+            for k in range(1, n) : 
+                xk = a + k*h
+                sum_fxk += g.evalf(subs={p : xk})
+            for k in range(n) :
+                mk = a + (k + 1/2)*h
+                sum_fmk = g.evalf(subs={p : mk})
+            expr_g = (h / 6) * (g.evalf(subs={p : a}) + g.evalf(subs={p : b}) + 2 * sum_fxk + 4 * sum_fmk)
+            print(expr_f, expr_g)
         if (expr_f <= expr_g) :
             print(Fore.GREEN, expr_f, "<=", expr_g, "so : Taking state", key, Fore.WHITE)
             score += expr_f

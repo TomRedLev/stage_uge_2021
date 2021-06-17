@@ -224,5 +224,17 @@ Tentative de compréhension des résultats obtenus sur les graphes non isomorphe
 ressemblent à des compteurs saturés à 2 bits (calculs réalisés et vérifiés à la main). <br />
 Revérification que le code suit bien la méthodologie et les calculs établis. <br />
 Assister au séminaire. <br />
+<br />
+
+## Mercredi 16 Juin 2021 : 
+Résolution du problème de mauvaises précisions des calculs, qui empéchait d'obtenir des résultats cohérents et réels pour les compteurs à 2 bits saturés. <br />
+Solution temporaire établie. <br />
+Tentative de solution plus globale, pas encore trouvée. <br />
+<br />
+
+## Jeudi 17 Juin 2021 : 
+Tentative de solution plus globale, pas encore trouvée, mais je pense avoir une bonne piste pour trouver comment réaliser ces calculs et obtenir les mêmes résultats que ceux obtenus lors des calculs à la main. <br />
+Assister au séminaire. <br />
+
 
 
