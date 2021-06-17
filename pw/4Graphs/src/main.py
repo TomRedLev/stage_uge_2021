@@ -175,17 +175,17 @@ def integrate_probabilities(k, G, variables) :
         a, b = 0, 1
         expr_f = ((b - a) / 6) * (f.evalf(subs={p : a}) + 4 * f.evalf(subs={p : (a + b)/ 2}) + f.evalf(subs={p : b}))
         expr_g = ((b - a) / 6) * (g.evalf(subs={p : a}) + 4 * g.evalf(subs={p : (a + b)/ 2}) + g.evalf(subs={p : b}))
-        
         if (math.isclose(expr_f, expr_g)) : 
             n = 40
             h = (b - a) / n
             expr_f = (h / 6) * (f.evalf(subs={p : a}) + f.evalf(subs={p : b}) + 2 * sum(f.evalf(subs={p : a + k*h}) for k in range(1, n)) 
-                + 4 * sum(f.evalf(subs={p : a + (k + 1/2)*h}) for k in range(n)))
+                    + 4 * sum(f.evalf(subs={p : a + (k + 1/2)*h}) for k in range(n)))
             expr_g = (h / 6) * (g.evalf(subs={p : a}) + g.evalf(subs={p : b}) + 2 * sum(g.evalf(subs={p : a + k*h}) for k in range(1, n)) 
-                + 4 * sum(g.evalf(subs={p : a + (k + 1/2)*h}) for k in range(n)))
+                    + 4 * sum(g.evalf(subs={p : a + (k + 1/2)*h}) for k in range(n)))
         
-
-
+        
+            
+        
         if (expr_f <= expr_g) :
             print(Fore.GREEN, expr_f, "<=", expr_g, "so : Taking state", key, Fore.WHITE)
             score += expr_f
@@ -197,40 +197,6 @@ def integrate_probabilities(k, G, variables) :
     print(score)
     print()
     return score, states
-
-
-
-def test_iso_counters(G) :
-    mat = G._matrice_adjacence
-    if ((mat[0][0] == 1 - p and mat[0][1] == p and mat[1][0] == 1 - p and mat[1][2] == p and mat[2][1] == 1 - p and mat[2][3] == p and mat[3][2] == 1-p and mat[3][3] == p) or
-        (mat[0][0] == 1 - p and mat[0][2] == p and mat[2][0] == 1 - p and mat[2][1] == p and mat[1][2] == 1 - p and mat[1][3] == p and mat[3][1] == 1-p and mat[3][3] == p) or
-        (mat[0][0] == 1 - p and mat[0][3] == p and mat[3][0] == 1 - p and mat[3][1] == p and mat[1][3] == 1 - p and mat[1][2] == p and mat[2][1] == 1-p and mat[2][2] == p) or
-        (mat[0][0] == 1 - p and mat[0][1] == p and mat[1][0] == 1 - p and mat[1][3] == p and mat[3][1] == 1 - p and mat[3][2] == p and mat[2][3] == 1-p and mat[2][2] == p) or
-        (mat[0][0] == 1 - p and mat[0][2] == p and mat[2][0] == 1 - p and mat[2][3] == p and mat[3][2] == 1 - p and mat[3][1] == p and mat[1][3] == 1-p and mat[1][1] == p) or
-        (mat[0][0] == 1 - p and mat[0][3] == p and mat[3][0] == 1 - p and mat[3][2] == p and mat[2][3] == 1 - p and mat[2][1] == p and mat[1][2] == 1-p and mat[1][1] == p) or
-
-        (mat[1][1] == 1 - p and mat[1][0] == p and mat[0][1] == 1 - p and mat[0][2] == p and mat[2][0] == 1 - p and mat[2][3] == p and mat[3][2] == 1-p and mat[3][3] == p) or
-        (mat[1][1] == 1 - p and mat[1][0] == p and mat[0][1] == 1 - p and mat[0][3] == p and mat[3][0] == 1 - p and mat[3][2] == p and mat[2][3] == 1-p and mat[2][2] == p) or
-        (mat[1][1] == 1 - p and mat[1][2] == p and mat[2][1] == 1 - p and mat[2][0] == p and mat[0][2] == 1 - p and mat[0][3] == p and mat[3][0] == 1-p and mat[3][3] == p) or
-        (mat[1][1] == 1 - p and mat[1][2] == p and mat[2][1] == 1 - p and mat[2][3] == p and mat[3][2] == 1 - p and mat[3][0] == p and mat[0][3] == 1-p and mat[0][0] == p) or
-        (mat[1][1] == 1 - p and mat[1][3] == p and mat[3][1] == 1 - p and mat[3][2] == p and mat[2][3] == 1 - p and mat[2][0] == p and mat[0][2] == 1-p and mat[0][0] == p) or
-        (mat[1][1] == 1 - p and mat[1][3] == p and mat[3][1] == 1 - p and mat[3][0] == p and mat[0][3] == 1 - p and mat[0][2] == p and mat[2][0] == 1-p and mat[2][2] == p) or
-
-        (mat[2][2] == 1 - p and mat[2][0] == p and mat[0][2] == 1 - p and mat[0][1] == p and mat[1][0] == 1 - p and mat[1][3] == p and mat[3][1] == 1-p and mat[3][3] == p) or
-        (mat[2][2] == 1 - p and mat[2][0] == p and mat[0][2] == 1 - p and mat[0][3] == p and mat[3][0] == 1 - p and mat[3][1] == p and mat[1][3] == 1-p and mat[1][1] == p) or
-        (mat[2][2] == 1 - p and mat[2][1] == p and mat[1][2] == 1 - p and mat[1][0] == p and mat[0][1] == 1 - p and mat[0][3] == p and mat[3][0] == 1-p and mat[3][3] == p) or
-        (mat[2][2] == 1 - p and mat[2][1] == p and mat[1][2] == 1 - p and mat[1][3] == p and mat[3][1] == 1 - p and mat[3][0] == p and mat[0][3] == 1-p and mat[0][0] == p) or
-        (mat[2][2] == 1 - p and mat[2][3] == p and mat[3][2] == 1 - p and mat[3][0] == p and mat[0][3] == 1 - p and mat[0][1] == p and mat[1][0] == 1-p and mat[1][1] == p) or
-        (mat[2][2] == 1 - p and mat[2][3] == p and mat[3][2] == 1 - p and mat[3][1] == p and mat[1][3] == 1 - p and mat[1][0] == p and mat[0][1] == 1-p and mat[0][0] == p) or
-
-        (mat[3][3] == 1 - p and mat[3][0] == p and mat[0][3] == 1 - p and mat[0][1] == p and mat[1][0] == 1 - p and mat[1][2] == p and mat[2][1] == 1-p and mat[2][2] == p) or
-        (mat[3][3] == 1 - p and mat[3][0] == p and mat[0][3] == 1 - p and mat[0][2] == p and mat[2][0] == 1 - p and mat[2][1] == p and mat[1][2] == 1-p and mat[1][1] == p) or
-        (mat[3][3] == 1 - p and mat[3][1] == p and mat[1][3] == 1 - p and mat[1][0] == p and mat[0][1] == 1 - p and mat[0][2] == p and mat[2][0] == 1-p and mat[2][2] == p) or
-        (mat[3][3] == 1 - p and mat[3][1] == p and mat[1][3] == 1 - p and mat[1][2] == p and mat[2][1] == 1 - p and mat[2][0] == p and mat[0][2] == 1-p and mat[0][0] == p) or
-        (mat[3][3] == 1 - p and mat[3][2] == p and mat[2][3] == 1 - p and mat[2][0] == p and mat[0][2] == 1 - p and mat[0][1] == p and mat[1][0] == 1-p and mat[1][1] == p) or
-        (mat[3][3] == 1 - p and mat[3][2] == p and mat[2][3] == 1 - p and mat[2][1] == p and mat[1][2] == 1 - p and mat[1][0] == p and mat[0][1] == 1-p and mat[0][0] == p)) :
-        return True
-    return False
 
 
 
@@ -267,8 +233,6 @@ def main() :
             if (len(tarjan(G)) == 1) :
                 # The 2-bit saturated counter (4-states) is passing tarjan, but not the isomorphism check.
                 if (indepth_course(G, set_paths)) :
-                    # if (test_iso_counters(G)) :
-                    #     print("iso counter not isomorph", i)
                     res = calculate_stationary_probas(k, G, variables)
                     print("graph", i, " : ", G._matrice_adjacence, "\nprobabilities :", res)
                     #test_stationary_probas(k, G, variables) # Can be use to test the probabilities

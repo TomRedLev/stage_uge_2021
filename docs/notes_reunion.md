@@ -43,4 +43,10 @@ Faire évoluer n entre 100 et ... (trouver la valeur limite d'exécution). <br /
 Permettre de vérifier la formule de mispredictions théorique. <br />
 Essayer de concaténer le code des calculs de mispredictions. <br />
 Idée : Essayer de faire une fonction qui prend la comparaison et effectue le reste des opérations en interne. <br />
+<br />
+Refaire l'isomorphisme des graphes (parcours à changer et plus de set de sets). <br />
+Changer les calculs d'intégrales (quadrature scipy) <br />
+https://www.southampton.ac.uk/~fangohr/teaching/python/book/html/16-scipy.html <br />
+https://docs.scipy.org/doc/scipy/reference/generated/scipy.integrate.simpson.html <br />
+Retravailler sur le papier. <br />
 
