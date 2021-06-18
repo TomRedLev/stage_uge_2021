@@ -330,6 +330,28 @@ class MatriceAdjacence(object):
                     list.append(i)
         return list
 
+    def ord_voisins(self, sommet):
+        """
+        Renvoie la liste des voisins d'un sommet.
+
+        >>> G = MatriceAdjacence()
+        >>> G.ajouter_aretes([(1, 1, 1), (1, 2, 1)])
+        >>> G.ord_voisins(1)
+        [1, 2]
+        """
+        p = sp.var("p")
+        list = [-1, -1]
+        if (self.contient_sommet(sommet) == True) :
+            for i in range(len(self._matrice_adjacence[sommet])) :
+                if (self._matrice_adjacence[sommet][i] == p) :
+                    list[1] = i
+                elif (self._matrice_adjacence[sommet][i] == 1 - p) :
+                    list[0] = i
+                elif (self._matrice_adjacence[sommet][i] == 1) : 
+                    list[0] = i
+                    list[1] = i
+        return list
+
     # TODO
     def check_entrees(self) :
         """

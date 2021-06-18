@@ -7,7 +7,9 @@ from itertools import combinations_with_replacement
 from itertools import permutations
 from time import *
 from colorama import *
-import sympy as sp
+from sympy.utilities.lambdify import lambdify
+import scipy as sc
+from scipy import integrate
 import math
 import doctest
 import warnings
@@ -50,27 +52,22 @@ def generate_edges(n) :
 
 
 # New in-depth courses :
-def explore(G, sommet, marked, etiquettes, path) :
+def explore(G, sommet, marked, order) :
     """
     Auxilar function of indepth_course.
     """
     marked[sommet] = True
-    etiquettes[sommet] = path
-    voisins = G.voisins(sommet)
-    if (len(voisins) == 2) :
-        if (G._matrice_adjacence[sommet][voisins[0]] == (1-p)) :
-            if not marked[voisins[0]] :
-                explore(G, voisins[0], marked, etiquettes, path + "N")
-            if not marked[voisins[1]] :
-                explore(G, voisins[1], marked, etiquettes, path + "T")
-        else :
-            if not marked[voisins[1]] :
-                explore(G, voisins[1], marked, etiquettes, path + "N")
-            if not marked[voisins[0]] :
-                explore(G, voisins[0], marked, etiquettes, path + "T")
-    else :
-        if not marked[voisins[0]] :
-            explore(G, voisins[0], marked, etiquettes, path + "B") # Can put B to obtains more results or N for less
+    order.append(sommet)
+    voisins = G.ord_voisins(sommet)
+    for voisin in voisins : 
+        if not marked[voisin] :
+            explore(G, voisin, marked, order)
+
+def second_exploration(G, order, etiquette) : 
+    for sommet in order : 
+        voisins = G.ord_voisins(sommet)
+        for voisin in voisins :
+            etiquette.append(str(order.index(voisin))) 
 
 def indepth_course(G, set_paths) :
     """
@@ -78,16 +75,18 @@ def indepth_course(G, set_paths) :
     It registers the paths taken from each state to discover 
     all the others.
     """
-    keeped_signatures = set()
+    check = False
     for sommet in G.sommets() :
         marked = [False for x in range(len(G.sommets()))]
-        etiquettes = ["" for x in range(len(G.sommets()))]
-        explore(G, sommet, marked, etiquettes, "")
-        keeped_signatures.add(":".join(etiquettes))
-    keeped_signatures = frozenset(keeped_signatures)
-    if keeped_signatures in set_paths :
-        return False
-    set_paths.add(keeped_signatures)
+        order = []
+        etiquette = []
+        explore(G, sommet, marked, order)
+        second_exploration(G, order, etiquette)
+        etiquette = "".join(etiquette)
+        if not check and etiquette in set_paths : 
+            return False
+        set_paths.add("".join(etiquette))
+        check = True
     return True
 
 
@@ -173,19 +172,8 @@ def integrate_probabilities(k, G, variables) :
     for key in probas.keys() :
         f, g = probas[key] * (1 - p), probas[key] * p
         a, b = 0, 1
-        expr_f = ((b - a) / 6) * (f.evalf(subs={p : a}) + 4 * f.evalf(subs={p : (a + b)/ 2}) + f.evalf(subs={p : b}))
-        expr_g = ((b - a) / 6) * (g.evalf(subs={p : a}) + 4 * g.evalf(subs={p : (a + b)/ 2}) + g.evalf(subs={p : b}))
-        if (math.isclose(expr_f, expr_g)) : 
-            n = 40
-            h = (b - a) / n
-            expr_f = (h / 6) * (f.evalf(subs={p : a}) + f.evalf(subs={p : b}) + 2 * sum(f.evalf(subs={p : a + k*h}) for k in range(1, n)) 
-                    + 4 * sum(f.evalf(subs={p : a + (k + 1/2)*h}) for k in range(n)))
-            expr_g = (h / 6) * (g.evalf(subs={p : a}) + g.evalf(subs={p : b}) + 2 * sum(g.evalf(subs={p : a + k*h}) for k in range(1, n)) 
-                    + 4 * sum(g.evalf(subs={p : a + (k + 1/2)*h}) for k in range(n)))
-        
-        
-            
-        
+        expr_f, err_f = integrate.quad(lambdify(p, f), a, b)
+        expr_g, err_g = integrate.quad(lambdify(p, g), a, b)
         if (expr_f <= expr_g) :
             print(Fore.GREEN, expr_f, "<=", expr_g, "so : Taking state", key, Fore.WHITE)
             score += expr_f
