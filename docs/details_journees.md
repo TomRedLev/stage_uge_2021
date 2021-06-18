@@ -235,6 +235,13 @@ Tentative de solution plus globale, pas encore trouvée. <br />
 ## Jeudi 17 Juin 2021 : 
 Tentative de solution plus globale, pas encore trouvée, mais je pense avoir une bonne piste pour trouver comment réaliser ces calculs et obtenir les mêmes résultats que ceux obtenus lors des calculs à la main. <br />
 Assister au séminaire. <br />
+<br />
 
-
+## Vendredi 18 Juin 2021 : 
+Correction des divers problèmes établis hier. <br />
+Etablissement d'une nouvelle méthode de détection des isomorphismes. <br />
+Rework complet de cet aspect. <br />
+Utilisation de Scipy pour les calculs d'intégrales. <br />
+Cela semble très bien fonctionner et on obtient un gros gain de performance et de propreté de code. <br />
+<br />
 
