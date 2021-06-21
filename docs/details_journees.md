@@ -245,3 +245,10 @@ Utilisation de Scipy pour les calculs d'intégrales. <br />
 Cela semble très bien fonctionner et on obtient un gros gain de performance et de propreté de code. <br />
 <br />
 
+## Lundi 19 Juin 2021 : 
+Tentative d'améliorations des dernières implémentations. <br />
+Patch de certains bugs. <br />
+Rendre le code un peu plus propre. <br />
+Travailler sur le compte-rendu. <br />
+<br />
+
