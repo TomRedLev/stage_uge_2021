@@ -8,8 +8,8 @@ from itertools import permutations
 from time import *
 from colorama import *
 from sympy.utilities.lambdify import lambdify
-import scipy as sc
 from scipy import integrate
+import scipy as sc
 import math
 import doctest
 import warnings
@@ -108,7 +108,6 @@ def construct_graph_from_permutation(permut, k, p) :
     for i in range(0, len(permut), 2) :
         G.ajouter_aretes([(i//2, permut[i], p), (i//2, permut[i+1], 1-p)])
     return G
-
 
 def calculate_stationary_probas(k, G, variables) :
     """

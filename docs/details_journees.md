@@ -252,3 +252,10 @@ Rendre le code un peu plus propre. <br />
 Travailler sur le compte-rendu. <br />
 <br />
 
+## Lundi 19 Juin 2021 : 
+Tentative d'améliorations des performances générales du programme. <br />
+Impossible d'installer scipy sur pypy3. <br />
+Je tenterais de le refaire. <br />
+Retravailler le compte-rendu et essayer de détailler un peu plus les explications. <br />
+<br />
+
