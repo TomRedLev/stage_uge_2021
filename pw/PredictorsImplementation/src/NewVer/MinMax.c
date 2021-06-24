@@ -8,6 +8,7 @@ int cmpt_compar_naive = 0;
 int cmpt_compar = 0;
 
 int misprediction_naive = 0;
+int misprediction = 0;
 
 int* naive_min_max(int* array, int len_array) {
     Graph * tbsc_1 = create_tbsc();
@@ -17,72 +18,57 @@ int* naive_min_max(int* array, int len_array) {
     int i;
     for (i = 1; i < len_array; i++) {
         /* First comparison : */
-        if (check_current_state(tbsc_1) == 1) {
-            if (array[i] < minmax[0]) {
-                minmax[0] = array[i];
-                running_graph(tbsc_1, 1);
-            } else {
-                running_graph(tbsc_1, 0);
-                misprediction_naive += 1;
-            }
+        if (evolving_graph(tbsc_1, array[i] < minmax[0], &misprediction_naive)) {
+            minmax[0] = array[i];
         }
-        else {
-            if (array[i] < minmax[0]) {
-                minmax[0] = array[i];
-                running_graph(tbsc_1, 1);
-                misprediction_naive += 1;
-            } else {
-                running_graph(tbsc_1, 0);
-            }
-        }
-
-        /*printf("Current state tbsc_1 = %d\n", tbsc_1->head->num_state);*/
 
         /* Second comparison : */
-        if (check_current_state(tbsc_2) == 1) {
-            if (array[i] > minmax[1]) {
-                running_graph(tbsc_2, 1);
-                minmax[1] = array[i];
-            } else {
-                running_graph(tbsc_2, 0);
-                misprediction_naive += 1;
-            }
-        } else {
-            if (array[i] > minmax[1]) {
-                minmax[1] = array[i];
-                running_graph(tbsc_2, 1);
-                misprediction_naive += 1;
-            } else {
-                running_graph(tbsc_2, 0);
-            }
-        }
+        if (evolving_graph(tbsc_2, array[i] > minmax[1], &misprediction_naive)) {
+            minmax[1] = array[i];
+        } 
 
         cmpt_compar_naive += 2;
     }
-    printf("%d\n", tbsc_1->head->num_state);
-    printf("%d\n", tbsc_2->head->num_state);
+
+    printf("First counter's current state : %d\n", tbsc_1->current_state);
+    printf("Second counter's current state : %d\n", tbsc_2->current_state);
     return minmax;
 }
 
 
 int* min_max(int* array, int len_array) {
+    Graph * tbsc_1 = create_tbsc();
+    Graph * tbsc_2 = create_tbsc();
+    Graph * tbsc_3 = create_tbsc();
+    Graph * tbsc_4 = create_tbsc();
+    Graph * tbsc_5 = create_tbsc();
+
     int * minmax = (int *) malloc(2 * sizeof(int));
     minmax[0] = minmax[1] = array[len_array - 1];
     int i;
     for (i = 0; i < len_array - 1; i += 2) {
-        if (array[i] < array[i + 1]) {
-            if (array[i] < minmax[0])
+        if (evolving_graph(tbsc_1, array[i] < array[i + 1], &misprediction)) {
+            if (evolving_graph(tbsc_2, array[i] < minmax[0], &misprediction)) {
                 minmax[0] = array[i];
-            if (array[i + 1] > minmax[1])
+            }
+            if (evolving_graph(tbsc_3, array[i + 1] > minmax[1], &misprediction)) {
                 minmax[1] = array[i + 1];
+            }
         } else {
-            if (array[i + 1] < minmax[0]) 
+            if (evolving_graph(tbsc_4, array[i + 1] < minmax[0], &misprediction)) {
                 minmax[0] = array[i + 1];
-            if (array[i] > minmax[1])
+            }
+            if (evolving_graph(tbsc_5, array[i] > minmax[1], &misprediction)) {
                 minmax[1] = array[i];
+            }
         }
         cmpt_compar += 3;
     }
+    printf("First counter's current state : %d\n", tbsc_1->current_state);
+    printf("Second counter's current state : %d\n", tbsc_2->current_state);
+    printf("Third counter's current state : %d\n", tbsc_3->current_state);
+    printf("Fourth counter's current state : %d\n", tbsc_4->current_state);
+    printf("Fifth counter's current state : %d\n", tbsc_5->current_state);
     return minmax;
 }
 
@@ -90,7 +76,7 @@ void complete_array(int* array, int len_array) {
     srand(time(NULL));
     int i;
     for (i = 0; i < len_array; i++) {
-        array[i] = rand() % 1000;
+        array[i] = rand() % 1000000;
     }
 }
 
@@ -107,6 +93,7 @@ int main(void) {
     printf("Naive Mispredictions : %d == %f\n", misprediction_naive, 2*log((double) len_array));
     int* minmax = min_max(array, len_array);
     printf("Min : %d\nMax : %d\n", minmax[0], minmax[1]);
-    printf("Comparisons counter : %d == 3/2 * len_array\n", cmpt_compar);
+    printf("Normal Comparisons : %d == %d\n", cmpt_compar, 3 / 2 * len_array);
+    printf("Normal Mispredictions : %d == %f\n", misprediction, len_array / 4 + log(len_array));
     return 0;
 }
