@@ -245,17 +245,44 @@ Utilisation de Scipy pour les calculs d'intégrales. <br />
 Cela semble très bien fonctionner et on obtient un gros gain de performance et de propreté de code. <br />
 <br />
 
-## Lundi 19 Juin 2021 : 
+## Lundi 21 Juin 2021 : 
 Tentative d'améliorations des dernières implémentations. <br />
 Patch de certains bugs. <br />
 Rendre le code un peu plus propre. <br />
 Travailler sur le compte-rendu. <br />
 <br />
 
-## Lundi 19 Juin 2021 : 
+## Mardi 22 Juin 2021 : 
 Tentative d'améliorations des performances générales du programme. <br />
 Impossible d'installer scipy sur pypy3. <br />
 Je tenterais de le refaire. <br />
 Retravailler le compte-rendu et essayer de détailler un peu plus les explications. <br />
 <br />
 
+## Mercredi 23 Juin 2021 : 
+Tentative d'améliorations des performances générales du programme. <br />
+Installation de numba, aucune performance améliorée. <br />
+Retravailler le compte-rendu et essayer de reformuler les phrases lourdes. <br />
+<br />
+
+## Jeudi 24 Juin 2021 :
+Retravail de la structure de graphes dans PredictorsImplementation. <br />
+Tentative de dé-enlacer encore plus l'avancement de la structure avec le code basique. <br />
+Retravail du compte-rendu. <br />
+<br />
+
+## Vendredi 25 Juin 2021 :
+Retravailler les sources du "projet" PredictorsImplementation. <br />
+Nouvelle tentative de dé-enlacer encore plus l'avancement de la structure avec le code basique. <br />
+Je pense avoir trouvé une bonne solution. <br />
+Je vais tenter de passer tout mon code en python pour simplifier l'utilisation et la compréhension, ainsi que pour n'avoir plus qu'un unique langage de programmation pour le stage. <br />
+Le C aura été utile pour générer facilement les codes en assembleur. <br />
+Tentative d'améliorations des performances générales du programme. <br />
+Retravail du compte-rendu. <br />
+<br />
+
+## Jeudi 24 Juin 2021 :
+Tentative d'optimisations sur les divers programmes avec des outils extérieurs. <br />
+Tests sur l'utilisation de la librairie PAPI. <br />
+Relecture et réécriture de certaines parties du compte-rendu. <br />
+<br />

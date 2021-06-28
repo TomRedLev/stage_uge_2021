@@ -55,4 +55,9 @@ def create_tbsc() :
 	"""
 	"""
 	states = [State(0, 0, 0, 1), State(1, 0, 0, 2), State(2, 1, 1, 3), State(3, 1, 2, 3)]
-	return Graph(4, 1, states);
+	return Graph(4, 1, states)
+
+def create_swapped() :
+	states = [State(0, 0, 0, 1), State(1, 0, 0, 3), State(2, 1, 0, 3), State(3, 1, 2, 3)]
+	return Graph(4, 1, states)
+
