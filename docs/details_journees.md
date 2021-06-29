@@ -281,8 +281,14 @@ Tentative d'améliorations des performances générales du programme. <br />
 Retravail du compte-rendu. <br />
 <br />
 
-## Jeudi 24 Juin 2021 :
+## Lundi 28 Juin 2021 :
 Tentative d'optimisations sur les divers programmes avec des outils extérieurs. <br />
 Tests sur l'utilisation de la librairie PAPI. <br />
 Relecture et réécriture de certaines parties du compte-rendu. <br />
+<br />
+
+## Mardi 29 Juin 2021 :
+Ajout de nouvelles sections dans le compte-rendu. <br />
+Retravail de certaines parties du compte-rendu. <br />
+Tentative de réinstallation de Pypy. <br />
 <br />

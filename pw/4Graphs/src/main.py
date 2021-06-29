@@ -39,7 +39,7 @@ def generate_edges_aux(n, i, lst, lst_evolving) :
 
 def generate_edges(n) :
     """
-    Generate all the adges needed to build graphs wanted.
+    Generate all the edges needed to build graphs wanted.
     """
     lst = []
     lst_evolving = [0 for x in range(2*n)]
