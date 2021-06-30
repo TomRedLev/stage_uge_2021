@@ -207,6 +207,7 @@ def main() :
     variables = generate_variables(k)
     mini = 1
     set_paths = set()
+    rel_tol = 0.1
 
     # Starting the timer :
     time_perf = perf_counter()
@@ -224,14 +225,14 @@ def main() :
                     print("graph", i, " : ", G._matrice_adjacence, "\nprobabilities :", res)
                     #test_stationary_probas(k, G, variables) # Can be use to test the probabilities
                     score, states = integrate_probabilities(k, G, variables)
-                    if score > 0 and score < mini :
+                    if score > 0 and score < (mini - rel_tol) :
                         mini = score
                         f.close()
                         f = open("graphs.gv", "w")
-                        f.write(export_dot(G, str(i), states))
+                        f.write(export_dot(G, str(i), states, score))
                         f.write("\n\n")
-                    elif score > 0 and math.isclose(score, mini) :
-                        f.write(export_dot(G, str(i), states)) 
+                    elif score > 0 and math.isclose(score, mini, rel_tol=rel_tol) :
+                        f.write(export_dot(G, str(i), states, score)) 
                         f.write("\n\n")
                     i += 1
 

@@ -292,3 +292,12 @@ Ajout de nouvelles sections dans le compte-rendu. <br />
 Retravail de certaines parties du compte-rendu. <br />
 Tentative de réinstallation de Pypy. <br />
 <br />
+
+## Mercredi 30 Juin 2021 :
+Ajout de définitions, d'exemples et de propositions dans le compte-rendu. <br />
+Restructuration de certaines parties du document. <br />
+Mise en place de la prise en charge des solutions optimales et des solutions presques optimales. <br />
+J'ai une autre idée pour cette prise en charge, faire une liste, la trier et ne prendre que les éléments jusqu'à un certain score. <br />
+Cela permettrait d'éviter certaines pertes. <br />
+Mise en place du dessin de graphes de Matplotlib pour les exemples. <br />
+<br />

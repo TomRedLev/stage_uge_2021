@@ -1,0 +1,4680 @@
+digraph graph47 {
+center=true;
+pad=1;
+graph [label="Graphe 47 :\nScore : 0.3137993642342179\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 3;
+1 -> 1;
+0 -> 1;
+0 -> 3[style=dotted];
+1 -> 2[style=dotted];
+2 -> 0[style=dotted];
+2 -> 1;
+3 -> 0[style=dotted];
+3 -> 0;
+}
+
+digraph graph48 {
+center=true;
+pad=1;
+graph [label="Graphe 48 :\nScore : 0.30015634613164344\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 3;
+1 -> 1;
+0 -> 2;
+0 -> 3[style=dotted];
+1 -> 2[style=dotted];
+2 -> 0[style=dotted];
+2 -> 1;
+3 -> 0[style=dotted];
+3 -> 0;
+}
+
+digraph graph51 {
+center=true;
+pad=1;
+graph [label="Graphe 51 :\nScore : 0.3243501674072501\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 3;
+0 -> 1;
+0 -> 3[style=dotted];
+1 -> 2[style=dotted];
+1 -> 2;
+2 -> 0[style=dotted];
+2 -> 1;
+3 -> 0[style=dotted];
+3 -> 0;
+}
+
+digraph graph52 {
+center=true;
+pad=1;
+graph [label="Graphe 52 :\nScore : 0.3137993642342178\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 3;
+0 -> 2;
+0 -> 3[style=dotted];
+1 -> 2[style=dotted];
+1 -> 2;
+2 -> 0[style=dotted];
+2 -> 1;
+3 -> 0[style=dotted];
+3 -> 0;
+}
+
+digraph graph72 {
+center=true;
+pad=1;
+graph [label="Graphe 72 :\nScore : 0.3316325712102868\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 3;
+0 -> 0[style=dotted];
+1 -> 1;
+0 -> 2;
+1 -> 3[style=dotted];
+2 -> 0[style=dotted];
+2 -> 1;
+3 -> 0[style=dotted];
+3 -> 0;
+}
+
+digraph graph76 {
+center=true;
+pad=1;
+graph [label="Graphe 76 :\nScore : 0.3479552951799798\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 3;
+1 -> 1;
+0 -> 1;
+0 -> 2[style=dotted];
+1 -> 3[style=dotted];
+2 -> 0[style=dotted];
+2 -> 1;
+3 -> 0[style=dotted];
+3 -> 0;
+}
+
+digraph graph77 {
+center=true;
+pad=1;
+graph [label="Graphe 77 :\nScore : 0.34718914027753073\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 3;
+1 -> 1;
+0 -> 2[style=dotted];
+0 -> 2;
+1 -> 3[style=dotted];
+2 -> 0[style=dotted];
+2 -> 1;
+3 -> 0[style=dotted];
+3 -> 0;
+}
+
+digraph graph78 {
+center=true;
+pad=1;
+graph [label="Graphe 78 :\nScore : 0.3396092832302888\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 3;
+1 -> 1;
+0 -> 2;
+0 -> 3[style=dotted];
+1 -> 3[style=dotted];
+2 -> 0[style=dotted];
+2 -> 1;
+3 -> 0[style=dotted];
+3 -> 0;
+}
+
+digraph graph79 {
+center=true;
+pad=1;
+graph [label="Graphe 79 :\nScore : 0.340705650836011\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 3;
+0 -> 0[style=dotted];
+0 -> 1;
+1 -> 2;
+1 -> 3[style=dotted];
+2 -> 0[style=dotted];
+2 -> 1;
+3 -> 0[style=dotted];
+3 -> 0;
+}
+
+digraph graph80 {
+center=true;
+pad=1;
+graph [label="Graphe 80 :\nScore : 0.334491745361772\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 3;
+0 -> 0[style=dotted];
+0 -> 2;
+1 -> 2;
+1 -> 3[style=dotted];
+2 -> 0[style=dotted];
+2 -> 1;
+3 -> 0[style=dotted];
+3 -> 0;
+}
+
+digraph graph89 {
+center=true;
+pad=1;
+graph [label="Graphe 89 :\nScore : 0.3339732012981123\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 3;
+0 -> 1;
+0 -> 3[style=dotted];
+1 -> 2;
+1 -> 3[style=dotted];
+2 -> 0[style=dotted];
+2 -> 1;
+3 -> 0[style=dotted];
+3 -> 0;
+}
+
+digraph graph90 {
+center=true;
+pad=1;
+graph [label="Graphe 90 :\nScore : 0.33333333333333337\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 3;
+0 -> 2;
+0 -> 3[style=dotted];
+1 -> 2;
+1 -> 3[style=dotted];
+2 -> 0[style=dotted];
+2 -> 1;
+3 -> 0[style=dotted];
+3 -> 0;
+}
+
+digraph graph97 {
+center=true;
+pad=1;
+graph [label="Graphe 97 :\nScore : 0.3273179461700461\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 3;
+2 -> 2;
+0 -> 1[style=dotted];
+0 -> 2;
+1 -> 0[style=dotted];
+1 -> 3;
+2 -> 0[style=dotted];
+3 -> 0[style=dotted];
+3 -> 0;
+}
+
+digraph graph99 {
+center=true;
+pad=1;
+graph [label="Graphe 99 :\nScore : 0.33963103955316526\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 3;
+1 -> 1[style=dotted];
+2 -> 2;
+0 -> 1[style=dotted];
+0 -> 3;
+1 -> 2;
+2 -> 0[style=dotted];
+3 -> 0[style=dotted];
+3 -> 0;
+}
+
+digraph graph100 {
+center=true;
+pad=1;
+graph [label="Graphe 100 :\nScore : 0.33963103955316526\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 3;
+1 -> 1[style=dotted];
+2 -> 2;
+0 -> 1;
+0 -> 3[style=dotted];
+1 -> 2;
+2 -> 0[style=dotted];
+3 -> 0[style=dotted];
+3 -> 0;
+}
+
+digraph graph101 {
+center=true;
+pad=1;
+graph [label="Graphe 101 :\nScore : 0.3143915123698765\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 3;
+1 -> 1[style=dotted];
+2 -> 2;
+0 -> 1[style=dotted];
+0 -> 2;
+1 -> 3;
+2 -> 0[style=dotted];
+3 -> 0[style=dotted];
+3 -> 0;
+}
+
+digraph graph106 {
+center=true;
+pad=1;
+graph [label="Graphe 106 :\nScore : 0.3243501674072501\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 3;
+1 -> 1;
+2 -> 2;
+0 -> 1;
+0 -> 3[style=dotted];
+1 -> 2[style=dotted];
+2 -> 0[style=dotted];
+3 -> 0[style=dotted];
+3 -> 0;
+}
+
+digraph graph108 {
+center=true;
+pad=1;
+graph [label="Graphe 108 :\nScore : 0.33333333333333337\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 3;
+2 -> 2;
+0 -> 1;
+0 -> 3[style=dotted];
+1 -> 2[style=dotted];
+1 -> 2;
+2 -> 0[style=dotted];
+3 -> 0[style=dotted];
+3 -> 0;
+}
+
+digraph graph116 {
+center=true;
+pad=1;
+graph [label="Graphe 116 :\nScore : 0.32124061133410775\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 3;
+2 -> 2;
+0 -> 1[style=dotted];
+0 -> 2;
+1 -> 0;
+1 -> 3[style=dotted];
+2 -> 0[style=dotted];
+3 -> 0[style=dotted];
+3 -> 0;
+}
+
+digraph graph118 {
+center=true;
+pad=1;
+graph [label="Graphe 118 :\nScore : 0.33963103955316526\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 3;
+1 -> 1;
+2 -> 2;
+0 -> 1[style=dotted];
+0 -> 2;
+1 -> 3[style=dotted];
+2 -> 0[style=dotted];
+3 -> 0[style=dotted];
+3 -> 0;
+}
+
+digraph graph119 {
+center=true;
+pad=1;
+graph [label="Graphe 119 :\nScore : 0.34718914027753073\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 3;
+1 -> 1;
+2 -> 2;
+0 -> 1;
+0 -> 2[style=dotted];
+1 -> 3[style=dotted];
+2 -> 0[style=dotted];
+3 -> 0[style=dotted];
+3 -> 0;
+}
+
+digraph graph120 {
+center=true;
+pad=1;
+graph [label="Graphe 120 :\nScore : 0.3336676828527357\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 3;
+0 -> 0[style=dotted];
+2 -> 2;
+0 -> 1;
+1 -> 2;
+1 -> 3[style=dotted];
+2 -> 0[style=dotted];
+3 -> 0[style=dotted];
+3 -> 0;
+}
+
+digraph graph123 {
+center=true;
+pad=1;
+graph [label="Graphe 123 :\nScore : 0.33963103955316526\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 3;
+2 -> 2;
+0 -> 1[style=dotted];
+0 -> 1;
+1 -> 2;
+1 -> 3[style=dotted];
+2 -> 0[style=dotted];
+3 -> 0[style=dotted];
+3 -> 0;
+}
+
+digraph graph124 {
+center=true;
+pad=1;
+graph [label="Graphe 124 :\nScore : 0.32669118345034653\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 3;
+2 -> 2;
+0 -> 1[style=dotted];
+0 -> 2;
+1 -> 2;
+1 -> 3[style=dotted];
+2 -> 0[style=dotted];
+3 -> 0[style=dotted];
+3 -> 0;
+}
+
+digraph graph126 {
+center=true;
+pad=1;
+graph [label="Graphe 126 :\nScore : 0.32731794617004617\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 3;
+2 -> 2;
+0 -> 1;
+0 -> 3[style=dotted];
+1 -> 2;
+1 -> 3[style=dotted];
+2 -> 0[style=dotted];
+3 -> 0[style=dotted];
+3 -> 0;
+}
+
+digraph graph127 {
+center=true;
+pad=1;
+graph [label="Graphe 127 :\nScore : 0.3239592165010823\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 3;
+2 -> 2;
+0 -> 1[style=dotted];
+0 -> 2;
+1 -> 3[style=dotted];
+1 -> 3;
+2 -> 0[style=dotted];
+3 -> 0[style=dotted];
+3 -> 0;
+}
+
+digraph graph130 {
+center=true;
+pad=1;
+graph [label="Graphe 130 :\nScore : 0.3212406113341077\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 3;
+1 -> 1[style=dotted];
+0 -> 1[style=dotted];
+0 -> 2;
+1 -> 0;
+2 -> 0[style=dotted];
+2 -> 3;
+3 -> 0[style=dotted];
+3 -> 0;
+}
+
+digraph graph133 {
+center=true;
+pad=1;
+graph [label="Graphe 133 :\nScore : 0.33449174536177195\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 3;
+1 -> 1[style=dotted];
+0 -> 1[style=dotted];
+0 -> 3;
+1 -> 2;
+2 -> 0[style=dotted];
+2 -> 3;
+3 -> 0[style=dotted];
+3 -> 0;
+}
+
+digraph graph134 {
+center=true;
+pad=1;
+graph [label="Graphe 134 :\nScore : 0.34662258939552776\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 3;
+0 -> 0;
+1 -> 1[style=dotted];
+0 -> 1[style=dotted];
+1 -> 2;
+2 -> 0[style=dotted];
+2 -> 3;
+3 -> 0[style=dotted];
+3 -> 0;
+}
+
+digraph graph136 {
+center=true;
+pad=1;
+graph [label="Graphe 136 :\nScore : 0.33963103955316526\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 3;
+1 -> 1[style=dotted];
+0 -> 1[style=dotted];
+0 -> 2;
+1 -> 2;
+2 -> 0[style=dotted];
+2 -> 3;
+3 -> 0[style=dotted];
+3 -> 0;
+}
+
+digraph graph139 {
+center=true;
+pad=1;
+graph [label="Graphe 139 :\nScore : 0.337691020964986\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 3;
+1 -> 1[style=dotted];
+0 -> 1[style=dotted];
+0 -> 2;
+1 -> 3;
+2 -> 0[style=dotted];
+2 -> 3;
+3 -> 0[style=dotted];
+3 -> 0;
+}
+
+digraph graph148 {
+center=true;
+pad=1;
+graph [label="Graphe 148 :\nScore : 0.34662258939552776\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 3;
+0 -> 0[style=dotted];
+1 -> 1;
+0 -> 1;
+1 -> 2[style=dotted];
+2 -> 0[style=dotted];
+2 -> 3;
+3 -> 0[style=dotted];
+3 -> 0;
+}
+
+digraph graph153 {
+center=true;
+pad=1;
+graph [label="Graphe 153 :\nScore : 0.34718914027753073\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 3;
+1 -> 1;
+0 -> 1;
+0 -> 2[style=dotted];
+1 -> 2[style=dotted];
+2 -> 0[style=dotted];
+2 -> 3;
+3 -> 0[style=dotted];
+3 -> 0;
+}
+
+digraph graph154 {
+center=true;
+pad=1;
+graph [label="Graphe 154 :\nScore : 0.34654639847850205\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 3;
+1 -> 1;
+0 -> 1;
+0 -> 3[style=dotted];
+1 -> 2[style=dotted];
+2 -> 0[style=dotted];
+2 -> 3;
+3 -> 0[style=dotted];
+3 -> 0;
+}
+
+digraph graph172 {
+center=true;
+pad=1;
+graph [label="Graphe 172 :\nScore : 0.34165202929930816\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 3;
+1 -> 1;
+0 -> 1;
+0 -> 2[style=dotted];
+1 -> 3[style=dotted];
+2 -> 0[style=dotted];
+2 -> 3;
+3 -> 0[style=dotted];
+3 -> 0;
+}
+
+digraph graph182 {
+center=true;
+pad=1;
+graph [label="Graphe 182 :\nScore : 0.32511893423736626\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 3;
+1 -> 1[style=dotted];
+0 -> 2[style=dotted];
+0 -> 3;
+1 -> 0;
+2 -> 0;
+2 -> 1[style=dotted];
+3 -> 0[style=dotted];
+3 -> 0;
+}
+
+digraph graph184 {
+center=true;
+pad=1;
+graph [label="Graphe 184 :\nScore : 0.31379936423421784\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 3;
+1 -> 1[style=dotted];
+0 -> 1[style=dotted];
+0 -> 3;
+1 -> 2;
+2 -> 0;
+2 -> 1[style=dotted];
+3 -> 0[style=dotted];
+3 -> 0;
+}
+
+digraph graph185 {
+center=true;
+pad=1;
+graph [label="Graphe 185 :\nScore : 0.30015634613164344\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 3;
+1 -> 1[style=dotted];
+0 -> 2[style=dotted];
+0 -> 3;
+1 -> 2;
+2 -> 0;
+2 -> 1[style=dotted];
+3 -> 0[style=dotted];
+3 -> 0;
+}
+
+digraph graph187 {
+center=true;
+pad=1;
+graph [label="Graphe 187 :\nScore : 0.3471891402775308\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 3;
+1 -> 1[style=dotted];
+0 -> 2;
+0 -> 3[style=dotted];
+1 -> 2;
+2 -> 0;
+2 -> 1[style=dotted];
+3 -> 0[style=dotted];
+3 -> 0;
+}
+
+digraph graph189 {
+center=true;
+pad=1;
+graph [label="Graphe 189 :\nScore : 0.3479552951799798\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 3;
+1 -> 1[style=dotted];
+0 -> 1[style=dotted];
+0 -> 2;
+1 -> 3;
+2 -> 0;
+2 -> 1[style=dotted];
+3 -> 0[style=dotted];
+3 -> 0;
+}
+
+digraph graph190 {
+center=true;
+pad=1;
+graph [label="Graphe 190 :\nScore : 0.3396092832302888\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 3;
+1 -> 1[style=dotted];
+0 -> 2[style=dotted];
+0 -> 3;
+1 -> 3;
+2 -> 0;
+2 -> 1[style=dotted];
+3 -> 0[style=dotted];
+3 -> 0;
+}
+
+digraph graph191 {
+center=true;
+pad=1;
+graph [label="Graphe 191 :\nScore : 0.3316325712102868\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 3;
+0 -> 0;
+1 -> 1[style=dotted];
+0 -> 2[style=dotted];
+1 -> 3;
+2 -> 0;
+2 -> 1[style=dotted];
+3 -> 0[style=dotted];
+3 -> 0;
+}
+
+digraph graph193 {
+center=true;
+pad=1;
+graph [label="Graphe 193 :\nScore : 0.3471891402775308\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 3;
+1 -> 1[style=dotted];
+0 -> 2[style=dotted];
+0 -> 2;
+1 -> 3;
+2 -> 0;
+2 -> 1[style=dotted];
+3 -> 0[style=dotted];
+3 -> 0;
+}
+
+digraph graph195 {
+center=true;
+pad=1;
+graph [label="Graphe 195 :\nScore : 0.32511893423736626\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 3;
+0 -> 1[style=dotted];
+0 -> 3;
+1 -> 0;
+1 -> 2[style=dotted];
+2 -> 0;
+2 -> 1[style=dotted];
+3 -> 0[style=dotted];
+3 -> 0;
+}
+
+digraph graph198 {
+center=true;
+pad=1;
+graph [label="Graphe 198 :\nScore : 0.3243501674072501\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 3;
+1 -> 1;
+0 -> 2[style=dotted];
+0 -> 3;
+1 -> 2[style=dotted];
+2 -> 0;
+2 -> 1[style=dotted];
+3 -> 0[style=dotted];
+3 -> 0;
+}
+
+digraph graph201 {
+center=true;
+pad=1;
+graph [label="Graphe 201 :\nScore : 0.3243501674072501\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 3;
+0 -> 1[style=dotted];
+0 -> 3;
+1 -> 2[style=dotted];
+1 -> 2;
+2 -> 0;
+2 -> 1[style=dotted];
+3 -> 0[style=dotted];
+3 -> 0;
+}
+
+digraph graph206 {
+center=true;
+pad=1;
+graph [label="Graphe 206 :\nScore : 0.3339732012981123\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 3;
+0 -> 1[style=dotted];
+0 -> 3;
+1 -> 2[style=dotted];
+1 -> 3;
+2 -> 0;
+2 -> 1[style=dotted];
+3 -> 0[style=dotted];
+3 -> 0;
+}
+
+digraph graph207 {
+center=true;
+pad=1;
+graph [label="Graphe 207 :\nScore : 0.34070565083601095\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 3;
+0 -> 0;
+0 -> 1[style=dotted];
+1 -> 2[style=dotted];
+1 -> 3;
+2 -> 0;
+2 -> 1[style=dotted];
+3 -> 0[style=dotted];
+3 -> 0;
+}
+
+digraph graph209 {
+center=true;
+pad=1;
+graph [label="Graphe 209 :\nScore : 0.33333333333333337\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 3;
+0 -> 2[style=dotted];
+0 -> 3;
+1 -> 2[style=dotted];
+1 -> 3;
+2 -> 0;
+2 -> 1[style=dotted];
+3 -> 0[style=dotted];
+3 -> 0;
+}
+
+digraph graph210 {
+center=true;
+pad=1;
+graph [label="Graphe 210 :\nScore : 0.334491745361772\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 3;
+0 -> 0;
+0 -> 2[style=dotted];
+1 -> 2[style=dotted];
+1 -> 3;
+2 -> 0;
+2 -> 1[style=dotted];
+3 -> 0[style=dotted];
+3 -> 0;
+}
+
+digraph graph244 {
+center=true;
+pad=1;
+graph [label="Graphe 244 :\nScore : 0.33333333333333337\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 3;
+1 -> 1[style=dotted];
+0 -> 2[style=dotted];
+0 -> 3;
+1 -> 0;
+2 -> 1[style=dotted];
+2 -> 1;
+3 -> 0[style=dotted];
+3 -> 0;
+}
+
+digraph graph247 {
+center=true;
+pad=1;
+graph [label="Graphe 247 :\nScore : 0.3471891402775308\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 3;
+1 -> 1[style=dotted];
+0 -> 2[style=dotted];
+0 -> 3;
+1 -> 3;
+2 -> 1[style=dotted];
+2 -> 1;
+3 -> 0[style=dotted];
+3 -> 0;
+}
+
+digraph graph251 {
+center=true;
+pad=1;
+graph [label="Graphe 251 :\nScore : 0.33333333333333337\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 3;
+0 -> 2[style=dotted];
+0 -> 3;
+1 -> 2[style=dotted];
+1 -> 3;
+2 -> 1[style=dotted];
+2 -> 1;
+3 -> 0[style=dotted];
+3 -> 0;
+}
+
+digraph graph252 {
+center=true;
+pad=1;
+graph [label="Graphe 252 :\nScore : 0.34718914027753073\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 3;
+0 -> 0;
+0 -> 2[style=dotted];
+1 -> 2[style=dotted];
+1 -> 3;
+2 -> 1[style=dotted];
+2 -> 1;
+3 -> 0[style=dotted];
+3 -> 0;
+}
+
+digraph graph264 {
+center=true;
+pad=1;
+graph [label="Graphe 264 :\nScore : 0.33963103955316526\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 3;
+1 -> 1[style=dotted];
+2 -> 2;
+0 -> 2[style=dotted];
+0 -> 3;
+1 -> 0;
+2 -> 1[style=dotted];
+3 -> 0[style=dotted];
+3 -> 0;
+}
+
+digraph graph265 {
+center=true;
+pad=1;
+graph [label="Graphe 265 :\nScore : 0.33963103955316526\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 3;
+1 -> 1[style=dotted];
+2 -> 2;
+0 -> 2;
+0 -> 3[style=dotted];
+1 -> 0;
+2 -> 1[style=dotted];
+3 -> 0[style=dotted];
+3 -> 0;
+}
+
+digraph graph266 {
+center=true;
+pad=1;
+graph [label="Graphe 266 :\nScore : 0.34718914027753073\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 3;
+0 -> 0[style=dotted];
+1 -> 1[style=dotted];
+2 -> 2;
+0 -> 2;
+1 -> 3;
+2 -> 1[style=dotted];
+3 -> 0[style=dotted];
+3 -> 0;
+}
+
+digraph graph268 {
+center=true;
+pad=1;
+graph [label="Graphe 268 :\nScore : 0.3471891402775308\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 3;
+0 -> 0;
+1 -> 1[style=dotted];
+2 -> 2;
+0 -> 2[style=dotted];
+1 -> 3;
+2 -> 1[style=dotted];
+3 -> 0[style=dotted];
+3 -> 0;
+}
+
+digraph graph273 {
+center=true;
+pad=1;
+graph [label="Graphe 273 :\nScore : 0.33333333333333337\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 3;
+2 -> 2;
+0 -> 1[style=dotted];
+0 -> 3;
+1 -> 2[style=dotted];
+1 -> 3;
+2 -> 1[style=dotted];
+3 -> 0[style=dotted];
+3 -> 0;
+}
+
+digraph graph274 {
+center=true;
+pad=1;
+graph [label="Graphe 274 :\nScore : 0.34718914027753073\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 3;
+0 -> 0;
+2 -> 2;
+0 -> 1[style=dotted];
+1 -> 2[style=dotted];
+1 -> 3;
+2 -> 1[style=dotted];
+3 -> 0[style=dotted];
+3 -> 0;
+}
+
+digraph graph281 {
+center=true;
+pad=1;
+graph [label="Graphe 281 :\nScore : 0.3466225893955277\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 3;
+0 -> 0[style=dotted];
+2 -> 2;
+0 -> 2;
+1 -> 0;
+1 -> 3[style=dotted];
+2 -> 1[style=dotted];
+3 -> 0[style=dotted];
+3 -> 0;
+}
+
+digraph graph285 {
+center=true;
+pad=1;
+graph [label="Graphe 285 :\nScore : 0.33449174536177195\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 3;
+2 -> 2;
+0 -> 2;
+0 -> 3[style=dotted];
+1 -> 0;
+1 -> 3[style=dotted];
+2 -> 1[style=dotted];
+3 -> 0[style=dotted];
+3 -> 0;
+}
+
+digraph graph286 {
+center=true;
+pad=1;
+graph [label="Graphe 286 :\nScore : 0.3471891402775308\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 3;
+0 -> 0[style=dotted];
+1 -> 1;
+2 -> 2;
+0 -> 2;
+1 -> 3[style=dotted];
+2 -> 1[style=dotted];
+3 -> 0[style=dotted];
+3 -> 0;
+}
+
+digraph graph290 {
+center=true;
+pad=1;
+graph [label="Graphe 290 :\nScore : 0.33333333333333337\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 3;
+1 -> 1;
+2 -> 2;
+0 -> 2;
+0 -> 3[style=dotted];
+1 -> 3[style=dotted];
+2 -> 1[style=dotted];
+3 -> 0[style=dotted];
+3 -> 0;
+}
+
+digraph graph291 {
+center=true;
+pad=1;
+graph [label="Graphe 291 :\nScore : 0.3143915123698765\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 3;
+0 -> 0[style=dotted];
+2 -> 2;
+0 -> 1;
+1 -> 2;
+1 -> 3[style=dotted];
+2 -> 1[style=dotted];
+3 -> 0[style=dotted];
+3 -> 0;
+}
+
+digraph graph292 {
+center=true;
+pad=1;
+graph [label="Graphe 292 :\nScore : 0.3316325712102868\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 3;
+0 -> 0[style=dotted];
+2 -> 2;
+0 -> 2;
+1 -> 2;
+1 -> 3[style=dotted];
+2 -> 1[style=dotted];
+3 -> 0[style=dotted];
+3 -> 0;
+}
+
+digraph graph294 {
+center=true;
+pad=1;
+graph [label="Graphe 294 :\nScore : 0.33963103955316526\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 3;
+0 -> 0;
+2 -> 2;
+0 -> 1[style=dotted];
+1 -> 2;
+1 -> 3[style=dotted];
+2 -> 1[style=dotted];
+3 -> 0[style=dotted];
+3 -> 0;
+}
+
+digraph graph295 {
+center=true;
+pad=1;
+graph [label="Graphe 295 :\nScore : 0.3286070979827281\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 3;
+2 -> 2;
+0 -> 1[style=dotted];
+0 -> 2;
+1 -> 2;
+1 -> 3[style=dotted];
+2 -> 1[style=dotted];
+3 -> 0[style=dotted];
+3 -> 0;
+}
+
+digraph graph299 {
+center=true;
+pad=1;
+graph [label="Graphe 299 :\nScore : 0.30369486159157666\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 3;
+2 -> 2;
+0 -> 1;
+0 -> 3[style=dotted];
+1 -> 2;
+1 -> 3[style=dotted];
+2 -> 1[style=dotted];
+3 -> 0[style=dotted];
+3 -> 0;
+}
+
+digraph graph300 {
+center=true;
+pad=1;
+graph [label="Graphe 300 :\nScore : 0.31549803432499407\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 3;
+2 -> 2;
+0 -> 2;
+0 -> 3[style=dotted];
+1 -> 2;
+1 -> 3[style=dotted];
+2 -> 1[style=dotted];
+3 -> 0[style=dotted];
+3 -> 0;
+}
+
+digraph graph303 {
+center=true;
+pad=1;
+graph [label="Graphe 303 :\nScore : 0.32669118345034653\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 3;
+1 -> 1[style=dotted];
+0 -> 1[style=dotted];
+0 -> 2;
+1 -> 0;
+2 -> 1[style=dotted];
+2 -> 3;
+3 -> 0[style=dotted];
+3 -> 0;
+}
+
+digraph graph304 {
+center=true;
+pad=1;
+graph [label="Graphe 304 :\nScore : 0.32731794617004617\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 3;
+1 -> 1[style=dotted];
+0 -> 2[style=dotted];
+0 -> 3;
+1 -> 0;
+2 -> 1[style=dotted];
+2 -> 3;
+3 -> 0[style=dotted];
+3 -> 0;
+}
+
+digraph graph305 {
+center=true;
+pad=1;
+graph [label="Graphe 305 :\nScore : 0.33366768285273574\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 3;
+0 -> 0;
+1 -> 1[style=dotted];
+0 -> 2[style=dotted];
+1 -> 0;
+2 -> 1[style=dotted];
+2 -> 3;
+3 -> 0[style=dotted];
+3 -> 0;
+}
+
+digraph graph307 {
+center=true;
+pad=1;
+graph [label="Graphe 307 :\nScore : 0.33963103955316526\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 3;
+1 -> 1[style=dotted];
+0 -> 2[style=dotted];
+0 -> 2;
+1 -> 0;
+2 -> 1[style=dotted];
+2 -> 3;
+3 -> 0[style=dotted];
+3 -> 0;
+}
+
+digraph graph310 {
+center=true;
+pad=1;
+graph [label="Graphe 310 :\nScore : 0.33963103955316526\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 3;
+0 -> 0[style=dotted];
+1 -> 1[style=dotted];
+0 -> 2;
+1 -> 2;
+2 -> 1[style=dotted];
+2 -> 3;
+3 -> 0[style=dotted];
+3 -> 0;
+}
+
+digraph graph311 {
+center=true;
+pad=1;
+graph [label="Graphe 311 :\nScore : 0.315498034324994\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 3;
+1 -> 1[style=dotted];
+0 -> 1[style=dotted];
+0 -> 3;
+1 -> 2;
+2 -> 1[style=dotted];
+2 -> 3;
+3 -> 0[style=dotted];
+3 -> 0;
+}
+
+digraph graph312 {
+center=true;
+pad=1;
+graph [label="Graphe 312 :\nScore : 0.3316325712102868\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 3;
+0 -> 0;
+1 -> 1[style=dotted];
+0 -> 1[style=dotted];
+1 -> 2;
+2 -> 1[style=dotted];
+2 -> 3;
+3 -> 0[style=dotted];
+3 -> 0;
+}
+
+digraph graph313 {
+center=true;
+pad=1;
+graph [label="Graphe 313 :\nScore : 0.328607097982728\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 3;
+1 -> 1[style=dotted];
+0 -> 1[style=dotted];
+0 -> 2;
+1 -> 2;
+2 -> 1[style=dotted];
+2 -> 3;
+3 -> 0[style=dotted];
+3 -> 0;
+}
+
+digraph graph314 {
+center=true;
+pad=1;
+graph [label="Graphe 314 :\nScore : 0.30369486159157666\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 3;
+1 -> 1[style=dotted];
+0 -> 2[style=dotted];
+0 -> 3;
+1 -> 2;
+2 -> 1[style=dotted];
+2 -> 3;
+3 -> 0[style=dotted];
+3 -> 0;
+}
+
+digraph graph315 {
+center=true;
+pad=1;
+graph [label="Graphe 315 :\nScore : 0.31439151236987645\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 3;
+0 -> 0;
+1 -> 1[style=dotted];
+0 -> 2[style=dotted];
+1 -> 2;
+2 -> 1[style=dotted];
+2 -> 3;
+3 -> 0[style=dotted];
+3 -> 0;
+}
+
+digraph graph317 {
+center=true;
+pad=1;
+graph [label="Graphe 317 :\nScore : 0.3239592165010823\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 3;
+1 -> 1[style=dotted];
+0 -> 2[style=dotted];
+0 -> 2;
+1 -> 2;
+2 -> 1[style=dotted];
+2 -> 3;
+3 -> 0[style=dotted];
+3 -> 0;
+}
+
+digraph graph321 {
+center=true;
+pad=1;
+graph [label="Graphe 321 :\nScore : 0.34111691664032817\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 3;
+1 -> 1[style=dotted];
+0 -> 2[style=dotted];
+0 -> 3;
+1 -> 3;
+2 -> 1[style=dotted];
+2 -> 3;
+3 -> 0[style=dotted];
+3 -> 0;
+}
+
+digraph graph322 {
+center=true;
+pad=1;
+graph [label="Graphe 322 :\nScore : 0.3479552951799798\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 3;
+0 -> 0;
+1 -> 1[style=dotted];
+0 -> 2[style=dotted];
+1 -> 3;
+2 -> 1[style=dotted];
+2 -> 3;
+3 -> 0[style=dotted];
+3 -> 0;
+}
+
+digraph graph326 {
+center=true;
+pad=1;
+graph [label="Graphe 326 :\nScore : 0.34111691664032817\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 3;
+0 -> 1[style=dotted];
+0 -> 3;
+1 -> 2[style=dotted];
+1 -> 3;
+2 -> 1[style=dotted];
+2 -> 3;
+3 -> 0[style=dotted];
+3 -> 0;
+}
+
+digraph graph327 {
+center=true;
+pad=1;
+graph [label="Graphe 327 :\nScore : 0.3479552951799798\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 3;
+0 -> 0;
+0 -> 1[style=dotted];
+1 -> 2[style=dotted];
+1 -> 3;
+2 -> 1[style=dotted];
+2 -> 3;
+3 -> 0[style=dotted];
+3 -> 0;
+}
+
+digraph graph351 {
+center=true;
+pad=1;
+graph [label="Graphe 351 :\nScore : 0.3243501674072501\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 3;
+1 -> 1[style=dotted];
+2 -> 2[style=dotted];
+0 -> 1[style=dotted];
+0 -> 3;
+1 -> 2;
+2 -> 0;
+3 -> 0[style=dotted];
+3 -> 0;
+}
+
+digraph graph353 {
+center=true;
+pad=1;
+graph [label="Graphe 353 :\nScore : 0.3471891402775308\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 3;
+1 -> 1[style=dotted];
+2 -> 2[style=dotted];
+0 -> 1[style=dotted];
+0 -> 2;
+1 -> 3;
+2 -> 0;
+3 -> 0[style=dotted];
+3 -> 0;
+}
+
+digraph graph354 {
+center=true;
+pad=1;
+graph [label="Graphe 354 :\nScore : 0.33963103955316526\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 3;
+1 -> 1[style=dotted];
+2 -> 2[style=dotted];
+0 -> 1;
+0 -> 2[style=dotted];
+1 -> 3;
+2 -> 0;
+3 -> 0[style=dotted];
+3 -> 0;
+}
+
+digraph graph356 {
+center=true;
+pad=1;
+graph [label="Graphe 356 :\nScore : 0.32731794617004617\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 3;
+2 -> 2[style=dotted];
+0 -> 1;
+0 -> 2[style=dotted];
+1 -> 0;
+1 -> 3[style=dotted];
+2 -> 0;
+3 -> 0[style=dotted];
+3 -> 0;
+}
+
+digraph graph358 {
+center=true;
+pad=1;
+graph [label="Graphe 358 :\nScore : 0.3143915123698765\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 3;
+1 -> 1;
+2 -> 2[style=dotted];
+0 -> 1;
+0 -> 2[style=dotted];
+1 -> 3[style=dotted];
+2 -> 0;
+3 -> 0[style=dotted];
+3 -> 0;
+}
+
+digraph graph368 {
+center=true;
+pad=1;
+graph [label="Graphe 368 :\nScore : 0.33333333333333337\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 3;
+1 -> 1[style=dotted];
+2 -> 2[style=dotted];
+0 -> 2[style=dotted];
+0 -> 3;
+1 -> 3;
+2 -> 1;
+3 -> 0[style=dotted];
+3 -> 0;
+}
+
+digraph graph369 {
+center=true;
+pad=1;
+graph [label="Graphe 369 :\nScore : 0.34718914027753073\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 3;
+0 -> 0;
+1 -> 1[style=dotted];
+2 -> 2[style=dotted];
+0 -> 2[style=dotted];
+1 -> 3;
+2 -> 1;
+3 -> 0[style=dotted];
+3 -> 0;
+}
+
+digraph graph373 {
+center=true;
+pad=1;
+graph [label="Graphe 373 :\nScore : 0.34654639847850205\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 3;
+2 -> 2[style=dotted];
+0 -> 2[style=dotted];
+0 -> 3;
+1 -> 0;
+1 -> 3[style=dotted];
+2 -> 1;
+3 -> 0[style=dotted];
+3 -> 0;
+}
+
+digraph graph374 {
+center=true;
+pad=1;
+graph [label="Graphe 374 :\nScore : 0.3466225893955277\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 3;
+0 -> 0;
+2 -> 2[style=dotted];
+0 -> 2[style=dotted];
+1 -> 0;
+1 -> 3[style=dotted];
+2 -> 1;
+3 -> 0[style=dotted];
+3 -> 0;
+}
+
+digraph graph376 {
+center=true;
+pad=1;
+graph [label="Graphe 376 :\nScore : 0.34718914027753073\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 3;
+0 -> 0[style=dotted];
+1 -> 1;
+2 -> 2[style=dotted];
+0 -> 2;
+1 -> 3[style=dotted];
+2 -> 1;
+3 -> 0[style=dotted];
+3 -> 0;
+}
+
+digraph graph378 {
+center=true;
+pad=1;
+graph [label="Graphe 378 :\nScore : 0.3471891402775308\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 3;
+0 -> 0;
+1 -> 1;
+2 -> 2[style=dotted];
+0 -> 2[style=dotted];
+1 -> 3[style=dotted];
+2 -> 1;
+3 -> 0[style=dotted];
+3 -> 0;
+}
+
+digraph graph380 {
+center=true;
+pad=1;
+graph [label="Graphe 380 :\nScore : 0.3471891402775308\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 3;
+0 -> 0[style=dotted];
+2 -> 2[style=dotted];
+0 -> 1;
+1 -> 2;
+1 -> 3[style=dotted];
+2 -> 1;
+3 -> 0[style=dotted];
+3 -> 0;
+}
+
+digraph graph388 {
+center=true;
+pad=1;
+graph [label="Graphe 388 :\nScore : 0.33333333333333337\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 3;
+2 -> 2[style=dotted];
+0 -> 1;
+0 -> 3[style=dotted];
+1 -> 2;
+1 -> 3[style=dotted];
+2 -> 1;
+3 -> 0[style=dotted];
+3 -> 0;
+}
+
+digraph graph393 {
+center=true;
+pad=1;
+graph [label="Graphe 393 :\nScore : 0.3479552951799798\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 3;
+1 -> 1;
+2 -> 2[style=dotted];
+0 -> 1;
+0 -> 2[style=dotted];
+1 -> 2[style=dotted];
+2 -> 3;
+3 -> 0[style=dotted];
+3 -> 0;
+}
+
+digraph graph395 {
+center=true;
+pad=1;
+graph [label="Graphe 395 :\nScore : 0.34270745016558435\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 3;
+2 -> 2[style=dotted];
+0 -> 1;
+0 -> 2[style=dotted];
+1 -> 2[style=dotted];
+1 -> 3;
+2 -> 3;
+3 -> 0[style=dotted];
+3 -> 0;
+}
+
+digraph graph403 {
+center=true;
+pad=1;
+graph [label="Graphe 403 :\nScore : 0.3471891402775308\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 3;
+1 -> 1[style=dotted];
+0 -> 1[style=dotted];
+0 -> 2;
+1 -> 2;
+2 -> 0;
+2 -> 3[style=dotted];
+3 -> 0[style=dotted];
+3 -> 0;
+}
+
+digraph graph405 {
+center=true;
+pad=1;
+graph [label="Graphe 405 :\nScore : 0.34165202929930816\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 3;
+1 -> 1[style=dotted];
+0 -> 1[style=dotted];
+0 -> 2;
+1 -> 3;
+2 -> 0;
+2 -> 3[style=dotted];
+3 -> 0[style=dotted];
+3 -> 0;
+}
+
+digraph graph408 {
+center=true;
+pad=1;
+graph [label="Graphe 408 :\nScore : 0.33963103955316526\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 3;
+1 -> 1;
+0 -> 1;
+0 -> 2[style=dotted];
+1 -> 2[style=dotted];
+2 -> 0;
+2 -> 3[style=dotted];
+3 -> 0[style=dotted];
+3 -> 0;
+}
+
+digraph graph414 {
+center=true;
+pad=1;
+graph [label="Graphe 414 :\nScore : 0.337691020964986\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 3;
+1 -> 1;
+0 -> 1;
+0 -> 2[style=dotted];
+1 -> 3[style=dotted];
+2 -> 0;
+2 -> 3[style=dotted];
+3 -> 0[style=dotted];
+3 -> 0;
+}
+
+digraph graph422 {
+center=true;
+pad=1;
+graph [label="Graphe 422 :\nScore : 0.3479552951799798\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 3;
+0 -> 0[style=dotted];
+1 -> 1;
+0 -> 2;
+1 -> 3[style=dotted];
+2 -> 1;
+2 -> 3[style=dotted];
+3 -> 0[style=dotted];
+3 -> 0;
+}
+
+digraph graph426 {
+center=true;
+pad=1;
+graph [label="Graphe 426 :\nScore : 0.34111691664032817\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 3;
+1 -> 1;
+0 -> 2;
+0 -> 3[style=dotted];
+1 -> 3[style=dotted];
+2 -> 1;
+2 -> 3[style=dotted];
+3 -> 0[style=dotted];
+3 -> 0;
+}
+
+digraph graph427 {
+center=true;
+pad=1;
+graph [label="Graphe 427 :\nScore : 0.3479552951799798\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 3;
+0 -> 0[style=dotted];
+0 -> 1;
+1 -> 2;
+1 -> 3[style=dotted];
+2 -> 1;
+2 -> 3[style=dotted];
+3 -> 0[style=dotted];
+3 -> 0;
+}
+
+digraph graph431 {
+center=true;
+pad=1;
+graph [label="Graphe 431 :\nScore : 0.34111691664032817\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 3;
+0 -> 1;
+0 -> 3[style=dotted];
+1 -> 2;
+1 -> 3[style=dotted];
+2 -> 1;
+2 -> 3[style=dotted];
+3 -> 0[style=dotted];
+3 -> 0;
+}
+
+digraph graph432 {
+center=true;
+pad=1;
+graph [label="Graphe 432 :\nScore : 0.3479552951799798\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 3;
+1 -> 1[style=dotted];
+2 -> 2;
+0 -> 1[style=dotted];
+0 -> 2;
+1 -> 2;
+2 -> 3[style=dotted];
+3 -> 0[style=dotted];
+3 -> 0;
+}
+
+digraph graph438 {
+center=true;
+pad=1;
+graph [label="Graphe 438 :\nScore : 0.34270745016558435\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 3;
+2 -> 2;
+0 -> 1[style=dotted];
+0 -> 2;
+1 -> 2;
+1 -> 3[style=dotted];
+2 -> 3[style=dotted];
+3 -> 0[style=dotted];
+3 -> 0;
+}
+
+digraph graph440 {
+center=true;
+pad=1;
+graph [label="Graphe 440 :\nScore : 0.33333333333333337\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 3;
+1 -> 1;
+0 -> 2[style=dotted];
+0 -> 3;
+1 -> 0[style=dotted];
+2 -> 0[style=dotted];
+2 -> 1;
+3 -> 0[style=dotted];
+3 -> 1;
+}
+
+digraph graph441 {
+center=true;
+pad=1;
+graph [label="Graphe 441 :\nScore : 0.3333333333333333\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 3;
+0 -> 0[style=dotted];
+0 -> 3;
+1 -> 0[style=dotted];
+1 -> 2;
+2 -> 0[style=dotted];
+2 -> 1;
+3 -> 0[style=dotted];
+3 -> 1;
+}
+
+digraph graph445 {
+center=true;
+pad=1;
+graph [label="Graphe 445 :\nScore : 0.33333333333333337\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 3;
+0 -> 1;
+0 -> 3[style=dotted];
+1 -> 0[style=dotted];
+1 -> 2;
+2 -> 0[style=dotted];
+2 -> 1;
+3 -> 0[style=dotted];
+3 -> 1;
+}
+
+digraph graph446 {
+center=true;
+pad=1;
+graph [label="Graphe 446 :\nScore : 0.33333333333333337\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 3;
+0 -> 2;
+0 -> 3[style=dotted];
+1 -> 0[style=dotted];
+1 -> 2;
+2 -> 0[style=dotted];
+2 -> 1;
+3 -> 0[style=dotted];
+3 -> 1;
+}
+
+digraph graph448 {
+center=true;
+pad=1;
+graph [label="Graphe 448 :\nScore : 0.3333333333333333\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 3;
+0 -> 0[style=dotted];
+1 -> 1[style=dotted];
+0 -> 3;
+1 -> 2;
+2 -> 0[style=dotted];
+2 -> 1;
+3 -> 0[style=dotted];
+3 -> 1;
+}
+
+digraph graph460 {
+center=true;
+pad=1;
+graph [label="Graphe 460 :\nScore : 0.2942653951351023\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 3;
+0 -> 0[style=dotted];
+1 -> 1;
+0 -> 3;
+1 -> 2[style=dotted];
+2 -> 0[style=dotted];
+2 -> 1;
+3 -> 0[style=dotted];
+3 -> 1;
+}
+
+digraph graph462 {
+center=true;
+pad=1;
+graph [label="Graphe 462 :\nScore : 0.32511893423736626\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 3;
+1 -> 1;
+0 -> 2[style=dotted];
+0 -> 3;
+1 -> 2[style=dotted];
+2 -> 0[style=dotted];
+2 -> 1;
+3 -> 0[style=dotted];
+3 -> 1;
+}
+
+digraph graph463 {
+center=true;
+pad=1;
+graph [label="Graphe 463 :\nScore : 0.33333333333333337\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 3;
+0 -> 0;
+1 -> 1;
+0 -> 3[style=dotted];
+1 -> 2[style=dotted];
+2 -> 0[style=dotted];
+2 -> 1;
+3 -> 0[style=dotted];
+3 -> 1;
+}
+
+digraph graph464 {
+center=true;
+pad=1;
+graph [label="Graphe 464 :\nScore : 0.33333333333333337\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 3;
+1 -> 1;
+0 -> 1;
+0 -> 3[style=dotted];
+1 -> 2[style=dotted];
+2 -> 0[style=dotted];
+2 -> 1;
+3 -> 0[style=dotted];
+3 -> 1;
+}
+
+digraph graph465 {
+center=true;
+pad=1;
+graph [label="Graphe 465 :\nScore : 0.32371243342096107\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 3;
+1 -> 1;
+0 -> 2;
+0 -> 3[style=dotted];
+1 -> 2[style=dotted];
+2 -> 0[style=dotted];
+2 -> 1;
+3 -> 0[style=dotted];
+3 -> 1;
+}
+
+digraph graph466 {
+center=true;
+pad=1;
+graph [label="Graphe 466 :\nScore : 0.32511893423736626\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 3;
+0 -> 0[style=dotted];
+0 -> 3;
+1 -> 2[style=dotted];
+1 -> 3;
+2 -> 0[style=dotted];
+2 -> 1;
+3 -> 0[style=dotted];
+3 -> 1;
+}
+
+digraph graph467 {
+center=true;
+pad=1;
+graph [label="Graphe 467 :\nScore : 0.33333333333333337\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 3;
+0 -> 0[style=dotted];
+0 -> 1;
+1 -> 2[style=dotted];
+1 -> 3;
+2 -> 0[style=dotted];
+2 -> 1;
+3 -> 0[style=dotted];
+3 -> 1;
+}
+
+digraph graph468 {
+center=true;
+pad=1;
+graph [label="Graphe 468 :\nScore : 0.32371243342096107\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 3;
+0 -> 0[style=dotted];
+0 -> 2;
+1 -> 2[style=dotted];
+1 -> 3;
+2 -> 0[style=dotted];
+2 -> 1;
+3 -> 0[style=dotted];
+3 -> 1;
+}
+
+digraph graph472 {
+center=true;
+pad=1;
+graph [label="Graphe 472 :\nScore : 0.33333333333333337\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 3;
+0 -> 2[style=dotted];
+0 -> 3;
+1 -> 2[style=dotted];
+1 -> 3;
+2 -> 0[style=dotted];
+2 -> 1;
+3 -> 0[style=dotted];
+3 -> 1;
+}
+
+digraph graph474 {
+center=true;
+pad=1;
+graph [label="Graphe 474 :\nScore : 0.33333333333333337\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 3;
+0 -> 1;
+0 -> 2[style=dotted];
+1 -> 2[style=dotted];
+1 -> 3;
+2 -> 0[style=dotted];
+2 -> 1;
+3 -> 0[style=dotted];
+3 -> 1;
+}
+
+digraph graph478 {
+center=true;
+pad=1;
+graph [label="Graphe 478 :\nScore : 0.34111691664032817\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 3;
+1 -> 1;
+2 -> 2;
+0 -> 2[style=dotted];
+0 -> 3;
+1 -> 0[style=dotted];
+2 -> 0[style=dotted];
+3 -> 0[style=dotted];
+3 -> 1;
+}
+
+digraph graph479 {
+center=true;
+pad=1;
+graph [label="Graphe 479 :\nScore : 0.33333333333333337\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 3;
+1 -> 1;
+2 -> 2;
+0 -> 2;
+0 -> 3[style=dotted];
+1 -> 0[style=dotted];
+2 -> 0[style=dotted];
+3 -> 0[style=dotted];
+3 -> 1;
+}
+
+digraph graph480 {
+center=true;
+pad=1;
+graph [label="Graphe 480 :\nScore : 0.3333333333333333\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 3;
+0 -> 0[style=dotted];
+2 -> 2;
+0 -> 3;
+1 -> 0[style=dotted];
+1 -> 2;
+2 -> 0[style=dotted];
+3 -> 0[style=dotted];
+3 -> 1;
+}
+
+digraph graph484 {
+center=true;
+pad=1;
+graph [label="Graphe 484 :\nScore : 0.33333333333333337\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 3;
+2 -> 2;
+0 -> 1;
+0 -> 3[style=dotted];
+1 -> 0[style=dotted];
+1 -> 2;
+2 -> 0[style=dotted];
+3 -> 0[style=dotted];
+3 -> 1;
+}
+
+digraph graph485 {
+center=true;
+pad=1;
+graph [label="Graphe 485 :\nScore : 0.32554975002633857\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 3;
+2 -> 2;
+0 -> 2;
+0 -> 3[style=dotted];
+1 -> 0[style=dotted];
+1 -> 2;
+2 -> 0[style=dotted];
+3 -> 0[style=dotted];
+3 -> 1;
+}
+
+digraph graph486 {
+center=true;
+pad=1;
+graph [label="Graphe 486 :\nScore : 0.34111691664032817\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 3;
+2 -> 2;
+0 -> 1[style=dotted];
+0 -> 2;
+1 -> 0[style=dotted];
+1 -> 3;
+2 -> 0[style=dotted];
+3 -> 0[style=dotted];
+3 -> 1;
+}
+
+digraph graph487 {
+center=true;
+pad=1;
+graph [label="Graphe 487 :\nScore : 0.3411169166403282\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 3;
+2 -> 2;
+0 -> 2[style=dotted];
+0 -> 3;
+1 -> 0[style=dotted];
+1 -> 3;
+2 -> 0[style=dotted];
+3 -> 0[style=dotted];
+3 -> 1;
+}
+
+digraph graph489 {
+center=true;
+pad=1;
+graph [label="Graphe 489 :\nScore : 0.3239592165010823\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 3;
+1 -> 1[style=dotted];
+2 -> 2;
+0 -> 2;
+0 -> 3[style=dotted];
+1 -> 0;
+2 -> 0[style=dotted];
+3 -> 0[style=dotted];
+3 -> 1;
+}
+
+digraph graph490 {
+center=true;
+pad=1;
+graph [label="Graphe 490 :\nScore : 0.3479552951799798\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 3;
+0 -> 0[style=dotted];
+1 -> 1[style=dotted];
+2 -> 2;
+0 -> 3;
+1 -> 2;
+2 -> 0[style=dotted];
+3 -> 0[style=dotted];
+3 -> 1;
+}
+
+digraph graph491 {
+center=true;
+pad=1;
+graph [label="Graphe 491 :\nScore : 0.3482390475138254\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 3;
+1 -> 1[style=dotted];
+2 -> 2;
+0 -> 1[style=dotted];
+0 -> 3;
+1 -> 2;
+2 -> 0[style=dotted];
+3 -> 0[style=dotted];
+3 -> 1;
+}
+
+digraph graph494 {
+center=true;
+pad=1;
+graph [label="Graphe 494 :\nScore : 0.34111691664032817\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 3;
+1 -> 1[style=dotted];
+2 -> 2;
+0 -> 1;
+0 -> 3[style=dotted];
+1 -> 2;
+2 -> 0[style=dotted];
+3 -> 0[style=dotted];
+3 -> 1;
+}
+
+digraph graph495 {
+center=true;
+pad=1;
+graph [label="Graphe 495 :\nScore : 0.3286070979827281\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 3;
+1 -> 1[style=dotted];
+2 -> 2;
+0 -> 2;
+0 -> 3[style=dotted];
+1 -> 2;
+2 -> 0[style=dotted];
+3 -> 0[style=dotted];
+3 -> 1;
+}
+
+digraph graph496 {
+center=true;
+pad=1;
+graph [label="Graphe 496 :\nScore : 0.3479552951799798\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 3;
+1 -> 1[style=dotted];
+2 -> 2;
+0 -> 1[style=dotted];
+0 -> 2;
+1 -> 3;
+2 -> 0[style=dotted];
+3 -> 0[style=dotted];
+3 -> 1;
+}
+
+digraph graph497 {
+center=true;
+pad=1;
+graph [label="Graphe 497 :\nScore : 0.33333333333333337\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 3;
+1 -> 1[style=dotted];
+2 -> 2;
+0 -> 2[style=dotted];
+0 -> 3;
+1 -> 3;
+2 -> 0[style=dotted];
+3 -> 0[style=dotted];
+3 -> 1;
+}
+
+digraph graph505 {
+center=true;
+pad=1;
+graph [label="Graphe 505 :\nScore : 0.3363324757712294\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 3;
+2 -> 2;
+0 -> 2;
+0 -> 3[style=dotted];
+1 -> 0;
+1 -> 2[style=dotted];
+2 -> 0[style=dotted];
+3 -> 0[style=dotted];
+3 -> 1;
+}
+
+digraph graph506 {
+center=true;
+pad=1;
+graph [label="Graphe 506 :\nScore : 0.315498034324994\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 3;
+0 -> 0[style=dotted];
+1 -> 1;
+2 -> 2;
+0 -> 3;
+1 -> 2[style=dotted];
+2 -> 0[style=dotted];
+3 -> 0[style=dotted];
+3 -> 1;
+}
+
+digraph graph510 {
+center=true;
+pad=1;
+graph [label="Graphe 510 :\nScore : 0.34111691664032817\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 3;
+1 -> 1;
+2 -> 2;
+0 -> 1;
+0 -> 3[style=dotted];
+1 -> 2[style=dotted];
+2 -> 0[style=dotted];
+3 -> 0[style=dotted];
+3 -> 1;
+}
+
+digraph graph511 {
+center=true;
+pad=1;
+graph [label="Graphe 511 :\nScore : 0.34070565083601095\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 3;
+1 -> 1;
+2 -> 2;
+0 -> 2;
+0 -> 3[style=dotted];
+1 -> 2[style=dotted];
+2 -> 0[style=dotted];
+3 -> 0[style=dotted];
+3 -> 1;
+}
+
+digraph graph512 {
+center=true;
+pad=1;
+graph [label="Graphe 512 :\nScore : 0.328607097982728\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 3;
+0 -> 0[style=dotted];
+2 -> 2;
+0 -> 3;
+1 -> 2[style=dotted];
+1 -> 3;
+2 -> 0[style=dotted];
+3 -> 0[style=dotted];
+3 -> 1;
+}
+
+digraph graph513 {
+center=true;
+pad=1;
+graph [label="Graphe 513 :\nScore : 0.34270745016558435\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 3;
+0 -> 0[style=dotted];
+2 -> 2;
+0 -> 1;
+1 -> 2[style=dotted];
+1 -> 3;
+2 -> 0[style=dotted];
+3 -> 0[style=dotted];
+3 -> 1;
+}
+
+digraph graph520 {
+center=true;
+pad=1;
+graph [label="Graphe 520 :\nScore : 0.3479552951799798\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 3;
+2 -> 2;
+0 -> 2;
+0 -> 3[style=dotted];
+1 -> 2[style=dotted];
+1 -> 3;
+2 -> 0[style=dotted];
+3 -> 0[style=dotted];
+3 -> 1;
+}
+
+digraph graph521 {
+center=true;
+pad=1;
+graph [label="Graphe 521 :\nScore : 0.3210017495644293\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 3;
+2 -> 2;
+0 -> 1[style=dotted];
+0 -> 2;
+1 -> 0;
+1 -> 3[style=dotted];
+2 -> 0[style=dotted];
+3 -> 0[style=dotted];
+3 -> 1;
+}
+
+digraph graph524 {
+center=true;
+pad=1;
+graph [label="Graphe 524 :\nScore : 0.32751334474553634\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 3;
+2 -> 2;
+0 -> 2;
+0 -> 3[style=dotted];
+1 -> 0;
+1 -> 3[style=dotted];
+2 -> 0[style=dotted];
+3 -> 0[style=dotted];
+3 -> 1;
+}
+
+digraph graph526 {
+center=true;
+pad=1;
+graph [label="Graphe 526 :\nScore : 0.30369486159157666\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 3;
+1 -> 1;
+2 -> 2;
+0 -> 2[style=dotted];
+0 -> 3;
+1 -> 3[style=dotted];
+2 -> 0[style=dotted];
+3 -> 0[style=dotted];
+3 -> 1;
+}
+
+digraph graph527 {
+center=true;
+pad=1;
+graph [label="Graphe 527 :\nScore : 0.31549803432499407\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 3;
+1 -> 1;
+2 -> 2;
+0 -> 1;
+0 -> 2[style=dotted];
+1 -> 3[style=dotted];
+2 -> 0[style=dotted];
+3 -> 0[style=dotted];
+3 -> 1;
+}
+
+digraph graph528 {
+center=true;
+pad=1;
+graph [label="Graphe 528 :\nScore : 0.33333333333333337\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 3;
+1 -> 1;
+2 -> 2;
+0 -> 2;
+0 -> 3[style=dotted];
+1 -> 3[style=dotted];
+2 -> 0[style=dotted];
+3 -> 0[style=dotted];
+3 -> 1;
+}
+
+digraph graph529 {
+center=true;
+pad=1;
+graph [label="Graphe 529 :\nScore : 0.3309695626912725\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 3;
+0 -> 0[style=dotted];
+2 -> 2;
+0 -> 3;
+1 -> 2;
+1 -> 3[style=dotted];
+2 -> 0[style=dotted];
+3 -> 0[style=dotted];
+3 -> 1;
+}
+
+digraph graph530 {
+center=true;
+pad=1;
+graph [label="Graphe 530 :\nScore : 0.33333333333333337\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 3;
+0 -> 0[style=dotted];
+2 -> 2;
+0 -> 1;
+1 -> 2;
+1 -> 3[style=dotted];
+2 -> 0[style=dotted];
+3 -> 0[style=dotted];
+3 -> 1;
+}
+
+digraph graph533 {
+center=true;
+pad=1;
+graph [label="Graphe 533 :\nScore : 0.32630327312395\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 3;
+2 -> 2;
+0 -> 1[style=dotted];
+0 -> 2;
+1 -> 2;
+1 -> 3[style=dotted];
+2 -> 0[style=dotted];
+3 -> 0[style=dotted];
+3 -> 1;
+}
+
+digraph graph536 {
+center=true;
+pad=1;
+graph [label="Graphe 536 :\nScore : 0.3333333333333333\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 3;
+2 -> 2;
+0 -> 1;
+0 -> 3[style=dotted];
+1 -> 2;
+1 -> 3[style=dotted];
+2 -> 0[style=dotted];
+3 -> 0[style=dotted];
+3 -> 1;
+}
+
+digraph graph537 {
+center=true;
+pad=1;
+graph [label="Graphe 537 :\nScore : 0.33333333333333337\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 3;
+0 -> 0[style=dotted];
+0 -> 3;
+1 -> 0[style=dotted];
+1 -> 2;
+2 -> 0[style=dotted];
+2 -> 3;
+3 -> 0[style=dotted];
+3 -> 1;
+}
+
+digraph graph547 {
+center=true;
+pad=1;
+graph [label="Graphe 547 :\nScore : 0.34270745016558435\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 3;
+0 -> 0[style=dotted];
+1 -> 1[style=dotted];
+0 -> 3;
+1 -> 2;
+2 -> 0[style=dotted];
+2 -> 3;
+3 -> 0[style=dotted];
+3 -> 1;
+}
+
+digraph graph549 {
+center=true;
+pad=1;
+graph [label="Graphe 549 :\nScore : 0.328607097982728\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 3;
+0 -> 0[style=dotted];
+1 -> 1[style=dotted];
+0 -> 2;
+1 -> 2;
+2 -> 0[style=dotted];
+2 -> 3;
+3 -> 0[style=dotted];
+3 -> 1;
+}
+
+digraph graph559 {
+center=true;
+pad=1;
+graph [label="Graphe 559 :\nScore : 0.315498034324994\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 3;
+0 -> 0[style=dotted];
+1 -> 1[style=dotted];
+0 -> 2;
+1 -> 3;
+2 -> 0[style=dotted];
+2 -> 3;
+3 -> 0[style=dotted];
+3 -> 1;
+}
+
+digraph graph561 {
+center=true;
+pad=1;
+graph [label="Graphe 561 :\nScore : 0.34111691664032817\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 3;
+1 -> 1[style=dotted];
+0 -> 2[style=dotted];
+0 -> 3;
+1 -> 3;
+2 -> 0[style=dotted];
+2 -> 3;
+3 -> 0[style=dotted];
+3 -> 1;
+}
+
+digraph graph577 {
+center=true;
+pad=1;
+graph [label="Graphe 577 :\nScore : 0.31666666666666665\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 3;
+0 -> 0[style=dotted];
+1 -> 1;
+0 -> 3;
+1 -> 2[style=dotted];
+2 -> 0[style=dotted];
+2 -> 3;
+3 -> 0[style=dotted];
+3 -> 1;
+}
+
+digraph graph578 {
+center=true;
+pad=1;
+graph [label="Graphe 578 :\nScore : 0.33333333333333337\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 3;
+0 -> 0[style=dotted];
+1 -> 1;
+0 -> 1;
+1 -> 2[style=dotted];
+2 -> 0[style=dotted];
+2 -> 3;
+3 -> 0[style=dotted];
+3 -> 1;
+}
+
+digraph graph579 {
+center=true;
+pad=1;
+graph [label="Graphe 579 :\nScore : 0.31439151236987645\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 3;
+0 -> 0[style=dotted];
+1 -> 1;
+0 -> 2;
+1 -> 2[style=dotted];
+2 -> 0[style=dotted];
+2 -> 3;
+3 -> 0[style=dotted];
+3 -> 1;
+}
+
+digraph graph584 {
+center=true;
+pad=1;
+graph [label="Graphe 584 :\nScore : 0.3333333333333333\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 3;
+1 -> 1;
+0 -> 1;
+0 -> 2[style=dotted];
+1 -> 2[style=dotted];
+2 -> 0[style=dotted];
+2 -> 3;
+3 -> 0[style=dotted];
+3 -> 1;
+}
+
+digraph graph586 {
+center=true;
+pad=1;
+graph [label="Graphe 586 :\nScore : 0.34795529517997986\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 3;
+1 -> 1;
+0 -> 1;
+0 -> 3[style=dotted];
+1 -> 2[style=dotted];
+2 -> 0[style=dotted];
+2 -> 3;
+3 -> 0[style=dotted];
+3 -> 1;
+}
+
+digraph graph587 {
+center=true;
+pad=1;
+graph [label="Graphe 587 :\nScore : 0.3431920832080018\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 3;
+1 -> 1;
+0 -> 2;
+0 -> 3[style=dotted];
+1 -> 2[style=dotted];
+2 -> 0[style=dotted];
+2 -> 3;
+3 -> 0[style=dotted];
+3 -> 1;
+}
+
+digraph graph588 {
+center=true;
+pad=1;
+graph [label="Graphe 588 :\nScore : 0.3255497500263385\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 3;
+0 -> 0[style=dotted];
+0 -> 3;
+1 -> 2[style=dotted];
+1 -> 3;
+2 -> 0[style=dotted];
+2 -> 3;
+3 -> 0[style=dotted];
+3 -> 1;
+}
+
+digraph graph589 {
+center=true;
+pad=1;
+graph [label="Graphe 589 :\nScore : 0.3333333333333333\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 3;
+0 -> 0[style=dotted];
+0 -> 1;
+1 -> 2[style=dotted];
+1 -> 3;
+2 -> 0[style=dotted];
+2 -> 3;
+3 -> 0[style=dotted];
+3 -> 1;
+}
+
+digraph graph590 {
+center=true;
+pad=1;
+graph [label="Graphe 590 :\nScore : 0.3237944408433086\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 3;
+0 -> 0[style=dotted];
+0 -> 2;
+1 -> 2[style=dotted];
+1 -> 3;
+2 -> 0[style=dotted];
+2 -> 3;
+3 -> 0[style=dotted];
+3 -> 1;
+}
+
+digraph graph594 {
+center=true;
+pad=1;
+graph [label="Graphe 594 :\nScore : 0.33333333333333337\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 3;
+0 -> 1;
+0 -> 2[style=dotted];
+1 -> 2[style=dotted];
+1 -> 3;
+2 -> 0[style=dotted];
+2 -> 3;
+3 -> 0[style=dotted];
+3 -> 1;
+}
+
+digraph graph604 {
+center=true;
+pad=1;
+graph [label="Graphe 604 :\nScore : 0.29102815349296324\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 3;
+0 -> 0[style=dotted];
+1 -> 1;
+0 -> 2;
+1 -> 3[style=dotted];
+2 -> 0[style=dotted];
+2 -> 3;
+3 -> 0[style=dotted];
+3 -> 1;
+}
+
+digraph graph606 {
+center=true;
+pad=1;
+graph [label="Graphe 606 :\nScore : 0.31379936423421784\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 3;
+1 -> 1;
+0 -> 2[style=dotted];
+0 -> 3;
+1 -> 3[style=dotted];
+2 -> 0[style=dotted];
+2 -> 3;
+3 -> 0[style=dotted];
+3 -> 1;
+}
+
+digraph graph607 {
+center=true;
+pad=1;
+graph [label="Graphe 607 :\nScore : 0.3251189342373663\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 3;
+0 -> 0;
+1 -> 1;
+0 -> 2[style=dotted];
+1 -> 3[style=dotted];
+2 -> 0[style=dotted];
+2 -> 3;
+3 -> 0[style=dotted];
+3 -> 1;
+}
+
+digraph graph608 {
+center=true;
+pad=1;
+graph [label="Graphe 608 :\nScore : 0.3237944408433086\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 3;
+1 -> 1;
+0 -> 1;
+0 -> 2[style=dotted];
+1 -> 3[style=dotted];
+2 -> 0[style=dotted];
+2 -> 3;
+3 -> 0[style=dotted];
+3 -> 1;
+}
+
+digraph graph609 {
+center=true;
+pad=1;
+graph [label="Graphe 609 :\nScore : 0.32864627491720777\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 3;
+0 -> 0[style=dotted];
+0 -> 3;
+1 -> 2;
+1 -> 3[style=dotted];
+2 -> 0[style=dotted];
+2 -> 3;
+3 -> 0[style=dotted];
+3 -> 1;
+}
+
+digraph graph610 {
+center=true;
+pad=1;
+graph [label="Graphe 610 :\nScore : 0.3443572749037705\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 3;
+0 -> 0[style=dotted];
+0 -> 1;
+1 -> 2;
+1 -> 3[style=dotted];
+2 -> 0[style=dotted];
+2 -> 3;
+3 -> 0[style=dotted];
+3 -> 1;
+}
+
+digraph graph611 {
+center=true;
+pad=1;
+graph [label="Graphe 611 :\nScore : 0.32630327312394997\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 3;
+0 -> 0[style=dotted];
+0 -> 2;
+1 -> 2;
+1 -> 3[style=dotted];
+2 -> 0[style=dotted];
+2 -> 3;
+3 -> 0[style=dotted];
+3 -> 1;
+}
+
+digraph graph632 {
+center=true;
+pad=1;
+graph [label="Graphe 632 :\nScore : 0.3479552951799798\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 3;
+1 -> 1[style=dotted];
+0 -> 2;
+0 -> 3[style=dotted];
+1 -> 2;
+2 -> 0;
+2 -> 1[style=dotted];
+3 -> 0[style=dotted];
+3 -> 1;
+}
+
+digraph graph651 {
+center=true;
+pad=1;
+graph [label="Graphe 651 :\nScore : 0.33333333333333337\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 3;
+1 -> 1;
+2 -> 2;
+0 -> 2;
+0 -> 3[style=dotted];
+1 -> 0[style=dotted];
+2 -> 1[style=dotted];
+3 -> 0[style=dotted];
+3 -> 1;
+}
+
+digraph graph652 {
+center=true;
+pad=1;
+graph [label="Graphe 652 :\nScore : 0.34111691664032817\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 3;
+0 -> 0[style=dotted];
+2 -> 2;
+0 -> 2;
+1 -> 0[style=dotted];
+1 -> 3;
+2 -> 1[style=dotted];
+3 -> 0[style=dotted];
+3 -> 1;
+}
+
+digraph graph657 {
+center=true;
+pad=1;
+graph [label="Graphe 657 :\nScore : 0.3399586229188549\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 3;
+1 -> 1[style=dotted];
+2 -> 2;
+0 -> 2;
+0 -> 3[style=dotted];
+1 -> 0;
+2 -> 1[style=dotted];
+3 -> 0[style=dotted];
+3 -> 1;
+}
+
+digraph graph672 {
+center=true;
+pad=1;
+graph [label="Graphe 672 :\nScore : 0.3482390475138254\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 3;
+0 -> 0[style=dotted];
+2 -> 2;
+0 -> 2;
+1 -> 0;
+1 -> 3[style=dotted];
+2 -> 1[style=dotted];
+3 -> 0[style=dotted];
+3 -> 1;
+}
+
+digraph graph675 {
+center=true;
+pad=1;
+graph [label="Graphe 675 :\nScore : 0.3479552951799798\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 3;
+0 -> 0[style=dotted];
+1 -> 1;
+2 -> 2;
+0 -> 2;
+1 -> 3[style=dotted];
+2 -> 1[style=dotted];
+3 -> 0[style=dotted];
+3 -> 1;
+}
+
+digraph graph678 {
+center=true;
+pad=1;
+graph [label="Graphe 678 :\nScore : 0.2853981633974484\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 3;
+0 -> 0[style=dotted];
+2 -> 2;
+0 -> 3;
+1 -> 2;
+1 -> 3[style=dotted];
+2 -> 1[style=dotted];
+3 -> 0[style=dotted];
+3 -> 1;
+}
+
+digraph graph679 {
+center=true;
+pad=1;
+graph [label="Graphe 679 :\nScore : 0.31379936423421784\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 3;
+0 -> 0[style=dotted];
+2 -> 2;
+0 -> 1;
+1 -> 2;
+1 -> 3[style=dotted];
+2 -> 1[style=dotted];
+3 -> 0[style=dotted];
+3 -> 1;
+}
+
+digraph graph680 {
+center=true;
+pad=1;
+graph [label="Graphe 680 :\nScore : 0.33096956269127253\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 3;
+0 -> 0[style=dotted];
+2 -> 2;
+0 -> 2;
+1 -> 2;
+1 -> 3[style=dotted];
+2 -> 1[style=dotted];
+3 -> 0[style=dotted];
+3 -> 1;
+}
+
+digraph graph681 {
+center=true;
+pad=1;
+graph [label="Graphe 681 :\nScore : 0.3239592165010823\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 3;
+0 -> 0;
+2 -> 2;
+0 -> 1[style=dotted];
+1 -> 2;
+1 -> 3[style=dotted];
+2 -> 1[style=dotted];
+3 -> 0[style=dotted];
+3 -> 1;
+}
+
+digraph graph682 {
+center=true;
+pad=1;
+graph [label="Graphe 682 :\nScore : 0.3286462749172078\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 3;
+2 -> 2;
+0 -> 1[style=dotted];
+0 -> 2;
+1 -> 2;
+1 -> 3[style=dotted];
+2 -> 1[style=dotted];
+3 -> 0[style=dotted];
+3 -> 1;
+}
+
+digraph graph684 {
+center=true;
+pad=1;
+graph [label="Graphe 684 :\nScore : 0.3479552951799798\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 3;
+0 -> 0[style=dotted];
+1 -> 1;
+0 -> 2;
+1 -> 0[style=dotted];
+2 -> 1[style=dotted];
+2 -> 3;
+3 -> 0[style=dotted];
+3 -> 1;
+}
+
+digraph graph689 {
+center=true;
+pad=1;
+graph [label="Graphe 689 :\nScore : 0.3479552951799798\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 3;
+0 -> 0[style=dotted];
+0 -> 2;
+1 -> 0[style=dotted];
+1 -> 3;
+2 -> 1[style=dotted];
+2 -> 3;
+3 -> 0[style=dotted];
+3 -> 1;
+}
+
+digraph graph695 {
+center=true;
+pad=1;
+graph [label="Graphe 695 :\nScore : 0.3474054703695366\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 3;
+0 -> 0;
+1 -> 1[style=dotted];
+0 -> 2[style=dotted];
+1 -> 0;
+2 -> 1[style=dotted];
+2 -> 3;
+3 -> 0[style=dotted];
+3 -> 1;
+}
+
+digraph graph710 {
+center=true;
+pad=1;
+graph [label="Graphe 710 :\nScore : 0.3479552951799798\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 3;
+0 -> 0[style=dotted];
+1 -> 1;
+0 -> 3;
+1 -> 2[style=dotted];
+2 -> 1[style=dotted];
+2 -> 3;
+3 -> 0[style=dotted];
+3 -> 1;
+}
+
+digraph graph715 {
+center=true;
+pad=1;
+graph [label="Graphe 715 :\nScore : 0.34111691664032817\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 3;
+0 -> 0[style=dotted];
+0 -> 3;
+1 -> 2[style=dotted];
+1 -> 3;
+2 -> 1[style=dotted];
+2 -> 3;
+3 -> 0[style=dotted];
+3 -> 1;
+}
+
+digraph graph721 {
+center=true;
+pad=1;
+graph [label="Graphe 721 :\nScore : 0.3301363569034629\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 3;
+0 -> 0[style=dotted];
+1 -> 1;
+0 -> 2;
+1 -> 3[style=dotted];
+2 -> 1[style=dotted];
+2 -> 3;
+3 -> 0[style=dotted];
+3 -> 1;
+}
+
+digraph graph723 {
+center=true;
+pad=1;
+graph [label="Graphe 723 :\nScore : 0.3210017495644293\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 3;
+0 -> 0[style=dotted];
+0 -> 3;
+1 -> 2;
+1 -> 3[style=dotted];
+2 -> 1[style=dotted];
+2 -> 3;
+3 -> 0[style=dotted];
+3 -> 1;
+}
+
+digraph graph724 {
+center=true;
+pad=1;
+graph [label="Graphe 724 :\nScore : 0.3419125632012677\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 3;
+0 -> 0[style=dotted];
+0 -> 1;
+1 -> 2;
+1 -> 3[style=dotted];
+2 -> 1[style=dotted];
+2 -> 3;
+3 -> 0[style=dotted];
+3 -> 1;
+}
+
+digraph graph726 {
+center=true;
+pad=1;
+graph [label="Graphe 726 :\nScore : 0.31379936423421784\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 3;
+1 -> 1;
+2 -> 2[style=dotted];
+0 -> 2[style=dotted];
+0 -> 3;
+1 -> 0[style=dotted];
+2 -> 0;
+3 -> 0[style=dotted];
+3 -> 1;
+}
+
+digraph graph729 {
+center=true;
+pad=1;
+graph [label="Graphe 729 :\nScore : 0.31379936423421784\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 3;
+2 -> 2[style=dotted];
+0 -> 2[style=dotted];
+0 -> 3;
+1 -> 0[style=dotted];
+1 -> 3;
+2 -> 0;
+3 -> 0[style=dotted];
+3 -> 1;
+}
+
+digraph graph730 {
+center=true;
+pad=1;
+graph [label="Graphe 730 :\nScore : 0.3239592165010823\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 3;
+1 -> 1[style=dotted];
+2 -> 2[style=dotted];
+0 -> 2[style=dotted];
+0 -> 3;
+1 -> 0;
+2 -> 0;
+3 -> 0[style=dotted];
+3 -> 1;
+}
+
+digraph graph739 {
+center=true;
+pad=1;
+graph [label="Graphe 739 :\nScore : 0.30369486159157666\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 3;
+1 -> 1[style=dotted];
+2 -> 2[style=dotted];
+0 -> 2[style=dotted];
+0 -> 3;
+1 -> 3;
+2 -> 0;
+3 -> 0[style=dotted];
+3 -> 1;
+}
+
+digraph graph740 {
+center=true;
+pad=1;
+graph [label="Graphe 740 :\nScore : 0.32511893423736626\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 3;
+1 -> 1[style=dotted];
+2 -> 2[style=dotted];
+0 -> 1;
+0 -> 2[style=dotted];
+1 -> 3;
+2 -> 0;
+3 -> 0[style=dotted];
+3 -> 1;
+}
+
+digraph graph742 {
+center=true;
+pad=1;
+graph [label="Graphe 742 :\nScore : 0.3479552951799798\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 3;
+0 -> 0[style=dotted];
+1 -> 1;
+2 -> 2[style=dotted];
+0 -> 3;
+1 -> 2[style=dotted];
+2 -> 0;
+3 -> 0[style=dotted];
+3 -> 1;
+}
+
+digraph graph743 {
+center=true;
+pad=1;
+graph [label="Graphe 743 :\nScore : 0.3482390475138254\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 3;
+1 -> 1;
+2 -> 2[style=dotted];
+0 -> 1[style=dotted];
+0 -> 3;
+1 -> 2[style=dotted];
+2 -> 0;
+3 -> 0[style=dotted];
+3 -> 1;
+}
+
+digraph graph745 {
+center=true;
+pad=1;
+graph [label="Graphe 745 :\nScore : 0.34111691664032817\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 3;
+1 -> 1;
+2 -> 2[style=dotted];
+0 -> 1;
+0 -> 3[style=dotted];
+1 -> 2[style=dotted];
+2 -> 0;
+3 -> 0[style=dotted];
+3 -> 1;
+}
+
+digraph graph746 {
+center=true;
+pad=1;
+graph [label="Graphe 746 :\nScore : 0.340705650836011\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 3;
+0 -> 0[style=dotted];
+2 -> 2[style=dotted];
+0 -> 3;
+1 -> 2[style=dotted];
+1 -> 3;
+2 -> 0;
+3 -> 0[style=dotted];
+3 -> 1;
+}
+
+digraph graph747 {
+center=true;
+pad=1;
+graph [label="Graphe 747 :\nScore : 0.33333333333333337\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 3;
+0 -> 0[style=dotted];
+2 -> 2[style=dotted];
+0 -> 1;
+1 -> 2[style=dotted];
+1 -> 3;
+2 -> 0;
+3 -> 0[style=dotted];
+3 -> 1;
+}
+
+digraph graph748 {
+center=true;
+pad=1;
+graph [label="Graphe 748 :\nScore : 0.34319208320800176\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 3;
+2 -> 2[style=dotted];
+0 -> 1[style=dotted];
+0 -> 3;
+1 -> 2[style=dotted];
+1 -> 3;
+2 -> 0;
+3 -> 0[style=dotted];
+3 -> 1;
+}
+
+digraph graph749 {
+center=true;
+pad=1;
+graph [label="Graphe 749 :\nScore : 0.3399586229188548\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 3;
+0 -> 0;
+2 -> 2[style=dotted];
+0 -> 1[style=dotted];
+1 -> 2[style=dotted];
+1 -> 3;
+2 -> 0;
+3 -> 0[style=dotted];
+3 -> 1;
+}
+
+digraph graph752 {
+center=true;
+pad=1;
+graph [label="Graphe 752 :\nScore : 0.32751334474553634\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 3;
+2 -> 2[style=dotted];
+0 -> 1;
+0 -> 2[style=dotted];
+1 -> 0;
+1 -> 3[style=dotted];
+2 -> 0;
+3 -> 0[style=dotted];
+3 -> 1;
+}
+
+digraph graph754 {
+center=true;
+pad=1;
+graph [label="Graphe 754 :\nScore : 0.2910281534929632\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 3;
+1 -> 1;
+2 -> 2[style=dotted];
+0 -> 1;
+0 -> 2[style=dotted];
+1 -> 3[style=dotted];
+2 -> 0;
+3 -> 0[style=dotted];
+3 -> 1;
+}
+
+digraph graph759 {
+center=true;
+pad=1;
+graph [label="Graphe 759 :\nScore : 0.33333333333333337\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 3;
+1 -> 1;
+2 -> 2[style=dotted];
+0 -> 2[style=dotted];
+0 -> 3;
+1 -> 0[style=dotted];
+2 -> 1;
+3 -> 0[style=dotted];
+3 -> 1;
+}
+
+digraph graph760 {
+center=true;
+pad=1;
+graph [label="Graphe 760 :\nScore : 0.34270745016558435\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 3;
+1 -> 1;
+2 -> 2[style=dotted];
+0 -> 2;
+0 -> 3[style=dotted];
+1 -> 0[style=dotted];
+2 -> 1;
+3 -> 0[style=dotted];
+3 -> 1;
+}
+
+digraph graph761 {
+center=true;
+pad=1;
+graph [label="Graphe 761 :\nScore : 0.34111691664032817\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 3;
+0 -> 0[style=dotted];
+2 -> 2[style=dotted];
+0 -> 2;
+1 -> 0[style=dotted];
+1 -> 3;
+2 -> 1;
+3 -> 0[style=dotted];
+3 -> 1;
+}
+
+digraph graph762 {
+center=true;
+pad=1;
+graph [label="Graphe 762 :\nScore : 0.3333333333333333\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 3;
+2 -> 2[style=dotted];
+0 -> 2[style=dotted];
+0 -> 3;
+1 -> 0[style=dotted];
+1 -> 3;
+2 -> 1;
+3 -> 0[style=dotted];
+3 -> 1;
+}
+
+digraph graph763 {
+center=true;
+pad=1;
+graph [label="Graphe 763 :\nScore : 0.34111691664032817\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 3;
+0 -> 0;
+2 -> 2[style=dotted];
+0 -> 2[style=dotted];
+1 -> 0[style=dotted];
+1 -> 3;
+2 -> 1;
+3 -> 0[style=dotted];
+3 -> 1;
+}
+
+digraph graph770 {
+center=true;
+pad=1;
+graph [label="Graphe 770 :\nScore : 0.33333333333333337\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 3;
+0 -> 0[style=dotted];
+2 -> 2[style=dotted];
+0 -> 3;
+1 -> 2[style=dotted];
+1 -> 3;
+2 -> 1;
+3 -> 0[style=dotted];
+3 -> 1;
+}
+
+digraph graph771 {
+center=true;
+pad=1;
+graph [label="Graphe 771 :\nScore : 0.33333333333333337\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 3;
+0 -> 0[style=dotted];
+2 -> 2[style=dotted];
+0 -> 1;
+1 -> 2[style=dotted];
+1 -> 3;
+2 -> 1;
+3 -> 0[style=dotted];
+3 -> 1;
+}
+
+digraph graph772 {
+center=true;
+pad=1;
+graph [label="Graphe 772 :\nScore : 0.3239592165010823\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 3;
+0 -> 0;
+2 -> 2[style=dotted];
+0 -> 1[style=dotted];
+1 -> 2[style=dotted];
+1 -> 3;
+2 -> 1;
+3 -> 0[style=dotted];
+3 -> 1;
+}
+
+digraph graph773 {
+center=true;
+pad=1;
+graph [label="Graphe 773 :\nScore : 0.3363324757712294\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 3;
+2 -> 2[style=dotted];
+0 -> 1[style=dotted];
+0 -> 2;
+1 -> 2[style=dotted];
+1 -> 3;
+2 -> 1;
+3 -> 0[style=dotted];
+3 -> 1;
+}
+
+digraph graph775 {
+center=true;
+pad=1;
+graph [label="Graphe 775 :\nScore : 0.3482390475138254\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 3;
+0 -> 0;
+2 -> 2[style=dotted];
+0 -> 2[style=dotted];
+1 -> 0;
+1 -> 3[style=dotted];
+2 -> 1;
+3 -> 0[style=dotted];
+3 -> 1;
+}
+
+digraph graph776 {
+center=true;
+pad=1;
+graph [label="Graphe 776 :\nScore : 0.31549803432499407\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 3;
+0 -> 0[style=dotted];
+1 -> 1;
+2 -> 2[style=dotted];
+0 -> 2;
+1 -> 3[style=dotted];
+2 -> 1;
+3 -> 0[style=dotted];
+3 -> 1;
+}
+
+digraph graph777 {
+center=true;
+pad=1;
+graph [label="Graphe 777 :\nScore : 0.3479552951799798\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 3;
+0 -> 0;
+1 -> 1;
+2 -> 2[style=dotted];
+0 -> 2[style=dotted];
+1 -> 3[style=dotted];
+2 -> 1;
+3 -> 0[style=dotted];
+3 -> 1;
+}
+
+digraph graph778 {
+center=true;
+pad=1;
+graph [label="Graphe 778 :\nScore : 0.34111691664032817\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 3;
+0 -> 0[style=dotted];
+2 -> 2[style=dotted];
+0 -> 1;
+1 -> 2;
+1 -> 3[style=dotted];
+2 -> 1;
+3 -> 0[style=dotted];
+3 -> 1;
+}
+
+digraph graph781 {
+center=true;
+pad=1;
+graph [label="Graphe 781 :\nScore : 0.34111691664032817\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 3;
+0 -> 0[style=dotted];
+1 -> 1;
+2 -> 2[style=dotted];
+0 -> 2;
+1 -> 0[style=dotted];
+2 -> 3;
+3 -> 0[style=dotted];
+3 -> 1;
+}
+
+digraph graph783 {
+center=true;
+pad=1;
+graph [label="Graphe 783 :\nScore : 0.3333333333333333\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 3;
+1 -> 1;
+2 -> 2[style=dotted];
+0 -> 2[style=dotted];
+0 -> 3;
+1 -> 0[style=dotted];
+2 -> 3;
+3 -> 0[style=dotted];
+3 -> 1;
+}
+
+digraph graph784 {
+center=true;
+pad=1;
+graph [label="Graphe 784 :\nScore : 0.3333333333333333\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 3;
+0 -> 0;
+1 -> 1;
+2 -> 2[style=dotted];
+0 -> 2[style=dotted];
+1 -> 0[style=dotted];
+2 -> 3;
+3 -> 0[style=dotted];
+3 -> 1;
+}
+
+digraph graph785 {
+center=true;
+pad=1;
+graph [label="Graphe 785 :\nScore : 0.31666666666666665\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 3;
+1 -> 1;
+2 -> 2[style=dotted];
+0 -> 1;
+0 -> 2[style=dotted];
+1 -> 0[style=dotted];
+2 -> 3;
+3 -> 0[style=dotted];
+3 -> 1;
+}
+
+digraph graph787 {
+center=true;
+pad=1;
+graph [label="Graphe 787 :\nScore : 0.33333333333333337\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 3;
+2 -> 2[style=dotted];
+0 -> 2[style=dotted];
+0 -> 3;
+1 -> 0[style=dotted];
+1 -> 3;
+2 -> 3;
+3 -> 0[style=dotted];
+3 -> 1;
+}
+
+digraph graph803 {
+center=true;
+pad=1;
+graph [label="Graphe 803 :\nScore : 0.33333333333333337\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 3;
+0 -> 0[style=dotted];
+1 -> 1[style=dotted];
+2 -> 2[style=dotted];
+0 -> 2;
+1 -> 3;
+2 -> 3;
+3 -> 0[style=dotted];
+3 -> 1;
+}
+
+digraph graph805 {
+center=true;
+pad=1;
+graph [label="Graphe 805 :\nScore : 0.3333333333333333\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 3;
+0 -> 0[style=dotted];
+1 -> 1;
+2 -> 2[style=dotted];
+0 -> 3;
+1 -> 2[style=dotted];
+2 -> 3;
+3 -> 0[style=dotted];
+3 -> 1;
+}
+
+digraph graph806 {
+center=true;
+pad=1;
+graph [label="Graphe 806 :\nScore : 0.33333333333333337\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 3;
+0 -> 0[style=dotted];
+1 -> 1;
+2 -> 2[style=dotted];
+0 -> 1;
+1 -> 2[style=dotted];
+2 -> 3;
+3 -> 0[style=dotted];
+3 -> 1;
+}
+
+digraph graph807 {
+center=true;
+pad=1;
+graph [label="Graphe 807 :\nScore : 0.3251189342373663\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 3;
+0 -> 0[style=dotted];
+1 -> 1;
+2 -> 2[style=dotted];
+0 -> 2;
+1 -> 2[style=dotted];
+2 -> 3;
+3 -> 0[style=dotted];
+3 -> 1;
+}
+
+digraph graph809 {
+center=true;
+pad=1;
+graph [label="Graphe 809 :\nScore : 0.3474054703695365\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 3;
+1 -> 1;
+2 -> 2[style=dotted];
+0 -> 1[style=dotted];
+0 -> 2;
+1 -> 2[style=dotted];
+2 -> 3;
+3 -> 0[style=dotted];
+3 -> 1;
+}
+
+digraph graph810 {
+center=true;
+pad=1;
+graph [label="Graphe 810 :\nScore : 0.3479552951799798\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 3;
+0 -> 0;
+1 -> 1;
+2 -> 2[style=dotted];
+0 -> 2[style=dotted];
+1 -> 2[style=dotted];
+2 -> 3;
+3 -> 0[style=dotted];
+3 -> 1;
+}
+
+digraph graph811 {
+center=true;
+pad=1;
+graph [label="Graphe 811 :\nScore : 0.33333333333333337\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 3;
+1 -> 1;
+2 -> 2[style=dotted];
+0 -> 1;
+0 -> 2[style=dotted];
+1 -> 2[style=dotted];
+2 -> 3;
+3 -> 0[style=dotted];
+3 -> 1;
+}
+
+digraph graph813 {
+center=true;
+pad=1;
+graph [label="Graphe 813 :\nScore : 0.33333333333333337\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 3;
+0 -> 0[style=dotted];
+2 -> 2[style=dotted];
+0 -> 1;
+1 -> 2[style=dotted];
+1 -> 3;
+2 -> 3;
+3 -> 0[style=dotted];
+3 -> 1;
+}
+
+digraph graph817 {
+center=true;
+pad=1;
+graph [label="Graphe 817 :\nScore : 0.30369486159157666\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 3;
+0 -> 0[style=dotted];
+1 -> 1;
+2 -> 2[style=dotted];
+0 -> 2;
+1 -> 3[style=dotted];
+2 -> 3;
+3 -> 0[style=dotted];
+3 -> 1;
+}
+
+digraph graph818 {
+center=true;
+pad=1;
+graph [label="Graphe 818 :\nScore : 0.3333333333333333\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 3;
+0 -> 0;
+1 -> 1;
+2 -> 2[style=dotted];
+0 -> 2[style=dotted];
+1 -> 3[style=dotted];
+2 -> 3;
+3 -> 0[style=dotted];
+3 -> 1;
+}
+
+digraph graph823 {
+center=true;
+pad=1;
+graph [label="Graphe 823 :\nScore : 0.3419125632012677\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 3;
+1 -> 1;
+0 -> 2[style=dotted];
+0 -> 3;
+1 -> 0[style=dotted];
+2 -> 0;
+2 -> 3[style=dotted];
+3 -> 0[style=dotted];
+3 -> 1;
+}
+
+digraph graph834 {
+center=true;
+pad=1;
+graph [label="Graphe 834 :\nScore : 0.3301363569034628\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 3;
+0 -> 0[style=dotted];
+1 -> 1;
+0 -> 3;
+1 -> 2[style=dotted];
+2 -> 0;
+2 -> 3[style=dotted];
+3 -> 0[style=dotted];
+3 -> 1;
+}
+
+digraph graph835 {
+center=true;
+pad=1;
+graph [label="Graphe 835 :\nScore : 0.3479552951799798\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 3;
+0 -> 0[style=dotted];
+1 -> 1;
+0 -> 1;
+1 -> 2[style=dotted];
+2 -> 0;
+2 -> 3[style=dotted];
+3 -> 0[style=dotted];
+3 -> 1;
+}
+
+digraph graph840 {
+center=true;
+pad=1;
+graph [label="Graphe 840 :\nScore : 0.34435727490377055\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 3;
+1 -> 1;
+0 -> 1;
+0 -> 2[style=dotted];
+1 -> 2[style=dotted];
+2 -> 0;
+2 -> 3[style=dotted];
+3 -> 0[style=dotted];
+3 -> 1;
+}
+
+digraph graph844 {
+center=true;
+pad=1;
+graph [label="Graphe 844 :\nScore : 0.33333333333333337\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 3;
+1 -> 1;
+0 -> 1;
+0 -> 2[style=dotted];
+1 -> 0[style=dotted];
+2 -> 1;
+2 -> 3[style=dotted];
+3 -> 0[style=dotted];
+3 -> 1;
+}
+
+digraph graph852 {
+center=true;
+pad=1;
+graph [label="Graphe 852 :\nScore : 0.33333333333333337\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 3;
+0 -> 0[style=dotted];
+1 -> 1;
+0 -> 1;
+1 -> 2[style=dotted];
+2 -> 1;
+2 -> 3[style=dotted];
+3 -> 0[style=dotted];
+3 -> 1;
+}
+
+digraph graph853 {
+center=true;
+pad=1;
+graph [label="Graphe 853 :\nScore : 0.3143915123698765\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 3;
+0 -> 0[style=dotted];
+1 -> 1;
+0 -> 2;
+1 -> 2[style=dotted];
+2 -> 1;
+2 -> 3[style=dotted];
+3 -> 0[style=dotted];
+3 -> 1;
+}
+
+digraph graph855 {
+center=true;
+pad=1;
+graph [label="Graphe 855 :\nScore : 0.328607097982728\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 3;
+0 -> 0;
+1 -> 1;
+0 -> 2[style=dotted];
+1 -> 2[style=dotted];
+2 -> 1;
+2 -> 3[style=dotted];
+3 -> 0[style=dotted];
+3 -> 1;
+}
+
+digraph graph857 {
+center=true;
+pad=1;
+graph [label="Graphe 857 :\nScore : 0.34270745016558435\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 3;
+0 -> 0;
+1 -> 1;
+0 -> 2[style=dotted];
+1 -> 3[style=dotted];
+2 -> 1;
+2 -> 3[style=dotted];
+3 -> 0[style=dotted];
+3 -> 1;
+}
+
+digraph graph859 {
+center=true;
+pad=1;
+graph [label="Graphe 859 :\nScore : 0.3333333333333333\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 3;
+0 -> 0[style=dotted];
+1 -> 1;
+2 -> 2;
+0 -> 2;
+1 -> 0[style=dotted];
+2 -> 3[style=dotted];
+3 -> 0[style=dotted];
+3 -> 1;
+}
+
+digraph graph862 {
+center=true;
+pad=1;
+graph [label="Graphe 862 :\nScore : 0.33333333333333337\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 3;
+1 -> 1;
+2 -> 2;
+0 -> 2;
+0 -> 3[style=dotted];
+1 -> 0[style=dotted];
+2 -> 3[style=dotted];
+3 -> 0[style=dotted];
+3 -> 1;
+}
+
+digraph graph865 {
+center=true;
+pad=1;
+graph [label="Graphe 865 :\nScore : 0.3333333333333333\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 3;
+0 -> 0[style=dotted];
+1 -> 1[style=dotted];
+2 -> 2;
+0 -> 3;
+1 -> 2;
+2 -> 3[style=dotted];
+3 -> 0[style=dotted];
+3 -> 1;
+}
+
+digraph graph866 {
+center=true;
+pad=1;
+graph [label="Graphe 866 :\nScore : 0.33333333333333337\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 3;
+0 -> 0[style=dotted];
+1 -> 1[style=dotted];
+2 -> 2;
+0 -> 1;
+1 -> 2;
+2 -> 3[style=dotted];
+3 -> 0[style=dotted];
+3 -> 1;
+}
+
+digraph graph867 {
+center=true;
+pad=1;
+graph [label="Graphe 867 :\nScore : 0.3479552951799798\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 3;
+0 -> 0[style=dotted];
+1 -> 1[style=dotted];
+2 -> 2;
+0 -> 2;
+1 -> 2;
+2 -> 3[style=dotted];
+3 -> 0[style=dotted];
+3 -> 1;
+}
+
+digraph graph873 {
+center=true;
+pad=1;
+graph [label="Graphe 873 :\nScore : 0.30369486159157666\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 3;
+0 -> 0[style=dotted];
+1 -> 1;
+2 -> 2;
+0 -> 3;
+1 -> 2[style=dotted];
+2 -> 3[style=dotted];
+3 -> 0[style=dotted];
+3 -> 1;
+}
+
+digraph graph874 {
+center=true;
+pad=1;
+graph [label="Graphe 874 :\nScore : 0.34111691664032817\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 3;
+0 -> 0[style=dotted];
+1 -> 1;
+2 -> 2;
+0 -> 1;
+1 -> 2[style=dotted];
+2 -> 3[style=dotted];
+3 -> 0[style=dotted];
+3 -> 1;
+}
+
+digraph graph875 {
+center=true;
+pad=1;
+graph [label="Graphe 875 :\nScore : 0.32511893423736626\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 3;
+0 -> 0[style=dotted];
+1 -> 1;
+2 -> 2;
+0 -> 2;
+1 -> 2[style=dotted];
+2 -> 3[style=dotted];
+3 -> 0[style=dotted];
+3 -> 1;
+}
+
+digraph graph878 {
+center=true;
+pad=1;
+graph [label="Graphe 878 :\nScore : 0.33333333333333337\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 3;
+0 -> 0;
+1 -> 1;
+2 -> 2;
+0 -> 3[style=dotted];
+1 -> 2[style=dotted];
+2 -> 3[style=dotted];
+3 -> 0[style=dotted];
+3 -> 1;
+}
+
+digraph graph880 {
+center=true;
+pad=1;
+graph [label="Graphe 880 :\nScore : 0.3333333333333333\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 3;
+0 -> 0[style=dotted];
+1 -> 1;
+2 -> 2;
+0 -> 2;
+1 -> 3[style=dotted];
+2 -> 3[style=dotted];
+3 -> 0[style=dotted];
+3 -> 1;
+}
+
+digraph graph884 {
+center=true;
+pad=1;
+graph [label="Graphe 884 :\nScore : 0.3333333333333333\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 3;
+0 -> 0[style=dotted];
+1 -> 1;
+0 -> 2;
+1 -> 2[style=dotted];
+2 -> 3[style=dotted];
+2 -> 3;
+3 -> 0[style=dotted];
+3 -> 1;
+}
+
+digraph graph886 {
+center=true;
+pad=1;
+graph [label="Graphe 886 :\nScore : 0.33333333333333337\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 3;
+0 -> 0[style=dotted];
+1 -> 1[style=dotted];
+2 -> 2;
+3 -> 3;
+0 -> 2;
+1 -> 3;
+2 -> 1[style=dotted];
+3 -> 0[style=dotted];
+}
+
+digraph graph890 {
+center=true;
+pad=1;
+graph [label="Graphe 890 :\nScore : 0.33333333333333337\n", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 0;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 1;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=red] 2;
+node [color=black, shape="ellipse", style="filled", width=1, height=1, fillcolor=green] 3;
+0 -> 0;
+1 -> 1[style=dotted];
+2 -> 2[style=dotted];
+3 -> 3;
+0 -> 2[style=dotted];
+1 -> 3;
+2 -> 1;
+3 -> 0[style=dotted];
+}
+

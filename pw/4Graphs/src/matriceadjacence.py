@@ -382,7 +382,7 @@ def identity_matrix(n) :
     G.ajouter_aretes([(x, x, 1) for x in range(n)])
     return G
 
-def export_dot(graphe, num, states):
+def export_dot(graphe, num, states, score):
     """
     Renvoie une chaîne encodant le graphe au format dot.
 
@@ -400,7 +400,7 @@ def export_dot(graphe, num, states):
     }
     """
     p = sp.var("p")
-    graph = "digraph graph" + str(num) +" {\ncenter=true;\npad=1;\ngraph [label=\"Graphe " + str(num) + " :\\n\", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];\n"
+    graph = "digraph graph" + str(num) +" {\ncenter=true;\npad=1;\ngraph [label=\"Graphe " + str(num) + " :\\nScore : " + str(score) + "\\n\", labelloc=t; labeljust=center, fontname=Helvetica, fontsize=18];\n"
     for sommet in graphe.sommets():
         var = sp.var("q" + str(sommet + 1))
         if states[var] == 1 :

@@ -49,4 +49,13 @@ Changer les calculs d'intégrales (quadrature scipy) <br />
 https://www.southampton.ac.uk/~fangohr/teaching/python/book/html/16-scipy.html <br />
 https://docs.scipy.org/doc/scipy/reference/generated/scipy.integrate.simpson.html <br />
 Retravailler sur le papier. <br />
+<br />
+Exemple LaTeX : <br />
+\begin{equation}\label{eq:expr_x}
+x = \int_{0}^{1} ((1-p)*(1-p))\, dp = 0.33333
+\end{equation}
+\begin{equation}
+y = \int_{0}^{1} ((1-p)*p)\, dp = 0.16667
+\end{equation}
+                
 
