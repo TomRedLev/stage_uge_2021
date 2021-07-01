@@ -301,3 +301,10 @@ J'ai une autre idée pour cette prise en charge, faire une liste, la trier et ne
 Cela permettrait d'éviter certaines pertes. <br />
 Mise en place du dessin de graphes de Matplotlib pour les exemples. <br />
 <br />
+
+## Jeudi 1 Juillet 2021 :
+Travail sur le compte-rendu. <br />
+Reformulation de plusieurs parties. <br />
+Ajout de définitions et de propositions. <br />
+Ajout des sites visités et des dates. <br />
+Retravail sur Matplotlib. <br />
