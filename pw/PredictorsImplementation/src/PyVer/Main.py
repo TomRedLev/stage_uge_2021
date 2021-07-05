@@ -48,7 +48,7 @@ def min_max(array, len_array) :
     tbsc_5 = create_tbsc()
 
     minmax = [array[len_array - 1], array[len_array - 1]]
-    for i in range(len_array - 1) :
+    for i in range(0, len_array - 1, 2) :
         if (tbsc_1.evolving_graph(array[i] < array[i + 1])) :
             if (tbsc_2.evolving_graph(array[i] < minmax[0])) :
                 minmax[0] = array[i]
@@ -79,7 +79,7 @@ def complete_array(array, len_array, size) :
 
 
 def main() :
-    size = 10000
+    size = 1000
     naive_cmpt_compars = []
     naive_msps = []
     cmpt_compars = []
