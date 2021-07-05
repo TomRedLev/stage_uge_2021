@@ -308,3 +308,22 @@ Reformulation de plusieurs parties. <br />
 Ajout de définitions et de propositions. <br />
 Ajout des sites visités et des dates. <br />
 Retravail sur Matplotlib. <br />
+<br />
+
+## Vendredi 2 Juillet 2021 :
+Travail sur le compte-rendu. <br />
+Reformulation de plusieurs parties. <br />
+Ajout de définitions et de propositions. <br />
+Ajout de sites visités et des dates. <br />
+Retravail de l'implémentation de la détection des solutions optimales. <br />
+<br />
+
+## Lundi 5 Juillet 2021 :
+Travail sur le compte-rendu. <br />
+Retravail de certaines parties, reformulation, réécriture, reprécisions, ... <br />
+Finalisation de l'implémentation de la détection des solutions optimales. <br />
+Re-split des fonctions dessinées via Matplotlib. <br />
+Les mispredictions et les comparaisons sont dans deux fichiers différents à partir de maintenant pour pouvoir les comparer facilement aux valeurs théoriques. <br />
+<br />
+<br />
+

@@ -41,11 +41,11 @@ class Graph(object):
 				graph.running_graph(1)
 			else :
 				graph.running_graph(0)
-				graph.mispredictions += 1;
+				graph.mispredictions += 1
 		else :
 			if (comp) :
 				graph.running_graph(1)
-				graph.mispredictions += 1;
+				graph.mispredictions += 1
 			else :
 				graph.running_graph(0)
 		return comp

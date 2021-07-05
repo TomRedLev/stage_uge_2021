@@ -79,7 +79,7 @@ def complete_array(array, len_array, size) :
 
 
 def main() :
-    size = 1000
+    size = 10000
     naive_cmpt_compars = []
     naive_msps = []
     cmpt_compars = []
@@ -101,15 +101,31 @@ def main() :
     fig, ax = plt.subplots()
     axe = [x for x in range(2, size)]
     ax.plot(axe, naive_cmpt_compars, label="naive_cmpt_compars")
-    ax.plot(axe, naive_msps, label="naive_msps")
+    ax.plot(axe, [(2*x - 2) for x in range(2, size)], label="2*x - 2")
     ax.legend()
-    plt.savefig('naive_min_max.png', dpi=300, bbox_inches='tight')
+    plt.savefig('naive_min_max_compars.png', dpi=300, bbox_inches='tight')
     plt.clf()
+
+    fig, ax = plt.subplots()
+    axe = [x for x in range(2, size)]
+    ax.plot(axe, naive_msps, label="naive_msps")
+    ax.plot(axe, [(2 * log(x)) for x in range(2, size)], label="2 * log(x)")
+    ax.legend()
+    plt.savefig('naive_min_max_msps.png', dpi=300, bbox_inches='tight')
+    plt.clf()
+
     fig, ax = plt.subplots()
     ax.plot(axe, cmpt_compars, label="cmpt_compars")
-    ax.plot(axe, msps, label="msps")
+    ax.plot(axe, [(3/2 * x) for x in range(2, size)], label="3/2 * x")
     ax.legend()
-    plt.savefig('min_max.png', dpi=300, bbox_inches='tight')
+    plt.savefig('min_max_compars.png', dpi=300, bbox_inches='tight')
+    plt.clf()
+
+    fig, ax = plt.subplots()
+    ax.plot(axe, msps, label="msps")
+    ax.plot(axe, [(x/4 + log(x)) for x in range(2, size)], label="x/4 + log(x)")
+    ax.legend()
+    plt.savefig('min_max_msps.png', dpi=300, bbox_inches='tight')
     
 
     
