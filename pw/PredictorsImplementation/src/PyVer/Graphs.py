@@ -23,7 +23,7 @@ class Graph(object):
 	def running_graph(graph, taken) :
 		"""
 		"""
-		if (taken == 1) :
+		if (taken) :
 			graph.current_state = graph.states[graph.current_state].taken
 		else :
 			graph.current_state = graph.states[graph.current_state].not_taken
@@ -31,33 +31,38 @@ class Graph(object):
 	def check_current_state(graph) :
 		"""
 		"""
-		return graph.current_state
+		return graph.states[graph.current_state].taken_state
 
 	def evolving_graph(graph, comp) :
 		"""
 		"""
 		if (graph.check_current_state()) :
 			if (comp) :
-				graph.running_graph(1)
+				graph.running_graph(True)
 			else :
-				graph.running_graph(0)
+				graph.running_graph(False)
 				graph.mispredictions += 1
 		else :
 			if (comp) :
-				graph.running_graph(1)
+				graph.running_graph(True)
 				graph.mispredictions += 1
 			else :
-				graph.running_graph(0)
+				graph.running_graph(False)
 		return comp
 
+
+def create_obsc() :
+	"""
+	"""
+	states = [State(0, False, 0, 1), State(1, True, 0, 1)]
+	return Graph(2, 0, states)
 
 def create_tbsc() :
 	"""
 	"""
-	states = [State(0, 0, 0, 1), State(1, 0, 0, 2), State(2, 1, 1, 3), State(3, 1, 2, 3)]
-	return Graph(4, 1, states)
+	states = [State(0, False, 0, 1), State(1, False, 0, 2), State(2, True, 1, 3), State(3, True, 2, 3)]
+	return Graph(4, 0, states)
 
 def create_swapped() :
-	states = [State(0, 0, 0, 1), State(1, 0, 0, 3), State(2, 1, 0, 3), State(3, 1, 2, 3)]
-	return Graph(4, 1, states)
-
+	states = [State(0, False, 0, 1), State(1, False, 0, 3), State(2, True, 0, 3), State(3, True, 2, 3)]
+	return Graph(4, 0, states)
