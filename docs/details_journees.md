@@ -325,5 +325,12 @@ Finalisation de l'implémentation de la détection des solutions optimales. <br 
 Re-split des fonctions dessinées via Matplotlib. <br />
 Les mispredictions et les comparaisons sont dans deux fichiers différents à partir de maintenant pour pouvoir les comparer facilement aux valeurs théoriques. <br />
 <br />
+
+## Mardi 6 Juillet 2021 :
+Travail sur le compte-rendu. <br />
+Retravail sur les petits bugs dans PredictorsImplementation.<br />
+Premier bug dans l'implémentation général des graphes, mauvais renvoi de la fonction check_current_state qui ne renvoyait pas un booléen mais le numéro de l'état. <br />
+Second bug dans la fonction MinMax qui ne faisait pas i+= 2 à chaque tour de boucle. <br />
+Les résultats semblent beaucoup plus cohérent à partir de maintenant. <br />
 <br />
 
