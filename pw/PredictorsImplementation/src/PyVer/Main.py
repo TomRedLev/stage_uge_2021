@@ -100,6 +100,7 @@ def complete_array(array, len_array, size) :
 
 def main() :
     size = 10000
+    echantillon = 10
     naive_cmpt_compars = []
     naive_msps = []
     cmpt_compars = []
@@ -111,19 +112,26 @@ def main() :
         array = [0 for i in range(len_array)]
         #print("len_array :", len_array)
         complete_array(array, len_array, size)
-        # First test :
-        naive_cmpt_compar, naive_msp = naive_min_max(array, len_array)
-        naive_cmpt_compars.append(naive_cmpt_compar)
-        naive_msps.append(naive_msp)
-        # Second test :
-        cmpt_compar, msp = min_max(array, len_array)
-        cmpt_compars.append(cmpt_compar)
-        msps.append(msp)
-        # Third test :
-        osbc_cmpt_compar, osbc_msp = naive_min_max_obsc(array, len_array)
-        osbc_cmpt_compars.append(osbc_cmpt_compar)
-        osbc_msps.append(osbc_msp)
-
+        naive_cmpt_compar, naive_msp, cmpt_compar, msp, osbc_cmpt_compar, osbc_msp = 0, 0, 0, 0, 0, 0
+        for i in range(echantillon) :
+            # First test :
+            naive_cmpt_compa, naive_ms = naive_min_max(array, len_array)
+            naive_cmpt_compar += naive_cmpt_compa
+            naive_msp += naive_ms
+            # Second test :
+            cmpt_compa, ms = min_max(array, len_array)
+            cmpt_compar += cmpt_compa
+            msp += ms
+            # Third test :
+            osbc_cmpt_compa, osbc_ms = naive_min_max_obsc(array, len_array)
+            osbc_cmpt_compar += osbc_cmpt_compa
+            osbc_msp += osbc_ms
+        naive_cmpt_compars.append(naive_cmpt_compar / echantillon)
+        naive_msps.append(naive_msp / echantillon)
+        cmpt_compars.append(cmpt_compar / echantillon)
+        msps.append(msp / echantillon)
+        osbc_cmpt_compars.append(osbc_cmpt_compar / echantillon)
+        osbc_msps.append(osbc_msp / echantillon)
 
     fig, ax = plt.subplots()
     axe = [x for x in range(2, size)]
