@@ -35,27 +35,6 @@ def naive_min_max(array, len_array) :
 
     return cmpt_compar, msp
 
-
-def naive_min_max_obsc(array, len_array) :
-    # Counters :
-    cmpt_compar = 0
-
-    # Graphs :
-    obsc_1 = create_obsc()
-    obsc_2 = create_obsc()
-
-    minmax = [array[0], array[0]]
-    for i in range(1, len_array) :
-        if (obsc_1.evolving_graph(array[i] < minmax[0])) :
-            minmax[0] = array[i]
-        if (obsc_2.evolving_graph(array[i] > minmax[1])) :
-            minmax[1] = array[i]
-        cmpt_compar += 2
-    msp = obsc_1.mispredictions + obsc_2.mispredictions
-
-    return cmpt_compar, msp
-
-
 def min_max(array, len_array) :
     # Counters :
     cmpt_compar = 0
@@ -99,39 +78,32 @@ def complete_array(array, len_array, size) :
 
 
 def main() :
-    size = 10000
-    echantillon = 10
+    size = 10002
+    echantillon = 100
     naive_cmpt_compars = []
     naive_msps = []
     cmpt_compars = []
     msps = []
-    osbc_cmpt_compars = []
-    osbc_msps = []
 
-    for len_array in range(2, size) :
-        array = [0 for i in range(len_array)]
-        #print("len_array :", len_array)
-        complete_array(array, len_array, size)
-        naive_cmpt_compar, naive_msp, cmpt_compar, msp, osbc_cmpt_compar, osbc_msp = 0, 0, 0, 0, 0, 0
-        for i in range(echantillon) :
+    for len_array in range(2, size, echantillon) :
+        naive_cmpt_compar, naive_msp, cmpt_compar, msp = 0, 0, 0, 0
+        for i in range(len_array, len_array + echantillon) :
+            array = [0 for j in range(i)]
+            #print("len_array :", len_array)
+            complete_array(array, i, size)
             # First test :
-            naive_cmpt_compa, naive_ms = naive_min_max(array, len_array)
+            naive_cmpt_compa, naive_ms = naive_min_max(array, i)
             naive_cmpt_compar += naive_cmpt_compa
             naive_msp += naive_ms
             # Second test :
-            cmpt_compa, ms = min_max(array, len_array)
+            cmpt_compa, ms = min_max(array, i)
             cmpt_compar += cmpt_compa
             msp += ms
-            # Third test :
-            osbc_cmpt_compa, osbc_ms = naive_min_max_obsc(array, len_array)
-            osbc_cmpt_compar += osbc_cmpt_compa
-            osbc_msp += osbc_ms
-        naive_cmpt_compars.append(naive_cmpt_compar / echantillon)
-        naive_msps.append(naive_msp / echantillon)
-        cmpt_compars.append(cmpt_compar / echantillon)
-        msps.append(msp / echantillon)
-        osbc_cmpt_compars.append(osbc_cmpt_compar / echantillon)
-        osbc_msps.append(osbc_msp / echantillon)
+        for i in range(len_array, len_array + echantillon) :
+            naive_cmpt_compars.append(naive_cmpt_compar / echantillon)
+            naive_msps.append(naive_msp / echantillon)
+            cmpt_compars.append(cmpt_compar / echantillon)
+            msps.append(msp / echantillon)
 
     fig, ax = plt.subplots()
     axe = [x for x in range(2, size)]
@@ -159,19 +131,6 @@ def main() :
     ax.plot(axe, [(x/4 + log(x)) for x in range(2, size)], label="x/4 + log(x)")
     ax.legend()
     plt.savefig('min_max_msps.png', dpi=300, bbox_inches='tight')
-    plt.clf()
-
-    fig, ax = plt.subplots()
-    ax.plot(axe, osbc_cmpt_compars, label="obsc_naive_cmpt_compars")
-    ax.plot(axe, [(2 * x - 2) for x in range(2, size)], label="2 * x - 2")
-    ax.legend()
-    plt.savefig('obsc_naive_min_max_compars.png', dpi=300, bbox_inches='tight')
-    plt.clf()
-    fig, ax = plt.subplots()
-    ax.plot(axe, osbc_msps, label="obsc_naive_msps")
-    ax.plot(axe, [(4 * log(x)) for x in range(2, size)], label="4 * log(x)")
-    ax.legend()
-    plt.savefig('obsc_naive_min_max_msps.png', dpi=300, bbox_inches='tight')
     plt.clf()
 
 
