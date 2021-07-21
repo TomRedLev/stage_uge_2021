@@ -59,20 +59,20 @@ def explore(G, sommet, marked, order) :
     marked[sommet] = True
     order.append(sommet)
     voisins = G.ord_voisins(sommet)
-    for voisin in voisins : 
+    for voisin in voisins :
         if not marked[voisin] :
             explore(G, voisin, marked, order)
 
-def second_exploration(G, order, etiquette) : 
-    for sommet in order : 
+def second_exploration(G, order, etiquette) :
+    for sommet in order :
         voisins = G.ord_voisins(sommet)
         for voisin in voisins :
-            etiquette.append(str(order.index(voisin))) 
+            etiquette.append(str(order.index(voisin)))
 
 def indepth_course(G, set_paths) :
     """
     Do an in-depth course in a graph, starting at each state.
-    It registers the paths taken from each state to discover 
+    It registers the paths taken from each state to discover
     all the others.
     """
     check = False
@@ -83,7 +83,7 @@ def indepth_course(G, set_paths) :
         explore(G, sommet, marked, order)
         second_exploration(G, order, etiquette)
         etiquette = "".join(etiquette)
-        if not check and etiquette in set_paths : 
+        if not check and etiquette in set_paths :
             return False
         set_paths.add("".join(etiquette))
         check = True
@@ -226,14 +226,14 @@ def main() :
                     #test_stationary_probas(k, G, variables) # Can be use to test the probabilities
                     score, states = integrate_probabilities(k, G, variables)
                     if score > 0 :
-                        ordered_lst.append((G, str(i), states, score))   
+                        ordered_lst.append((G, str(i), states, score))
                     i += 1
         cmpt += 1
 
     ordered_lst.sort(key = lambda x : x[3])
     nb_sol = int(input("How many solutions do you want (between 0 and " + str(i) + ") : "))
     for i in range(nb_sol) :
-        f.write(export_dot(ordered_lst[i][0], ordered_lst[i][1], ordered_lst[i][2], ordered_lst[i][3])) 
+        f.write(export_dot(ordered_lst[i][0], ordered_lst[i][1], ordered_lst[i][2], ordered_lst[i][3]))
         f.write("\n\n")
 
     print(Style.RESET_ALL + str((perf_counter() - time_perf)), "seconds to run the generation of strongly connected", k, "- states graphs.")
